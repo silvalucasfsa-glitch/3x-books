@@ -20,6 +20,7 @@ create table if not exists public.profiles (
   max_books_in_one_day integer not null default 0,
   books_completed_today jsonb not null default '{}',
   monthly_opens jsonb not null default '{}',
+  monthly_idea_views jsonb not null default '{}',
   is_premium boolean not null default false,
   is_admin boolean not null default false,
   unlocked_achievements text[] not null default '{}',
@@ -100,3 +101,10 @@ drop trigger if exists on_auth_user_created on auth.users;
 create trigger on_auth_user_created
   after insert on auth.users
   for each row execute procedure public.handle_new_user();
+
+-- ─────────────────────────────────────────────
+-- Migração (2026-07-18): limite de 3 ideias de negócio/mês no plano grátis.
+-- Se a tabela profiles já existir de uma execução anterior deste script,
+-- rode só esta linha abaixo no SQL Editor para adicionar a coluna nova.
+-- ─────────────────────────────────────────────
+alter table public.profiles add column if not exists monthly_idea_views jsonb not null default '{}';

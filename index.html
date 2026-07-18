@@ -113,6 +113,7 @@ const defaultState = () => ({
   maxBooksInOneDay: 0,
   booksCompletedToday: {},  // { 'YYYY-MM-DD': count }
   monthlyOpens: {},         // { 'YYYY-MM': [bookId, ...] }
+  monthlyIdeaViews: {},     // { 'YYYY-MM': [dataISO, ...] } — dias distintos em que a ideia do dia foi vista
   isPremium: false,
   isAdmin: false,
   unlockedAchievements: [],
@@ -167,6 +168,7 @@ function profileRowToState(row) {
     maxBooksInOneDay: row.max_books_in_one_day || 0,
     booksCompletedToday: row.books_completed_today || {},
     monthlyOpens: row.monthly_opens || {},
+    monthlyIdeaViews: row.monthly_idea_views || {},
     isPremium: row.is_premium ?? base.isPremium,
     isAdmin: row.is_admin ?? base.isAdmin,
     unlockedAchievements: row.unlocked_achievements || [],
@@ -192,6 +194,7 @@ function stateToProfileRow(userId, state) {
     max_books_in_one_day: state.maxBooksInOneDay,
     books_completed_today: state.booksCompletedToday,
     monthly_opens: state.monthlyOpens,
+    monthly_idea_views: state.monthlyIdeaViews,
     is_premium: state.isPremium,
     is_admin: state.isAdmin,
     unlocked_achievements: state.unlockedAchievements,
@@ -383,6 +386,25 @@ function AppProvider({ children }) {
     });
   }, [touchActivity]);
 
+  const canViewIdea = useCallback(() => {
+    if (state.isAdmin || state.isPremium) return true;
+    const mk = monthKey();
+    const viewed = state.monthlyIdeaViews[mk] || [];
+    const today = todayKey();
+    if (viewed.includes(today)) return true;
+    return viewed.length < 3;
+  }, [state.isAdmin, state.isPremium, state.monthlyIdeaViews]);
+
+  const registerIdeaView = useCallback(() => {
+    setState((s) => {
+      const mk = monthKey();
+      const viewed = s.monthlyIdeaViews[mk] || [];
+      const today = todayKey();
+      if (viewed.includes(today)) return s;
+      return { ...s, monthlyIdeaViews: { ...s.monthlyIdeaViews, [mk]: [...viewed, today] } };
+    });
+  }, []);
+
   const completeBook = useCallback((bookId) => {
     touchActivity();
     setState((s) => {
@@ -435,6 +457,7 @@ function AppProvider({ children }) {
   const value = {
     state, setState, showToast,
     canOpenBook, registerOpen, completeBook, registerAudioListen, submitQuiz,
+    canViewIdea, registerIdeaView,
     setPremium, setFontScale,
     session, authLoading, authError, hydrated,
     configured: !!supa,
@@ -499,7 +522,7 @@ function PaywallModal({ onClose }) {
           <Icon name="crown" style={{ width: 30, height: 30, color: "var(--gold-light)", marginBottom: 8 }} />
           <h2 style={{ fontSize: 22, marginBottom: 6 }}>Desbloqueie a Biblioteca 3X</h2>
           <p style={{ color: "var(--silver)", fontSize: 14.5 }}>
-            No plano grátis você lê 3 resumos por mês. Vire Premium e tenha acesso ilimitado a todos os títulos, sem espera.
+            No plano grátis você lê 3 resumos e vê 3 ideias de negócio por mês. Vire Premium e tenha acesso ilimitado a todos os títulos e ideias, sem espera.
           </p>
         </div>
 
@@ -612,13 +635,19 @@ function AuthScreen() {
 ═══════════════════════════════════════════════ */
 
 function HomeScreen({ nav }) {
-  const { state } = useApp();
+  const { state, canViewIdea, registerIdeaView } = useApp();
+  const [showPaywall, setShowPaywall] = useState(false);
   const reflection = window.REFLECTIONS[dayOfYear() % window.REFLECTIONS.length];
   const idea = window.BUSINESS_IDEAS[dayOfYear() % window.BUSINESS_IDEAS.length];
   const level = getLevel(state.points);
+  const ideaUnlocked = canViewIdea();
   const inProgress = window.BOOKS
     .filter((b) => b.chapters && b.chapters.length > 0 && !state.completedBooks.includes(b.id))
     .slice(0, 4);
+
+  useEffect(() => {
+    if (ideaUnlocked && !state.isAdmin && !state.isPremium) registerIdeaView();
+  }, []);
 
   const shareReflection = () => {
     const text = `"${reflection}" — via 3X Books`;
@@ -666,20 +695,35 @@ function HomeScreen({ nav }) {
 
       <div className="idea-card">
         <div className="section-title" style={{ marginBottom: 6 }}>💡 Ideia de negócio do dia</div>
-        <div style={{ fontFamily: "var(--font-display)", fontSize: 18, marginBottom: 8 }}>{idea.title}</div>
-        <p style={{ color: "var(--silver)", fontSize: 14.5, lineHeight: 1.6 }}>{idea.concept}</p>
-        <div className="idea-meta-row">
-          <div className="idea-meta">
-            <div className="idea-meta-label">Investimento</div>
-            <div className="idea-meta-value">{idea.investment}</div>
+        {ideaUnlocked ? (
+          <>
+            <div style={{ fontFamily: "var(--font-display)", fontSize: 18, marginBottom: 8 }}>{idea.title}</div>
+            <p style={{ color: "var(--silver)", fontSize: 14.5, lineHeight: 1.6 }}>{idea.concept}</p>
+            <div className="idea-meta-row">
+              <div className="idea-meta">
+                <div className="idea-meta-label">Investimento</div>
+                <div className="idea-meta-value">{idea.investment}</div>
+              </div>
+              <div className="idea-meta">
+                <div className="idea-meta-label">Primeiro passo</div>
+                <div className="idea-meta-value">{idea.firstStep}</div>
+              </div>
+            </div>
+            <p style={{ color: "var(--silver-dim)", fontSize: 13, marginTop: 12, fontStyle: "italic" }}>Exemplo real: {idea.example}</p>
+          </>
+        ) : (
+          <div style={{ textAlign: "center", padding: "10px 4px" }}>
+            <Icon name="lock" style={{ width: 24, height: 24, color: "var(--gold)", marginBottom: 8 }} />
+            <div style={{ fontFamily: "var(--font-display)", fontSize: 16, marginBottom: 6 }}>{idea.title}</div>
+            <p style={{ color: "var(--silver-dim)", fontSize: 13.5, marginBottom: 14 }}>
+              Você já viu suas 3 ideias grátis este mês. Assine o 3X Premium para ideias ilimitadas.
+            </p>
+            <button className="btn-gold" onClick={() => setShowPaywall(true)}>Desbloquear ideias ilimitadas</button>
           </div>
-          <div className="idea-meta">
-            <div className="idea-meta-label">Primeiro passo</div>
-            <div className="idea-meta-value">{idea.firstStep}</div>
-          </div>
-        </div>
-        <p style={{ color: "var(--silver-dim)", fontSize: 13, marginTop: 12, fontStyle: "italic" }}>Exemplo real: {idea.example}</p>
+        )}
       </div>
+
+      {showPaywall && <PaywallModal onClose={() => setShowPaywall(false)} />}
 
       <div className="header-row">
         <div className="section-title" style={{ marginBottom: 0 }}>Continue aprendendo</div>
@@ -1196,6 +1240,7 @@ function TrackScreen() {
 
 function ProfileScreen({ nav }) {
   const { state, signOut } = useApp();
+  const [showPaywall, setShowPaywall] = useState(false);
   const level = getLevel(state.points);
   const initials = state.name.split(" ").map((w) => w[0]).slice(0, 2).join("").toUpperCase();
   const completedList = window.BOOKS.filter((b) => state.completedBooks.includes(b.id));
@@ -1220,14 +1265,20 @@ function ProfileScreen({ nav }) {
       </div>
 
       {!state.isPremium && !state.isAdmin && (
-        <div className="idea-card" style={{ marginTop: 18, display: "flex", alignItems: "center", justifyContent: "space-between" }}>
+        <button
+          className="idea-card"
+          style={{ marginTop: 18, display: "flex", alignItems: "center", justifyContent: "space-between", width: "100%", textAlign: "left" }}
+          onClick={() => setShowPaywall(true)}
+        >
           <div>
             <div style={{ fontWeight: 700 }}>Você está no plano grátis</div>
-            <div style={{ fontSize: 13, color: "var(--silver-dim)" }}>3 resumos por mês</div>
+            <div style={{ fontSize: 13, color: "var(--silver-dim)" }}>3 resumos e 3 ideias de negócio por mês</div>
           </div>
           <Icon name="lock" style={{ color: "var(--gold)" }} />
-        </div>
+        </button>
       )}
+
+      {showPaywall && <PaywallModal onClose={() => setShowPaywall(false)} />}
 
       <div className="stat-row">
         <div className="stat-tile"><div className="stat-tile-value">{state.points}</div><div className="stat-tile-label">Pontos</div></div>
