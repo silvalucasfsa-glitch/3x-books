@@ -1,0 +1,1370 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover, maximum-scale=1.0">
+<title>3X Books · Microlearning</title>
+<meta name="description" content="3X Books — resumos de livros em microlearning, com áudio, quiz e trilha de conquistas. Multiplicando negócios. Construindo legado.">
+<meta name="theme-color" content="#0A0A0A">
+<link rel="manifest" href="manifest.json">
+<link rel="icon" href="icon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="icon.svg">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600;9..144,700&family=Libre+Franklin:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<div id="root"></div>
+<script src="data/books.js"></script>
+<script src="config.js"></script>
+<script crossorigin src="https://unpkg.com/react@18/umd/react.production.min.js"></script>
+<script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.production.min.js"></script>
+<script crossorigin src="https://unpkg.com/@supabase/supabase-js@2/dist/umd/supabase.js"></script>
+<script crossorigin src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+
+<script type="text/jsx-manual" id="app-source">
+const { useState, useEffect, useMemo, useRef, useCallback, createContext, useContext } = React;
+
+/* ═══════════════════════════════════════════════
+   ÍCONES — SVG line icons, minimalistas, sem lib externa
+═══════════════════════════════════════════════ */
+const Icon = ({ name, ...props }) => {
+  const paths = {
+    home: <path d="M3 11.5 12 4l9 7.5M5 10v10h5v-6h4v6h5V10" />,
+    library: <path d="M4 4v16M4 4l6 1v16l-6-1M10 5l6-1v16l-6 1M16 4l4 1v16l-4-1" />,
+    trophy: <path d="M8 4h8v4a4 4 0 0 1-8 0V4ZM8 5H4v2a4 4 0 0 0 4 3M16 5h4v2a4 4 0 0 1-4 3M10 15v3h4v-3M8 21h8" />,
+    profile: <path d="M12 12a4 4 0 1 0 0-8 4 4 0 0 0 0 8ZM4 20c1.5-4 5-6 8-6s6.5 2 8 6" />,
+    search: <path d="M11 19a8 8 0 1 0 0-16 8 8 0 0 0 0 16ZM21 21l-4.3-4.3" />,
+    play: <path d="M6 4l14 8-14 8V4Z" fill="currentColor" stroke="none" />,
+    pause: <path d="M7 4h3v16H7zM14 4h3v16h-3z" fill="currentColor" stroke="none" />,
+    skipBack: <path d="M6 4v16M18 4 6 12l12 8V4Z" fill="currentColor" stroke="none" />,
+    skipForward: <path d="M18 4v16M6 4l12 8-12 8V4Z" fill="currentColor" stroke="none" />,
+    headphones: <path d="M4 13v-1a8 8 0 0 1 16 0v1M4 13v5a2 2 0 0 0 2 2h1v-7H5a1 1 0 0 0-1 1ZM20 13v5a2 2 0 0 1-2 2h-1v-7h2a1 1 0 0 1 1 1Z" />,
+    briefcase: <path d="M3 8h18v11H3zM8 8V6a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2M3 13h18" />,
+    coins: <path d="M12 8a4 4 0 1 0 0 8 4 4 0 0 0 0-8ZM3 12a4 8 0 0 0 8 8M21 12a4 8 0 0 1-8 8" />,
+    compass: <path d="M12 21a9 9 0 1 0 0-18 9 9 0 0 0 0 18ZM15 9l-2 6-4-2 2-6 4 2Z" />,
+    brain: <path d="M9 4a3 3 0 0 0-3 3v1a3 3 0 0 0-2 5 3 3 0 0 0 2 5 3 3 0 0 0 3 3M9 4a3 3 0 0 1 3 3v11a3 3 0 0 1-3 3M15 4a3 3 0 0 1 3 3v1a3 3 0 0 1 2 5 3 3 0 0 1-2 5 3 3 0 0 1-3 3M15 4a3 3 0 0 0-3 3v11a3 3 0 0 0 3 3" />,
+    handshake: <path d="M2 12h4l3-3 4 4 3-3h6M9 9l3 6M15 9l-1 3M6 17l2 2h3l2-2M18 17l-2 2h-3" />,
+    bolt: <path d="M13 2 4 14h6l-1 8 9-12h-6l1-8Z" />,
+    flame: <path d="M12 2c1 4-3 5-3 9a3 3 0 0 0 6 0c0-1-1-2-1-3 2 1 3 3 3 5a5 5 0 0 1-10 0c0-6 5-6 5-11Z" />,
+    zap: <path d="M13 2 4 14h6l-1 8 9-12h-6l1-8Z" />,
+    crown: <path d="M3 8l4 3 5-6 5 6 4-3-2 10H5L3 8ZM5 20h14" />,
+    target: <path d="M12 21a9 9 0 1 0 0-18 9 9 0 0 0 0 18ZM12 16a4 4 0 1 0 0-8 4 4 0 0 0 0 8ZM12 13a1 1 0 1 0 0-2 1 1 0 0 0 0 2Z" />,
+    bookOpen: <path d="M12 6c-2-2-6-2-8-1v13c2-1 6-1 8 1 2-2 6-2 8-1V5c-2-1-6-1-8 1ZM12 6v13" />,
+    check: <path d="M5 13l4 4L19 7" />,
+    x: <path d="M6 6l12 12M18 6 6 18" />,
+    lock: <path d="M6 11V8a6 6 0 1 1 12 0v3M5 11h14v10H5V11Z" />,
+    star: <path d="M12 2l3 7 7 1-5.5 5 1.5 7-6-3.5L6 22l1.5-7L2 10l7-1 3-7Z" />,
+    chevronRight: <path d="M9 6l6 6-6 6" />,
+    chevronLeft: <path d="M15 6l-6 6 6 6" />,
+    share: <path d="M4 12v7a1 1 0 0 0 1 1h14a1 1 0 0 0 1-1v-7M16 6l-4-4-4 4M12 2v14" />,
+    sparkle: <path d="M12 2v4M12 18v4M2 12h4M18 12h4M5 5l3 3M16 16l3 3M19 5l-3 3M8 16l-3 3" />,
+    clock: <path d="M12 21a9 9 0 1 0 0-18 9 9 0 0 0 0 18ZM12 7v5l3 3" />,
+    plus: <path d="M12 5v14M5 12h14" />,
+    minus: <path d="M5 12h14" />,
+    heart: <path d="M12 21s-7.5-4.6-10-9.3C.4 8.4 2.3 5 5.8 5c1.9 0 3.4 1 4.2 2.4C10.8 6 12.3 5 14.2 5c3.5 0 5.4 3.4 3.8 6.7C19.5 16.4 12 21 12 21Z" />,
+    graduationCap: <path d="M2 9l10-5 10 5-10 5-10-5ZM6 11.5V17c0 1.4 2.7 3 6 3s6-1.6 6-3v-5.5M22 9v6" />,
+    cpu: <path d="M8 4v3M12 4v3M16 4v3M8 17v3M12 17v3M16 17v3M4 8h3M4 12h3M4 16h3M17 8h3M17 12h3M17 16h3M7 7h10v10H7z" />,
+    flask: <path d="M9 3h6M10 3v6l-5.5 9.5A2 2 0 0 0 6.2 21h11.6a2 2 0 0 0 1.7-3.5L14 9V3M7.5 15h9" />,
+    moon: <path d="M20 14.5A8.5 8.5 0 1 1 9.5 4a7 7 0 0 0 10.5 10.5Z" />,
+    landmark: <path d="M3 21h18M4 21V10M20 21V10M2 10l10-6 10 6M6 10v11M10 10v11M14 10v11M18 10v11" />,
+    users: <path d="M9 11a3 3 0 1 0 0-6 3 3 0 0 0 0 6ZM3 20c0-3.3 2.7-6 6-6s6 2.7 6 6M17 8a3 3 0 1 0 0-6M21 20c0-2.8-1.8-5.1-4.3-5.8" />,
+  };
+  return (
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round" {...props}>
+      {paths[name] || null}
+    </svg>
+  );
+};
+
+/* ═══════════════════════════════════════════════
+   AUTENTICAÇÃO + ESTADO GLOBAL
+
+   Se config.js tiver SUPABASE_URL/SUPABASE_ANON_KEY preenchidos, o app
+   usa Supabase Auth (login/cadastro reais) + tabela "profiles" (ver
+   supabase/schema.sql) para persistir o progresso na nuvem.
+
+   Sem essas chaves configuradas, o app cai em "modo local": cadastro e
+   login funcionam do mesmo jeito, mas tudo fica salvo só neste navegador
+   (localStorage). É o modo usado durante o desenvolvimento/preview.
+
+   silvalucasfsa@gmail.com é reconhecido como administrador nos dois
+   modos: no Supabase isso é garantido pelo gatilho handle_new_user()
+   (schema.sql); no modo local é replicado aqui em ADMIN_EMAIL.
+═══════════════════════════════════════════════ */
+
+const ADMIN_EMAIL = "silvalucasfsa@gmail.com";
+
+const supa = (window.SUPABASE_URL && window.SUPABASE_ANON_KEY
+  && window.SUPABASE_ANON_KEY.indexOf("COLE_") !== 0 && window.supabase)
+  ? window.supabase.createClient(window.SUPABASE_URL, window.SUPABASE_ANON_KEY)
+  : null;
+
+const defaultState = () => ({
+  email: null,
+  name: "Leitor 3X",
+  points: 0,
+  completedBooks: [],       // ids dos resumos concluídos (leitura)
+  quizResults: {},          // { bookId: { score, total, date } }
+  quizzesAbove80: 0,
+  audiobooksListened: 0,
+  streak: 0,
+  lastActiveDate: null,
+  activityDates: [],        // últimas datas ativas (YYYY-MM-DD)
+  maxBooksInOneDay: 0,
+  booksCompletedToday: {},  // { 'YYYY-MM-DD': count }
+  monthlyOpens: {},         // { 'YYYY-MM': [bookId, ...] }
+  isPremium: false,
+  isAdmin: false,
+  unlockedAchievements: [],
+  fontScale: 1,
+});
+
+function adminOverrides(email, base) {
+  if (email !== ADMIN_EMAIL) return base;
+  return { ...base, isAdmin: true, isPremium: true, points: Math.max(base.points, 2000) };
+}
+
+// ── Modo local (fallback sem Supabase) ──────────
+const LOCAL_USERS_KEY = "3xbooks_local_users";
+const LOCAL_SESSION_KEY = "3xbooks_local_session";
+const stateKeyFor = (email) => `3xbooks_state_v1:${email}`;
+
+function localUsersDB() {
+  try { return JSON.parse(localStorage.getItem(LOCAL_USERS_KEY) || "{}"); } catch (e) { return {}; }
+}
+function saveLocalUsersDB(db) {
+  try { localStorage.setItem(LOCAL_USERS_KEY, JSON.stringify(db)); } catch (e) {}
+}
+function loadStateFor(email) {
+  const base = adminOverrides(email, defaultState());
+  try {
+    const raw = localStorage.getItem(stateKeyFor(email));
+    if (!raw) return { ...base, email };
+    return { ...base, ...JSON.parse(raw), email };
+  } catch (e) {
+    return { ...base, email };
+  }
+}
+function saveStateFor(email, state) {
+  try { localStorage.setItem(stateKeyFor(email), JSON.stringify(state)); } catch (e) {}
+}
+
+// ── Modo Supabase — conversão state (camelCase) <-> linha da tabela profiles (snake_case)
+function profileRowToState(row) {
+  const base = adminOverrides(row.email, defaultState());
+  return {
+    ...base,
+    email: row.email,
+    name: row.name || base.name,
+    points: row.points ?? base.points,
+    completedBooks: row.completed_books || [],
+    quizResults: row.quiz_results || {},
+    quizzesAbove80: row.quizzes_above_80 || 0,
+    audiobooksListened: row.audiobooks_listened || 0,
+    streak: row.streak || 0,
+    lastActiveDate: row.last_active_date,
+    activityDates: row.activity_dates || [],
+    maxBooksInOneDay: row.max_books_in_one_day || 0,
+    booksCompletedToday: row.books_completed_today || {},
+    monthlyOpens: row.monthly_opens || {},
+    isPremium: row.is_premium ?? base.isPremium,
+    isAdmin: row.is_admin ?? base.isAdmin,
+    unlockedAchievements: row.unlocked_achievements || [],
+    fontScale: row.font_scale || 1,
+  };
+}
+
+function stateToProfileRow(userId, state) {
+  // is_admin/is_premium são ignorados em updates pelo gatilho protect_privileged_columns
+  // (ver supabase/schema.sql) — só mudam via SQL/admin, nunca pelo próprio cliente.
+  return {
+    id: userId,
+    email: state.email,
+    name: state.name,
+    points: state.points,
+    completed_books: state.completedBooks,
+    quiz_results: state.quizResults,
+    quizzes_above_80: state.quizzesAbove80,
+    audiobooks_listened: state.audiobooksListened,
+    streak: state.streak,
+    last_active_date: state.lastActiveDate,
+    activity_dates: state.activityDates,
+    max_books_in_one_day: state.maxBooksInOneDay,
+    books_completed_today: state.booksCompletedToday,
+    monthly_opens: state.monthlyOpens,
+    is_premium: state.isPremium,
+    is_admin: state.isAdmin,
+    unlocked_achievements: state.unlockedAchievements,
+    font_scale: state.fontScale,
+    updated_at: new Date().toISOString(),
+  };
+}
+
+const todayKey = () => new Date().toISOString().slice(0, 10);
+const monthKey = () => new Date().toISOString().slice(0, 7);
+const dayOfYear = () => {
+  const now = new Date();
+  const start = new Date(now.getFullYear(), 0, 0);
+  const diff = now - start;
+  return Math.floor(diff / 86400000);
+};
+
+const AppCtx = createContext(null);
+const useApp = () => useContext(AppCtx);
+
+/* ═══════════════════════════════════════════════
+   PROVIDER — lógica de progresso, pontos, streak
+═══════════════════════════════════════════════ */
+
+function AppProvider({ children }) {
+  const [session, setSession] = useState(null);
+  const [authLoading, setAuthLoading] = useState(true);
+  const [authError, setAuthError] = useState(null);
+  const [hydrated, setHydrated] = useState(false);
+  const [state, setState] = useState(defaultState);
+  const [toast, setToast] = useState(null);
+  const toastTimer = useRef(null);
+  const saveTimer = useRef(null);
+
+  const showToast = useCallback((msg) => {
+    setToast(msg);
+    clearTimeout(toastTimer.current);
+    toastTimer.current = setTimeout(() => setToast(null), 2600);
+  }, []);
+
+  const loadOrCreateProfile = useCallback(async (user, nameHint) => {
+    setHydrated(false);
+    let row = null;
+    for (let i = 0; i < 5 && !row; i++) {
+      const { data } = await supa.from("profiles").select("*").eq("id", user.id).maybeSingle();
+      if (data) { row = data; break; }
+      await new Promise((r) => setTimeout(r, 400));
+    }
+    if (row) {
+      setState(profileRowToState(row));
+    } else {
+      // Gatilho ainda não criou a linha (raro) — usa um estado inicial local;
+      // o próximo salvamento faz upsert e cria a linha na tabela profiles.
+      const base = adminOverrides(user.email, defaultState());
+      setState({ ...base, email: user.email, name: nameHint || user.email.split("@")[0] });
+    }
+    setHydrated(true);
+  }, []);
+
+  // Bootstrap de sessão ao carregar o app
+  useEffect(() => {
+    let cancelled = false;
+    async function init() {
+      if (supa) {
+        const { data } = await supa.auth.getSession();
+        if (cancelled) return;
+        if (data.session) {
+          setSession(data.session);
+          await loadOrCreateProfile(data.session.user);
+        }
+        setAuthLoading(false);
+        supa.auth.onAuthStateChange((event, newSession) => {
+          setSession(newSession);
+          if (newSession) {
+            loadOrCreateProfile(newSession.user);
+          } else {
+            setState(defaultState());
+            setHydrated(false);
+          }
+        });
+      } else {
+        const savedEmail = localStorage.getItem(LOCAL_SESSION_KEY);
+        if (savedEmail) {
+          setSession({ user: { email: savedEmail, id: "local:" + savedEmail } });
+          setState(loadStateFor(savedEmail));
+          setHydrated(true);
+        }
+        setAuthLoading(false);
+      }
+    }
+    init();
+    return () => { cancelled = true; };
+  }, [loadOrCreateProfile]);
+
+  // Persistência — só depois que o perfil já foi carregado (evita sobrescrever
+  // dados da nuvem com o estado padrão antes do fetch inicial terminar)
+  useEffect(() => {
+    if (!session || !hydrated) return;
+    if (supa) {
+      clearTimeout(saveTimer.current);
+      saveTimer.current = setTimeout(() => {
+        supa.from("profiles").upsert(stateToProfileRow(session.user.id, state), { onConflict: "id" })
+          .then(({ error }) => { if (error) console.error("Erro ao salvar progresso:", error.message); });
+      }, 600);
+    } else {
+      saveStateFor(session.user.email, state);
+    }
+  }, [state, session, hydrated]);
+
+  const signUp = useCallback(async ({ email, password, name }) => {
+    setAuthError(null);
+    if (supa) {
+      const { data, error } = await supa.auth.signUp({ email, password, options: { data: { name } } });
+      if (error) { setAuthError(error.message); return { ok: false }; }
+      if (data.session) {
+        setSession(data.session);
+        await loadOrCreateProfile(data.session.user, name);
+      }
+      return { ok: true, needsConfirmation: !data.session };
+    }
+    const db = localUsersDB();
+    if (db[email]) { setAuthError("Este e-mail já está cadastrado."); return { ok: false }; }
+    db[email] = { password, name, createdAt: Date.now() };
+    saveLocalUsersDB(db);
+    localStorage.setItem(LOCAL_SESSION_KEY, email);
+    const st = { ...loadStateFor(email), name: name || "Leitor 3X", email };
+    saveStateFor(email, st);
+    setSession({ user: { email, id: "local:" + email } });
+    setState(st);
+    setHydrated(true);
+    return { ok: true, needsConfirmation: false };
+  }, [loadOrCreateProfile]);
+
+  const signIn = useCallback(async ({ email, password }) => {
+    setAuthError(null);
+    if (supa) {
+      const { data, error } = await supa.auth.signInWithPassword({ email, password });
+      if (error) { setAuthError(error.message); return { ok: false }; }
+      setSession(data.session);
+      await loadOrCreateProfile(data.session.user);
+      return { ok: true };
+    }
+    const db = localUsersDB();
+    const rec = db[email];
+    if (!rec || rec.password !== password) { setAuthError("E-mail ou senha inválidos."); return { ok: false }; }
+    localStorage.setItem(LOCAL_SESSION_KEY, email);
+    setSession({ user: { email, id: "local:" + email } });
+    setState(loadStateFor(email));
+    setHydrated(true);
+    return { ok: true };
+  }, [loadOrCreateProfile]);
+
+  const signOut = useCallback(async () => {
+    if (supa) await supa.auth.signOut();
+    else localStorage.removeItem(LOCAL_SESSION_KEY);
+    setSession(null);
+    setState(defaultState());
+    setHydrated(false);
+    setAuthError(null);
+  }, []);
+
+  const touchActivity = useCallback(() => {
+    setState((s) => {
+      const today = todayKey();
+      if (s.lastActiveDate === today) return s;
+      const yesterday = new Date(Date.now() - 86400000).toISOString().slice(0, 10);
+      const newStreak = s.lastActiveDate === yesterday ? s.streak + 1 : 1;
+      return { ...s, lastActiveDate: today, streak: newStreak, activityDates: [...new Set([...s.activityDates, today])].slice(-30) };
+    });
+  }, []);
+
+  const canOpenBook = useCallback((bookId) => {
+    if (state.isAdmin || state.isPremium) return true;
+    const book = window.BOOKS.find((b) => b.id === bookId);
+    if (book && !book.premium) return true;
+    const mk = monthKey();
+    const opened = state.monthlyOpens[mk] || [];
+    if (opened.includes(bookId)) return true;
+    return opened.length < 3;
+  }, [state.isAdmin, state.isPremium, state.monthlyOpens]);
+
+  const registerOpen = useCallback((bookId) => {
+    touchActivity();
+    setState((s) => {
+      const mk = monthKey();
+      const opened = s.monthlyOpens[mk] || [];
+      if (opened.includes(bookId)) return s;
+      return { ...s, monthlyOpens: { ...s.monthlyOpens, [mk]: [...opened, bookId] } };
+    });
+  }, [touchActivity]);
+
+  const completeBook = useCallback((bookId) => {
+    touchActivity();
+    setState((s) => {
+      if (s.completedBooks.includes(bookId)) return s;
+      const today = todayKey();
+      const doneToday = (s.booksCompletedToday[today] || 0) + 1;
+      return {
+        ...s,
+        points: s.points + 20,
+        completedBooks: [...s.completedBooks, bookId],
+        booksCompletedToday: { ...s.booksCompletedToday, [today]: doneToday },
+        maxBooksInOneDay: Math.max(s.maxBooksInOneDay, doneToday),
+      };
+    });
+    showToast("+20 pontos · resumo concluído");
+  }, [touchActivity, showToast]);
+
+  const registerAudioListen = useCallback(() => {
+    setState((s) => ({ ...s, audiobooksListened: s.audiobooksListened + 1 }));
+  }, []);
+
+  const submitQuiz = useCallback((bookId, score, total) => {
+    touchActivity();
+    const pct = score / total;
+    const bonus = pct >= 0.8 ? 50 : 0;
+    const earned = score * 10 + bonus;
+    setState((s) => ({
+      ...s,
+      points: s.points + earned,
+      quizResults: { ...s.quizResults, [bookId]: { score, total, date: todayKey() } },
+      quizzesAbove80: s.quizzesAbove80 + (pct >= 0.8 ? 1 : 0),
+    }));
+    return earned;
+  }, [touchActivity]);
+
+  const setPremium = useCallback((val) => setState((s) => ({ ...s, isPremium: val })), []);
+  const setFontScale = useCallback((v) => setState((s) => ({ ...s, fontScale: v })), []);
+
+  useEffect(() => {
+    if (!hydrated) return;
+    const readableBooks = window.BOOKS.filter((b) => b.chapters && b.chapters.length > 0).length;
+    (window.ACHIEVEMENTS || []).forEach((a) => {
+      if (!state.unlockedAchievements.includes(a.id) && a.check(state, readableBooks)) {
+        setState((s) => s.unlockedAchievements.includes(a.id) ? s : { ...s, unlockedAchievements: [...s.unlockedAchievements, a.id] });
+        showToast(`🏆 Conquista desbloqueada: ${a.title}`);
+      }
+    });
+  }, [hydrated, state.completedBooks, state.quizzesAbove80, state.streak, state.audiobooksListened, state.maxBooksInOneDay]);
+
+  const value = {
+    state, setState, showToast,
+    canOpenBook, registerOpen, completeBook, registerAudioListen, submitQuiz,
+    setPremium, setFontScale,
+    session, authLoading, authError, hydrated,
+    configured: !!supa,
+    signUp, signIn, signOut,
+  };
+
+  return (
+    <AppCtx.Provider value={value}>
+      {children}
+      {toast && <div className="toast">{toast}</div>}
+    </AppCtx.Provider>
+  );
+}
+
+/* ═══════════════════════════════════════════════
+   COMPONENTES COMPARTILHADOS
+═══════════════════════════════════════════════ */
+
+function getLevel(points) {
+  return window.LEVELS.find((l) => points >= l.min && points <= l.max) || window.LEVELS[0];
+}
+
+function BookCover({ book, size = "grid" }) {
+  const hasContent = book.chapters && book.chapters.length > 0;
+  return (
+    <div className="book-cover">
+      <Icon name={book.coverIcon} />
+      {!hasContent && <span className="book-cover-badge" style={{ color: "var(--silver)" }}>Em breve</span>}
+      {hasContent && book.premium && <span className="book-cover-badge">Premium</span>}
+    </div>
+  );
+}
+
+function BookCard({ book, onClick }) {
+  return (
+    <button className="book-card" onClick={onClick}>
+      <BookCover book={book} />
+      <div className="book-info">
+        <div className="book-category">{book.category}</div>
+        <div className="book-title">{book.title}</div>
+        <div className="book-meta-row">
+          <Icon name="clock" style={{ width: 12, height: 12 }} />
+          <span>{book.readTimeMin} min</span>
+        </div>
+      </div>
+    </button>
+  );
+}
+
+function PaywallModal({ onClose }) {
+  const { setPremium, showToast } = useApp();
+  const fakeSubscribe = (plan) => {
+    showToast("Integração de pagamento (Stripe/Mercado Pago) em breve — assinatura simulada.");
+    setPremium(true);
+    onClose();
+  };
+  return (
+    <div className="modal-backdrop" onClick={onClose}>
+      <div className="modal-sheet" onClick={(e) => e.stopPropagation()}>
+        <div className="modal-handle" />
+        <div style={{ textAlign: "center", marginBottom: 20 }}>
+          <Icon name="crown" style={{ width: 30, height: 30, color: "var(--gold-light)", marginBottom: 8 }} />
+          <h2 style={{ fontSize: 22, marginBottom: 6 }}>Desbloqueie a Biblioteca 3X</h2>
+          <p style={{ color: "var(--silver)", fontSize: 14.5 }}>
+            No plano grátis você lê 3 resumos por mês. Vire Premium e tenha acesso ilimitado a todos os títulos, sem espera.
+          </p>
+        </div>
+
+        <div className="plan-card featured">
+          <span className="plan-badge">2 meses grátis</span>
+          <div style={{ fontSize: 13, color: "var(--silver-dim)", marginBottom: 4, fontWeight: 700 }}>PLANO ANUAL</div>
+          <div className="plan-price">R$ 179<span>/ano</span></div>
+          <div style={{ fontSize: 12.5, color: "var(--gold-light)", marginTop: 4 }}>Equivale a R$ 14,90/mês</div>
+          <button className="btn-gold" style={{ marginTop: 14 }} onClick={() => fakeSubscribe("anual")}>Assinar plano anual</button>
+        </div>
+
+        <div className="plan-card">
+          <div style={{ fontSize: 13, color: "var(--silver-dim)", marginBottom: 4, fontWeight: 700 }}>PLANO MENSAL</div>
+          <div className="plan-price">R$ 24,90<span>/mês</span></div>
+          <button className="btn-ghost" style={{ marginTop: 14 }} onClick={() => fakeSubscribe("mensal")}>Assinar plano mensal</button>
+        </div>
+
+        <button className="text-btn" style={{ display: "block", margin: "16px auto 0" }} onClick={onClose}>Continuar no plano grátis</button>
+      </div>
+    </div>
+  );
+}
+
+/* ═══════════════════════════════════════════════
+   AUTENTICAÇÃO — tela inicial de login / cadastro
+═══════════════════════════════════════════════ */
+
+function AuthScreen() {
+  const { signIn, signUp, authError, configured } = useApp();
+  const [mode, setMode] = useState("login"); // "login" | "signup"
+  const [name, setName] = useState("");
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
+  const [loading, setLoading] = useState(false);
+  const [notice, setNotice] = useState(null);
+
+  const submit = async (e) => {
+    e.preventDefault();
+    setNotice(null);
+    setLoading(true);
+    if (mode === "login") {
+      await signIn({ email: email.trim(), password });
+      setLoading(false);
+    } else {
+      const res = await signUp({ email: email.trim(), password, name: name.trim() || "Leitor 3X" });
+      setLoading(false);
+      if (res.ok && res.needsConfirmation) {
+        setNotice("Cadastro criado! Confira seu e-mail para confirmar a conta antes de entrar.");
+        setMode("login");
+      }
+    }
+  };
+
+  return (
+    <div className="auth-wrap">
+      <div className="auth-card">
+        <div className="brand" style={{ justifyContent: "center", marginBottom: 18 }}>
+          <div className="brand-mark">3X</div>
+          <div className="brand-name">3X <span>Books</span></div>
+        </div>
+
+        <h1 className="auth-title">{mode === "login" ? "Bem-vindo de volta" : "Crie sua conta"}</h1>
+        <p className="auth-subtitle">
+          {mode === "login" ? "Entre para continuar sua trilha de aprendizado." : "Comece sua jornada de microlearning 3X."}
+        </p>
+
+        {!configured && (
+          <div className="auth-banner">Modo local: configure config.js para sincronizar na nuvem.</div>
+        )}
+
+        <form onSubmit={submit}>
+          {mode === "signup" && (
+            <div className="auth-field">
+              <label htmlFor="auth-name">Nome</label>
+              <input id="auth-name" className="auth-input" type="text" value={name} onChange={(e) => setName(e.target.value)} placeholder="Seu nome" />
+            </div>
+          )}
+          <div className="auth-field">
+            <label htmlFor="auth-email">E-mail</label>
+            <input id="auth-email" className="auth-input" type="email" required value={email} onChange={(e) => setEmail(e.target.value)} placeholder="voce@email.com" autoComplete="email" />
+          </div>
+          <div className="auth-field">
+            <label htmlFor="auth-password">Senha</label>
+            <input id="auth-password" className="auth-input" type="password" required minLength={6} value={password} onChange={(e) => setPassword(e.target.value)} placeholder="Mínimo 6 caracteres" autoComplete={mode === "login" ? "current-password" : "new-password"} />
+          </div>
+
+          {authError && <div className="auth-error">{authError}</div>}
+          {notice && <div className="auth-notice">{notice}</div>}
+
+          <button className="btn-gold" type="submit" disabled={loading} style={{ marginTop: 6 }}>
+            {loading ? "Aguarde..." : mode === "login" ? "Entrar" : "Criar conta 3X"}
+          </button>
+        </form>
+
+        <button
+          className="text-btn"
+          style={{ display: "block", margin: "18px auto 0" }}
+          onClick={() => { setMode(mode === "login" ? "signup" : "login"); setNotice(null); }}
+        >
+          {mode === "login" ? "Não tem conta? Criar conta" : "Já tem conta? Entrar"}
+        </button>
+      </div>
+      <div className="auth-footer-slogan">Multiplicando negócios. Construindo legado.</div>
+    </div>
+  );
+}
+
+/* ═══════════════════════════════════════════════
+   HOME
+═══════════════════════════════════════════════ */
+
+function HomeScreen({ nav }) {
+  const { state } = useApp();
+  const reflection = window.REFLECTIONS[dayOfYear() % window.REFLECTIONS.length];
+  const idea = window.BUSINESS_IDEAS[dayOfYear() % window.BUSINESS_IDEAS.length];
+  const level = getLevel(state.points);
+  const inProgress = window.BOOKS
+    .filter((b) => b.chapters && b.chapters.length > 0 && !state.completedBooks.includes(b.id))
+    .slice(0, 4);
+
+  const shareReflection = () => {
+    const text = `"${reflection}" — via 3X Books`;
+    if (navigator.share) {
+      navigator.share({ text }).catch(() => {});
+    } else {
+      navigator.clipboard?.writeText(text);
+      window.__toast && window.__toast("Reflexão copiada!");
+    }
+  };
+
+  return (
+    <div className="app-screen">
+      <div className="topbar">
+        <div className="brand">
+          <div className="brand-mark">3X</div>
+          <div className="brand-name">3X <span>Books</span></div>
+        </div>
+        <button className="btn-icon" onClick={() => nav("perfil")}>
+          <Icon name="profile" />
+        </button>
+      </div>
+
+      <div style={{ display: "flex", alignItems: "center", justifyContent: "space-between", marginBottom: 18 }}>
+        <div>
+          <div style={{ color: "var(--silver-dim)", fontSize: 13 }}>Olá,</div>
+          <div style={{ fontFamily: "var(--font-display)", fontSize: 20, fontWeight: 600 }}>{state.name}</div>
+        </div>
+        <div className="pill">
+          <Icon name="flame" style={{ color: "var(--gold)" }} />
+          {state.streak} dias
+        </div>
+      </div>
+
+      <div className="reflection-card">
+        <span className="reflection-quote-mark">“</span>
+        <div className="reflection-text">{reflection}</div>
+        <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center" }}>
+          <span style={{ fontSize: 12, color: "var(--silver-dim)", textTransform: "uppercase", letterSpacing: "0.06em" }}>Reflexão do dia</span>
+          <button className="btn-icon" onClick={shareReflection} style={{ width: 34, height: 34 }}>
+            <Icon name="share" style={{ width: 15, height: 15 }} />
+          </button>
+        </div>
+      </div>
+
+      <div className="idea-card">
+        <div className="section-title" style={{ marginBottom: 6 }}>💡 Ideia de negócio do dia</div>
+        <div style={{ fontFamily: "var(--font-display)", fontSize: 18, marginBottom: 8 }}>{idea.title}</div>
+        <p style={{ color: "var(--silver)", fontSize: 14.5, lineHeight: 1.6 }}>{idea.concept}</p>
+        <div className="idea-meta-row">
+          <div className="idea-meta">
+            <div className="idea-meta-label">Investimento</div>
+            <div className="idea-meta-value">{idea.investment}</div>
+          </div>
+          <div className="idea-meta">
+            <div className="idea-meta-label">Primeiro passo</div>
+            <div className="idea-meta-value">{idea.firstStep}</div>
+          </div>
+        </div>
+        <p style={{ color: "var(--silver-dim)", fontSize: 13, marginTop: 12, fontStyle: "italic" }}>Exemplo real: {idea.example}</p>
+      </div>
+
+      <div className="header-row">
+        <div className="section-title" style={{ marginBottom: 0 }}>Continue aprendendo</div>
+        <button className="text-btn" onClick={() => nav("biblioteca")}>Ver tudo</button>
+      </div>
+      <div className="book-grid">
+        {inProgress.map((b) => (
+          <BookCard key={b.id} book={b} onClick={() => nav("detalhe", { bookId: b.id })} />
+        ))}
+      </div>
+
+      <div className="divider" />
+      <div className="card card-gold-edge">
+        <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center", marginBottom: 10 }}>
+          <div>
+            <div style={{ fontSize: 12, color: "var(--silver-dim)", textTransform: "uppercase" }}>Seu nível</div>
+            <div style={{ fontFamily: "var(--font-display)", fontSize: 18, color: "var(--gold-light)" }}>{level.name}</div>
+          </div>
+          <div style={{ fontFamily: "var(--font-display)", fontSize: 22 }}>{state.points} pts</div>
+        </div>
+        <div className="progress-track">
+          <div className="progress-fill" style={{ width: `${level.max === Infinity ? 100 : Math.min(100, ((state.points - level.min) / (level.max - level.min)) * 100)}%` }} />
+        </div>
+      </div>
+    </div>
+  );
+}
+
+/* ═══════════════════════════════════════════════
+   BIBLIOTECA
+═══════════════════════════════════════════════ */
+
+const LIBRARY_PAGE_SIZE = 60;
+
+function LibraryScreen({ nav }) {
+  const [query, setQuery] = useState("");
+  const [category, setCategory] = useState("Todas");
+  const [visibleCount, setVisibleCount] = useState(LIBRARY_PAGE_SIZE);
+
+  useEffect(() => { setVisibleCount(LIBRARY_PAGE_SIZE); }, [query, category]);
+
+  const filtered = window.BOOKS.filter((b) => {
+    const matchesQuery = b.title.toLowerCase().includes(query.toLowerCase()) || b.author.toLowerCase().includes(query.toLowerCase());
+    const matchesCategory = category === "Todas" || b.category === category;
+    return matchesQuery && matchesCategory;
+  });
+  const visible = filtered.slice(0, visibleCount);
+  const readableCount = window.BOOKS.filter((b) => b.chapters && b.chapters.length > 0).length;
+
+  return (
+    <div className="app-screen">
+      <div className="topbar">
+        <h1 style={{ fontSize: 24 }}>Biblioteca</h1>
+      </div>
+
+      <div className="search-bar">
+        <Icon name="search" />
+        <input placeholder="Buscar por título ou autor..." value={query} onChange={(e) => setQuery(e.target.value)} />
+      </div>
+
+      <div className="chip-row">
+        {["Todas", ...window.CATEGORIES].map((c) => (
+          <button key={c} className={`chip ${category === c ? "active" : ""}`} onClick={() => setCategory(c)}>{c}</button>
+        ))}
+      </div>
+
+      {filtered.length === 0 ? (
+        <div className="empty-state">
+          <Icon name="search" />
+          <div>Nenhum resumo encontrado.</div>
+        </div>
+      ) : (
+        <>
+          <div className="book-grid">
+            {visible.map((b) => (
+              <BookCard key={b.id} book={b} onClick={() => nav("detalhe", { bookId: b.id })} />
+            ))}
+          </div>
+          {visibleCount < filtered.length && (
+            <button className="btn-ghost" style={{ marginTop: 18 }} onClick={() => setVisibleCount((v) => v + LIBRARY_PAGE_SIZE)}>
+              Carregar mais ({filtered.length - visibleCount} restantes)
+            </button>
+          )}
+        </>
+      )}
+
+      <p style={{ textAlign: "center", color: "var(--silver-dim)", fontSize: 12.5, marginTop: 24 }}>
+        {readableCount} resumos completos · {window.BOOKS.length} títulos no catálogo · em expansão contínua
+      </p>
+    </div>
+  );
+}
+
+/* ═══════════════════════════════════════════════
+   DETALHE DO LIVRO
+═══════════════════════════════════════════════ */
+
+function BookDetailScreen({ nav, params }) {
+  const { state, canOpenBook, registerOpen } = useApp();
+  const [showPaywall, setShowPaywall] = useState(false);
+  const book = window.BOOKS.find((b) => b.id === params.bookId);
+  if (!book) return <div className="app-screen">Resumo não encontrado.</div>;
+
+  const isCompleted = state.completedBooks.includes(book.id);
+  const quizResult = state.quizResults[book.id];
+  const hasContent = book.chapters && book.chapters.length > 0;
+
+  const handleStart = (mode) => {
+    if (!canOpenBook(book.id)) { setShowPaywall(true); return; }
+    registerOpen(book.id);
+    nav(mode === "audio" ? "audio" : "leitura", { bookId: book.id, chapter: 0 });
+  };
+
+  return (
+    <div className="app-screen">
+      <div className="topbar">
+        <button className="btn-icon" onClick={() => nav("biblioteca")}><Icon name="chevronLeft" /></button>
+        {isCompleted && <div className="pill"><Icon name="check" style={{ color: "var(--success)" }} />Concluído</div>}
+      </div>
+
+      <div className="detail-hero">
+        <div className="detail-cover"><Icon name={book.coverIcon} /></div>
+        <div style={{ flex: 1 }}>
+          <div style={{ fontSize: 12.5, color: "var(--gold)", fontWeight: 700, textTransform: "uppercase", marginBottom: 4 }}>{book.category}</div>
+          <h2 style={{ fontSize: 20, lineHeight: 1.3, marginBottom: 6 }}>{book.title}</h2>
+          <div style={{ fontSize: 13, color: "var(--silver-dim)", marginBottom: 10 }}>{book.author}</div>
+          <div style={{ display: "flex", gap: 8, flexWrap: "wrap" }}>
+            <div className="pill"><Icon name="clock" />{book.readTimeMin} min</div>
+            {hasContent && <div className="pill"><Icon name="bookOpen" />{book.chapters.length} ideias-chave</div>}
+            {book.premium && <div className="pill" style={{ color: "var(--gold-light)", borderColor: "var(--border-strong)" }}><Icon name="crown" />Premium</div>}
+          </div>
+        </div>
+      </div>
+
+      {hasContent ? (
+        <>
+          <p style={{ color: "var(--silver)", lineHeight: 1.7, marginBottom: 22 }}>{book.synopsis}</p>
+
+          <div style={{ display: "flex", gap: 10, marginBottom: 26 }}>
+            <button className="btn-gold" onClick={() => handleStart("leitura")}>
+              <Icon name="bookOpen" style={{ width: 18, height: 18 }} /> Ler resumo
+            </button>
+            <button className="btn-ghost" style={{ flex: "0 0 auto", width: 54 }} onClick={() => handleStart("audio")}>
+              <Icon name="headphones" style={{ width: 18, height: 18 }} />
+            </button>
+          </div>
+
+          <div className="section-title">Ideias-chave</div>
+          <div className="card">
+            {book.chapters.map((ch, i) => (
+              <div className="chapter-list-item" key={i}>
+                <div className="chapter-num">{i + 1}</div>
+                <div style={{ fontSize: 14.5, fontWeight: 600 }}>{ch.title}</div>
+              </div>
+            ))}
+          </div>
+
+          <div className="section-title" style={{ marginTop: 24 }}>Quiz</div>
+          <div className="card" style={{ display: "flex", alignItems: "center", justifyContent: "space-between" }}>
+            <div>
+              <div style={{ fontWeight: 700, marginBottom: 4 }}>10 perguntas · 4 alternativas</div>
+              <div style={{ fontSize: 13, color: "var(--silver-dim)" }}>
+                {quizResult ? `Última nota: ${quizResult.score}/${quizResult.total}` : "Ainda não feito"}
+              </div>
+            </div>
+            <button className="btn-icon" onClick={() => nav("quiz", { bookId: book.id })}><Icon name="chevronRight" /></button>
+          </div>
+        </>
+      ) : (
+        <div className="card" style={{ textAlign: "center", padding: "32px 20px" }}>
+          <Icon name="sparkle" style={{ width: 26, height: 26, color: "var(--gold)", marginBottom: 10 }} />
+          <div style={{ fontWeight: 700, marginBottom: 6 }}>Resumo completo em breve</div>
+          <p style={{ color: "var(--silver-dim)", fontSize: 13.5, lineHeight: 1.6 }}>
+            Este título já está no catálogo 3X Books. O resumo, o áudio e o quiz estão sendo produzidos e chegam em uma próxima atualização.
+          </p>
+        </div>
+      )}
+
+      {showPaywall && <PaywallModal onClose={() => setShowPaywall(false)} />}
+    </div>
+  );
+}
+
+/* ═══════════════════════════════════════════════
+   LEITURA (texto)
+═══════════════════════════════════════════════ */
+
+function ReadingScreen({ nav, params }) {
+  const { state, completeBook, setFontScale } = useApp();
+  const book = window.BOOKS.find((b) => b.id === params.bookId);
+  const [idx, setIdx] = useState(params.chapter || 0);
+  useEffect(() => { setIdx(params.chapter || 0); }, [params.bookId]);
+  if (!book) return null;
+
+  const chapter = book.chapters[idx];
+  const isLast = idx === book.chapters.length - 1;
+  const progressPct = ((idx + 1) / book.chapters.length) * 100;
+
+  const next = () => {
+    if (isLast) {
+      completeBook(book.id);
+      nav("quiz", { bookId: book.id });
+    } else {
+      setIdx(idx + 1);
+      window.scrollTo({ top: 0, behavior: "smooth" });
+    }
+  };
+  const prev = () => { if (idx > 0) { setIdx(idx - 1); window.scrollTo({ top: 0 }); } };
+
+  return (
+    <div className="app-screen">
+      <div className="reading-header">
+        <div style={{ display: "flex", alignItems: "center", justifyContent: "space-between", marginBottom: 10 }}>
+          <button className="btn-icon" onClick={() => nav("detalhe", { bookId: book.id })}><Icon name="chevronLeft" /></button>
+          <div className="font-toggle">
+            <button onClick={() => setFontScale(Math.max(0.85, state.fontScale - 0.1))}><Icon name="minus" style={{ width: 14, height: 14 }} /></button>
+            <span style={{ fontSize: 12, color: "var(--silver-dim)" }}>Aa</span>
+            <button onClick={() => setFontScale(Math.min(1.4, state.fontScale + 0.1))}><Icon name="plus" style={{ width: 14, height: 14 }} /></button>
+          </div>
+        </div>
+        <div className="progress-track"><div className="progress-fill" style={{ width: `${progressPct}%` }} /></div>
+      </div>
+
+      <div style={{ fontSize: `${state.fontScale}em` }}>
+        <div className="chapter-reading-title">Ideia-chave {idx + 1} de {book.chapters.length}</div>
+        <h2 className="chapter-reading-heading">{chapter.title}</h2>
+        <p className="chapter-reading-body">{chapter.content}</p>
+      </div>
+
+      <div className="reading-nav">
+        {idx > 0 && <button className="btn-ghost" onClick={prev}>Anterior</button>}
+        <button className="btn-gold" onClick={next}>{isLast ? "Concluir e fazer quiz" : "Próxima ideia"}</button>
+      </div>
+    </div>
+  );
+}
+
+/* ═══════════════════════════════════════════════
+   AUDIOBOOK — Web Speech API
+═══════════════════════════════════════════════ */
+
+function AudioScreen({ nav, params }) {
+  const { completeBook, registerAudioListen } = useApp();
+  const book = window.BOOKS.find((b) => b.id === params.bookId);
+  const [idx, setIdx] = useState(0);
+  const [playing, setPlaying] = useState(false);
+  const [rate, setRate] = useState(1);
+  const [supported, setSupported] = useState(true);
+  const utterRef = useRef(null);
+  const listenedRef = useRef(false);
+
+  useEffect(() => {
+    if (!("speechSynthesis" in window)) { setSupported(false); }
+    return () => { window.speechSynthesis && window.speechSynthesis.cancel(); };
+  }, []);
+
+  useEffect(() => {
+    window.speechSynthesis && window.speechSynthesis.cancel();
+    setPlaying(false);
+  }, [idx, book?.id]);
+
+  if (!book) return null;
+  const chapter = book.chapters[idx];
+  const isLast = idx === book.chapters.length - 1;
+
+  const pickVoice = () => {
+    const voices = window.speechSynthesis.getVoices();
+    return voices.find((v) => v.lang === "pt-BR") || voices.find((v) => v.lang && v.lang.startsWith("pt")) || null;
+  };
+
+  const speak = () => {
+    if (!supported) return;
+    window.speechSynthesis.cancel();
+    const utter = new SpeechSynthesisUtterance(`${chapter.title}. ${chapter.content}`);
+    utter.lang = "pt-BR";
+    utter.rate = rate;
+    const voice = pickVoice();
+    if (voice) utter.voice = voice;
+    utter.onend = () => {
+      setPlaying(false);
+      if (!listenedRef.current) { registerAudioListen(); listenedRef.current = true; }
+      if (isLast) { completeBook(book.id); } else { setIdx((i) => i + 1); }
+    };
+    utterRef.current = utter;
+    window.speechSynthesis.speak(utter);
+    setPlaying(true);
+  };
+
+  const togglePlay = () => {
+    if (!supported) return;
+    if (playing) {
+      window.speechSynthesis.pause();
+      setPlaying(false);
+    } else if (window.speechSynthesis.paused) {
+      window.speechSynthesis.resume();
+      setPlaying(true);
+    } else {
+      speak();
+    }
+  };
+
+  const skip = (dir) => {
+    const newIdx = Math.min(book.chapters.length - 1, Math.max(0, idx + dir));
+    setIdx(newIdx);
+  };
+
+  return (
+    <div className="app-screen">
+      <div className="topbar">
+        <button className="btn-icon" onClick={() => { window.speechSynthesis && window.speechSynthesis.cancel(); nav("detalhe", { bookId: book.id }); }}><Icon name="chevronLeft" /></button>
+        <div className="pill"><Icon name="headphones" />Áudio</div>
+      </div>
+
+      <div style={{ textAlign: "center", margin: "20px 0 8px" }}>
+        <div className="detail-cover" style={{ margin: "0 auto 16px", width: 130, height: 174 }}><Icon name={book.coverIcon} /></div>
+        <h2 style={{ fontSize: 20 }}>{book.title}</h2>
+        <div style={{ color: "var(--silver-dim)", fontSize: 13.5, marginTop: 4 }}>Ideia {idx + 1} de {book.chapters.length} · {chapter.title}</div>
+      </div>
+
+      {!supported && (
+        <div className="card" style={{ textAlign: "center", color: "var(--silver)" }}>
+          Seu navegador não suporta a Web Speech API. Tente em Chrome ou Edge no desktop/Android.
+        </div>
+      )}
+
+      <div className="audio-panel">
+        <div className="progress-track"><div className="progress-fill" style={{ width: `${((idx + 1) / book.chapters.length) * 100}%` }} /></div>
+        <div className="audio-controls">
+          <button className="audio-skip-btn" onClick={() => skip(-1)} disabled={idx === 0}><Icon name="skipBack" /></button>
+          <button className="audio-play-btn" onClick={togglePlay} disabled={!supported}>
+            <Icon name={playing ? "pause" : "play"} />
+          </button>
+          <button className="audio-skip-btn" onClick={() => skip(1)} disabled={isLast}><Icon name="skipForward" /></button>
+        </div>
+        <div className="speed-row">
+          {[0.75, 1, 1.25, 1.5, 2].map((r) => (
+            <button key={r} className={`speed-chip ${rate === r ? "active" : ""}`} onClick={() => setRate(r)}>{r}x</button>
+          ))}
+        </div>
+      </div>
+
+      <p style={{ color: "var(--silver)", lineHeight: 1.8, fontSize: 15 }}>{chapter.content}</p>
+
+      {isLast && (
+        <button className="btn-gold" style={{ marginTop: 20 }} onClick={() => nav("quiz", { bookId: book.id })}>Ir para o quiz</button>
+      )}
+    </div>
+  );
+}
+
+/* ═══════════════════════════════════════════════
+   QUIZ
+═══════════════════════════════════════════════ */
+
+function QuizScreen({ nav, params }) {
+  const { submitQuiz } = useApp();
+  const book = window.BOOKS.find((b) => b.id === params.bookId);
+  const [qIdx, setQIdx] = useState(0);
+  const [selected, setSelected] = useState(null);
+  const [score, setScore] = useState(0);
+  const [finished, setFinished] = useState(false);
+  const [earnedPoints, setEarnedPoints] = useState(0);
+
+  if (!book) return null;
+  const question = book.quiz[qIdx];
+  const isLast = qIdx === book.quiz.length - 1;
+
+  const choose = (i) => {
+    if (selected !== null) return;
+    setSelected(i);
+    if (i === question.correct) setScore((s) => s + 1);
+  };
+
+  const next = () => {
+    if (isLast) {
+      const finalScore = score + (selected === question.correct && selected !== null ? 0 : 0);
+      const earned = submitQuiz(book.id, score, book.quiz.length);
+      setEarnedPoints(earned);
+      setFinished(true);
+    } else {
+      setQIdx(qIdx + 1);
+      setSelected(null);
+    }
+  };
+
+  if (finished) {
+    const pct = Math.round((score / book.quiz.length) * 100);
+    return (
+      <div className="app-screen" style={{ textAlign: "center" }}>
+        <div style={{ marginTop: 30 }}>
+          <Icon name="crown" style={{ width: 40, height: 40, color: "var(--gold-light)" }} />
+        </div>
+        <div className="quiz-result-score">{score}/{book.quiz.length}</div>
+        <div style={{ color: "var(--silver)", marginBottom: 6 }}>{pct}% de acerto</div>
+        {pct >= 80 && <div className="pill" style={{ margin: "10px auto", width: "fit-content" }}><Icon name="sparkle" style={{ color: "var(--gold)" }} />Bônus de 50 pts!</div>}
+        <div style={{ fontFamily: "var(--font-display)", fontSize: 20, color: "var(--gold-light)", margin: "18px 0" }}>+{earnedPoints} pontos</div>
+        <div style={{ display: "flex", flexDirection: "column", gap: 10, marginTop: 20 }}>
+          <button className="btn-gold" onClick={() => nav("trilha")}>Ver minha trilha</button>
+          <button className="btn-ghost" onClick={() => nav("biblioteca")}>Voltar à biblioteca</button>
+        </div>
+      </div>
+    );
+  }
+
+  return (
+    <div className="app-screen">
+      <div className="topbar">
+        <button className="btn-icon" onClick={() => nav("detalhe", { bookId: book.id })}><Icon name="chevronLeft" /></button>
+        <div style={{ fontSize: 13, color: "var(--silver-dim)" }}>{qIdx + 1} / {book.quiz.length}</div>
+      </div>
+
+      <div className="quiz-progress-dots">
+        {book.quiz.map((_, i) => (
+          <div key={i} className={`quiz-dot ${i < qIdx ? "done" : i === qIdx ? "current" : ""}`} />
+        ))}
+      </div>
+
+      <div className="quiz-question">{question.q}</div>
+
+      {question.options.map((opt, i) => {
+        let cls = "quiz-option";
+        if (selected !== null) {
+          if (i === question.correct) cls += " correct";
+          else if (i === selected) cls += " wrong";
+        }
+        return (
+          <button key={i} className={cls} onClick={() => choose(i)}>
+            <span className="quiz-option-letter">{String.fromCharCode(65 + i)}</span>
+            {opt}
+          </button>
+        );
+      })}
+
+      {selected !== null && (
+        <>
+          <div className="quiz-explanation">{question.explanation}</div>
+          <button className="btn-gold" onClick={next}>{isLast ? "Ver resultado" : "Próxima pergunta"}</button>
+        </>
+      )}
+    </div>
+  );
+}
+
+/* ═══════════════════════════════════════════════
+   TRILHA DE CONQUISTAS
+═══════════════════════════════════════════════ */
+
+function TrackScreen() {
+  const { state } = useApp();
+  const level = getLevel(state.points);
+  const last7 = Array.from({ length: 7 }, (_, i) => {
+    const d = new Date(Date.now() - (6 - i) * 86400000);
+    return d.toISOString().slice(0, 10);
+  });
+
+  return (
+    <div className="app-screen">
+      <div className="topbar"><h1 style={{ fontSize: 24 }}>Trilha 3X</h1></div>
+
+      <div className="card card-gold-edge" style={{ marginBottom: 24 }}>
+        <div style={{ display: "flex", justifyContent: "space-between", alignItems: "flex-end" }}>
+          <div>
+            <div style={{ fontSize: 12, color: "var(--silver-dim)", textTransform: "uppercase" }}>Nível atual</div>
+            <div style={{ fontFamily: "var(--font-display)", fontSize: 24, color: "var(--gold-light)" }}>{level.name}</div>
+          </div>
+          <div style={{ fontFamily: "var(--font-display)", fontSize: 26 }}>{state.points}<span style={{ fontSize: 13, color: "var(--silver-dim)" }}> pts</span></div>
+        </div>
+      </div>
+
+      <div className="section-title">Sequência da semana</div>
+      <div className="streak-strip">
+        {last7.map((d, i) => {
+          const label = ["D", "S", "T", "Q", "Q", "S", "S"][new Date(d).getDay()];
+          return <div key={d} className={`streak-day ${state.activityDates.includes(d) ? "filled" : ""}`}>{label}</div>;
+        })}
+      </div>
+
+      <div className="section-title" style={{ marginTop: 26 }}>Níveis</div>
+      <div className="level-track">
+        {window.LEVELS.map((l) => {
+          const reached = state.points >= l.min;
+          const isCurrent = level.name === l.name;
+          return (
+            <div key={l.name} className={`level-node ${reached ? "reached" : ""} ${isCurrent ? "current" : ""}`}>
+              <div className="level-node-dot">{reached ? <Icon name="check" style={{ width: 18, height: 18, color: "#0A0A0A" }} /> : <Icon name="lock" style={{ width: 16, height: 16, color: "var(--silver-dim)" }} />}</div>
+              <div>
+                <div className="level-node-name" style={{ color: reached ? "var(--gold-light)" : "var(--silver)" }}>{l.name}</div>
+                <div className="level-node-range">{l.min} {l.max === Infinity ? "+" : `– ${l.max}`} pts</div>
+              </div>
+            </div>
+          );
+        })}
+      </div>
+
+      <div className="section-title">Medalhas</div>
+      <div className="badge-grid">
+        {window.ACHIEVEMENTS.map((a) => {
+          const unlocked = state.unlockedAchievements.includes(a.id);
+          return (
+            <div key={a.id} className={`badge-tile ${unlocked ? "" : "locked"}`}>
+              <div className="badge-icon-circle"><Icon name={a.icon} /></div>
+              <div className="badge-name">{a.title}</div>
+            </div>
+          );
+        })}
+      </div>
+    </div>
+  );
+}
+
+/* ═══════════════════════════════════════════════
+   PERFIL
+═══════════════════════════════════════════════ */
+
+function ProfileScreen({ nav }) {
+  const { state, signOut } = useApp();
+  const level = getLevel(state.points);
+  const initials = state.name.split(" ").map((w) => w[0]).slice(0, 2).join("").toUpperCase();
+  const completedList = window.BOOKS.filter((b) => state.completedBooks.includes(b.id));
+
+  return (
+    <div className="app-screen">
+      <div className="topbar">
+        <h1 style={{ fontSize: 24 }}>Perfil</h1>
+        <button className="text-btn" onClick={signOut}>Sair</button>
+      </div>
+
+      <div style={{ display: "flex", alignItems: "center", gap: 16, marginBottom: 6 }}>
+        <div className="avatar-circle">{initials}</div>
+        <div>
+          <div style={{ fontFamily: "var(--font-display)", fontSize: 20 }}>{state.name}</div>
+          {state.email && <div style={{ fontSize: 12.5, color: "var(--silver-dim)" }}>{state.email}</div>}
+          <div style={{ display: "flex", gap: 6, marginTop: 6, flexWrap: "wrap" }}>
+            <div className="pill"><Icon name="crown" style={{ color: "var(--gold)" }} />{level.name}</div>
+            {state.isAdmin && <div className="pill" style={{ color: "var(--gold-light)", borderColor: "var(--border-strong)" }}><Icon name="star" style={{ color: "var(--gold)" }} />Administrador</div>}
+          </div>
+        </div>
+      </div>
+
+      {!state.isPremium && !state.isAdmin && (
+        <div className="idea-card" style={{ marginTop: 18, display: "flex", alignItems: "center", justifyContent: "space-between" }}>
+          <div>
+            <div style={{ fontWeight: 700 }}>Você está no plano grátis</div>
+            <div style={{ fontSize: 13, color: "var(--silver-dim)" }}>3 resumos por mês</div>
+          </div>
+          <Icon name="lock" style={{ color: "var(--gold)" }} />
+        </div>
+      )}
+
+      <div className="stat-row">
+        <div className="stat-tile"><div className="stat-tile-value">{state.points}</div><div className="stat-tile-label">Pontos</div></div>
+        <div className="stat-tile"><div className="stat-tile-value">{state.completedBooks.length}</div><div className="stat-tile-label">Concluídos</div></div>
+        <div className="stat-tile"><div className="stat-tile-value">{state.streak}</div><div className="stat-tile-label">Sequência</div></div>
+      </div>
+
+      <div className="section-title">Medalhas conquistadas</div>
+      <div className="badge-grid" style={{ marginBottom: 24 }}>
+        {window.ACHIEVEMENTS.map((a) => {
+          const unlocked = state.unlockedAchievements.includes(a.id);
+          return (
+            <div key={a.id} className={`badge-tile ${unlocked ? "" : "locked"}`}>
+              <div className="badge-icon-circle"><Icon name={a.icon} /></div>
+              <div className="badge-name">{a.title}</div>
+            </div>
+          );
+        })}
+      </div>
+
+      <div className="section-title">Histórico de leitura</div>
+      {completedList.length === 0 ? (
+        <div className="empty-state"><Icon name="bookOpen" /><div>Você ainda não concluiu nenhum resumo.</div></div>
+      ) : (
+        completedList.map((b) => (
+          <div className="book-row" key={b.id} onClick={() => nav("detalhe", { bookId: b.id })}>
+            <div className="book-cover"><Icon name={b.coverIcon} /></div>
+            <div style={{ flex: 1 }}>
+              <div style={{ fontWeight: 700, fontSize: 14.5 }}>{b.title}</div>
+              <div style={{ fontSize: 12.5, color: "var(--silver-dim)" }}>{b.category}</div>
+              {state.quizResults[b.id] && (
+                <div style={{ fontSize: 12, color: "var(--gold)", marginTop: 3 }}>Quiz: {state.quizResults[b.id].score}/{state.quizResults[b.id].total}</div>
+              )}
+            </div>
+            <Icon name="chevronRight" style={{ color: "var(--silver-dim)" }} />
+          </div>
+        ))
+      )}
+    </div>
+  );
+}
+
+/* ═══════════════════════════════════════════════
+   NAVEGAÇÃO
+═══════════════════════════════════════════════ */
+
+const NAV_ITEMS = [
+  { key: "home", label: "Home", icon: "home" },
+  { key: "biblioteca", label: "Biblioteca", icon: "library" },
+  { key: "trilha", label: "Trilha", icon: "trophy" },
+  { key: "perfil", label: "Perfil", icon: "profile" },
+];
+
+function BottomNav({ current, nav }) {
+  const tabRoutes = ["home", "biblioteca", "trilha", "perfil"];
+  if (!tabRoutes.includes(current)) return null;
+  return (
+    <div className="bottom-nav">
+      {NAV_ITEMS.map((item) => (
+        <button key={item.key} className={`nav-item ${current === item.key ? "active" : ""}`} onClick={() => nav(item.key)}>
+          <Icon name={item.icon} />
+          {item.label}
+          <span className="nav-dot" />
+        </button>
+      ))}
+    </div>
+  );
+}
+
+function AppShell() {
+  const { session, authLoading } = useApp();
+  const [route, setRoute] = useState("home");
+  const [params, setParams] = useState({});
+
+  const nav = (r, p = {}) => {
+    setRoute(r);
+    setParams(p);
+    window.scrollTo({ top: 0 });
+  };
+
+  if (authLoading) {
+    return (
+      <div style={{ minHeight: "100vh", display: "flex", alignItems: "center", justifyContent: "center" }}>
+        <div className="brand-mark" style={{ width: 52, height: 52, fontSize: 20 }}>3X</div>
+      </div>
+    );
+  }
+
+  if (!session) {
+    return <AuthScreen />;
+  }
+
+  const screens = {
+    home: <HomeScreen nav={nav} />,
+    biblioteca: <LibraryScreen nav={nav} />,
+    detalhe: <BookDetailScreen nav={nav} params={params} />,
+    leitura: <ReadingScreen nav={nav} params={params} />,
+    audio: <AudioScreen nav={nav} params={params} />,
+    quiz: <QuizScreen nav={nav} params={params} />,
+    trilha: <TrackScreen nav={nav} />,
+    perfil: <ProfileScreen nav={nav} />,
+  };
+
+  return (
+    <>
+      {screens[route] || screens.home}
+      <BottomNav current={route} nav={nav} />
+    </>
+  );
+}
+
+function App() {
+  return (
+    <AppProvider>
+      <AppShell />
+    </AppProvider>
+  );
+}
+
+ReactDOM.createRoot(document.getElementById("root")).render(<App />);
+
+if ("serviceWorker" in navigator) {
+  window.addEventListener("load", () => {
+    navigator.serviceWorker.register("sw.js").catch(() => {});
+  });
+}
+</script>
+<script>
+(function () {
+  var src = document.getElementById("app-source").textContent;
+  var code = Babel.transform(src, { presets: [["react", { runtime: "classic" }]] }).code;
+  (0, eval)(code);
+})();
+</script>
+
+<footer style="text-align:center;padding:14px;color:#8A8D91;font-size:11px;font-family:'Libre Franklin',sans-serif;">
+  Multiplicando negócios. Construindo legado. — 3X Capital
+</footer>
+</body>
+</html>
