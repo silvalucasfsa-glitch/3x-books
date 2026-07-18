@@ -423,6 +423,462 @@ window.BOOKS = [
       { q: "Qual é o formato usado pela obra para transmitir os princípios financeiros?", options: ["Fórmulas matemáticas complexas", "Parábolas ambientadas na antiga Babilônia", "Estudos de caso de empresas modernas", "Entrevistas com investidores"], correct: 1, explanation: "O livro usa histórias e parábolas para ilustrar cada princípio financeiro." },
     ],
   },
+
+  {
+    id: "sete-habitos",
+    title: "Os 7 Hábitos das Pessoas Altamente Eficazes",
+    author: "Baseado na obra de Stephen R. Covey",
+    category: "Desenvolvimento Pessoal",
+    tags: ["caráter", "eficácia pessoal", "princípios"],
+    readTimeMin: 17,
+    premium: true,
+    coverIcon: "brain",
+    synopsis:
+      "Um framework de sete princípios, do mais pessoal ao mais interpessoal, para construir eficácia duradoura baseada em caráter, não em técnicas superficiais.",
+    chapters: [
+      {
+        title: "De dentro para fora",
+        content:
+          "A maior parte dos conselhos de autoajuda foca em técnicas de imagem e atitude — uma 'ética da personalidade'. O autor propõe o oposto: mudança duradoura vem de uma 'ética do caráter', trabalhando primeiro os próprios princípios e valores internos antes de tentar mudar comportamentos externos ou a percepção alheia. Tentar parecer eficaz sem ser eficaz por dentro é insustentável; mais cedo ou mais tarde, o caráter real aparece nas rachaduras da imagem construída.",
+      },
+      {
+        title: "Seja proativo",
+        content:
+          "O primeiro hábito é reconhecer que, entre um estímulo e a resposta a ele, existe um espaço de escolha. Pessoas reativas atribuem seus sentimentos e resultados a circunstâncias externas; pessoas proativas assumem responsabilidade por suas respostas, focando energia no que podem controlar — seu 'círculo de influência' — em vez de gastar energia reclamando do que está fora dele. Linguagem proativa ('vou escolher') substitui linguagem reativa ('não tenho escolha'), e essa mudança de vocabulário reforça a mudança de postura.",
+      },
+      {
+        title: "Comece com o objetivo em mente",
+        content:
+          "Antes de agir, é preciso ter clareza de onde se quer chegar — em projetos, carreira e na vida como um todo. O exercício sugerido é imaginar o próprio funeral e o que gostaria que fosse dito sobre você, para extrair dali os valores que realmente importam. Sem esse norte claro, é fácil confundir estar ocupado com estar sendo eficaz: subir rápido numa escada que, no fim, está encostada na parede errada.",
+      },
+      {
+        title: "Primeiro o mais importante",
+        content:
+          "Tarefas podem ser classificadas por urgência e importância. A armadilha mais comum é viver apagando incêndios urgentes, enquanto atividades importantes mas não urgentes — planejamento, relacionamentos, prevenção, desenvolvimento pessoal — ficam sempre para depois. O hábito de gestão pessoal eficaz é proteger deliberadamente tempo para essas atividades do quadrante importante-mas-não-urgente antes que elas também se tornem crises urgentes.",
+      },
+      {
+        title: "Pense ganha-ganha e busque primeiro compreender",
+        content:
+          "Em relações e negociações, buscar vencer à custa do outro (ganha-perde) ou ceder sempre (perde-ganha) corrói a confiança no longo prazo. A alternativa madura é buscar soluções ganha-ganha, ou, quando isso genuinamente não existe, preferir 'não fechar negócio' a fechar um acordo ruim para uma das partes. Isso só é possível quando se busca primeiro compreender o ponto de vista do outro genuinamente, antes de tentar ser compreendido — a maioria das pessoas ouve para responder, não para entender.",
+      },
+      {
+        title: "Sinergia e renovação",
+        content:
+          "Sinergia é o princípio de que o todo pode ser maior que a soma das partes: duas pessoas com perspectivas diferentes, combinadas com respeito mútuo, costumam chegar a soluções melhores do que qualquer uma teria sozinha — desde que valorizem a diferença em vez de tentar eliminá-la. Por fim, nenhum desses hábitos se sustenta sem renovação constante nas quatro dimensões da vida: física, mental, social/emocional e espiritual. Negligenciar qualquer uma delas, mais cedo ou mais tarde, compromete as demais.",
+      },
+    ],
+    quiz: [
+      { q: "O que é a 'ética do caráter', segundo o autor?", options: ["Técnicas de imagem pessoal", "Trabalhar princípios e valores internos antes do comportamento externo", "Regras de etiqueta social", "Estratégias de persuasão"], correct: 1, explanation: "O livro defende que eficácia duradoura vem de dentro para fora, não de técnicas superficiais." },
+      { q: "O que significa 'ser proativo', segundo o primeiro hábito?", options: ["Agir sem pensar nas consequências", "Assumir responsabilidade pela resposta aos estímulos, não só pelos estímulos em si", "Reagir rapidamente a qualquer situação", "Delegar decisões para outras pessoas"], correct: 1, explanation: "Proatividade é reconhecer o espaço de escolha entre estímulo e resposta." },
+      { q: "O que é o 'círculo de influência'?", options: ["Tudo que preocupa a pessoa", "Aquilo que a pessoa pode efetivamente controlar ou influenciar", "O círculo de amizades", "Uma técnica de meditação"], correct: 1, explanation: "Focar energia no círculo de influência, não no que está fora do controle, é mais produtivo." },
+      { q: "Qual é o exercício sugerido para o hábito 'comece com o objetivo em mente'?", options: ["Fazer uma lista de compras", "Imaginar o próprio funeral e o que gostaria que fosse dito", "Planejar apenas a próxima semana", "Copiar os objetivos de outra pessoa"], correct: 1, explanation: "Esse exercício ajuda a identificar os valores que realmente importam no longo prazo." },
+      { q: "Qual é a armadilha mais comum na gestão do tempo, segundo o livro?", options: ["Fazer pouco no dia a dia", "Viver apagando urgências e negligenciar o que é importante mas não urgente", "Planejar demais", "Delegar tarefas importantes"], correct: 1, explanation: "Tarefas importantes mas não urgentes tendem a ser adiadas até virarem crises." },
+      { q: "O que caracteriza uma solução 'ganha-ganha'?", options: ["Uma parte cede tudo para a outra vencer", "Ambas as partes saem satisfeitas com o resultado", "A negociação é sempre cancelada", "Apenas uma proposta é considerada"], correct: 1, explanation: "Ganha-ganha busca resultado satisfatório para ambos os lados envolvidos." },
+      { q: "O que o livro recomenda quando uma solução ganha-ganha genuinamente não existe?", options: ["Forçar um acordo de qualquer forma", "Preferir não fechar negócio a fechar um acordo ruim para uma das partes", "Sempre ceder para evitar conflito", "Ignorar o problema"], correct: 1, explanation: "É preferível não fechar negócio a criar um acordo perde-ganha disfarçado." },
+      { q: "O que significa 'buscar primeiro compreender'?", options: ["Ouvir apenas para formular uma resposta", "Ouvir genuinamente o ponto de vista do outro antes de tentar ser compreendido", "Concordar com tudo que o outro diz", "Evitar conversas difíceis"], correct: 1, explanation: "A maioria das pessoas ouve para responder, não para entender de fato." },
+      { q: "O que é sinergia, segundo o livro?", options: ["Fazer tudo sozinho para ser mais rápido", "O todo sendo maior que a soma das partes, valorizando diferenças", "Eliminar diferenças de opinião", "Um tipo de meditação em grupo"], correct: 1, explanation: "Sinergia surge quando perspectivas diferentes são combinadas com respeito mútuo." },
+      { q: "Quais são as quatro dimensões que precisam de renovação constante?", options: ["Física, mental, social/emocional e espiritual", "Financeira, social, digital e física", "Apenas física e mental", "Profissional, familiar, social e financeira"], correct: 0, explanation: "Negligenciar qualquer uma dessas dimensões compromete as demais no longo prazo." },
+    ],
+  },
+
+  {
+    id: "poder-do-agora",
+    title: "O Poder do Agora",
+    author: "Baseado na obra de Eckhart Tolle",
+    category: "Espiritualidade & Mindfulness",
+    tags: ["presença", "mente", "consciência"],
+    readTimeMin: 15,
+    premium: true,
+    coverIcon: "moon",
+    synopsis:
+      "Um guia para se libertar do sofrimento gerado pela mente que vive no passado ou no futuro, através da prática de presença total no momento atual.",
+    chapters: [
+      {
+        title: "Você não é sua mente",
+        content:
+          "A obra parte de uma distinção central: existe uma diferença entre a mente — o fluxo constante de pensamentos, narrativas e julgamentos — e a consciência que observa esses pensamentos. A maior parte do sofrimento psicológico vem da identificação total com a mente, como se os pensamentos fossem a própria identidade. Reconhecer que é possível observar o pensamento sem ser o pensamento é o primeiro passo para reduzir o sofrimento que a mente gera quando funciona sem supervisão.",
+      },
+      {
+        title: "O corpo de dor",
+        content:
+          "O autor descreve o 'corpo de dor' como um acúmulo de dor emocional não processada do passado, que existe como uma espécie de entidade semi-autônoma dentro da pessoa, periodicamente 'acordando' e buscando mais sofrimento para se alimentar — reagindo de forma desproporcional a pequenos gatilhos. Reconhecer esse padrão quando ele surge, sem se identificar com ele nem tentar suprimi-lo à força, é a forma descrita de esvaziar gradualmente esse acúmulo de dor antiga.",
+      },
+      {
+        title: "Viver no agora",
+        content:
+          "Ansiedade, culpa e ressentimento são descritos como produtos da mente presa em um passado que já não existe ou em um futuro que ainda não chegou. O momento presente, por outro lado, é o único lugar onde a vida realmente acontece — e onde a maioria dos problemas que parecem urgentes, quando examinados de perto, na verdade não exigem sofrimento imediato, apenas ação prática quando necessária. A prática de trazer a atenção repetidamente de volta ao agora é apresentada como o caminho central da obra.",
+      },
+      {
+        title: "Aceitação e rendição",
+        content:
+          "Rendição, no sentido usado pela obra, não significa passividade ou desistência — significa parar de resistir mentalmente ao que já é fato presente, mesmo que ainda seja preciso agir para mudá-lo. Resistir psicologicamente a uma situação que já aconteceu apenas soma sofrimento mental ao problema prático original. Aceitar o momento como ele é, e então agir com clareza a partir daí, é descrito como muito mais eficaz do que agir a partir de resistência e raiva.",
+      },
+      {
+        title: "O ego e a identificação com o pensamento",
+        content:
+          "Muito do sofrimento humano, segundo a obra, vem da construção de uma identidade mental (o ego) baseada em papéis, posses, opiniões e comparações constantes com os outros. Esse ego precisa de conflito e drama para se manter 'alimentado', e frequentemente cria problemas onde não precisaria haver nenhum, só para reforçar sua própria sensação de existência através de reclamação, razão ou vitimismo. Perceber esse mecanismo em ação, sem julgá-lo, começa a enfraquecer seu domínio automático sobre o comportamento.",
+      },
+      {
+        title: "Presença na vida cotidiana",
+        content:
+          "A prática de presença não exige retiro ou isolamento — pode ser exercitada em tarefas comuns: lavar louça, caminhar, esperar em uma fila, prestando atenção plena às sensações físicas e ao ambiente, em vez de deixar a mente vagar automaticamente entre preocupações. Pequenos momentos de presença acumulados ao longo do dia, mais do que uma única grande revelação espiritual, são apresentados como o caminho prático e sustentável para viver com mais paz.",
+      },
+    ],
+    quiz: [
+      { q: "Qual é a distinção central proposta na obra?", options: ["Entre corpo e alma", "Entre a mente (pensamentos) e a consciência que observa os pensamentos", "Entre passado e futuro apenas", "Entre razão e emoção"], correct: 1, explanation: "Reconhecer que é possível observar o pensamento sem se identificar totalmente com ele é o ponto de partida." },
+      { q: "O que é o 'corpo de dor' descrito na obra?", options: ["Uma dor física crônica", "Um acúmulo de dor emocional não processada do passado", "Uma técnica de respiração", "Um tipo de exercício físico"], correct: 1, explanation: "O corpo de dor reage de forma desproporcional a pequenos gatilhos, buscando mais sofrimento." },
+      { q: "Segundo a obra, de onde vêm ansiedade, culpa e ressentimento?", options: ["De problemas puramente físicos", "Da mente presa no passado ou no futuro", "Da falta de dinheiro", "De fatores genéticos apenas"], correct: 1, explanation: "Essas emoções são descritas como produtos de uma mente que não está no momento presente." },
+      { q: "O que significa 'rendição' no contexto da obra?", options: ["Desistir e ser passivo diante dos problemas", "Parar de resistir mentalmente ao que já é fato, mesmo agindo para mudá-lo", "Aceitar qualquer situação sem nunca agir", "Evitar todo tipo de conflito"], correct: 1, explanation: "Rendição não é passividade, é parar de somar sofrimento mental ao problema prático." },
+      { q: "O que é o 'ego', segundo a obra?", options: ["A parte racional da mente", "Uma identidade mental baseada em papéis, posses e comparações", "Um órgão do corpo", "Sinônimo de autoestima saudável"], correct: 1, explanation: "O ego precisa de conflito e drama para se manter 'alimentado', segundo o autor." },
+      { q: "Como a prática de presença pode ser exercitada no dia a dia?", options: ["Somente em retiros espirituais isolados", "Em tarefas comuns, como lavar louça ou caminhar, com atenção plena", "Apenas durante a meditação formal", "Somente durante momentos de crise"], correct: 1, explanation: "Pequenos momentos de presença no cotidiano são o caminho prático sugerido pela obra." },
+      { q: "Por que resistir mentalmente a uma situação já ocorrida é considerado prejudicial?", options: ["Porque não muda o passado e apenas soma sofrimento mental extra", "Porque é ilegal", "Porque gasta energia física", "Porque impede o sono"], correct: 0, explanation: "A resistência psicológica soma sofrimento ao problema prático original, sem resolvê-lo." },
+      { q: "O que a obra sugere fazer com os pensamentos, em vez de reprimi-los?", options: ["Ignorá-los completamente", "Observá-los sem se identificar totalmente com eles", "Anotá-los todos em um diário", "Discuti-los com um terapeuta apenas"], correct: 1, explanation: "Observar o pensamento sem ser dominado por ele reduz seu poder automático." },
+      { q: "Qual é o único lugar onde, segundo a obra, a vida realmente acontece?", options: ["No planejamento do futuro", "No momento presente", "Na reflexão sobre o passado", "Nos sonhos noturnos"], correct: 1, explanation: "O momento presente é apresentado como o único espaço real de existência." },
+      { q: "O que costuma alimentar o ego, segundo a obra?", options: ["Silêncio e quietude", "Conflito, drama, reclamação e comparação constante", "Práticas de gratidão", "Exercício físico regular"], correct: 1, explanation: "O ego cria ou amplifica problemas para reforçar sua própria sensação de existência." },
+    ],
+  },
+
+  {
+    id: "rapido-e-devagar",
+    title: "Rápido e Devagar: Duas Formas de Pensar",
+    author: "Baseado na obra de Daniel Kahneman",
+    category: "Psicologia",
+    tags: ["vieses cognitivos", "tomada de decisão", "economia comportamental"],
+    readTimeMin: 18,
+    premium: true,
+    coverIcon: "brain",
+    synopsis:
+      "A pesquisa vencedora do Nobel sobre os dois sistemas que governam o pensamento humano — um rápido e intuitivo, outro lento e deliberado — e como isso molda decisões.",
+    chapters: [
+      {
+        title: "Sistema 1 e Sistema 2",
+        content:
+          "O cérebro opera com dois modos de pensar. O Sistema 1 é rápido, automático, intuitivo e opera sem esforço consciente — é ele que reconhece um rosto familiar ou completa a frase 'pão com...'. O Sistema 2 é lento, deliberado, exige esforço mental e é usado para cálculos complexos ou decisões que exigem análise cuidadosa. O Sistema 1 domina a maior parte do dia a dia porque é eficiente; o problema é que ele também é a origem da maioria dos vieses e erros sistemáticos de julgamento, porque toma atalhos que geralmente funcionam, mas nem sempre.",
+      },
+      {
+        title: "Heurísticas e vieses",
+        content:
+          "Para lidar com a complexidade do mundo rapidamente, o Sistema 1 usa atalhos mentais chamados heurísticas. A heurística da disponibilidade faz julgar a frequência de um evento pela facilidade de lembrar exemplos dele — por isso eventos dramáticos e recentes na mídia parecem mais comuns do que realmente são. A heurística da representatividade faz julgar a probabilidade de algo pela semelhança com um estereótipo mental, ignorando taxas-base estatísticas reais. Esses atalhos são úteis na maioria das situações cotidianas, mas produzem erros previsíveis em contextos específicos.",
+      },
+      {
+        title: "Excesso de confiança e a ilusão de validade",
+        content:
+          "Pessoas — inclusive especialistas — tendem a superestimar a precisão de seus próprios julgamentos, especialmente quando os dados formam uma narrativa coerente e fácil de acreditar. A obra mostra evidências de que especialistas em áreas com alta incerteza, como previsão de mercado financeiro ou política, frequentemente performam pior que modelos estatísticos simples, mas continuam confiantes em suas próprias previsões — porque a sensação subjetiva de confiança não é um bom indicador de precisão real.",
+      },
+      {
+        title: "Aversão à perda",
+        content:
+          "Um dos achados centrais da pesquisa é que perdas doem psicologicamente mais do que ganhos equivalentes trazem prazer — perder R$100 dói mais do que ganhar R$100 satisfaz. Essa assimetria explica comportamentos aparentemente irracionais: manter investimentos ruins na esperança de 'recuperar o prejuízo' em vez de vender, ou recusar negociações vantajosas porque envolvem abrir mão de algo já possuído. Entender a aversão à perda ajuda a reconhecer quando ela está distorcendo uma decisão que deveria ser puramente racional.",
+      },
+      {
+        title: "O eu que experimenta versus o eu que lembra",
+        content:
+          "A pesquisa distingue dois 'eus': o eu que experimenta um momento em tempo real, e o eu que lembra e avalia essa experiência depois. Curiosamente, decisões futuras costumam ser guiadas pelas memórias do eu que lembra, não pela soma real do que foi vivido — e essas memórias são fortemente influenciadas pelo pico emocional da experiência e por como ela termina, quase ignorando a duração total. Isso explica por que a lembrança de um evento pode ser desproporcionalmente boa ou ruim em relação à experiência real momento a momento.",
+      },
+      {
+        title: "Como tomar decisões melhores",
+        content:
+          "Reconhecer os próprios vieses não os elimina automaticamente — o Sistema 1 continua operando de forma automática mesmo depois de estudado. Mas algumas práticas ajudam: usar checklists e critérios pré-definidos em decisões importantes, buscar ativamente informações que contradigam a primeira impressão, considerar taxas-base estatísticas antes de confiar em narrativas individuais convincentes, e desconfiar especialmente de decisões tomadas sob pressão de tempo ou cansaço, quando o Sistema 2 tende a ceder espaço para os atalhos do Sistema 1.",
+      },
+    ],
+    quiz: [
+      { q: "O que caracteriza o Sistema 1 de pensamento?", options: ["Lento e deliberado", "Rápido, automático e intuitivo", "Usado apenas em cálculos matemáticos", "Exige grande esforço consciente"], correct: 1, explanation: "O Sistema 1 opera automaticamente e sem esforço consciente." },
+      { q: "O que caracteriza o Sistema 2 de pensamento?", options: ["Rápido e automático", "Lento, deliberado e exige esforço mental", "Não é usado em decisões complexas", "É o único sistema de pensamento"], correct: 1, explanation: "O Sistema 2 é usado para análises cuidadosas e cálculos complexos." },
+      { q: "O que é a 'heurística da disponibilidade'?", options: ["Julgar frequência pela facilidade de lembrar exemplos", "Um método de cálculo matemático preciso", "Uma técnica de meditação", "Um tipo de investimento financeiro"], correct: 0, explanation: "Eventos fáceis de lembrar parecem mais frequentes do que realmente são." },
+      { q: "Por que especialistas frequentemente confiam demais em suas previsões, segundo o livro?", options: ["Porque sempre têm razão", "Porque a sensação subjetiva de confiança não é um bom indicador de precisão", "Porque usam apenas modelos estatísticos", "Porque nunca cometem erros"], correct: 1, explanation: "Confiança subjetiva não se correlaciona necessariamente com precisão real do julgamento." },
+      { q: "O que é 'aversão à perda'?", options: ["Preferir sempre investimentos de baixo risco", "Perdas doerem psicologicamente mais do que ganhos equivalentes satisfazem", "Medo de tomar qualquer decisão financeira", "Um tipo de fobia clínica"], correct: 1, explanation: "Essa assimetria emocional explica muitos comportamentos financeiros aparentemente irracionais." },
+      { q: "Qual comportamento a aversão à perda ajuda a explicar?", options: ["Vender investimentos lucrativos rapidamente", "Manter investimentos ruins esperando 'recuperar o prejuízo'", "Investir sempre de forma diversificada", "Nunca investir em nada"], correct: 1, explanation: "A dor da perda leva a manter posições ruins na esperança de reverter o prejuízo." },
+      { q: "Qual é a diferença entre o 'eu que experimenta' e o 'eu que lembra'?", options: ["Não há diferença real entre eles", "Um vive o momento em tempo real, o outro avalia a experiência depois", "Ambos são a mesma coisa que o Sistema 1", "Apenas o eu que lembra tem emoções"], correct: 1, explanation: "Decisões futuras costumam ser guiadas pela memória, não pela experiência real completa." },
+      { q: "O que mais influencia a memória de uma experiência, segundo a pesquisa?", options: ["A duração total da experiência", "O pico emocional e como a experiência termina", "Apenas o início da experiência", "A temperatura do ambiente"], correct: 1, explanation: "A memória é distorcida pelo pico e pelo final, quase ignorando a duração total." },
+      { q: "Qual prática o livro recomenda para decisões importantes?", options: ["Confiar sempre na primeira impressão", "Usar checklists e critérios pré-definidos", "Decidir sempre sob pressão de tempo", "Ignorar dados estatísticos"], correct: 1, explanation: "Checklists e critérios objetivos ajudam a reduzir a influência de vieses automáticos." },
+      { q: "Quando o Sistema 2 tende a ceder espaço para os atalhos do Sistema 1?", options: ["Quando há muito tempo disponível", "Sob pressão de tempo ou cansaço", "Apenas em decisões financeiras", "Nunca cede espaço"], correct: 1, explanation: "Cansaço e pressão de tempo reduzem a capacidade de pensamento deliberado." },
+    ],
+  },
+
+  {
+    id: "sapiens",
+    title: "Sapiens: Uma Breve História da Humanidade",
+    author: "Baseado na obra de Yuval Noah Harari",
+    category: "História & Filosofia",
+    tags: ["evolução", "história", "civilização"],
+    readTimeMin: 19,
+    premium: true,
+    coverIcon: "compass",
+    synopsis:
+      "Uma releitura da história humana através de três revoluções — cognitiva, agrícola e científica — e do papel único das ficções coletivas na cooperação em massa.",
+    chapters: [
+      {
+        title: "A revolução cognitiva",
+        content:
+          "Há cerca de 70 mil anos, mudanças na cognição do Homo sapiens permitiram algo que nenhuma outra espécie conseguia: comunicar e acreditar coletivamente em coisas que não existem fisicamente — deuses, nações, dinheiro, empresas. Essa capacidade de criar e compartilhar 'ficções' não é um defeito, é a base que permitiu a cooperação flexível entre milhares ou milhões de estranhos, algo impossível para qualquer outro primata, que só coopera bem em grupos pequenos baseados em relação direta.",
+      },
+      {
+        title: "Mitos que unem estranhos",
+        content:
+          "Nações, religiões, sistemas legais e corporações são exemplos de 'ordens imaginadas' — construções que só existem porque um número suficiente de pessoas acredita nelas simultaneamente. O dinheiro é talvez o mito mais bem-sucedido da história: um pedaço de papel não tem valor intrínseco algum, mas funciona porque virtualmente todo mundo confia que os outros também vão aceitá-lo em troca de bens reais. Essas histórias compartilhadas são o que permite que milhões de estranhos cooperem em projetos comuns sem nunca terem se conhecido.",
+      },
+      {
+        title: "A revolução agrícola: uma armadilha?",
+        content:
+          "A adoção da agricultura, há cerca de 12 mil anos, é tradicionalmente vista como um grande avanço. O autor propõe uma leitura provocativa: para o indivíduo médio, a agricultura trouxe mais horas de trabalho, dietas menos variadas, mais doenças por aglomeração e maior desigualdade social do que a vida de caçador-coletor. A espécie prosperou em número, mas o bem-estar individual médio pode ter piorado — um lembrete de que 'progresso' para a espécie e bem-estar para o indivíduo nem sempre andam juntos.",
+      },
+      {
+        title: "A unificação da humanidade",
+        content:
+          "Ao longo da história, três forças globais foram unificando gradualmente comunidades antes isoladas: o dinheiro, que criou um sistema de troca universal; os impérios, que absorveram culturas diversas sob administrações comuns; e as religiões universalistas, que ofereceram verdades pretensamente válidas para toda a humanidade, não apenas para uma tribo. Essas forças, por mais que tenham gerado violência e opressão ao longo do caminho, tendem a aproximar culturas antes completamente separadas em uma rede global cada vez mais interconectada.",
+      },
+      {
+        title: "A revolução científica",
+        content:
+          "Diferente de tradições anteriores que presumiam já possuir todo o conhecimento importante, a revolução científica, a partir de cerca de 500 anos atrás, começou de uma admissão radical: 'não sabemos'. Essa disposição para reconhecer ignorância, combinada com método empírico e disposição para revisar crenças diante de evidência, acelerou o conhecimento humano de forma exponencial — e se conectou de maneira estreita com o capitalismo e o imperialismo, que financiaram boa parte da exploração científica em troca de aplicações práticas e lucrativas.",
+      },
+      {
+        title: "Rumo a algo além do Homo sapiens",
+        content:
+          "A obra termina olhando para o futuro: avanços em biotecnologia, inteligência artificial e engenharia genética colocam a humanidade na posição inédita de poder redesenhar não só o ambiente, mas a própria biologia da espécie. O autor levanta a questão de que, pela primeira vez, o Homo sapiens pode estar próximo de deixar de ser o produto da seleção natural cega e passar a ser o produto de um design deliberado — com todas as implicações éticas que isso levanta sobre quem decide esse design e para quê.",
+      },
+    ],
+    quiz: [
+      { q: "O que caracterizou a revolução cognitiva, segundo o livro?", options: ["O uso do fogo", "A capacidade de acreditar coletivamente em ficções compartilhadas", "A invenção da roda", "O surgimento da agricultura"], correct: 1, explanation: "Essa capacidade permitiu cooperação em massa entre estranhos, algo único do Homo sapiens." },
+      { q: "O que é uma 'ordem imaginada', segundo a obra?", options: ["Um erro de percepção", "Uma construção social que só existe porque muitas pessoas acreditam nela", "Um tipo de sonho recorrente", "Uma lei da física"], correct: 1, explanation: "Nações, dinheiro e religiões são exemplos de ordens imaginadas compartilhadas coletivamente." },
+      { q: "Por que o dinheiro é considerado um 'mito bem-sucedido'?", options: ["Porque tem valor físico intrínseco", "Porque funciona pela confiança coletiva de que será aceito em troca", "Porque é impresso pelo governo", "Porque nunca perde valor"], correct: 1, explanation: "O valor do dinheiro depende inteiramente da confiança compartilhada, não de valor físico." },
+      { q: "Qual é a visão provocativa do autor sobre a revolução agrícola?", options: ["Foi um avanço sem nenhuma desvantagem", "Pode ter piorado o bem-estar médio do indivíduo, apesar de aumentar a população", "Não teve nenhum impacto na sociedade", "Ocorreu ao mesmo tempo em todos os continentes"], correct: 1, explanation: "Mais trabalho, doenças e desigualdade são citados como custos da vida agrícola comparada à de caçador-coletor." },
+      { q: "Quais três forças o autor cita como unificadoras da humanidade?", options: ["Guerra, fome e doença", "Dinheiro, impérios e religiões universalistas", "Arte, música e literatura", "Tecnologia, mídia e internet"], correct: 1, explanation: "Essas três forças aproximaram culturas antes isoladas em uma rede global." },
+      { q: "O que marcou o início da revolução científica, segundo o livro?", options: ["A certeza de já possuir todo conhecimento necessário", "A admissão de ignorância e a disposição para revisar crenças com evidências", "A invenção da imprensa", "O fim das religiões"], correct: 1, explanation: "Reconhecer 'não sabemos' abriu espaço para o método científico moderno." },
+      { q: "Com que sistemas a revolução científica se conectou de forma estreita?", options: ["Apenas com a religião", "Com o capitalismo e o imperialismo", "Apenas com a arte", "Com o sistema feudal"], correct: 1, explanation: "Capitalismo e imperialismo financiaram boa parte da exploração científica histórica." },
+      { q: "O que o autor sugere sobre o futuro da espécie humana?", options: ["Que ela permanecerá inalterada para sempre", "Que biotecnologia e IA podem levar a um design deliberado da própria biologia humana", "Que a extinção é inevitável em breve", "Que a agricultura será abandonada"], correct: 1, explanation: "O livro questiona as implicações éticas de redesenhar deliberadamente a biologia humana." },
+      { q: "Por que outros primatas não conseguem cooperar em grande escala como os humanos?", options: ["Porque são menos inteligentes em geral", "Porque cooperam bem apenas em grupos pequenos baseados em relação direta", "Porque não têm emoções", "Porque vivem sozinhos"], correct: 1, explanation: "Sem a capacidade de acreditar em ficções compartilhadas, a cooperação fica limitada a grupos pequenos." },
+      { q: "Qual é o papel das religiões universalistas na unificação da humanidade, segundo a obra?", options: ["Nenhum, elas sempre dividiram as pessoas", "Oferecer verdades pretensamente válidas para toda a humanidade, não só uma tribo", "Apenas organizar rituais locais", "Substituir completamente o dinheiro"], correct: 1, explanation: "Ao propor verdades universais, essas religiões ajudaram a conectar povos distantes entre si." },
+    ],
+  },
+
+  {
+    id: "cinco-linguagens-do-amor",
+    title: "As 5 Linguagens do Amor",
+    author: "Baseado na obra de Gary Chapman",
+    category: "Sexo & Relacionamentos",
+    tags: ["relacionamento", "comunicação afetiva", "casamento"],
+    readTimeMin: 14,
+    premium: true,
+    coverIcon: "users",
+    synopsis:
+      "Um modelo prático para entender como diferentes pessoas expressam e recebem amor de formas distintas — e por que isso frequentemente gera mal-entendidos em relações.",
+    chapters: [
+      {
+        title: "O tanque de amor emocional",
+        content:
+          "O autor propõe a metáfora de um 'tanque de amor emocional' que cada pessoa carrega: quando está cheio, a pessoa se sente segura e valorizada na relação; quando está vazio, surgem inseguranças, distanciamento e conflitos, mesmo que o parceiro esteja genuinamente tentando demonstrar afeto. O problema mais comum em casais é que cada um tenta encher o tanque do outro usando a linguagem de amor que faz sentido para si mesmo, não necessariamente a que o parceiro realmente precisa para se sentir amado.",
+      },
+      {
+        title: "Palavras de afirmação",
+        content:
+          "Para pessoas com essa linguagem principal, elogios verbais, palavras de encorajamento e expressões explícitas de apreço comunicam amor de forma poderosa — enquanto o silêncio, mesmo bem-intencionado, pode ser interpretado como indiferença. Críticas, por outro lado, ferem essas pessoas de forma desproporcionalmente profunda, precisamente porque a palavra é o canal mais sensível pelo qual recebem (e portanto também podem ser feridas por) mensagens emocionais.",
+      },
+      {
+        title: "Tempo de qualidade",
+        content:
+          "Aqui o que importa é atenção plena e indivisa — conversar sem celular por perto, fazer uma atividade junto com foco total um no outro, não apenas 'estar no mesmo cômodo' enquanto cada um mexe no telefone. Para quem tem essa linguagem como principal, presença física sem atenção genuína não conta como tempo de qualidade, e cancelamentos frequentes de planos juntos doem mais do que pareceriam à primeira vista para quem tem outra linguagem de amor.",
+      },
+      {
+        title: "Presentes, atos de serviço e toque físico",
+        content:
+          "Presentes, nessa linguagem, não são sobre valor material, mas sobre o pensamento e esforço por trás da escolha — um presente simples mas atencioso pode comunicar mais amor que um caro mas genérico. Atos de serviço envolvem fazer algo prático que alivia a carga do outro (preparar uma refeição, resolver uma tarefa chata) — para quem valoriza essa linguagem, ajuda prática fala mais alto que palavras. Toque físico — um abraço, segurar a mão, um gesto carinhoso — é a linguagem mais direta e biologicamente imediata de conexão para quem a tem como principal.",
+      },
+      {
+        title: "Descobrindo a própria linguagem e a do parceiro",
+        content:
+          "O livro sugere observar dois sinais: o que a pessoa mais reclama que falta na relação (geralmente aponta diretamente para sua linguagem principal) e o que ela espontaneamente faz para demonstrar amor ao outro (que costuma ser, por padrão, a própria linguagem, projetada erroneamente como universal). Perguntar diretamente ao parceiro o que o faria se sentir mais amado, e observar suas respostas ao longo do tempo, também revela pistas importantes sobre qual linguagem predomina.",
+      },
+      {
+        title: "Amor como escolha, não apenas sentimento",
+        content:
+          "Uma das teses centrais é que, depois da fase inicial de paixão (que a obra chama de 'experiência de apaixonar-se', biologicamente temporária), o amor sustentável em uma relação de longo prazo se torna, em grande parte, uma escolha ativa e diária — aprender e praticar deliberadamente a linguagem de amor do outro, mesmo quando não é a linguagem natural de quem ama. Essa prática consciente, mais do que esperar que o sentimento espontâneo resolva tudo sozinho, é apresentada como o que sustenta relações duradouras.",
+      },
+    ],
+    quiz: [
+      { q: "O que é o 'tanque de amor emocional'?", options: ["Uma técnica de terapia de casal", "Uma metáfora para a necessidade de se sentir amado e valorizado", "Um tipo de diário de relacionamento", "Um teste de compatibilidade"], correct: 1, explanation: "Quando o tanque está vazio, surgem inseguranças mesmo com boas intenções do parceiro." },
+      { q: "Qual é o erro mais comum apontado pelo livro em casais?", options: ["Não se comunicarem o suficiente", "Tentar demonstrar amor usando a própria linguagem, não a do parceiro", "Passar tempo demais juntos", "Nunca discutirem problemas"], correct: 1, explanation: "Cada um tende a usar a linguagem que faz sentido para si, não necessariamente a do outro." },
+      { q: "O que caracteriza a linguagem 'palavras de afirmação'?", options: ["Presentes caros", "Elogios verbais e expressões explícitas de apreço", "Ajudar em tarefas domésticas", "Contato físico frequente"], correct: 1, explanation: "Para essa linguagem, palavras de encorajamento comunicam amor de forma poderosa." },
+      { q: "O que é essencial na linguagem 'tempo de qualidade'?", options: ["Estar no mesmo ambiente, mesmo sem interação", "Atenção plena e indivisa ao outro", "Trocar presentes regularmente", "Fazer elogios constantes"], correct: 1, explanation: "Presença física sem atenção genuína não conta como tempo de qualidade nessa linguagem." },
+      { q: "O que importa mais na linguagem 'presentes', segundo o livro?", options: ["O valor monetário do presente", "O pensamento e esforço por trás da escolha", "A frequência com que são dados", "O tamanho do presente"], correct: 1, explanation: "Um presente simples mas atencioso pode comunicar mais amor que um caro mas genérico." },
+      { q: "O que caracteriza 'atos de serviço' como linguagem do amor?", options: ["Dar presentes caros", "Fazer algo prático que alivia a carga do outro", "Elogiar verbalmente", "Passar tempo em silêncio junto"], correct: 1, explanation: "Ajuda prática fala mais alto que palavras para quem valoriza essa linguagem." },
+      { q: "Como o livro sugere descobrir a linguagem de amor principal de alguém?", options: ["Adivinhando aleatoriamente", "Observando do que a pessoa mais reclama que falta e o que ela espontaneamente demonstra", "Copiando o comportamento de outros casais", "Ignorando o assunto completamente"], correct: 1, explanation: "Reclamações recorrentes costumam apontar diretamente para a linguagem principal da pessoa." },
+      { q: "O que o livro diz sobre a fase inicial de paixão em uma relação?", options: ["Ela dura para sempre sem esforço", "É biologicamente temporária", "Não tem relação com as linguagens do amor", "É a única fase importante do relacionamento"], correct: 1, explanation: "Após essa fase, o amor sustentável se torna uma escolha ativa e diária." },
+      { q: "Segundo o livro, o que sustenta relações de longo prazo?", options: ["Esperar que o sentimento espontâneo resolva tudo", "Aprender e praticar deliberadamente a linguagem de amor do outro", "Ter a mesma linguagem de amor que o parceiro", "Evitar qualquer tipo de conflito"], correct: 1, explanation: "Praticar conscientemente a linguagem do outro sustenta o amor no longo prazo." },
+      { q: "Qual é o canal mais direto de conexão para quem tem 'toque físico' como linguagem principal?", options: ["Palavras escritas", "Um abraço, segurar a mão, um gesto carinhoso", "Presentes materiais", "Tarefas domésticas"], correct: 1, explanation: "O toque físico é descrito como a linguagem mais imediata e biológica de conexão." },
+    ],
+  },
+
+  {
+    id: "essencialismo",
+    title: "Essencialismo",
+    author: "Baseado na obra de Greg McKeown",
+    category: "Produtividade & Gestão do Tempo",
+    tags: ["foco", "priorização", "menos porém melhor"],
+    readTimeMin: 15,
+    premium: true,
+    coverIcon: "bolt",
+    synopsis:
+      "A disciplina de buscar 'menos, porém melhor' — eliminando o que é trivial para investir tempo e energia apenas no que realmente importa.",
+    chapters: [
+      {
+        title: "A busca disciplinada por menos",
+        content:
+          "O essencialista não faz mais coisas em menos tempo — faz apenas as coisas certas. A obra contrasta o essencialista com o 'não essencialista', que diz sim a quase tudo por medo de perder oportunidades ou desagradar pessoas, e termina sobrecarregado, fazendo muitas coisas de forma mediana em vez de poucas coisas de forma excelente. A pergunta central proposta não é 'como posso encaixar isso também', mas 'isso é a coisa mais importante que eu poderia estar fazendo agora com meu tempo e recursos'.",
+      },
+      {
+        title: "Quase tudo é trivial",
+        content:
+          "A obra defende que, ao contrário da crença popular de que 'tudo é importante', na realidade poucas coisas produzem a maior parte do resultado — e a maioria das atividades do dia a dia é trivial demais para justificar o tempo investido nela. Distinguir entre o vital e o trivial exige investir tempo explorando e questionando opções antes de comprometer-se, em vez de aceitar automaticamente a primeira oportunidade razoável que aparece só porque parece 'boa o suficiente'.",
+      },
+      {
+        title: "O poder do 'não' gracioso",
+        content:
+          "Dizer não a pedidos, convites e oportunidades que não se alinham com as prioridades reais é uma habilidade central do essencialismo — e a obra ensina formas de recusar sem necessariamente destruir relações: separar a decisão da relação com a pessoa, usar um 'não claro, mas gentil' em vez de um sim relutante que gera ressentimento futuro, e lembrar que cada sim a algo trivial é automaticamente um não a algo potencialmente mais importante que poderia ocupar aquele mesmo espaço de tempo e energia.",
+      },
+      {
+        title: "Eliminar sem culpa",
+        content:
+          "Depois de identificado o que não é essencial, a obra recomenda eliminá-lo ativamente, não apenas evitar adicionar mais coisas novas. Isso inclui cortar compromissos já assumidos que deixaram de fazer sentido, mesmo que isso gere desconforto de curto prazo — o chamado 'custo irrecuperável' já foi gasto de qualquer forma, e continuar investindo tempo em algo só porque já se investiu antes é uma armadilha lógica comum que a obra recomenda reconhecer e evitar.",
+      },
+      {
+        title: "Criar um sistema à prova de erros",
+        content:
+          "Depender de força de vontade constante para manter o foco no essencial é frágil. A obra recomenda construir rotinas e sistemas que tornem o comportamento essencialista automático: bloquear tempo no calendário antes que outros compromissos o ocupem, criar 'buffers' de tempo entre tarefas para absorver imprevistos sem descarrilar o dia inteiro, e revisar regularmente compromissos assumidos para identificar quais já deixaram de ser essenciais e podem ser eliminados.",
+      },
+      {
+        title: "Viver como essencialista",
+        content:
+          "O essencialismo não é aplicado uma vez e esquecido — é uma prática contínua de reavaliação, porque prioridades mudam com o tempo e o que era essencial em uma fase da vida pode deixar de ser em outra. A recompensa descrita não é apenas mais produtividade, mas uma sensação mais profunda de propósito: em vez de se sentir dispersa e sobrecarregada por reagir a tudo, a pessoa passa a sentir controle real sobre onde investe sua energia mais limitada e valiosa — o próprio tempo de vida.",
+      },
+    ],
+    quiz: [
+      { q: "O que o essencialista busca, segundo o livro?", options: ["Fazer mais coisas em menos tempo", "Fazer apenas as coisas certas, com excelência", "Nunca recusar nenhum pedido", "Trabalhar o máximo de horas possível"], correct: 1, explanation: "O foco é qualidade e relevância das escolhas, não quantidade de tarefas realizadas." },
+      { q: "Qual é a pergunta central proposta pela obra ao avaliar uma nova oportunidade?", options: ["Como posso encaixar isso também?", "Isso é a coisa mais importante que eu poderia estar fazendo agora?", "Isso vai impressionar meus colegas?", "Quanto tempo isso vai levar?"], correct: 1, explanation: "Essa pergunta ajuda a filtrar o que realmente merece tempo e energia." },
+      { q: "O que a obra afirma sobre a maioria das atividades do dia a dia?", options: ["Todas são igualmente importantes", "A maioria é trivial e não produz a maior parte do resultado", "Devem ser todas eliminadas imediatamente", "São todas obrigatórias"], correct: 1, explanation: "Poucas atividades realmente produzem a maior parte do resultado desejado." },
+      { q: "Como o livro recomenda dizer não a pedidos que não se alinham com prioridades?", options: ["Ignorando a pessoa completamente", "Separando a decisão da relação com a pessoa, com um não claro mas gentil", "Sempre aceitando para evitar conflito", "Prometendo pensar e nunca respondendo"], correct: 1, explanation: "Um não claro e gentil evita tanto o compromisso indesejado quanto o ressentimento futuro." },
+      { q: "O que cada 'sim' a algo trivial representa, segundo a obra?", options: ["Uma oportunidade sem custo", "Um 'não' automático a algo potencialmente mais importante", "Sempre uma boa decisão", "Um investimento sem risco"], correct: 1, explanation: "Tempo e energia são limitados, então todo sim tem um custo de oportunidade." },
+      { q: "O que é o 'custo irrecuperável' mencionado no livro?", options: ["Um tipo de investimento financeiro", "Tempo ou recursos já gastos que não devem influenciar decisões futuras", "Um erro de cálculo comum", "O valor de um produto"], correct: 1, explanation: "Continuar investindo em algo só por já ter investido antes é uma armadilha lógica." },
+      { q: "Por que depender apenas de força de vontade para manter foco é frágil, segundo a obra?", options: ["Porque força de vontade não existe", "Porque é uma fonte de energia limitada e inconsistente ao longo do tempo", "Porque é ilegal em ambientes profissionais", "Porque não tem relação com produtividade"], correct: 1, explanation: "Por isso a obra recomenda criar sistemas e rotinas em vez de depender só de disciplina momentânea." },
+      { q: "O que a obra recomenda fazer com compromissos já assumidos que perderam relevância?", options: ["Mantê-los para não desperdiçar o esforço já investido", "Eliminá-los ativamente, mesmo com desconforto de curto prazo", "Ignorá-los sem cancelar formalmente", "Delegar sempre para outra pessoa"], correct: 1, explanation: "Eliminar ativamente é diferente de simplesmente evitar adicionar coisas novas." },
+      { q: "Por que o essencialismo é descrito como uma prática contínua?", options: ["Porque é aplicado uma única vez na vida", "Porque prioridades mudam com o tempo, exigindo reavaliação constante", "Porque é obrigatório por lei", "Porque não tem relação com produtividade pessoal"], correct: 1, explanation: "O que era essencial em uma fase da vida pode deixar de ser em outra." },
+      { q: "Qual é a recompensa descrita pela prática do essencialismo, além de produtividade?", options: ["Riqueza material imediata", "Uma sensação mais profunda de controle e propósito sobre o próprio tempo", "Fama e reconhecimento público", "Redução total do estresse para sempre"], correct: 1, explanation: "A pessoa passa a sentir controle real sobre onde investe sua energia mais valiosa." },
+    ],
+  },
+
+  {
+    id: "comece-pelo-porque",
+    title: "Comece pelo Porquê",
+    author: "Baseado na obra de Simon Sinek",
+    category: "Carreira & Negócios",
+    tags: ["propósito", "liderança", "inspiração"],
+    readTimeMin: 14,
+    premium: true,
+    coverIcon: "briefcase",
+    synopsis:
+      "Por que algumas organizações e líderes inspiram lealdade e inovação enquanto outros, com recursos e talento semelhantes, não conseguem — a resposta está na ordem em que comunicam propósito, processo e produto.",
+    chapters: [
+      {
+        title: "O Círculo Dourado",
+        content:
+          "A maioria das organizações sabe comunicar o que faz (produtos e serviços) e, com algum esforço, como faz (diferenciais e processos). Poucas conseguem articular claramente por que fazem o que fazem — não o lucro como consequência, mas o propósito, causa ou crença que motiva a existência da organização. O modelo do Círculo Dourado propõe que organizações e líderes verdadeiramente inspiradores comunicam de dentro para fora: primeiro o porquê, depois o como, e só então o quê — na ordem inversa da maioria das comunicações convencionais de marketing.",
+      },
+      {
+        title: "A biologia da tomada de decisão",
+        content:
+          "Essa ordem de comunicação não é apenas estética — corresponde à estrutura do cérebro humano. Decisões relacionadas a propósito, lealdade e comportamento são processadas em regiões cerebrais associadas a sentimento, não a linguagem racional explícita — por isso comunicações que apelam primeiro ao 'porquê' geram uma resposta visceral de identificação ('isso é o que eu também acredito') antes mesmo que a pessoa consiga articular racionalmente por que se sente atraída pela marca ou pelo líder.",
+      },
+      {
+        title: "Clareza, disciplina e consistência",
+        content:
+          "Ter um porquê claro não basta — é preciso disciplina para garantir que o como (os valores e processos) seja consistente com esse porquê em toda decisão organizacional, e consistência para que o quê (os produtos concretos) sirva como prova tangível do porquê ao longo do tempo. Organizações que comunicam um propósito inspirador mas agem de forma inconsistente com ele rapidamente perdem credibilidade — o público percebe a diferença entre um porquê genuíno e um usado apenas como estratégia de marketing.",
+      },
+      {
+        title: "Confiança e a lei da difusão de inovações",
+        content:
+          "Pessoas não compram apenas o que você faz, compram por que você faz — e isso cria um tipo diferente de relação com clientes e colaboradores: baseada em confiança e identificação com valores compartilhados, não apenas em características do produto. A obra conecta essa ideia com o modelo de difusão de inovações: inovadores e early adopters (cerca de 15-18% do mercado) compram baseados no porquê e na crença compartilhada, e são eles que, se conquistados primeiro, arrastam consigo a maioria pragmática do mercado depois.",
+      },
+      {
+        title: "Quando o porquê se perde",
+        content:
+          "Organizações fundadas com um porquê claro frequentemente o perdem conforme crescem: o fundador que incorporava o propósito sai ou se afasta, e a empresa passa a ser guiada por metas de curto prazo (o quê) sem a bússola original. O livro descreve esse fenômeno como uma das principais causas de estagnação em empresas que já foram inovadoras — quando decisões passam a ser tomadas puramente por dados de mercado e resultados trimestrais, sem referência ao porquê original que gerava diferenciação genuína.",
+      },
+      {
+        title: "Encontrando e vivendo o próprio porquê",
+        content:
+          "O porquê pessoal ou organizacional não é inventado, é descoberto — geralmente está enraizado em experiências reais de origem, nos valores que já guiam decisões mesmo sem terem sido articulados formalmente. O processo sugerido envolve revisitar histórias e momentos de maior orgulho e realização para identificar o fio condutor comum entre eles. Uma vez articulado, o porquê deve ser usado como filtro de decisão constante: cada nova iniciativa, contratação ou parceria deveria ser avaliada primeiro por sua coerência com esse propósito central, não apenas por seu potencial de lucro imediato.",
+      },
+    ],
+    quiz: [
+      { q: "O que é o 'Círculo Dourado' proposto pelo autor?", options: ["Um modelo financeiro de investimentos", "Um modelo de comunicação que parte do porquê, depois como, depois o quê", "Uma estratégia de precificação", "Um tipo de organograma empresarial"], correct: 1, explanation: "A maioria das organizações comunica na ordem inversa: o quê, o como, e raramente o porquê." },
+      { q: "Por que a ordem de comunicação do Círculo Dourado é eficaz, segundo a obra?", options: ["Porque é mais rápida de explicar", "Porque corresponde à forma como o cérebro processa decisões ligadas a sentimento e lealdade", "Porque reduz custos de marketing", "Porque é exigida por lei em alguns países"], correct: 1, explanation: "Decisões de lealdade são processadas em regiões cerebrais ligadas a sentimento, não linguagem racional." },
+      { q: "O que acontece quando uma organização comunica um propósito inspirador mas age de forma inconsistente com ele?", options: ["Nada, o público não percebe", "Perde credibilidade, pois a diferença entre porquê genuíno e marketing fica evidente", "Aumenta automaticamente as vendas", "Isso nunca acontece na prática"], correct: 1, explanation: "Consistência entre porquê, como e quê é essencial para manter a credibilidade." },
+      { q: "Segundo o livro, o que as pessoas realmente compram?", options: ["Apenas o produto em si", "O porquê por trás do que a empresa faz", "Sempre o preço mais baixo disponível", "Apenas a marca mais conhecida"], correct: 1, explanation: "A relação com clientes se baseia em confiança e identificação com valores compartilhados." },
+      { q: "Quem, segundo o modelo de difusão de inovações citado, compra baseado no porquê primeiro?", options: ["A maioria pragmática do mercado", "Inovadores e early adopters", "Apenas clientes que buscam o menor preço", "Consumidores que nunca experimentam produtos novos"], correct: 1, explanation: "Esse grupo, cerca de 15-18% do mercado, costuma arrastar a maioria pragmática depois." },
+      { q: "Por que organizações frequentemente perdem seu porquê ao crescer?", options: ["Porque o porquê nunca foi real desde o início", "Porque o fundador que incorporava o propósito se afasta e decisões passam a ser guiadas só por metas de curto prazo", "Porque crescer é sempre negativo", "Porque o mercado exige isso por lei"], correct: 1, explanation: "Sem a bússola original, decisões passam a ser guiadas puramente por resultados trimestrais." },
+      { q: "Como o porquê pessoal ou organizacional geralmente é encontrado, segundo o autor?", options: ["É inventado do zero para fins de marketing", "É descoberto, revisitando histórias e valores que já guiam decisões", "É copiado de outras empresas de sucesso", "É definido por consultores externos apenas"], correct: 1, explanation: "O porquê geralmente já está enraizado em experiências reais de origem." },
+      { q: "Como o porquê deve ser usado nas decisões organizacionais, segundo o livro?", options: ["Apenas em campanhas de marketing", "Como filtro constante para avaliar novas iniciativas e parcerias", "Somente na fundação da empresa", "Não tem aplicação prática no dia a dia"], correct: 1, explanation: "Cada decisão deveria ser avaliada por sua coerência com o propósito central, não só pelo lucro." },
+      { q: "O que caracteriza o 'como', no Círculo Dourado?", options: ["Os produtos e serviços concretos oferecidos", "Os valores e processos diferenciais da organização", "Apenas o preço dos produtos", "A localização física da empresa"], correct: 1, explanation: "O como representa os valores e processos que tornam a organização diferente das demais." },
+      { q: "O que caracteriza o 'quê', no Círculo Dourado?", options: ["O propósito ou crença central", "Os produtos e serviços tangíveis oferecidos", "A cultura organizacional", "A missão declarada da empresa"], correct: 1, explanation: "O quê são os produtos concretos, que servem como prova tangível do porquê." },
+    ],
+  },
+
+  {
+    id: "influencia-psicologia-persuasao",
+    title: "Influência: A Psicologia da Persuasão",
+    author: "Baseado na obra de Robert Cialdini",
+    category: "Marketing & Vendas",
+    tags: ["persuasão", "psicologia social", "vendas"],
+    readTimeMin: 17,
+    premium: true,
+    coverIcon: "handshake",
+    synopsis:
+      "Seis princípios psicológicos universais que tornam as pessoas mais propensas a dizer sim — e como reconhecê-los tanto para influenciar de forma ética quanto para se proteger de manipulação.",
+    chapters: [
+      {
+        title: "Reciprocidade",
+        content:
+          "Quando alguém nos dá algo — um favor, uma amostra grátis, uma informação útil — sentimos uma obrigação psicológica quase automática de retribuir, mesmo que o presente inicial não tenha sido solicitado. Esse princípio é usado (e abusado) em vendas através de amostras grátis, degustações e pequenos favores que criam um senso de dívida social. A defesa contra o uso manipulador da reciprocidade não é recusar todo favor genuíno, mas reconhecer quando um 'presente' foi oferecido estrategicamente para gerar uma obrigação desproporcional.",
+      },
+      {
+        title: "Compromisso e coerência",
+        content:
+          "Uma vez que assumimos publicamente uma posição ou um pequeno compromisso, sentimos forte pressão psicológica interna para manter coerência com essa escolha em decisões futuras, mesmo que as circunstâncias tenham mudado. Vendedores exploram isso com a técnica do 'pé na porta': conseguir um pequeno sim inicial (assinar uma petição, aceitar uma amostra) torna muito mais provável conseguir um sim maior depois, porque recusar geraria uma sensação incômoda de inconsistência com o compromisso já assumido.",
+      },
+      {
+        title: "Prova social",
+        content:
+          "Em situações de incerteza sobre a ação correta, as pessoas olham para o comportamento de outros como guia — especialmente de pessoas que consideram semelhantes a si mesmas. Avaliações online, filas visíveis, contadores de 'pessoas que compraram este produto' e depoimentos de clientes exploram esse princípio. A prova social é especialmente poderosa em situações ambíguas, onde a pessoa não tem certeza própria sobre a melhor decisão e busca pistas externas para reduzir essa incerteza.",
+      },
+      {
+        title: "Afeição, autoridade e escassez",
+        content:
+          "Tendemos a dizer sim mais facilmente a pessoas de quem gostamos — por semelhança, elogios genuínos ou familiaridade repetida. Também obedecemos mais prontamente a símbolos de autoridade genuína ou aparente — títulos, uniformes, jargão técnico — mesmo sem verificar a legitimidade real por trás deles. E valorizamos mais aquilo que parece escasso ou com prazo limitado, porque a perda potencial de uma oportunidade pesa psicologicamente mais do que o ganho equivalente — daí o poder de frases como 'últimas unidades' ou 'oferta por tempo limitado'.",
+      },
+      {
+        title: "Como esses princípios se combinam",
+        content:
+          "Na prática, campanhas de persuasão eficazes raramente usam apenas um princípio isoladamente — combinam vários simultaneamente para amplificar o efeito: uma oferta escassa (escassez), recomendada por um especialista (autoridade), com muitas avaliações positivas de outros clientes (prova social), e um pequeno compromisso inicial gratuito (reciprocidade e coerência). Reconhecer cada princípio individualmente ajuda a identificar quando várias dessas alavancas estão sendo puxadas ao mesmo tempo, o que costuma indicar uma tentativa deliberada de acelerar uma decisão.",
+      },
+      {
+        title: "Usando influência de forma ética",
+        content:
+          "O autor distingue claramente entre usar esses princípios para comunicar vantagens reais de forma persuasiva (legítimo) e usá-los para induzir decisões que a pessoa não tomaria com informação completa e tempo para refletir (manipulação). A recomendação prática para quem aplica esses princípios profissionalmente é usá-los apenas quando a oferta subjacente é genuinamente boa para quem a recebe — porque a persuasão de curto prazo baseada em pressão, sem substância real por trás, tende a gerar arrependimento do cliente e destruir a confiança de longo prazo.",
+      },
+    ],
+    quiz: [
+      { q: "O que é o princípio da reciprocidade?", options: ["Comprar sempre o produto mais barato", "A obrigação psicológica de retribuir quando alguém nos dá algo", "Evitar qualquer tipo de favor", "Um tipo de desconto comercial"], correct: 1, explanation: "Amostras grátis e pequenos favores criam um senso de dívida social a ser retribuída." },
+      { q: "O que é a técnica do 'pé na porta'?", options: ["Uma técnica de vendas porta a porta apenas", "Conseguir um pequeno compromisso inicial para facilitar um compromisso maior depois", "Uma estratégia de precificação", "Um tipo de propaganda visual"], correct: 1, explanation: "O princípio de compromisso e coerência torna mais provável aceitar pedidos maiores após um pequeno sim inicial." },
+      { q: "Quando a prova social é mais poderosa, segundo o livro?", options: ["Quando a pessoa já tem total certeza da decisão", "Em situações de incerteza, quando a pessoa busca pistas externas", "Apenas em compras de baixo valor", "Nunca influencia decisões importantes"], correct: 1, explanation: "Em ambiguidade, as pessoas olham para o comportamento de outros como guia." },
+      { q: "Por que símbolos de autoridade influenciam decisões, mesmo sem verificação?", options: ["Porque são sempre legítimos de fato", "Porque tendemos a obedecer a títulos, uniformes e jargão técnico automaticamente", "Porque é exigido por lei", "Porque reduzem o preço dos produtos"], correct: 1, explanation: "A obediência a símbolos de autoridade muitas vezes ocorre sem checar sua legitimidade real." },
+      { q: "Por que a escassez aumenta o desejo por algo, segundo o livro?", options: ["Porque produtos escassos são sempre de melhor qualidade", "Porque a perda potencial de uma oportunidade pesa mais psicologicamente que o ganho equivalente", "Porque escassez sempre significa preço mais baixo", "Não há relação entre escassez e desejo"], correct: 1, explanation: "Frases como 'últimas unidades' exploram a aversão à perda de oportunidade." },
+      { q: "Por que campanhas de persuasão eficazes combinam vários princípios ao mesmo tempo?", options: ["Para confundir o consumidor de propósito", "Para amplificar o efeito persuasivo combinando várias alavancas psicológicas", "Porque um princípio isolado nunca funciona", "Isso nunca acontece na prática real"], correct: 1, explanation: "Escassez, autoridade, prova social e reciprocidade combinados aceleram a tomada de decisão." },
+      { q: "Qual é a diferença entre persuasão ética e manipulação, segundo o autor?", options: ["Não existe diferença real entre elas", "Persuasão ética comunica vantagens reais; manipulação induz decisões sem informação completa", "Manipulação é sempre mais eficaz no longo prazo", "A diferença está apenas no preço do produto"], correct: 1, explanation: "O uso ético desses princípios depende da oferta subjacente ser genuinamente boa para quem recebe." },
+      { q: "O que costuma acontecer quando persuasão de curto prazo é usada sem substância real por trás?", options: ["Aumenta a confiança do cliente no longo prazo", "Gera arrependimento do cliente e destrói a confiança de longo prazo", "Não tem nenhum efeito negativo", "Sempre resulta em mais vendas futuras"], correct: 1, explanation: "Pressão sem valor real por trás tende a prejudicar a relação de confiança no longo prazo." },
+      { q: "Por que tendemos a dizer sim mais facilmente a pessoas de quem gostamos?", options: ["Isso não influencia decisões reais", "O princípio da afeição faz com que semelhança e familiaridade aumentem a persuasão", "Apenas por obrigação contratual", "Somente em relações familiares"], correct: 1, explanation: "Semelhança, elogios genuínos e familiaridade repetida aumentam a afeição e a persuasão." },
+      { q: "Qual é a recomendação prática do autor para quem aplica esses princípios profissionalmente?", options: ["Usá-los sempre, independente da qualidade da oferta", "Usá-los apenas quando a oferta é genuinamente boa para quem a recebe", "Evitar completamente qualquer técnica de persuasão", "Usá-los apenas com clientes novos"], correct: 1, explanation: "Isso evita o arrependimento do cliente e protege a confiança de longo prazo." },
+    ],
+  },
 ];
 
 // Reflexões diárias — o índice é calculado a partir do dia do ano (rotaciona automaticamente por data)
@@ -537,7 +993,6 @@ window.LEVELS = [
 */
 window.CATALOG_STUBS = [
   // Carreira & Negócios
-  ["Comece pelo Porquê", "Simon Sinek", "Carreira & Negócios"],
   ["Empresas Feitas para Vencer", "Jim Collins", "Carreira & Negócios"],
   ["Empresas Feitas para Durar", "Jim Collins e Jerry Porras", "Carreira & Negócios"],
   ["A Startup Enxuta", "Eric Ries", "Carreira & Negócios"],
@@ -652,7 +1107,6 @@ window.CATALOG_STUBS = [
   ["A Arte de Apresentar", "Carmine Gallo", "Cultura Corporativa & Comunicação"],
 
   // Gestão & Liderança
-  ["Os 7 Hábitos das Pessoas Altamente Eficazes", "Stephen Covey", "Gestão & Liderança"],
   ["O Monge e o Executivo", "James C. Hunter", "Gestão & Liderança"],
   ["Liderança: Teoria e Prática", "Peter Northouse", "Gestão & Liderança"],
   ["Líderes Comem Por Último", "Simon Sinek", "Gestão & Liderança"],
@@ -681,7 +1135,6 @@ window.CATALOG_STUBS = [
   ["Receita Previsível", "Aaron Ross e Marylou Tyler", "Marketing & Vendas"],
   ["Spin Selling", "Neil Rackham", "Marketing & Vendas"],
   ["A Venda Desafiadora", "Matthew Dixon e Brent Adamson", "Marketing & Vendas"],
-  ["Influência: A Psicologia da Persuasão", "Robert Cialdini", "Marketing & Vendas"],
   ["Pré-Suasão", "Robert Cialdini", "Marketing & Vendas"],
   ["Contágio: Por Que as Coisas Pegam", "Jonah Berger", "Marketing & Vendas"],
   ["Marketing de Permissão", "Seth Godin", "Marketing & Vendas"],
@@ -697,12 +1150,10 @@ window.CATALOG_STUBS = [
 
   // Produtividade & Gestão do Tempo
   ["A Arte de Fazer Acontecer", "David Allen", "Produtividade & Gestão do Tempo"],
-  ["Essencialismo", "Greg McKeown", "Produtividade & Gestão do Tempo"],
   ["Trabalho Focado", "Cal Newport", "Produtividade & Gestão do Tempo"],
   ["Trabalho Superficial", "Cal Newport", "Produtividade & Gestão do Tempo"],
   ["A Semana de 4 Horas", "Timothy Ferriss", "Produtividade & Gestão do Tempo"],
   ["Coma o Sapo!", "Brian Tracy", "Produtividade & Gestão do Tempo"],
-  ["Os 7 Hábitos das Pessoas Altamente Eficazes", "Stephen Covey", "Produtividade & Gestão do Tempo"],
   ["Foco: A Atenção e Seu Papel Fundamental para o Sucesso", "Daniel Goleman", "Produtividade & Gestão do Tempo"],
   ["Deep Work: Foco Total", "Cal Newport", "Produtividade & Gestão do Tempo"],
   ["16 Elementos para Uma Vida Equilibrada", "Christian Barbosa", "Produtividade & Gestão do Tempo"],
@@ -731,7 +1182,6 @@ window.CATALOG_STUBS = [
   ["A Inteligência Emocional das Crianças", "John Gottman", "Inteligência Emocional"],
 
   // Psicologia
-  ["Rápido e Devagar: Duas Formas de Pensar", "Daniel Kahneman", "Psicologia"],
   ["O Homem em Busca de Sentido", "Viktor Frankl", "Psicologia"],
   ["A Sociedade do Cansaço", "Byung-Chul Han", "Psicologia"],
   ["O Corpo Guarda as Marcas", "Bessel van der Kolk", "Psicologia"],
@@ -753,8 +1203,6 @@ window.CATALOG_STUBS = [
   ["Autoconhecimento: O Caminho para a Liberdade", "Jiddu Krishnamurti", "Psicologia"],
 
   // Desenvolvimento Pessoal
-  ["Os 7 Hábitos das Pessoas Altamente Eficazes", "Stephen Covey", "Desenvolvimento Pessoal"],
-  ["O Poder do Agora", "Eckhart Tolle", "Desenvolvimento Pessoal"],
   ["Um Novo Mundo, Uma Nova Terra", "Eckhart Tolle", "Desenvolvimento Pessoal"],
   ["Os Quatro Compromissos", "Miguel Ruiz", "Desenvolvimento Pessoal"],
   ["O Quinto Compromisso", "Miguel Ruiz", "Desenvolvimento Pessoal"],
@@ -796,7 +1244,6 @@ window.CATALOG_STUBS = [
   ["A Coragem de Ser Você Mesmo", "Wayne Dyer", "Autoajuda & Motivação"],
 
   // Espiritualidade & Mindfulness
-  ["O Poder do Agora", "Eckhart Tolle", "Espiritualidade & Mindfulness"],
   ["A Prática da Atenção Plena", "Thich Nhat Hanh", "Espiritualidade & Mindfulness"],
   ["O Milagre da Atenção Plena", "Thich Nhat Hanh", "Espiritualidade & Mindfulness"],
   ["Paz Em Cada Passo", "Thich Nhat Hanh", "Espiritualidade & Mindfulness"],
@@ -815,7 +1262,6 @@ window.CATALOG_STUBS = [
   ["O Livro da Alegria", "Dalai Lama e Desmond Tutu", "Espiritualidade & Mindfulness"],
 
   // Sexo & Relacionamentos
-  ["Os 5 Linguagens do Amor", "Gary Chapman", "Sexo & Relacionamentos"],
   ["Por Que os Homens Fazem Sexo e as Mulheres Fazem Amor", "Allan e Barbara Pease", "Sexo & Relacionamentos"],
   ["Por Que os Homens Não Escutam e as Mulheres Não Entendem Mapas", "Allan e Barbara Pease", "Sexo & Relacionamentos"],
   ["Homens São de Marte, Mulheres São de Vênus", "John Gray", "Sexo & Relacionamentos"],
@@ -901,7 +1347,6 @@ window.CATALOG_STUBS = [
   ["Guerreiras de Klimt", "Anne-Marie O'Connor", "Biografias & Memórias"],
 
   // História & Filosofia
-  ["Sapiens: Uma Breve História da Humanidade", "Yuval Noah Harari", "História & Filosofia"],
   ["Homo Deus", "Yuval Noah Harari", "História & Filosofia"],
   ["21 Lições para o Século 21", "Yuval Noah Harari", "História & Filosofia"],
   ["Armas, Germes e Aço", "Jared Diamond", "História & Filosofia"],
