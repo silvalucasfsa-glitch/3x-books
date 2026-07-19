@@ -1,5 +1,5 @@
 /*
-  3X BOOKS — Configuração do Supabase
+  MENTOR3X — Configuração do Supabase
 
   1. Acesse: https://supabase.com/dashboard/project/emnyioovbakygmqhmbpc/settings/api
   2. Copie a chave "anon public" (NUNCA a "service_role" — essa é secreta e não

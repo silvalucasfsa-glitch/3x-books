@@ -3,8 +3,8 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover, maximum-scale=1.0">
-<title>3X Books · Microlearning</title>
-<meta name="description" content="3X Books — resumos de livros em microlearning, com áudio, quiz e trilha de conquistas. Multiplicando negócios. Construindo legado.">
+<title>Mentor3X · Microlearning</title>
+<meta name="description" content="Mentor3X — resumos de livros em microlearning, com áudio, quiz e trilha de conquistas. Multiplicando negócios. Construindo legado.">
 <meta name="theme-color" content="#0A0A0A">
 <link rel="manifest" href="manifest.json">
 <link rel="icon" href="icon.svg" type="image/svg+xml">
@@ -520,7 +520,7 @@ function PaywallModal({ onClose }) {
         <div className="modal-handle" />
         <div style={{ textAlign: "center", marginBottom: 20 }}>
           <Icon name="crown" style={{ width: 30, height: 30, color: "var(--gold-light)", marginBottom: 8 }} />
-          <h2 style={{ fontSize: 22, marginBottom: 6 }}>Desbloqueie a Biblioteca 3X</h2>
+          <h2 style={{ fontSize: 22, marginBottom: 6 }}>Desbloqueie a Biblioteca Mentor3X</h2>
           <p style={{ color: "var(--silver)", fontSize: 14.5 }}>
             No plano grátis você lê 3 resumos e vê 3 ideias de negócio por mês. Vire Premium e tenha acesso ilimitado a todos os títulos e ideias, sem espera.
           </p>
@@ -580,8 +580,8 @@ function AuthScreen() {
     <div className="auth-wrap">
       <div className="auth-card">
         <div className="brand" style={{ justifyContent: "center", marginBottom: 18 }}>
-          <div className="brand-mark">3X</div>
-          <div className="brand-name">3X <span>Books</span></div>
+          <div className="brand-mark">M3X</div>
+          <div className="brand-name">Mentor<span>3X</span></div>
         </div>
 
         <h1 className="auth-title">{mode === "login" ? "Bem-vindo de volta" : "Crie sua conta"}</h1>
@@ -650,7 +650,7 @@ function HomeScreen({ nav }) {
   }, []);
 
   const shareReflection = () => {
-    const text = `"${reflection}" — via 3X Books`;
+    const text = `"${reflection}" — via Mentor3X`;
     if (navigator.share) {
       navigator.share({ text }).catch(() => {});
     } else {
@@ -663,8 +663,8 @@ function HomeScreen({ nav }) {
     <div className="app-screen">
       <div className="topbar">
         <div className="brand">
-          <div className="brand-mark">3X</div>
-          <div className="brand-name">3X <span>Books</span></div>
+          <div className="brand-mark">M3X</div>
+          <div className="brand-name">Mentor<span>3X</span></div>
         </div>
         <button className="btn-icon" onClick={() => nav("perfil")}>
           <Icon name="profile" />
@@ -897,7 +897,7 @@ function BookDetailScreen({ nav, params }) {
           <Icon name="sparkle" style={{ width: 26, height: 26, color: "var(--gold)", marginBottom: 10 }} />
           <div style={{ fontWeight: 700, marginBottom: 6 }}>Resumo completo em breve</div>
           <p style={{ color: "var(--silver-dim)", fontSize: 13.5, lineHeight: 1.6 }}>
-            Este título já está no catálogo 3X Books. O resumo, o áudio e o quiz estão sendo produzidos e chegam em uma próxima atualização.
+            Este título já está no catálogo Mentor3X. O resumo, o áudio e o quiz estão sendo produzidos e chegam em uma próxima atualização.
           </p>
         </div>
       )}
@@ -1362,7 +1362,7 @@ function AppShell() {
   if (authLoading) {
     return (
       <div style={{ minHeight: "100vh", display: "flex", alignItems: "center", justifyContent: "center" }}>
-        <div className="brand-mark" style={{ width: 52, height: 52, fontSize: 20 }}>3X</div>
+        <div className="brand-mark" style={{ width: 52, height: 52, fontSize: 17 }}>M3X</div>
       </div>
     );
   }

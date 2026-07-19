@@ -1,6 +1,6 @@
 {
-  "name": "3X Books — Multiplicando negócios. Construindo legado.",
-  "short_name": "3X Books",
+  "name": "Mentor3X — Multiplicando negócios. Construindo legado.",
+  "short_name": "Mentor3X",
   "description": "Microlearning de livros de negócios: resumos, áudio, quiz e trilha de conquistas.",
   "start_url": "./index.html",
   "scope": "./",

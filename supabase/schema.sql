@@ -1,4 +1,4 @@
--- 3X BOOKS — Schema Supabase
+-- MENTOR3X — Schema Supabase
 -- Rode este script inteiro no SQL Editor do painel:
 -- https://supabase.com/dashboard/project/emnyioovbakygmqhmbpc/sql/new
 

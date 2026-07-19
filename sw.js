@@ -1,4 +1,4 @@
-const CACHE_NAME = "3xbooks-cache-v3";
+const CACHE_NAME = "mentor3x-cache-v4";
 const ASSETS = [
   "./",
   "./index.html",

@@ -1,5 +1,5 @@
 /*
-  3X BOOKS — Base de dados de conteúdo
+  MENTOR3X — Base de dados de conteúdo
   Estrutura pensada para escalar até 1000+ títulos.
   Cada resumo é escrito com palavras próprias (paráfrase original),
   nunca trechos literais das obras originais.
@@ -879,6 +879,861 @@ window.BOOKS = [
       { q: "Qual é a recomendação prática do autor para quem aplica esses princípios profissionalmente?", options: ["Usá-los sempre, independente da qualidade da oferta", "Usá-los apenas quando a oferta é genuinamente boa para quem a recebe", "Evitar completamente qualquer técnica de persuasão", "Usá-los apenas com clientes novos"], correct: 1, explanation: "Isso evita o arrependimento do cliente e protege a confiança de longo prazo." },
     ],
   },
+
+  {
+    id: "steve-jobs-biografia",
+    title: "Steve Jobs",
+    author: "Baseado na obra de Walter Isaacson",
+    category: "Biografias & Memórias",
+    tags: ["biografia", "tecnologia", "inovação"],
+    readTimeMin: 19,
+    premium: true,
+    coverIcon: "bookOpen",
+    synopsis:
+      "A biografia definitiva e autorizada do cofundador da Apple, construída a partir de mais de quarenta entrevistas com o próprio Jobs e centenas com pessoas de sua vida.",
+    chapters: [
+      {
+        title: "Abandono e busca de controle",
+        content:
+          "Jobs foi dado para adoção ao nascer e, ao longo da vida, carregou uma sensibilidade profunda em relação a abandono e controle — traços que o biógrafo conecta a padrões posteriores de comportamento: necessidade de controlar cada detalhe de seus produtos, dificuldade em manter relações consistentes, e uma intensidade emocional que oscilava entre extremos. Entender essa origem não desculpa os excessos do personagem, mas ajuda a explicar a obsessão por perfeição que definiria sua carreira.",
+      },
+      {
+        title: "O 'campo de distorção da realidade'",
+        content:
+          "Colegas cunharam essa expressão para descrever a capacidade de Jobs de convencer a si mesmo e aos outros de que o aparentemente impossível era alcançável — pressionando equipes a entregar prazos e especificações que pareciam absurdos, e conseguindo, com frequência incômoda, que a equipe realmente entregasse. Essa mesma força também gerava atrito severo: humilhações públicas, mudanças de opinião abruptas e padrões inatingíveis eram parte do preço pago por quem trabalhava perto dele.",
+      },
+      {
+        title: "Simplicidade como filosofia de design",
+        content:
+          "Influenciado por estética minimalista e por sua experiência com meditação zen, Jobs tratava simplicidade não como estilo superficial, mas como resultado de um processo obsessivo de eliminação — remover botões, remover opções, remover qualquer coisa que exigisse do usuário entender a complexidade interna do produto. 'Simples pode ser mais difícil que complexo', segundo essa filosofia: exige muito mais trabalho tornar algo intuitivo do que simplesmente adicionar mais funcionalidades.",
+      },
+      {
+        title: "A volta à Apple e o foco radical",
+        content:
+          "Ao retornar à Apple em 1997, quase falida, Jobs cortou a linha de produtos de dezenas para apenas quatro — dois desktops e dois portáteis, um para consumidores e outro para profissionais. Essa disposição para dizer não a quase tudo, mesmo produtos lucrativos, e concentrar recursos em poucas apostas de altíssima qualidade, é apresentada como decisão central que salvou a empresa, ilustrando sua crença de que foco não é sobre dizer sim às boas ideias, mas dizer não a centenas delas.",
+      },
+      {
+        title: "Integração vertical como vantagem",
+        content:
+          "Enquanto concorrentes apostavam em licenciar software para múltiplos fabricantes de hardware, Jobs insistia em controlar toda a experiência — hardware, software e, depois, a loja de aplicativos — de ponta a ponta. Essa integração vertical, vista por muitos analistas como antiquada num mercado que caminhava para abertura, permitiu um nível de polimento e coerência de experiência que a obra credita como diferencial central do sucesso do iPhone e do iPad.",
+      },
+      {
+        title: "Legado e contradições",
+        content:
+          "A biografia não esconde os aspectos mais duros do personagem: o tratamento áspero com funcionários, negação inicial da paternidade de sua primeira filha, decisões questionáveis sobre seu próprio tratamento médico. O retrato final é deliberadamente ambíguo — nem herói sem falhas, nem vilão simples — apresentando Jobs como alguém cujas qualidades mais admiráveis (padrões implacáveis, visão de produto, intuição estética) e seus piores defeitos vinham, segundo o próprio biógrafo, exatamente da mesma fonte de personalidade.",
+      },
+    ],
+    quiz: [
+      { q: "Qual é a experiência de origem que o biógrafo conecta a padrões posteriores no comportamento de Jobs?", options: ["Uma infância em extrema pobreza", "Ter sido dado para adoção ao nascer", "Um acidente na juventude", "Ter crescido sem irmãos"], correct: 1, explanation: "A questão do abandono é ligada à necessidade de controle observada mais tarde em sua vida." },
+      { q: "O que é o 'campo de distorção da realidade'?", options: ["Uma técnica de marketing da Apple", "A capacidade de Jobs de convencer pessoas de que o impossível era alcançável", "Um recurso de software da empresa", "Um termo da física quântica"], correct: 1, explanation: "Colegas usavam essa expressão para descrever sua pressão intensa por resultados aparentemente impossíveis." },
+      { q: "Como Jobs tratava a simplicidade em seus produtos?", options: ["Como um estilo superficial e fácil de aplicar", "Como resultado de um processo obsessivo de eliminação", "Como algo irrelevante para o sucesso comercial", "Como sinônimo de baixo custo de produção"], correct: 1, explanation: "Simplicidade exigia um esforço grande de remover complexidade desnecessária." },
+      { q: "O que Jobs fez ao retornar à Apple em 1997?", options: ["Expandiu a linha de produtos para dezenas de opções", "Cortou a linha de produtos para apenas quatro modelos", "Vendeu a empresa imediatamente", "Terceirizou toda a produção"], correct: 1, explanation: "Essa concentração de foco é apresentada como decisão central que ajudou a salvar a empresa." },
+      { q: "O que caracteriza a 'integração vertical' que Jobs defendia?", options: ["Licenciar software para múltiplos fabricantes", "Controlar hardware, software e loja de aplicativos de ponta a ponta", "Terceirizar todo o design de produto", "Focar apenas no desenvolvimento de software"], correct: 1, explanation: "Essa abordagem permitiu um nível de coerência de experiência considerado diferencial pela obra." },
+      { q: "Como a biografia retrata Jobs no seu balanço final?", options: ["Como um herói sem falhas", "Como um vilão sem qualidades", "De forma ambígua, com qualidades e defeitos vindos da mesma fonte", "Como uma figura irrelevante para a tecnologia"], correct: 2, explanation: "O biógrafo sugere que seus maiores méritos e piores defeitos tinham raízes de personalidade comuns." },
+      { q: "Qual foi um dos aspectos mais duros do personagem retratados na obra?", options: ["Excesso de gentileza com funcionários", "Tratamento áspero com colaboradores e decisões questionáveis sobre sua saúde", "Falta total de ambição profissional", "Desinteresse completo por design"], correct: 1, explanation: "A obra não esconde os lados mais difíceis do comportamento de Jobs." },
+      { q: "O que a filosofia 'dizer não' representava para Jobs, segundo a obra?", options: ["Recusar qualquer proposta de negócio", "Concentrar recursos em poucas apostas de altíssima qualidade", "Evitar reuniões de equipe", "Uma estratégia apenas de relações públicas"], correct: 1, explanation: "Foco significava dizer não a centenas de boas ideias para priorizar poucas excelentes." },
+      { q: "De onde vem boa parte da influência estética de Jobs, segundo a obra?", options: ["Arquitetura barroca", "Minimalismo e experiência com meditação zen", "Design industrial soviético", "Tendências de moda da década de 1980"], correct: 1, explanation: "Essas influências reforçaram sua busca por simplicidade nos produtos." },
+      { q: "Por que a base de mais de quarenta entrevistas com o próprio Jobs é relevante para a obra?", options: ["Porque tornou a biografia não autorizada", "Porque deu acesso direto à perspectiva do próprio biografado, além de outras fontes", "Porque substituiu qualquer outra fonte de pesquisa", "Porque foi a única fonte usada no livro"], correct: 1, explanation: "A biografia combina a perspectiva de Jobs com centenas de outras entrevistas para um retrato mais completo." },
+    ],
+  },
+
+  {
+    id: "lideres-comem-por-ultimo",
+    title: "Líderes Comem Por Último",
+    author: "Baseado na obra de Simon Sinek",
+    category: "Gestão & Liderança",
+    tags: ["liderança", "confiança", "cultura organizacional"],
+    readTimeMin: 16,
+    premium: true,
+    coverIcon: "compass",
+    synopsis:
+      "Por que alguns times trabalham juntos com confiança e cooperação natural, enquanto outros vivem em competição interna constante — e o papel da liderança em criar segurança psicológica.",
+    chapters: [
+      {
+        title: "O 'Círculo de Segurança'",
+        content:
+          "A obra descreve o papel do líder como criar um 'Círculo de Segurança' ao redor de sua equipe — um ambiente onde as ameaças externas (concorrência, mercado, incerteza) são enfrentadas coletivamente, e as pessoas dentro do círculo não precisam se proteger umas das outras. Quando esse círculo existe, energia que seria gasta em política interna e autoproteção é redirecionada para colaboração e inovação genuína.",
+      },
+      {
+        title: "Biologia da confiança e da traição",
+        content:
+          "O autor conecta comportamento organizacional a química cerebral: endorfina e dopamina recompensam conquistas individuais de curto prazo, enquanto serotonina e ocitocina estão ligadas a status social e vínculos de confiança de longo prazo. Culturas que recompensam apenas resultados individuais imediatos, sem atenção a relações, favorecem os primeiros hormônios às custas dos segundos — gerando ambientes tecnicamente produtivos no curto prazo, mas frágeis e desconfiados no longo prazo.",
+      },
+      {
+        title: "'Comer por último' como símbolo",
+        content:
+          "O título faz referência a um costume observado em corpos militares: os líderes de maior patente comem depois de todos os demais, um gesto simbólico que comunica que a posição de liderança existe para servir a equipe, não o contrário. A obra argumenta que sacrifícios visíveis e consistentes por parte de líderes — mesmo pequenos e simbólicos — comunicam segurança de forma muito mais poderosa do que discursos sobre 'cuidar das pessoas'.",
+      },
+      {
+        title: "A distância abstrata",
+        content:
+          "Conforme organizações crescem, líderes ficam mais distantes das consequências humanas concretas de suas decisões — cortes de custo tornam-se números em uma planilha, não rostos de pessoas reais afetadas. Essa 'distância abstrata' é apontada como um dos maiores riscos do crescimento organizacional: decisões que pareceriam obviamente erradas se tomadas olhando no olho de um funcionário afetado tornam-se mais fáceis de justificar quando mediadas por camadas de abstração numérica.",
+      },
+      {
+        title: "Empatia como habilidade treinável",
+        content:
+          "A obra rejeita a ideia de que empatia é um traço fixo de personalidade — é apresentada como uma habilidade que se desenvolve através da prática deliberada de buscar entender a experiência alheia antes de julgar ou decidir. Líderes que praticam consistentemente perguntar 'como essa decisão afeta as pessoas envolvidas' antes de agir, mesmo em decisões puramente operacionais, constroem gradualmente essa capacidade, que se torna mais automática com repetição.",
+      },
+      {
+        title: "Construindo culturas que se sustentam",
+        content:
+          "Culturas de confiança e segurança não surgem de políticas escritas ou discursos motivacionais isolados — surgem de padrões repetidos de comportamento visível da liderança ao longo do tempo, especialmente em momentos de crise ou dificuldade, quando é mais tentador priorizar resultados de curto prazo às custas das pessoas. A obra conclui que a verdadeira medida de uma cultura organizacional não é o que ela declara valorizar, mas o que ela realmente recompensa e pune na prática cotidiana.",
+      },
+    ],
+    quiz: [
+      { q: "O que é o 'Círculo de Segurança' descrito na obra?", options: ["Um protocolo de segurança física do escritório", "Um ambiente criado pelo líder onde a equipe não precisa se proteger uma da outra", "Um tipo de seguro corporativo", "Uma política de recursos humanos formal"], correct: 1, explanation: "Dentro desse círculo, energia é redirecionada de autoproteção para colaboração." },
+      { q: "Quais hormônios a obra associa a recompensas individuais de curto prazo?", options: ["Serotonina e ocitocina", "Endorfina e dopamina", "Melatonina e cortisol", "Adrenalina apenas"], correct: 1, explanation: "Esses hormônios recompensam conquistas individuais imediatas." },
+      { q: "Quais hormônios estão ligados a vínculos de confiança de longo prazo, segundo a obra?", options: ["Endorfina e dopamina", "Serotonina e ocitocina", "Apenas adrenalina", "Nenhum hormônio está envolvido"], correct: 1, explanation: "Esses hormônios se relacionam a status social e conexões duradouras." },
+      { q: "O que simboliza o costume de 'líderes comerem por último'?", options: ["Uma regra de etiqueta sem significado real", "Que a posição de liderança existe para servir a equipe, não o contrário", "Uma tradição exclusivamente militar sem aplicação corporativa", "Uma forma de economizar recursos da empresa"], correct: 1, explanation: "Sacrifícios visíveis do líder comunicam segurança de forma poderosa." },
+      { q: "O que é a 'distância abstrata' mencionada na obra?", options: ["A distância física entre escritórios", "O distanciamento de líderes das consequências humanas concretas de suas decisões", "Um conceito de física aplicado a negócios", "A diferença de fuso horário em empresas globais"], correct: 1, explanation: "Decisões tornam-se números em planilha, mediadas por camadas de abstração." },
+      { q: "Como a obra descreve a empatia?", options: ["Um traço de personalidade fixo e não treinável", "Uma habilidade que se desenvolve com prática deliberada", "Uma fraqueza para líderes eficazes", "Algo relevante apenas fora do ambiente de trabalho"], correct: 1, explanation: "Empatia pode ser desenvolvida praticando entender a experiência alheia antes de agir." },
+      { q: "O que, segundo a obra, realmente define a cultura de uma organização?", options: ["As políticas escritas no manual do funcionário", "O que a empresa realmente recompensa e pune na prática cotidiana", "O discurso motivacional anual da liderança", "O tamanho do escritório"], correct: 1, explanation: "Cultura é revelada por padrões reais de comportamento, não por declarações formais." },
+      { q: "O que acontece quando uma cultura recompensa apenas resultados individuais imediatos?", options: ["A confiança de longo prazo aumenta automaticamente", "Gera ambientes produtivos no curto prazo, mas frágeis e desconfiados no longo prazo", "Não há nenhum efeito colateral", "A colaboração aumenta naturalmente"], correct: 1, explanation: "Priorizar só resultado imediato enfraquece os vínculos de confiança duradouros." },
+      { q: "Segundo a obra, quando os riscos da 'distância abstrata' se tornam maiores?", options: ["Em organizações pequenas apenas", "Conforme organizações crescem e líderes ficam mais distantes dos efeitos humanos das decisões", "Apenas em empresas familiares", "Nunca representa um risco real"], correct: 1, explanation: "O crescimento organizacional tende a aumentar essa distância." },
+      { q: "O que a obra recomenda para líderes antes de tomar decisões operacionais?", options: ["Ignorar o impacto humano e focar só em números", "Perguntar como a decisão afeta as pessoas envolvidas", "Delegar toda decisão para outro departamento", "Esperar aprovação de todos os funcionários"], correct: 1, explanation: "Essa prática consistente ajuda a desenvolver empatia genuína ao longo do tempo." },
+    ],
+  },
+
+  {
+    id: "startup-enxuta",
+    title: "A Startup Enxuta",
+    author: "Baseado na obra de Eric Ries",
+    category: "Startups & Empreendedorismo",
+    tags: ["inovação", "validação", "metodologia lean"],
+    readTimeMin: 17,
+    premium: true,
+    coverIcon: "bolt",
+    synopsis:
+      "Uma metodologia para reduzir o desperdício em novos empreendimentos através de ciclos rápidos de construir-medir-aprender, testando hipóteses de negócio antes de investir pesado.",
+    chapters: [
+      {
+        title: "Startups são experimentos, não apenas produtos",
+        content:
+          "Uma startup, segundo a definição da obra, é uma instituição humana desenhada para criar algo novo sob condições de extrema incerteza — o que a diferencia fundamentalmente de uma empresa estabelecida não é o tamanho, é o nível de incerteza sobre quem é o cliente e o que ele realmente valoriza. Tratar uma startup como um experimento científico, com hipóteses claras a serem testadas, é o ponto de partida da metodologia, em vez de tratá-la como a execução de um plano de negócios fixo e supostamente já validado.",
+      },
+      {
+        title: "Produto Mínimo Viável (MVP)",
+        content:
+          "Em vez de construir a versão completa e polida de um produto antes de mostrá-lo ao mercado, o MVP é a versão mais simples possível que permite testar a hipótese central de valor com o menor esforço e tempo. Um MVP pode ser deliberadamente incompleto, tosco ou até manual nos bastidores — o objetivo não é impressionar, é aprender rapidamente se a hipótese de negócio está correta antes de investir recursos significativos em construir algo que ninguém quer.",
+      },
+      {
+        title: "O ciclo Construir-Medir-Aprender",
+        content:
+          "O núcleo da metodologia é um ciclo iterativo: construir rapidamente algo testável, medir como usuários reais reagem com métricas concretas, e aprender com esses dados se deve perseverar na direção atual ou pivotar para uma abordagem diferente. Quanto mais rápido esse ciclo se repete, mais rápido o empreendimento aprende — e a obra argumenta que velocidade de aprendizado válido, não velocidade de execução por si só, é a verdadeira métrica de progresso em ambientes de alta incerteza.",
+      },
+      {
+        title: "Métricas de vaidade versus métricas acionáveis",
+        content:
+          "Números totais de usuários cadastrados ou downloads acumulados frequentemente sobem independentemente de o produto estar de fato criando valor — são 'métricas de vaidade' que fazem parecer que há progresso sem revelar causa e efeito. Métricas acionáveis, por outro lado, estão ligadas a mudanças específicas testáveis: taxa de conversão por versão do produto, retenção por coorte de usuários — números que realmente ajudam a decidir se uma mudança específica funcionou ou não.",
+      },
+      {
+        title: "Pivotar sem perder o rumo",
+        content:
+          "Pivotar significa mudar de forma estruturada uma hipótese central do negócio — o público-alvo, o problema resolvido, o modelo de receita — mantendo o aprendizado acumulado até ali, em vez de simplesmente desistir ou começar do zero. A obra descreve vários tipos de pivô (de zoom in, de segmento de cliente, de plataforma, entre outros) e insiste que pivotar não é fracasso: é exatamente o mecanismo pelo qual startups descobrem, através de evidência real, um caminho mais promissor do que a ideia original.",
+      },
+      {
+        title: "Crescimento sustentável",
+        content:
+          "A obra distingue entre crescimento artificialmente inflado por publicidade paga não recorrente, e crescimento sustentável, alimentado por um dos três motores: viral (usuários trazem outros usuários organicamente), pegajoso (usuários existentes não saem, aumentando a base líquida), ou pago (cada cliente gera receita suficiente para financiar a aquisição do próximo). Entender qual motor impulsiona um negócio específico ajuda a decidir em quais métricas e experimentos concentrar esforço para escalar de forma sustentável.",
+      },
+    ],
+    quiz: [
+      { q: "Como a obra define uma startup?", options: ["Qualquer empresa pequena", "Uma instituição desenhada para criar algo novo sob extrema incerteza", "Uma empresa com menos de 10 funcionários", "Um negócio exclusivamente de tecnologia"], correct: 1, explanation: "O que define uma startup é o nível de incerteza, não o tamanho ou setor." },
+      { q: "O que é um MVP (Produto Mínimo Viável)?", options: ["A versão final e completa do produto", "A versão mais simples que permite testar a hipótese central de valor", "Um produto sem nenhuma funcionalidade", "Um protótipo apenas para investidores"], correct: 1, explanation: "O objetivo do MVP é aprender rapidamente, não impressionar com polimento." },
+      { q: "Qual é o ciclo central da metodologia lean startup?", options: ["Planejar-Executar-Revisar", "Construir-Medir-Aprender", "Vender-Entregar-Cobrar", "Contratar-Treinar-Demitir"], correct: 1, explanation: "Esse ciclo iterativo é repetido continuamente para acelerar o aprendizado válido." },
+      { q: "O que são 'métricas de vaidade'?", options: ["Métricas ligadas diretamente a decisões de produto", "Números que sobem independentemente de o produto criar valor real", "Métricas financeiras exclusivamente", "Métricas usadas só por investidores"], correct: 1, explanation: "Downloads totais ou cadastros acumulados podem subir sem revelar causa e efeito real." },
+      { q: "O que caracteriza uma 'métrica acionável'?", options: ["Um número que não muda com o tempo", "Está ligada a mudanças específicas testáveis, como taxa de conversão por versão", "É sempre relacionada a lucro líquido", "É calculada apenas uma vez ao ano"], correct: 1, explanation: "Métricas acionáveis ajudam a decidir se uma mudança específica funcionou." },
+      { q: "O que significa 'pivotar', segundo a obra?", options: ["Desistir completamente do negócio", "Mudar estruturadamente uma hipótese central, mantendo o aprendizado acumulado", "Mudar de escritório físico", "Trocar toda a equipe de funcionários"], correct: 1, explanation: "Pivotar é um mecanismo estruturado de mudança baseado em evidência, não desistência." },
+      { q: "Pivotar é considerado um fracasso, segundo a obra?", options: ["Sim, sempre representa fracasso total", "Não, é o mecanismo pelo qual startups descobrem caminhos mais promissores", "Apenas quando ocorre mais de uma vez", "Sim, mas apenas em startups de tecnologia"], correct: 1, explanation: "A obra trata o pivô como parte normal e valiosa do processo de aprendizado." },
+      { q: "Qual é o motor de crescimento 'viral', segundo a obra?", options: ["Crescimento baseado exclusivamente em publicidade paga", "Usuários existentes trazendo novos usuários organicamente", "Crescimento gerado apenas por parcerias comerciais", "Um tipo de crescimento sempre insustentável"], correct: 1, explanation: "Esse motor depende da propagação orgânica entre usuários." },
+      { q: "O que caracteriza o motor de crescimento 'pago', segundo a obra?", options: ["Cada cliente gera receita suficiente para financiar a aquisição do próximo", "Crescimento sem nenhum custo de aquisição", "Um tipo de crescimento proibido para startups", "Depende exclusivamente de investidores externos"], correct: 0, explanation: "Esse motor de crescimento se sustenta pela economia unitária de cada cliente adquirido." },
+      { q: "Por que a velocidade do ciclo de aprendizado é tão valorizada na metodologia?", options: ["Porque velocidade de execução por si só é o que importa", "Porque aprendizado válido mais rápido reduz o desperdício de recursos em direções erradas", "Porque investidores exigem isso contratualmente", "Porque não tem relação com o sucesso do negócio"], correct: 1, explanation: "Quanto mais rápido o ciclo se repete, mais rápido o empreendimento aprende o que funciona." },
+    ],
+  },
+
+  {
+    id: "inteligencia-emocional-goleman",
+    title: "Inteligência Emocional",
+    author: "Baseado na obra de Daniel Goleman",
+    category: "Inteligência Emocional",
+    tags: ["emoções", "autoconhecimento", "relações"],
+    readTimeMin: 17,
+    premium: true,
+    coverIcon: "brain",
+    synopsis:
+      "Por que a capacidade de reconhecer e gerenciar emoções — próprias e alheias — pode importar tanto ou mais que o QI tradicional para o sucesso na vida pessoal e profissional.",
+    chapters: [
+      {
+        title: "Além do QI",
+        content:
+          "A obra reúne evidências de neurociência e psicologia mostrando que o quociente de inteligência tradicional, embora relevante, é um preditor limitado de sucesso na vida real — pessoas com QI elevado às vezes fracassam em relações e carreira por falta de habilidades emocionais, enquanto pessoas com QI mediano frequentemente prosperam por saberem gerenciar bem suas próprias emoções e as dos outros ao redor. Isso não desvaloriza a inteligência cognitiva, mas argumenta que ela sozinha é insuficiente.",
+      },
+      {
+        title: "As duas mentes",
+        content:
+          "O cérebro processa informação através de dois sistemas entrelaçados: um racional, deliberado e lento, e um emocional, rápido e automático, sediado em estruturas como a amígdala. Em situações de ameaça percebida, a amígdala pode 'sequestrar' a resposta antes que o córtex racional processe completamente a situação — o chamado 'sequestro emocional', que explica reações desproporcionais (explodir de raiva, entrar em pânico) que a pessoa racionalmente reconhece como exageradas depois do fato.",
+      },
+      {
+        title: "Autoconsciência emocional",
+        content:
+          "O primeiro pilar da inteligência emocional é reconhecer a própria emoção no momento em que ela surge, em vez de só perceber seus efeitos depois (agir por impulso e só depois entender por quê). Praticar nomear emoções especificamente — não apenas 'estou mal', mas 'estou frustrado porque essa reunião não teve o resultado esperado' — já reduz a intensidade da reação automática, porque nomear ativa regiões cerebrais racionais que competem com a resposta puramente emocional.",
+      },
+      {
+        title: "Autorregulação",
+        content:
+          "Reconhecer uma emoção não significa suprimi-la nem agir automaticamente sobre ela — autorregulação é a capacidade de criar um espaço entre sentir e reagir, escolhendo uma resposta apropriada em vez de uma reação automática. Técnicas práticas incluem pausar antes de responder em momentos de tensão, reformular mentalmente uma situação frustrante sob uma perspectiva diferente, e desenvolver rotinas de autocuidado que reduzem o nível basal de estresse, tornando reações desproporcionais menos prováveis no dia a dia.",
+      },
+      {
+        title: "Empatia",
+        content:
+          "Empatia vai além de simpatia genérica — é a capacidade de perceber com precisão o que outra pessoa está sentindo, mesmo quando não expressa isso diretamente em palavras, e ajustar a própria resposta de acordo. Essa habilidade se desenvolve com atenção deliberada a sinais não verbais (tom de voz, expressão facial, postura) e com a prática consciente de suspender julgamento imediato para genuinamente tentar entender a perspectiva do outro antes de reagir ou aconselhar.",
+      },
+      {
+        title: "Habilidades sociais e relações",
+        content:
+          "A combinação de autoconsciência, autorregulação e empatia culmina em habilidades sociais mais amplas: capacidade de influenciar positivamente, gerenciar conflitos de forma construtiva, trabalhar em equipe e liderar com credibilidade emocional. A obra argumenta que, diferente do QI que se estabiliza relativamente cedo na vida, a inteligência emocional pode continuar sendo desenvolvida ao longo de toda a vida adulta através de prática deliberada e feedback consciente sobre o próprio comportamento em situações reais.",
+      },
+    ],
+    quiz: [
+      { q: "O que a obra argumenta sobre o QI tradicional?", options: ["É o único fator relevante para o sucesso", "É um preditor limitado de sucesso na vida real, sozinho", "Não tem relevância nenhuma", "É sempre superior à inteligência emocional"], correct: 1, explanation: "QI elevado não garante sucesso sem habilidades emocionais complementares." },
+      { q: "O que é o 'sequestro emocional' descrito na obra?", options: ["Um tipo de terapia psicológica", "Quando a amígdala domina a resposta antes do processamento racional completo", "Uma técnica de meditação avançada", "Um distúrbio raro de personalidade"], correct: 1, explanation: "Isso explica reações desproporcionais reconhecidas como exageradas depois do fato." },
+      { q: "O que é autoconsciência emocional, segundo a obra?", options: ["Ignorar completamente as próprias emoções", "Reconhecer a própria emoção no momento em que ela surge", "Reprimir emoções negativas sempre", "Depender de terapia para identificar sentimentos"], correct: 1, explanation: "É o primeiro pilar da inteligência emocional descrito na obra." },
+      { q: "Por que nomear emoções especificamente ajuda a reduzir sua intensidade?", options: ["Porque distrai a pessoa do problema real", "Porque ativa regiões cerebrais racionais que competem com a resposta emocional", "Não há evidência disso", "Porque elimina a emoção completamente"], correct: 1, explanation: "Nomear a emoção com precisão envolve processamento racional que modula a resposta automática." },
+      { q: "O que é autorregulação emocional?", options: ["Suprimir todas as emoções sentidas", "Criar um espaço entre sentir e reagir, escolhendo uma resposta apropriada", "Agir sempre por impulso imediato", "Evitar qualquer situação emocionalmente desafiadora"], correct: 1, explanation: "Não é sobre eliminar a emoção, mas sobre escolher a resposta em vez de reagir automaticamente." },
+      { q: "O que caracteriza empatia, segundo a obra?", options: ["Concordar sempre com o que o outro sente", "Perceber com precisão o que o outro sente e ajustar a resposta de acordo", "Ignorar sinais não verbais", "Um traço presente apenas em algumas pessoas, não treinável"], correct: 1, explanation: "Empatia envolve atenção a sinais não verbais e suspensão de julgamento imediato." },
+      { q: "Quais habilidades resultam da combinação de autoconsciência, autorregulação e empatia?", options: ["Apenas habilidades técnicas de trabalho", "Habilidades sociais mais amplas, como gestão de conflitos e liderança", "Habilidades exclusivamente artísticas", "Nenhuma habilidade prática relevante"], correct: 1, explanation: "Essas habilidades sociais se constroem sobre os pilares anteriores da inteligência emocional." },
+      { q: "Diferente do QI, o que a obra afirma sobre a inteligência emocional ao longo da vida?", options: ["Ela se estabiliza na infância e não muda mais", "Pode continuar sendo desenvolvida ao longo de toda a vida adulta", "Diminui inevitavelmente com a idade", "Não tem relação com prática ou experiência"], correct: 1, explanation: "Prática deliberada e feedback consciente permitem seu desenvolvimento contínuo." },
+      { q: "Onde no cérebro está sediada boa parte do processamento emocional rápido, segundo a obra?", options: ["No cerebelo", "Na amígdala", "Apenas no córtex pré-frontal", "No sistema nervoso periférico"], correct: 1, explanation: "A amígdala é central no processamento emocional rápido e automático." },
+      { q: "Qual técnica prática a obra sugere para melhorar a autorregulação?", options: ["Reagir imediatamente a qualquer situação de tensão", "Pausar antes de responder e reformular a situação sob outra perspectiva", "Evitar qualquer forma de autocuidado", "Ignorar completamente o próprio estresse"], correct: 1, explanation: "Pausar e reformular ajudam a criar espaço entre sentir e reagir." },
+    ],
+  },
+
+  {
+    id: "breve-historia-do-tempo",
+    title: "Uma Breve História do Tempo",
+    author: "Baseado na obra de Stephen Hawking",
+    category: "Ciência",
+    tags: ["física", "cosmologia", "universo"],
+    readTimeMin: 18,
+    premium: true,
+    coverIcon: "flask",
+    synopsis:
+      "Uma explicação acessível dos maiores mistérios do universo — do Big Bang aos buracos negros — escrita para leitores sem formação técnica em física.",
+    chapters: [
+      {
+        title: "Do universo estático ao universo em expansão",
+        content:
+          "Por séculos, a suposição dominante era de um universo estático e eterno. A descoberta de que galáxias distantes se afastam umas das outras — e que essa velocidade de afastamento é maior quanto mais distante a galáxia está — revelou um universo em expansão constante. Rebobinar essa expansão no tempo leva logicamente a um ponto inicial extremamente denso e quente: o Big Bang, o momento em que o próprio espaço e tempo, tal como conhecemos, começaram a existir.",
+      },
+      {
+        title: "O tempo como quarta dimensão",
+        content:
+          "A teoria da relatividade de Einstein uniu espaço e tempo em um único tecido contínuo, o espaço-tempo, no qual massa e energia curvam a geometria ao redor delas — o que sentimos como gravidade é, nessa visão, o efeito dessa curvatura sobre a trajetória de objetos e da própria luz. Consequências contraintuitivas incluem o fato de que o tempo passa mais devagar perto de objetos muito massivos, e que não existe um 'agora' universal e absoluto compartilhado por todos os observadores do universo.",
+      },
+      {
+        title: "Buracos negros",
+        content:
+          "Quando uma estrela suficientemente massiva esgota seu combustível nuclear, a gravidade pode vencer todas as outras forças e colapsar a matéria em uma densidade tão extrema que nem a luz consegue escapar além de um certo limite, chamado horizonte de eventos. Buracos negros desafiam a intuição comum: o tempo, visto de fora, pareceria parar completamente para algo caindo em direção ao horizonte de eventos, enquanto, da perspectiva de quem cai, nada de especial pareceria acontecer ao cruzá-lo.",
+      },
+      {
+        title: "O princípio da incerteza",
+        content:
+          "No nível subatômico, a física quântica revela que não é possível conhecer simultaneamente, com precisão absoluta, certas propriedades emparelhadas de uma partícula — como posição e momento. Isso não é uma limitação de instrumentos de medição, é uma característica fundamental da realidade nessa escala. Essa incerteza fundamental tem consequências profundas para tentar unir a física quântica (que rege o muito pequeno) com a relatividade geral (que rege o muito grande e massivo) em uma teoria única e consistente.",
+      },
+      {
+        title: "A seta do tempo",
+        content:
+          "Por que o tempo parece fluir em apenas uma direção — do passado para o futuro, nunca o contrário — mesmo que a maioria das leis fundamentais da física seja simétrica no tempo? A obra explora três 'setas do tempo' possíveis: a termodinâmica (a desordem do universo, ou entropia, tende sempre a aumentar), a psicológica (lembramos o passado, não o futuro) e a cosmológica (o universo está se expandindo, não contraindo) — e argumenta que essas três setas provavelmente estão profundamente conectadas.",
+      },
+      {
+        title: "Em busca de uma teoria unificada",
+        content:
+          "O objetivo final buscado por físicos teóricos, incluindo o próprio autor, é uma 'teoria de tudo' — um conjunto único e consistente de equações que unifique todas as forças fundamentais da natureza e explique tanto o comportamento das partículas subatômicas quanto a estrutura do universo em grande escala. A obra termina com humildade científica: mesmo que tal teoria seja encontrada, isso não esgotaria as perguntas filosóficas mais profundas sobre por que existe algo em vez de nada.",
+      },
+    ],
+    quiz: [
+      { q: "O que revelou que o universo está em expansão?", options: ["A medição da temperatura da Lua", "A observação de que galáxias distantes se afastam, mais rápido quanto mais longe", "Um experimento de laboratório na Terra", "A observação de eclipses solares"], correct: 1, explanation: "Essa descoberta levou logicamente à ideia do Big Bang como ponto inicial." },
+      { q: "O que é o Big Bang, segundo a obra?", options: ["Uma explosão dentro de um universo já existente", "O momento em que o próprio espaço e tempo começaram a existir", "Um evento que ainda vai acontecer no futuro", "Uma teoria já descartada pela ciência"], correct: 1, explanation: "Rebobinar a expansão do universo leva a esse ponto inicial extremamente denso e quente." },
+      { q: "O que a teoria da relatividade uniu em um único conceito?", options: ["Matéria e energia apenas", "Espaço e tempo em um único tecido contínuo", "Luz e som", "Passado e futuro de forma idêntica"], correct: 1, explanation: "Esse espaço-tempo é curvado por massa e energia, o que sentimos como gravidade." },
+      { q: "O que é o 'horizonte de eventos' de um buraco negro?", options: ["O centro exato do buraco negro", "O limite além do qual nem a luz consegue escapar", "Uma estrela próxima ao buraco negro", "Um tipo de telescópio espacial"], correct: 1, explanation: "Além desse limite, a gravidade é forte demais para a luz escapar." },
+      { q: "O que o princípio da incerteza afirma, na física quântica?", options: ["Que os instrumentos de medição são sempre imprecisos", "Que não é possível conhecer simultaneamente, com precisão absoluta, certas propriedades emparelhadas de uma partícula", "Que partículas subatômicas não existem", "Que a física quântica está errada"], correct: 1, explanation: "Essa incerteza é uma característica fundamental da realidade, não uma limitação técnica." },
+      { q: "Quais são as três 'setas do tempo' exploradas na obra?", options: ["Física, química e biológica", "Termodinâmica, psicológica e cosmológica", "Passada, presente e futura", "Newtoniana, einsteiniana e quântica"], correct: 1, explanation: "A obra sugere que essas três setas estão provavelmente conectadas entre si." },
+      { q: "O que a seta termodinâmica do tempo descreve?", options: ["Que lembramos o passado, não o futuro", "Que a desordem (entropia) do universo tende sempre a aumentar", "Que o universo está se contraindo", "Que o tempo é uma ilusão"], correct: 1, explanation: "O aumento constante da entropia é uma das explicações para a direção única do tempo." },
+      { q: "O que é uma 'teoria de tudo', buscada por físicos teóricos?", options: ["Uma teoria que explica apenas partículas subatômicas", "Um conjunto único de equações que unifique todas as forças fundamentais da natureza", "Uma teoria filosófica sem base matemática", "Uma teoria já comprovada e aceita universalmente"], correct: 1, explanation: "Essa teoria buscaria unir a física quântica e a relatividade geral em um único modelo." },
+      { q: "O que acontece com o tempo perto de objetos muito massivos, segundo a relatividade?", options: ["Ele passa mais rápido", "Ele passa mais devagar", "Não sofre nenhuma alteração", "Ele para completamente sempre"], correct: 1, explanation: "Objetos massivos curvam o espaço-tempo, afetando a passagem do tempo ao seu redor." },
+      { q: "Segundo a obra, encontrar uma teoria unificada resolveria todas as perguntas filosóficas sobre a existência?", options: ["Sim, completamente", "Não, mesmo assim restariam perguntas profundas como por que existe algo em vez de nada", "Essa questão não é discutida na obra", "Sim, mas apenas para físicos"], correct: 1, explanation: "A obra termina com humildade científica sobre os limites do que a física pode responder." },
+    ],
+  },
+
+  {
+    id: "grit-determinacao",
+    title: "Grit: O Poder da Paixão e da Perseverança",
+    author: "Baseado na obra de Angela Duckworth",
+    category: "Autoajuda & Motivação",
+    tags: ["perseverança", "desempenho", "motivação"],
+    readTimeMin: 15,
+    premium: true,
+    coverIcon: "sparkle",
+    synopsis:
+      "A pesquisa que identificou 'grit' — a combinação de paixão sustentada e perseverança em direção a objetivos de longo prazo — como preditor de sucesso mais forte que talento isolado.",
+    chapters: [
+      {
+        title: "Talento não é destino",
+        content:
+          "A pesquisa da autora, incluindo estudos com cadetes militares, vendedores e estudantes, encontrou repetidamente que talento natural, medido isoladamente, previa mal quem realmente completaria desafios de longo prazo e alcançaria excelência sustentada. Pessoas talentosas frequentemente desistem diante da primeira grande dificuldade, precisamente porque estão acostumadas a que as coisas sejam fáceis; pessoas com grit persistem mesmo quando o progresso é lento ou invisível no curto prazo.",
+      },
+      {
+        title: "A equação do grit",
+        content:
+          "A autora propõe uma fórmula simplificada: habilidade multiplicada por esforço gera competência, e competência multiplicada por esforço novamente gera realização. O esforço aparece duas vezes na equação porque ele conta duas vezes: primeiro transforma talento em habilidade através de prática, depois transforma essa habilidade em resultado concreto através de aplicação sustentada. Isso implica que esforço consistente ao longo do tempo pesa mais na equação final do que o talento inicial isolado.",
+      },
+      {
+        title: "Paixão como constância, não intensidade",
+        content:
+          "Diferente do uso popular da palavra 'paixão' como um pico de entusiasmo intenso e passageiro, a pesquisa define paixão, no contexto do grit, como constância de interesse ao longo de anos — manter o mesmo objetivo de nível mais alto (não necessariamente as mesmas tarefas do dia a dia) por períodos prolongados, em vez de trocar de direção a cada novo interesse que surge. Pessoas com grit alto tendem a ter uma hierarquia clara de objetivos, com um propósito de nível superior que organiza e dá sentido às metas menores do cotidiano.",
+      },
+      {
+        title: "Prática deliberada",
+        content:
+          "Grit sozinho não gera excelência sem o tipo certo de prática. A obra descreve 'prática deliberada' como sessões focadas em um aspecto específico e desafiador da habilidade (não apenas repetição confortável do que já se domina), com objetivos claros de melhoria, feedback imediato sobre o desempenho, e repetição com refinamento contínuo. Esse tipo de prática é mentalmente exigente e geralmente não é agradável no momento — mas é isso que efetivamente amplia a competência ao longo do tempo.",
+      },
+      {
+        title: "Esperança e a mentalidade de crescimento",
+        content:
+          "A pesquisa conecta grit com a crença de que o esforço pode melhorar a capacidade futura (mentalidade de crescimento, conceito relacionado ao trabalho de Carol Dweck). Pessoas com grit alto tendem a interpretar contratempos como temporários e específicos, não como evidência de incapacidade permanente e generalizada. Essa forma de interpretar dificuldades — como parte esperada do processo, não como veredito final sobre a própria capacidade — sustenta a persistência diante de fracassos repetidos.",
+      },
+      {
+        title: "Cultivando grit em si mesmo e nos outros",
+        content:
+          "A pesquisa sugere que grit pode crescer tanto de dentro para fora (desenvolvendo interesse genuíno, praticando deliberadamente, conectando o trabalho a um propósito maior, cultivando esperança diante de contratempos) quanto de fora para dentro (fazendo parte de uma cultura ou comunidade que valoriza e modela perseverança). Pais e treinadores que combinam altas expectativas com apoio genuíno — nem permissivos demais nem excessivamente rígidos — tendem a criar ambientes que favorecem o desenvolvimento de grit em crianças e jovens ao longo do tempo.",
+      },
+    ],
+    quiz: [
+      { q: "O que a pesquisa descobriu sobre talento natural isolado?", options: ["É o único fator que prevê sucesso", "Previa mal quem completaria desafios de longo prazo, comparado ao grit", "É irrelevante para qualquer desempenho", "Sempre supera perseverança em qualquer contexto"], correct: 1, explanation: "Pessoas talentosas frequentemente desistem diante das primeiras dificuldades reais." },
+      { q: "Qual é a 'equação do grit' proposta pela autora?", options: ["Talento sozinho gera realização", "Habilidade x esforço = competência; competência x esforço = realização", "Sorte x oportunidade = sucesso", "Inteligência dividida por esforço = resultado"], correct: 1, explanation: "O esforço aparece duas vezes porque conta tanto para desenvolver habilidade quanto para gerar resultado." },
+      { q: "Como a pesquisa define 'paixão' no contexto do grit?", options: ["Um pico de entusiasmo intenso e passageiro", "Constância de interesse por um objetivo de nível mais alto ao longo de anos", "Mudar de direção a cada novo interesse", "Uma emoção incontrolável e imprevisível"], correct: 1, explanation: "Isso difere do uso popular da palavra como intensidade momentânea." },
+      { q: "O que caracteriza a 'prática deliberada'?", options: ["Repetição confortável do que já se domina", "Sessões focadas em aspectos desafiadores, com feedback imediato e refinamento contínuo", "Prática sem nenhum objetivo específico", "Evitar qualquer desconforto durante o treino"], correct: 1, explanation: "Esse tipo de prática é mentalmente exigente, mas amplia a competência de forma eficaz." },
+      { q: "Como pessoas com grit alto costumam interpretar contratempos?", options: ["Como evidência de incapacidade permanente", "Como temporários e específicos, parte esperada do processo", "Como motivo para desistir imediatamente", "Como algo que nunca deveria acontecer"], correct: 1, explanation: "Essa interpretação sustenta a persistência diante de fracassos repetidos." },
+      { q: "Com qual outro conceito psicológico o grit se conecta, segundo a obra?", options: ["Mentalidade fixa", "Mentalidade de crescimento", "Efeito placebo", "Viés de confirmação"], correct: 1, explanation: "A crença de que esforço melhora capacidade futura está ligada ao conceito de mentalidade de crescimento." },
+      { q: "Segundo a pesquisa, como o grit pode se desenvolver 'de fora para dentro'?", options: ["Não é possível desenvolver grit externamente", "Fazendo parte de uma cultura ou comunidade que valoriza e modela perseverança", "Apenas através de terapia individual", "Somente através de recompensas financeiras"], correct: 1, explanation: "O ambiente social também influencia o desenvolvimento do grit ao longo do tempo." },
+      { q: "Que tipo de ambiente parental favorece o desenvolvimento de grit, segundo a pesquisa?", options: ["Extremamente permissivo, sem expectativas", "Excessivamente rígido, sem apoio emocional", "Alta expectativa combinada com apoio genuíno", "Total ausência de supervisão"], correct: 2, explanation: "O equilíbrio entre exigência e suporte tende a favorecer o desenvolvimento de perseverança." },
+      { q: "Por que pessoas talentosas às vezes desistem mais facilmente, segundo a obra?", options: ["Porque têm menos inteligência emocional", "Porque estão acostumadas a que as coisas sejam fáceis", "Porque não têm interesse em nenhum assunto", "Porque são sempre mal orientadas por mentores"], correct: 1, explanation: "A facilidade inicial pode reduzir a tolerância a dificuldades reais mais tarde." },
+      { q: "O que uma hierarquia clara de objetivos proporciona, segundo a pesquisa sobre grit?", options: ["Confusão sobre prioridades", "Um propósito de nível superior que organiza e dá sentido às metas menores", "Nenhum benefício mensurável", "Menos foco no cotidiano"], correct: 1, explanation: "Isso ajuda a manter constância de interesse ao longo de anos." },
+    ],
+  },
+
+  {
+    id: "freakonomics",
+    title: "Freakonomics",
+    author: "Baseado na obra de Steven D. Levitt e Stephen J. Dubner",
+    category: "Economia",
+    tags: ["incentivos", "dados", "pensamento não convencional"],
+    readTimeMin: 16,
+    premium: true,
+    coverIcon: "coins",
+    synopsis:
+      "Uma aplicação não convencional do raciocínio econômico a perguntas do cotidiano — do que professores de escola e lutadores de sumô têm em comum, ao verdadeiro impacto de incentivos escondidos no comportamento humano.",
+    chapters: [
+      {
+        title: "Incentivos governam o comportamento",
+        content:
+          "A tese central é que praticamente todo comportamento humano responde a incentivos — econômicos, sociais ou morais — mesmo quando as pessoas não percebem conscientemente essa influência. Entender qual tipo de incentivo está realmente em jogo numa situação explica comportamentos que, à primeira vista, parecem contraditórios ou irracionais. Um exemplo citado: creches que passaram a multar pais atrasados viram os atrasos aumentarem, não diminuírem — porque a multa transformou uma obrigação moral (chegar na hora por respeito) em uma transação econômica aceitável (pagar para chegar atrasado).",
+      },
+      {
+        title: "Trapaça e como detectá-la com dados",
+        content:
+          "A obra examina como analisar grandes conjuntos de dados pode revelar trapaça sistemática invisível a olho nu — desde professores que alteravam respostas de provas padronizadas de alunos para melhorar estatísticas da escola, até lutadores de sumô que perdiam lutas estrategicamente em circunstâncias específicas de classificação. Em ambos os casos, padrões estatísticos anômalos (mudanças abruptas de desempenho em momentos-chave) revelaram comportamento que jamais seria admitido voluntariamente pelos envolvidos.",
+      },
+      {
+        title: "Correlação não é causa",
+        content:
+          "Um dos alertas metodológicos centrais da obra é a diferença entre correlação (duas coisas acontecerem juntas) e causalidade (uma coisa realmente provocar a outra). O exemplo clássico discutido é a relação entre número de policiais numa cidade e taxa de criminalidade: mais policiais podem reduzir crime, mas também podem ser uma RESPOSTA a um aumento anterior de crime — a direção da causa é ambígua sem análise mais cuidadosa, e conclusões apressadas sobre causalidade a partir de correlações simples levam a políticas públicas mal desenhadas.",
+      },
+      {
+        title: "O poder (e os limites) da informação",
+        content:
+          "Especialistas em diversas áreas — corretores de imóveis, agentes funerários, vendedores de carros — muitas vezes têm acesso a informação que o consumidor comum não tem, e usam essa assimetria de informação a seu próprio favor, mesmo quando dizem estar agindo em nome do cliente. A obra mostra evidências, por exemplo, de que corretores de imóveis vendem suas próprias casas por preços mais altos e com mais tempo no mercado do que quando vendem casas de clientes — porque o incentivo de vender rápido supera o incentivo de conseguir o melhor preço possível para o cliente.",
+      },
+      {
+        title: "Nomes, causalidade e o que realmente importa",
+        content:
+          "A obra investiga se o nome de uma criança afeta seu destino — e conclui que a correlação entre certos nomes e resultados de vida existe, mas provavelmente reflete o ambiente socioeconômico dos pais que escolheram aquele nome, não um efeito causal direto do nome em si. Esse exemplo reforça o padrão metodológico central da obra: buscar sistematicamente a causa real por trás de correlações populares, mesmo quando a explicação intuitiva e mais simples parece óbvia à primeira vista.",
+      },
+      {
+        title: "Pensar como um 'freak' econômico",
+        content:
+          "O convite final da obra não é para memorizar conclusões específicas, mas para adotar uma disposição de questionar sabedoria convencional, buscar dados reais em vez de intuição não testada, e sempre perguntar 'quais incentivos realmente estão em jogo aqui' antes de aceitar explicações populares para fenômenos sociais complexos. Essa disposição de investigação, mais do que qualquer conclusão isolada do livro, é apresentada como a contribuição duradoura da obra para quem a lê.",
+      },
+    ],
+    quiz: [
+      { q: "Qual é a tese central da obra sobre comportamento humano?", options: ["Comportamento é aleatório e imprevisível", "Praticamente todo comportamento responde a incentivos, mesmo sem percepção consciente", "Apenas incentivos financeiros importam", "Incentivos não afetam decisões morais"], correct: 1, explanation: "Incentivos econômicos, sociais e morais moldam comportamentos de formas nem sempre óbvias." },
+      { q: "O que aconteceu quando creches passaram a multar pais atrasados?", options: ["Os atrasos diminuíram imediatamente", "Os atrasos aumentaram, pois a multa virou uma transação aceitável", "Não houve nenhuma mudança de comportamento", "Os pais pararam de usar a creche"], correct: 1, explanation: "A multa transformou uma obrigação moral em uma transação econômica aceitável." },
+      { q: "Como a obra descreve a detecção de trapaça usando dados?", options: ["Através de confissões voluntárias apenas", "Através de padrões estatísticos anômalos em grandes conjuntos de dados", "Através de sorteios aleatórios", "Não é abordado na obra"], correct: 1, explanation: "Mudanças abruptas de desempenho em momentos-chave revelam comportamentos suspeitos." },
+      { q: "Qual é a diferença entre correlação e causalidade destacada na obra?", options: ["São sempre a mesma coisa", "Correlação é duas coisas acontecerem juntas; causalidade é uma provocar a outra", "Causalidade é mais fraca que correlação", "Não há diferença relevante em economia"], correct: 1, explanation: "Confundir os dois conceitos leva a conclusões e políticas públicas equivocadas." },
+      { q: "O que a obra revela sobre corretores de imóveis vendendo suas próprias casas?", options: ["Vendem pelo mesmo preço e tempo que casas de clientes", "Vendem por preços mais altos e com mais tempo no mercado que casas de clientes", "Sempre vendem mais rápido que os clientes", "Não há diferença de comportamento"], correct: 1, explanation: "O incentivo de vender rápido supera o de conseguir o melhor preço para o cliente." },
+      { q: "O que é 'assimetria de informação', segundo a obra?", options: ["Quando ambas as partes têm acesso igual à informação", "Quando uma parte (como um especialista) tem mais informação que a outra (o consumidor)", "Um conceito exclusivo de física", "Uma forma de fraude sempre ilegal"], correct: 1, explanation: "Especialistas podem usar essa vantagem de informação a seu próprio favor." },
+      { q: "Qual é a conclusão da obra sobre nomes de crianças e seu destino?", options: ["O nome causa diretamente o sucesso ou fracasso da pessoa", "A correlação provavelmente reflete o ambiente socioeconômico dos pais, não o nome em si", "Nomes não têm nenhuma correlação com resultados de vida", "Só nomes raros afetam o destino"], correct: 1, explanation: "Esse exemplo reforça a busca pela causa real por trás de correlações populares." },
+      { q: "Qual é o convite final da obra para o leitor?", options: ["Memorizar todas as conclusões específicas do livro", "Questionar sabedoria convencional e buscar incentivos reais por trás dos fenômenos", "Aceitar explicações populares sem questionar", "Evitar completamente o uso de dados em decisões"], correct: 1, explanation: "A disposição de investigação é apresentada como a contribuição duradoura da obra." },
+      { q: "Por que mais policiais numa cidade não prova diretamente que eles reduzem o crime?", options: ["Porque policiais nunca afetam taxas de crime", "Porque o aumento de policiais pode ser uma resposta a um crime já elevado, não a causa da redução", "Porque dados sobre crime não são confiáveis", "Porque a pergunta não faz sentido economicamente"], correct: 1, explanation: "A direção da causalidade é ambígua sem análise mais cuidadosa dos dados." },
+      { q: "Qual é o alerta metodológico central sobre correlações populares aceitas sem questionamento?", options: ["Elas sempre indicam causalidade direta", "Podem levar a conclusões erradas se a causa real não for investigada", "Não têm nenhuma utilidade em pesquisa", "São sempre mais confiáveis que experimentos controlados"], correct: 1, explanation: "A obra defende investigar sistematicamente a causa real por trás de correlações." },
+    ],
+  },
+
+  {
+    id: "por-que-dormimos",
+    title: "Por Que Dormimos",
+    author: "Baseado na obra de Matthew Walker",
+    category: "Saúde & Dieta",
+    tags: ["sono", "saúde", "neurociência"],
+    readTimeMin: 16,
+    premium: true,
+    coverIcon: "heart",
+    synopsis:
+      "A ciência por trás do sono revela por que ele é tão essencial quanto comida e água — e os riscos reais, pouco discutidos, de privação crônica de sono na sociedade moderna.",
+    chapters: [
+      {
+        title: "O sono não é opcional",
+        content:
+          "Diferente da crença popular de que sono é 'tempo perdido' recuperável nos fins de semana, a pesquisa mostra que dívida de sono acumulada tem efeitos cumulativos e, em muitos casos, não totalmente reversíveis — comprometendo sistema imunológico, capacidade de memória, regulação hormonal e saúde cardiovascular. Sociedades modernas normalizaram a privação crônica de sono como sinal de produtividade, quando na verdade ela reduz mensuravelmente o desempenho cognitivo, mesmo quando a pessoa não percebe conscientemente estar prejudicada.",
+      },
+      {
+        title: "As fases do sono e seus papéis distintos",
+        content:
+          "O sono não é um estado único e uniforme — alterna entre ciclos de sono NREM (não-REM, com estágios mais profundos de recuperação física) e sono REM (com sonhos vívidos, importante para processamento emocional e certos tipos de aprendizado). Cada fase cumpre funções diferentes e complementares: sono profundo NREM consolida memórias factuais e remove resíduos metabólicos do cérebro, enquanto o REM ajuda a integrar experiências emocionais e conexões criativas entre ideias aparentemente não relacionadas.",
+      },
+      {
+        title: "Sono e memória",
+        content:
+          "Durante o sono, o cérebro replica e consolida ativamente experiências e informações adquiridas no dia, transferindo memórias de curto prazo para armazenamento de longo prazo de forma mais estável. Isso explica por que uma noite de sono adequada antes de uma prova ou apresentação importante é mais eficaz do que uma sessão extra de estudo tardia às custas do sono — o cérebro precisa do próprio sono para de fato 'gravar' o que foi aprendido durante o dia.",
+      },
+      {
+        title: "Os riscos reais da privação crônica",
+        content:
+          "Estudos populacionais associam privação crônica de sono a risco elevado de doenças cardiovasculares, diabetes tipo 2, obesidade, comprometimento do sistema imunológico e maior propensão a certos tipos de câncer. No campo cognitivo, mesmo restrição moderada e repetida de sono (seis horas por noite ao longo de duas semanas, por exemplo) produz déficits de desempenho comparáveis aos de uma noite inteira sem dormir — déficits que a própria pessoa frequentemente não percebe conscientemente, tendo se 'acostumado' à sensação de cansaço crônico.",
+      },
+      {
+        title: "Cafeína, álcool e a qualidade do sono",
+        content:
+          "Cafeína tem meia-vida longa no organismo — mesmo consumida no início da tarde, uma quantidade significativa ainda está ativa à noite, fragmentando a qualidade do sono profundo mesmo quando a pessoa consegue adormecer sem dificuldade aparente. Álcool, apesar de popularmente associado a 'ajudar a dormir', na verdade suprime especificamente o sono REM e fragmenta os ciclos naturais de sono ao longo da noite, resultando em sono de pior qualidade mesmo quando a duração total parece adequada.",
+      },
+      {
+        title: "Higiene do sono na prática",
+        content:
+          "Recomendações práticas incluem manter horários consistentes de dormir e acordar, mesmo nos fins de semana; manter o quarto escuro e fresco; evitar telas com luz azul próximo ao horário de dormir, já que essa luz suprime a produção natural de melatonina; e evitar cafeína e álcool nas horas que antecedem o sono. A obra enfatiza que essas mudanças de hábito, embora simples individualmente, têm efeito cumulativo significativo na qualidade e consistência do sono ao longo de semanas de prática.",
+      },
+    ],
+    quiz: [
+      { q: "O que a pesquisa diz sobre 'recuperar' sono perdido nos fins de semana?", options: ["É totalmente eficaz e sem consequências", "A dívida de sono tem efeitos cumulativos, muitas vezes não totalmente reversíveis", "Não existe dívida de sono real", "É recomendado como estratégia principal"], correct: 1, explanation: "Privação crônica de sono compromete sistemas do corpo de forma cumulativa." },
+      { q: "Quais são as duas categorias principais de sono descritas na obra?", options: ["Sono leve e sono pesado", "Sono NREM e sono REM", "Sono diurno e sono noturno", "Sono ativo e sono passivo"], correct: 1, explanation: "Cada fase cumpre funções complementares e distintas no organismo." },
+      { q: "O que o sono profundo NREM ajuda a fazer, segundo a obra?", options: ["Apenas descansar os músculos", "Consolidar memórias factuais e remover resíduos metabólicos do cérebro", "Processar exclusivamente emoções", "Não tem função relevante"], correct: 1, explanation: "Essa fase é central para consolidação de memória e limpeza metabólica cerebral." },
+      { q: "Por que dormir bem antes de uma prova é mais eficaz que estudar a noite toda?", options: ["Porque o cérebro precisa do sono para consolidar o que foi aprendido", "Porque estudar à noite não tem nenhum valor", "Porque o sono não afeta a memória", "Porque provas não exigem memória"], correct: 0, explanation: "O sono transfere memórias de curto prazo para armazenamento de longo prazo mais estável." },
+      { q: "A privação crônica de sono está associada a quais riscos de saúde, segundo a obra?", options: ["Nenhum risco significativo", "Doenças cardiovasculares, diabetes tipo 2 e comprometimento imunológico", "Apenas cansaço passageiro", "Melhora do sistema imunológico"], correct: 1, explanation: "Estudos populacionais ligam privação crônica a diversos riscos sérios de saúde." },
+      { q: "O que acontece com pessoas cronicamente privadas de sono, segundo a obra?", options: ["Elas sempre percebem claramente o próprio déficit cognitivo", "Frequentemente não percebem conscientemente o próprio déficit, por estarem 'acostumadas'", "Não sofrem nenhum impacto no desempenho", "Dormem automaticamente mais em algum momento"], correct: 1, explanation: "O cansaço crônico se torna a nova 'normalidade' percebida pela pessoa." },
+      { q: "Como a cafeína afeta o sono, mesmo consumida à tarde?", options: ["Não tem nenhum efeito residual à noite", "Sua meia-vida longa pode fragmentar o sono profundo à noite", "Melhora a qualidade do sono profundo", "Só afeta pessoas sensíveis a cafeína"], correct: 1, explanation: "Uma quantidade significativa de cafeína ainda está ativa no organismo horas depois." },
+      { q: "Qual é o efeito real do álcool sobre o sono, segundo a obra?", options: ["Melhora a qualidade geral do sono", "Suprime o sono REM e fragmenta os ciclos naturais de sono", "Não tem nenhum efeito mensurável", "Aumenta a duração do sono profundo"], correct: 1, explanation: "Apesar de ajudar a adormecer, o álcool piora a qualidade do sono ao longo da noite." },
+      { q: "Por que evitar luz azul de telas antes de dormir é recomendado?", options: ["Porque não tem nenhum efeito biológico real", "Porque essa luz suprime a produção natural de melatonina", "Porque telas sempre causam dor de cabeça", "Porque aumenta a energia física antes de dormir"], correct: 1, explanation: "A supressão de melatonina dificulta o processo natural de adormecer." },
+      { q: "O que a obra recomenda sobre horários de dormir e acordar?", options: ["Variar bastante para 'testar' diferentes rotinas", "Manter horários consistentes, mesmo nos fins de semana", "Dormir apenas quando sentir muito cansaço", "Não há recomendação sobre horários"], correct: 1, explanation: "Consistência de horário ajuda a regular o ritmo biológico do sono." },
+    ],
+  },
+
+  {
+    id: "como-falar-filhos-ouvirem",
+    title: "Como Falar Para os Filhos Ouvirem",
+    author: "Baseado na obra de Adele Faber e Elaine Mazlish",
+    category: "Parentalidade",
+    tags: ["educação infantil", "comunicação", "família"],
+    readTimeMin: 15,
+    premium: true,
+    coverIcon: "users",
+    synopsis:
+      "Técnicas práticas de comunicação para reduzir conflitos entre pais e filhos, substituindo ordens, ameaças e sermões por diálogo que respeita os sentimentos da criança.",
+    chapters: [
+      {
+        title: "Reconhecer sentimentos em vez de negá-los",
+        content:
+          "Um padrão comum na comunicação com crianças é negar ou minimizar seus sentimentos ('não é motivo para chorar', 'isso não dói tanto assim') na tentativa de fazê-las se sentir melhor rapidamente. Paradoxalmente, isso costuma intensificar a angústia, porque a criança sente que sua experiência interna não está sendo validada. A alternativa proposta é nomear e reconhecer o sentimento primeiro ('percebo que você está muito frustrado com isso'), o que sozinho já reduz a intensidade emocional antes mesmo de qualquer solução prática ser discutida.",
+      },
+      {
+        title: "Convidar cooperação sem ordens diretas",
+        content:
+          "Ordens diretas repetidas ('arrume seu quarto', 'pare com isso') geram resistência automática, especialmente em crianças mais velhas que já buscam autonomia. Técnicas alternativas incluem descrever o problema observado sem acusar ('vejo roupas no chão do quarto'), dar informação em vez de ordem ('roupas no chão ficam amassadas'), usar uma única palavra como lembrete ('quarto') em vez de um sermão completo, e expressar o próprio sentimento sobre a situação de forma direta e sem ataque pessoal.",
+      },
+      {
+        title: "Alternativas a punição",
+        content:
+          "Punições frequentemente resolvem o comportamento imediato às custas do relacionamento de longo prazo, e não ensinam necessariamente a habilidade que faltou. A obra propõe alternativas: expressar desaprovação de forma clara sem atacar o caráter da criança, declarar expectativas explícitas para a próxima vez, mostrar como reparar o erro cometido, oferecer uma escolha entre opções aceitáveis, e permitir que a criança experimente consequências naturais razoáveis de suas próprias escolhas, quando seguro fazê-lo.",
+      },
+      {
+        title: "Elogio descritivo em vez de avaliativo",
+        content:
+          "Elogios genéricos e avaliativos ('você é ótimo', 'que inteligente') podem gerar pressão de manter uma imagem e ansiedade sobre decepcionar essa expectativa no futuro. A alternativa sugerida é o elogio descritivo: descrever especificamente o que a criança fez ('você organizou todos os brinquedos por cor, isso exigiu bastante atenção aos detalhes') e deixar que a criança tire suas próprias conclusões positivas sobre si mesma a partir dessa descrição concreta, em vez de receber apenas um rótulo pronto de fora.",
+      },
+      {
+        title: "Libertando crianças de papéis fixos",
+        content:
+          "Rótulos repetidos, mesmo bem-intencionados ('ela é a bagunceira', 'ele é o tímido da família'), tendem a se tornar profecias autorrealizáveis, pois a criança internaliza e passa a agir de acordo com essa identidade atribuída por adultos importantes em sua vida. A obra recomenda ativamente criar oportunidades para que a criança se veja de forma diferente: mencionar exemplos específicos que contradizem o rótulo antigo, e evitar comentar comportamentos negativos na frente de outras pessoas, o que reforça publicamente a identidade indesejada.",
+      },
+      {
+        title: "Resolução conjunta de problemas",
+        content:
+          "Para conflitos recorrentes, a obra propõe um processo estruturado: primeiro, ouvir e reconhecer os sentimentos e necessidades da criança sobre a situação; segundo, expressar os próprios sentimentos e necessidades como pai ou mãe; terceiro, gerar juntos uma lista de possíveis soluções sem julgar nenhuma ideia de imediato; e por fim, escolher juntos as soluções que parecem funcionar para ambos os lados. Esse processo colaborativo, mais trabalhoso no curto prazo que uma ordem direta, tende a gerar soluções mais duradouras porque a criança participou genuinamente da decisão.",
+      },
+    ],
+    quiz: [
+      { q: "O que acontece, segundo a obra, quando os sentimentos de uma criança são negados?", options: ["A angústia diminui imediatamente", "A angústia costuma se intensificar, pois a experiência não é validada", "Não há nenhum efeito perceptível", "A criança aprende a controlar melhor as emoções"], correct: 1, explanation: "Negar sentimentos tende a aumentar, não reduzir, a intensidade emocional da criança." },
+      { q: "Qual é a alternativa proposta a negar sentimentos?", options: ["Ignorar completamente a situação", "Nomear e reconhecer o sentimento antes de buscar soluções", "Punir a reação emocional", "Distrair a criança imediatamente"], correct: 1, explanation: "Reconhecer o sentimento primeiro já reduz a intensidade emocional." },
+      { q: "Por que ordens diretas repetidas costumam gerar resistência?", options: ["Porque crianças nunca obedecem ordens", "Porque geram resistência automática, especialmente com a busca por autonomia", "Porque são sempre mal formuladas", "Porque não têm nenhum efeito nas crianças"], correct: 1, explanation: "Isso é especialmente verdadeiro em crianças mais velhas buscando independência." },
+      { q: "Qual é uma alternativa a dar uma ordem direta, segundo a obra?", options: ["Gritar mais alto para reforçar a ordem", "Descrever o problema observado sem acusar", "Ignorar completamente a situação", "Repetir a mesma ordem várias vezes seguidas"], correct: 1, explanation: "Descrever o problema reduz a resistência automática à ordem direta." },
+      { q: "Qual é uma limitação apontada da punição tradicional?", options: ["Ela sempre ensina a habilidade que faltou", "Resolve o comportamento imediato às custas do relacionamento de longo prazo", "Não tem nenhum efeito negativo", "É a única forma eficaz de disciplina"], correct: 1, explanation: "Punição não necessariamente ensina a habilidade que a criança precisava desenvolver." },
+      { q: "O que é 'elogio descritivo'?", options: ["Um elogio genérico como 'você é ótimo'", "Descrever especificamente o que a criança fez, sem rótulo avaliativo pronto", "Elogiar apenas resultados finais", "Evitar qualquer tipo de elogio"], correct: 1, explanation: "Isso permite que a criança tire suas próprias conclusões positivas sobre si mesma." },
+      { q: "Por que rótulos repetidos como 'ela é a bagunceira' são problemáticos, segundo a obra?", options: ["Não têm nenhum efeito real", "Tendem a se tornar profecias autorrealizáveis", "Sempre motivam a criança a mudar", "São sempre precisos e úteis"], correct: 1, explanation: "A criança tende a internalizar e agir de acordo com a identidade atribuída." },
+      { q: "O que a obra recomenda para libertar crianças de rótulos fixos?", options: ["Reforçar o rótulo com mais frequência", "Mencionar exemplos específicos que contradizem o rótulo antigo", "Comentar o comportamento negativo na frente de outras pessoas", "Ignorar completamente qualquer mudança de comportamento"], correct: 1, explanation: "Isso ajuda a criança a se ver de forma diferente ao longo do tempo." },
+      { q: "Qual é o primeiro passo no processo de resolução conjunta de problemas?", options: ["Impor a solução do adulto imediatamente", "Ouvir e reconhecer os sentimentos e necessidades da criança", "Punir o comportamento antes de conversar", "Ignorar a perspectiva da criança"], correct: 1, explanation: "Esse reconhecimento inicial é a base para o processo colaborativo funcionar." },
+      { q: "Por que soluções geradas em conjunto tendem a ser mais duradouras, segundo a obra?", options: ["Porque são sempre mais rápidas de aplicar", "Porque a criança participou genuinamente da decisão", "Porque eliminam a necessidade de qualquer regra", "Porque os pais não precisam se envolver"], correct: 1, explanation: "A participação genuína da criança aumenta o comprometimento com a solução escolhida." },
+    ],
+  },
+
+  {
+    id: "dilema-da-inovacao",
+    title: "O Dilema da Inovação",
+    author: "Baseado na obra de Clayton Christensen",
+    category: "Tecnologia e Inovação",
+    tags: ["disrupção", "inovação", "estratégia"],
+    readTimeMin: 17,
+    premium: true,
+    coverIcon: "cpu",
+    synopsis:
+      "Por que empresas líderes de mercado, gerenciadas de forma tecnicamente competente, frequentemente perdem para tecnologias disruptivas que inicialmente pareciam inferiores e sem importância.",
+    chapters: [
+      {
+        title: "Inovação sustentadora versus disruptiva",
+        content:
+          "Inovações sustentadoras melhoram produtos existentes ao longo de dimensões que os clientes atuais já valorizam — e empresas estabelecidas geralmente lideram nesse tipo de inovação, porque estão bem alinhadas com as demandas dos clientes mais lucrativos. Inovações disruptivas, por outro lado, inicialmente oferecem desempenho inferior nas métricas tradicionais valorizadas pelos clientes principais, mas trazem outras vantagens (preço mais baixo, simplicidade, conveniência) que atraem um segmento diferente, geralmente menor e menos lucrativo no início.",
+      },
+      {
+        title: "Por que empresas bem geridas falham",
+        content:
+          "O paradoxo central da obra é que empresas não falham diante da disrupção por incompetência gerencial — falham precisamente por seguirem boas práticas de gestão: escutar seus clientes mais lucrativos, investir em produtos com margem maior, e alocar recursos para as oportunidades de mercado maiores e mais visíveis no curto prazo. Essas mesmas práticas racionais tornam quase impossível justificar investimento sério em uma tecnologia disruptiva que, no início, atende um mercado pequeno, com margens baixas, e que os clientes atuais explicitamente dizem não querer.",
+      },
+      {
+        title: "Os processos e valores da organização",
+        content:
+          "Organizações desenvolvem processos e critérios de decisão otimizados para seu modelo de negócio atual — sistemas de aprovação de projeto que exigem certo tamanho mínimo de mercado, métricas de sucesso calibradas para as margens do negócio principal. Esses mesmos processos e valores, que tornam a empresa eficiente em seu negócio atual, atuam como filtros que sistematicamente rejeitam ou desfinanciam projetos disruptivos, porque eles nunca parecem suficientemente atraentes quando avaliados pelos critérios do negócio estabelecido.",
+      },
+      {
+        title: "A trajetória de melhoria da tecnologia disruptiva",
+        content:
+          "Tecnologias disruptivas tipicamente melhoram seu desempenho ao longo do tempo numa velocidade maior do que a demanda real dos clientes por aquele desempenho específico cresce. Isso significa que, mesmo começando claramente inferior, a tecnologia disruptiva eventualmente 'alcança' e depois ultrapassa o nível de desempenho que o mercado principal considera suficiente — e nesse ponto, suas vantagens adicionais (custo, simplicidade) tornam-se decisivas, e os líderes estabelecidos frequentemente percebem a ameaça tarde demais para reagir de forma eficaz.",
+      },
+      {
+        title: "Criando unidades separadas para disrupção",
+        content:
+          "Uma das recomendações centrais da obra é que, quando uma empresa identifica uma oportunidade genuinamente disruptiva, ela deve ser desenvolvida em uma unidade organizacional separada, com sua própria estrutura de custos, processos de decisão e métricas de sucesso — pequena o suficiente para que oportunidades emergentes pareçam significativas para ela. Tentar desenvolver a inovação disruptiva dentro da estrutura principal quase sempre falha, porque será constantemente comparada e desfavorecida frente às oportunidades maiores e mais imediatas do negócio já estabelecido.",
+      },
+      {
+        title: "Aplicando a teoria de forma proativa",
+        content:
+          "A obra recomenda que executivos monitorem ativamente sinais de tecnologias emergentes que, mesmo parecendo brinquedos ou nichos irrelevantes hoje, atendem necessidades reais de um segmento de mercado através de uma proposta de valor fundamentalmente diferente. A pergunta estratégica chave não é 'nossos clientes atuais querem isso', mas 'existe um mercado, mesmo pequeno hoje, disposto a aceitar desempenho inferior em troca de outras vantagens — e essa tecnologia está numa trajetória de melhoria que pode eventualmente competir com nosso negócio principal'.",
+      },
+    ],
+    quiz: [
+      { q: "O que caracteriza uma inovação sustentadora?", options: ["Desempenho inicialmente inferior com outras vantagens", "Melhora produtos existentes em dimensões já valorizadas pelos clientes atuais", "Sempre cria um mercado totalmente novo", "É sempre mais barata que o produto original"], correct: 1, explanation: "Empresas estabelecidas geralmente lideram nesse tipo de inovação." },
+      { q: "O que caracteriza uma inovação disruptiva no início?", options: ["Desempenho superior em todas as métricas tradicionais", "Desempenho inferior nas métricas valorizadas pelos clientes principais, mas com outras vantagens", "Preço sempre mais alto que a alternativa existente", "Adoção imediata pelos clientes mais lucrativos"], correct: 1, explanation: "Vantagens como preço, simplicidade ou conveniência atraem inicialmente um segmento diferente." },
+      { q: "Por que, segundo a obra, empresas bem geridas falham diante da disrupção?", options: ["Por incompetência gerencial evidente", "Por seguirem boas práticas de gestão focadas nos clientes mais lucrativos atuais", "Por falta de recursos financeiros", "Por não terem departamento de inovação"], correct: 1, explanation: "As mesmas práticas racionais tornam difícil investir em tecnologias disruptivas iniciais." },
+      { q: "Como processos e valores organizacionais afetam projetos disruptivos?", options: ["Sempre favorecem automaticamente qualquer inovação", "Atuam como filtros que rejeitam projetos que não atendem aos critérios do negócio estabelecido", "Não têm nenhuma influência na avaliação de projetos", "Aceleram sempre a adoção de novas tecnologias"], correct: 1, explanation: "Esses processos otimizados para o modelo atual filtram projetos que parecem pouco atraentes inicialmente." },
+      { q: "O que geralmente acontece com a trajetória de melhoria de tecnologias disruptivas?", options: ["Elas nunca melhoram seu desempenho", "Melhoram numa velocidade maior que a demanda real dos clientes por aquele desempenho", "Estagnam permanentemente em nível inferior", "Pioram com o tempo"], correct: 1, explanation: "Eventualmente a tecnologia alcança e ultrapassa o nível de desempenho considerado suficiente." },
+      { q: "O que a obra recomenda para desenvolver oportunidades genuinamente disruptivas?", options: ["Desenvolvê-las dentro da estrutura principal da empresa", "Criar uma unidade organizacional separada, com sua própria estrutura de custos e métricas", "Ignorá-las completamente até se tornarem grandes", "Terceirizar totalmente para outra empresa"], correct: 1, explanation: "Unidades separadas evitam que a inovação seja desfavorecida frente a oportunidades maiores." },
+      { q: "Por que tentar desenvolver inovação disruptiva dentro da estrutura principal geralmente falha?", options: ["Porque falta talento técnico na empresa", "Porque será constantemente comparada e desfavorecida frente a oportunidades maiores e mais imediatas", "Porque é proibido por lei", "Porque consome muito tempo dos executivos"], correct: 1, explanation: "A comparação direta com o negócio principal tende a desfavorecer projetos ainda pequenos." },
+      { q: "Qual é a pergunta estratégica chave sugerida pela obra?", options: ["Nossos clientes atuais querem isso?", "Existe um mercado disposto a aceitar desempenho inferior em troca de outras vantagens, numa trajetória de melhoria?", "Qual é o lucro imediato dessa tecnologia?", "Nossos concorrentes já adotaram essa tecnologia?"], correct: 1, explanation: "Essa pergunta ajuda a identificar potenciais disrupções antes que se tornem óbvias." },
+      { q: "Por que líderes de mercado frequentemente percebem a ameaça disruptiva tarde demais?", options: ["Porque não têm acesso a dados de mercado", "Porque a tecnologia só se torna competitiva depois de ultrapassar o nível de desempenho considerado suficiente", "Porque ignoram completamente a concorrência", "Porque não investem em nenhuma pesquisa"], correct: 1, explanation: "As vantagens adicionais só se tornam decisivas depois que o desempenho alcança um patamar suficiente." },
+      { q: "O paradoxo central da obra é que empresas falham diante da disrupção...", options: ["Por serem geridas de forma incompetente", "Precisamente por seguirem boas práticas de gestão focadas no negócio atual", "Por não terem recursos financeiros suficientes", "Por ignorarem completamente seus clientes"], correct: 1, explanation: "Esse é o paradoxo central que dá nome ao 'dilema' da inovação." },
+    ],
+  },
+
+  {
+    id: "como-democracias-morrem",
+    title: "Como as Democracias Morrem",
+    author: "Baseado na obra de Steven Levitsky e Daniel Ziblatt",
+    category: "Sociedade & Política",
+    tags: ["democracia", "instituições", "política comparada"],
+    readTimeMin: 17,
+    premium: true,
+    coverIcon: "landmark",
+    synopsis:
+      "Uma análise de como democracias modernas frequentemente não morrem por golpes militares repentinos, mas por erosão gradual das normas e instituições, muitas vezes de dentro do próprio sistema eleitoral.",
+    chapters: [
+      {
+        title: "Golpes silenciosos, não tanques nas ruas",
+        content:
+          "Historicamente, democracias costumavam morrer de forma abrupta e visível — golpes militares, tomadas de poder por força. Os autores documentam um padrão mais comum nas últimas décadas: líderes eleitos democraticamente que, uma vez no poder, corroem gradualmente as instituições que poderiam limitá-los — tribunais, imprensa, órgãos eleitorais — usando meios aparentemente legais, um passo de cada vez, de forma que cada erosão individual pareça pequena demais para gerar resistência coletiva imediata.",
+      },
+      {
+        title: "Sinais de alerta de comportamento autoritário",
+        content:
+          "A obra propõe quatro sinais de alerta para identificar tendências autoritárias em um político: rejeição (ou compromisso fraco) com as regras democráticas do jogo; negação da legitimidade de oponentes políticos, tratados como inimigos e não como adversários legítimos; tolerância ou incentivo à violência; e disposição para restringir liberdades civis de opositores, incluindo mídia. Nenhum sinal isolado é definitivo, mas a presença de múltiplos sinais simultâneos é apresentada como motivo real de preocupação.",
+      },
+      {
+        title: "Guardiões invisíveis: normas não escritas",
+        content:
+          "Além das leis formais, democracias saudáveis dependem de normas não escritas, especialmente duas: tolerância mútua (aceitar oponentes políticos como legítimos, mesmo discordando profundamente deles) e reserva institucional (evitar usar todo o poder legal disponível até o limite máximo, mesmo quando tecnicamente permitido, para preservar o espírito e não só a letra das regras). Quando essas normas erodem, as mesmas instituições formais continuam existindo no papel, mas perdem a capacidade real de restringir abusos de poder.",
+      },
+      {
+        title: "Polarização extrema como terreno fértil",
+        content:
+          "Os autores argumentam que polarização política extrema — especialmente quando se sobrepõe a divisões identitárias profundas (raciais, religiosas, regionais) — cria condições em que a tolerância mútua se torna mais difícil de sustentar, porque cada lado passa a ver a vitória do outro não apenas como derrota política, mas como ameaça existencial ao próprio modo de vida. Nesse contexto, eleitores e partidos tornam-se mais dispostos a tolerar violações às normas democráticas por parte de líderes do 'próprio lado', desde que a alternativa pareça pior.",
+      },
+      {
+        title: "O papel dos partidos como filtros",
+        content:
+          "Uma função historicamente importante, mas pouco reconhecida, dos partidos políticos tradicionais era filtrar candidatos com tendências autoritárias antes que chegassem a concorrer nas eleições gerais, através de processos internos de seleção controlados por lideranças partidárias experientes. A obra observa que a democratização excessiva desses processos de seleção interna, embora bem-intencionada, removeu esse filtro institucional, tornando mais fácil para outsiders com pouco compromisso com normas democráticas conquistarem candidaturas.",
+      },
+      {
+        title: "Como as democracias se defendem",
+        content:
+          "A obra conclui que a defesa da democracia depende menos de mudanças constitucionais e mais da reconstrução ativa de normas de tolerância mútua e reserva institucional entre os próprios atores políticos — algo que exige lideranças dispostas a colocar a preservação das regras do jogo acima da vitória partidária de curto prazo. Também enfatiza o papel de cidadãos comuns: engajamento cívico sustentado, e não apenas indignação pontual em momentos de crise aguda, é apresentado como parte essencial da defesa institucional de longo prazo.",
+      },
+    ],
+    quiz: [
+      { q: "Qual é o padrão mais comum de morte de democracias modernas, segundo a obra?", options: ["Golpes militares abruptos e visíveis", "Erosão gradual das instituições por líderes eleitos, usando meios aparentemente legais", "Invasões estrangeiras", "Crises econômicas repentinas apenas"], correct: 1, explanation: "Cada erosão individual parece pequena demais para gerar resistência coletiva imediata." },
+      { q: "Quais são os quatro sinais de alerta de comportamento autoritário propostos pela obra?", options: ["Popularidade, carisma, riqueza e experiência", "Rejeição das regras democráticas, negação da legitimidade de oponentes, tolerância à violência e restrição de liberdades civis", "Idade, gênero, partido e região", "Nenhum sinal é identificável antecipadamente"], correct: 1, explanation: "A presença simultânea de múltiplos sinais é motivo real de preocupação." },
+      { q: "O que é 'tolerância mútua', como norma democrática não escrita?", options: ["Concordar sempre com o oponente político", "Aceitar oponentes políticos como legítimos, mesmo discordando profundamente", "Ignorar completamente a oposição", "Um conceito exclusivamente legal"], correct: 1, explanation: "Essa norma sustenta a aceitação da legitimidade do adversário político." },
+      { q: "O que é 'reserva institucional'?", options: ["Guardar recursos financeiros do Estado", "Evitar usar todo o poder legal disponível até o limite máximo, mesmo quando permitido", "Um tipo de reserva militar", "Acumular poder o máximo possível legalmente"], correct: 1, explanation: "Essa norma preserva o espírito das regras, não apenas a letra formal delas." },
+      { q: "Como a polarização extrema afeta a tolerância mútua, segundo a obra?", options: ["Não tem nenhuma relação com tolerância política", "Torna a tolerância mais difícil, pois a vitória do outro lado parece uma ameaça existencial", "Sempre fortalece a tolerância mútua", "Só afeta países pequenos"], correct: 1, explanation: "Quando sobreposta a divisões identitárias profundas, a polarização intensifica esse efeito." },
+      { q: "Qual era uma função histórica importante dos partidos políticos tradicionais, segundo a obra?", options: ["Financiar exclusivamente campanhas eleitorais", "Filtrar candidatos com tendências autoritárias antes das eleições gerais", "Escolher sempre o candidato mais popular", "Impedir qualquer renovação de lideranças"], correct: 1, explanation: "Esse filtro interno, controlado por lideranças experientes, ajudava a barrar candidatos problemáticos." },
+      { q: "O que a democratização excessiva dos processos internos dos partidos pode ter causado, segundo a obra?", options: ["Fortaleceu ainda mais o filtro contra candidatos autoritários", "Removeu esse filtro institucional, facilitando candidaturas de outsiders problemáticos", "Não teve nenhum efeito relevante", "Aumentou o controle das lideranças partidárias"], correct: 1, explanation: "Embora bem-intencionada, essa mudança teve consequências não previstas." },
+      { q: "Segundo os autores, do que depende principalmente a defesa da democracia?", options: ["Apenas de mudanças constitucionais formais", "Da reconstrução ativa de normas de tolerância mútua e reserva institucional entre atores políticos", "Exclusivamente de intervenção militar", "De nenhuma ação prática específica"], correct: 1, explanation: "Isso exige lideranças dispostas a priorizar as regras do jogo acima da vitória de curto prazo." },
+      { q: "Qual é o papel dos cidadãos comuns na defesa institucional, segundo a obra?", options: ["Nenhum papel relevante", "Engajamento cívico sustentado, não apenas indignação pontual em crises", "Apenas votar a cada eleição", "Delegar toda responsabilidade às instituições formais"], correct: 1, explanation: "O engajamento contínuo é apresentado como parte essencial da defesa de longo prazo." },
+      { q: "Por que instituições formais podem continuar existindo no papel mesmo quando a democracia está enfraquecida?", options: ["Porque instituições nunca perdem função real", "Porque a erosão das normas não escritas reduz a capacidade real das instituições de restringir abusos", "Porque isso nunca acontece na prática", "Porque instituições formais são imunes a erosão"], correct: 1, explanation: "As leis continuam existindo, mas perdem eficácia real sem as normas que as sustentam na prática." },
+    ],
+  },
+
+  {
+    id: "radical-candor",
+    title: "Radical Candor",
+    author: "Baseado na obra de Kim Scott",
+    category: "Cultura Corporativa & Comunicação",
+    tags: ["feedback", "gestão de pessoas", "comunicação direta"],
+    readTimeMin: 15,
+    premium: true,
+    coverIcon: "handshake",
+    synopsis:
+      "Um framework para dar feedback que é ao mesmo tempo genuinamente cuidadoso com a pessoa e diretamente honesto sobre o problema — evitando tanto a grosseria desnecessária quanto a complacência que não ajuda ninguém.",
+    chapters: [
+      {
+        title: "Os dois eixos do feedback",
+        content:
+          "A obra organiza feedback em dois eixos: 'se importar pessoalmente' (demonstrar cuidado genuíno pelo bem-estar e desenvolvimento da pessoa) e 'desafiar diretamente' (ser honesto e específico sobre o que precisa melhorar). Candura radical é a combinação dos dois: cuidar o suficiente para dizer a verdade difícil, e ser direto o suficiente para que a mensagem seja realmente útil, não vaga a ponto de não gerar mudança real.",
+      },
+      {
+        title: "Empatia ruinosa",
+        content:
+          "Quando existe cuidado genuíno mas falta coragem de desafiar diretamente, o resultado é 'empatia ruinosa' — feedback suavizado a ponto de perder utilidade, elogios vazios, ou silêncio completo sobre problemas reais por medo de magoar a pessoa. Paradoxalmente, essa forma aparentemente 'gentil' de evitar conversas difíceis costuma prejudicar mais a pessoa no longo prazo, porque ela não recebe a informação necessária para corrigir o curso a tempo, e o problema real permanece sem solução.",
+      },
+      {
+        title: "Insinceridade manipuladora",
+        content:
+          "Quando falta tanto cuidado genuíno quanto disposição para ser direto, surge a 'insinceridade manipuladora' — elogios falsos, política de bastidores, feedback distorcido para agradar ou manipular impressões, sem compromisso real com a verdade ou com o bem-estar da pessoa. A obra identifica esse quadrante como o mais destrutivo para a confiança organizacional no longo prazo, mesmo quando aparenta ser socialmente mais agradável no curto prazo do que um confronto direto.",
+      },
+      {
+        title: "Agressão desagradável",
+        content:
+          "Quando há disposição para ser direto, mas falta cuidado genuíno pela pessoa, o resultado é 'agressão desagradável' — feedback tecnicamente correto e honesto, mas entregue de forma que humilha, constrange ou desconsidera o impacto emocional na pessoa. Embora às vezes gere mudança rápida por medo, esse estilo corrói a confiança e a segurança psicológica necessárias para que a pessoa continue aberta a feedback no futuro, além de prejudicar a disposição da equipe de assumir riscos e admitir erros.",
+      },
+      {
+        title: "Praticando candura radical",
+        content:
+          "Praticar candura radical exige habilidades específicas: pedir feedback sobre si mesmo primeiro, genuína e frequentemente, antes de dar feedback aos outros — isso constrói confiança e modela vulnerabilidade; elogiar de forma específica e pública quando apropriado; e criticar de forma específica e privada, focando no comportamento observável, não em julgamentos de caráter. A pergunta prática sugerida antes de dar qualquer feedback difícil é: 'isso está vindo de um lugar de cuidado genuíno pela pessoa, e estou sendo claro o suficiente para realmente ajudar?'",
+      },
+      {
+        title: "Construindo uma cultura de candura",
+        content:
+          "Candura radical não é apenas uma técnica individual de conversa — é uma cultura que precisa ser modelada consistentemente por líderes ao longo do tempo, especialmente aceitando publicamente feedback crítico dos próprios subordinados sem retaliação. Quando líderes demonstram repetidamente que podem receber críticas diretas sem punir quem as oferece, isso sinaliza à equipe inteira que honestidade genuína é mais valorizada do que conformidade superficial — criando um ambiente onde problemas reais são identificados e corrigidos mais cedo, antes de se tornarem crises maiores.",
+      },
+    ],
+    quiz: [
+      { q: "Quais são os dois eixos do framework de feedback proposto pela obra?", options: ["Velocidade e formalidade", "Se importar pessoalmente e desafiar diretamente", "Escrito e verbal", "Público e privado"], correct: 1, explanation: "Candura radical é a combinação de cuidado genuíno com honestidade direta." },
+      { q: "O que é 'empatia ruinosa'?", options: ["Feedback direto e cuidadoso ao mesmo tempo", "Cuidado genuíno sem coragem de desafiar diretamente, resultando em feedback vago", "Feedback agressivo sem cuidado", "Ausência total de qualquer emoção no feedback"], correct: 1, explanation: "Evitar dizer a verdade por medo de magoar acaba prejudicando a pessoa no longo prazo." },
+      { q: "O que caracteriza a 'insinceridade manipuladora'?", options: ["Falta de cuidado e falta de disposição para ser direto, com elogios falsos", "Cuidado genuíno com honestidade total", "Feedback sempre entregue publicamente", "Um estilo raro e pouco destrutivo"], correct: 0, explanation: "Esse quadrante é identificado como o mais destrutivo para a confiança organizacional." },
+      { q: "O que é 'agressão desagradável'?", options: ["Feedback vago e sem clareza", "Disposição para ser direto, mas sem cuidado genuíno pela pessoa", "Um estilo sempre eficaz e recomendado", "A ausência completa de feedback"], correct: 1, explanation: "Esse estilo corrói a confiança, mesmo quando o conteúdo do feedback está correto." },
+      { q: "O que a obra recomenda fazer antes de dar feedback aos outros?", options: ["Evitar qualquer forma de autocrítica", "Pedir feedback sobre si mesmo primeiro, genuína e frequentemente", "Sempre criticar publicamente para dar o exemplo", "Aguardar que o problema se resolva sozinho"], correct: 1, explanation: "Isso constrói confiança e modela vulnerabilidade perante a equipe." },
+      { q: "Onde a obra recomenda que críticas específicas sejam feitas?", options: ["Sempre publicamente, para reforçar o exemplo", "Em privado, focando no comportamento observável, não em julgamentos de caráter", "Apenas por escrito, nunca verbalmente", "Nunca devem ser feitas diretamente"], correct: 1, explanation: "Isso preserva a dignidade da pessoa enquanto comunica o problema com clareza." },
+      { q: "Onde a obra recomenda que elogios específicos sejam feitos?", options: ["Sempre em privado apenas", "Publicamente, quando apropriado", "Nunca devem ser expressos", "Apenas por escrito formal"], correct: 1, explanation: "Elogio público específico reforça positivamente o comportamento observado." },
+      { q: "Qual pergunta prática a obra sugere antes de dar feedback difícil?", options: ["Isso vai me fazer parecer bem?", "Isso está vindo de cuidado genuíno e estou sendo claro o suficiente para ajudar?", "Quanto tempo isso vai levar?", "Alguém mais concorda comigo?"], correct: 1, explanation: "Essa pergunta ajuda a calibrar tanto o cuidado quanto a clareza da mensagem." },
+      { q: "Como líderes constroem uma cultura de candura, segundo a obra?", options: ["Punindo qualquer crítica recebida de subordinados", "Aceitando publicamente feedback crítico dos próprios subordinados sem retaliação", "Evitando completamente dar ou receber feedback", "Delegando toda comunicação difícil para RH"], correct: 1, explanation: "Isso sinaliza que honestidade genuína é mais valorizada que conformidade superficial." },
+      { q: "Qual é o benefício de uma cultura de candura bem estabelecida, segundo a obra?", options: ["Problemas reais são identificados e corrigidos mais cedo", "Conflitos aumentam sem nenhum benefício", "A equipe para de se comunicar", "Aumenta a rotatividade de funcionários sem propósito"], correct: 0, explanation: "Identificar problemas cedo evita que se tornem crises maiores no futuro." },
+    ],
+  },
+
+  {
+    id: "pequeno-principe",
+    title: "O Pequeno Príncipe",
+    author: "Baseado na obra de Antoine de Saint-Exupéry",
+    category: "Livros Infantis",
+    tags: ["clássico", "filosofia infantil", "amizade"],
+    readTimeMin: 12,
+    premium: false,
+    coverIcon: "star",
+    synopsis:
+      "A história de um piloto perdido no deserto que encontra um pequeno príncipe vindo de outro planeta — uma fábula sobre amizade, perda e o que realmente importa na vida, além do que os olhos conseguem ver.",
+    chapters: [
+      {
+        title: "O desenho que os adultos não entendem",
+        content:
+          "A narrativa se abre com o narrador adulto lembrando de sua infância, quando desenhou uma jiboia que engoliu um elefante — mas todo adulto via apenas um chapéu. Essa cena estabelece o tema central da obra: adultos perderam a capacidade de ver além do óbvio e do prático, enquanto crianças (e o pequeno príncipe) ainda enxergam o que está escondido por trás das aparências. O narrador, anos depois, piloto de avião perdido no deserto do Saara, encontra o pequeno príncipe — o único que reconhece imediatamente sua jiboia com o elefante dentro.",
+      },
+      {
+        title: "A rosa e o vínculo que exige cuidado",
+        content:
+          "O pequeno príncipe vem de um asteroide minúsculo, onde cultivava uma rosa única e especial — vaidosa, exigente, mas também, ele descobre depois de partir, genuinamente amada por ele. A relação com a rosa ilustra uma das ideias centrais da obra: aquilo que se torna verdadeiramente importante não é intrinsecamente especial por natureza, mas se torna especial através do tempo e cuidado investidos nele — 'foi o tempo que perdeste com tua rosa que a fez tão importante'.",
+      },
+      {
+        title: "Os adultos estranhos de outros planetas",
+        content:
+          "Antes de chegar à Terra, o príncipe visita planetas habitados cada um por um único adulto obcecado com uma forma limitada de ver o mundo: um rei sem súditos reais que insiste em comandar mesmo o inevitável, um vaidoso que só quer ser admirado, um bêbado que bebe para esquecer a vergonha de beber, um homem de negócios que 'possui' as estrelas apenas contando-as em uma lista, e um acendedor de lampiões preso a uma rotina absurda. Cada encontro satiriza uma forma específica de os adultos perderem de vista o que realmente importa, presos em obsessões vazias.",
+      },
+      {
+        title: "A raposa e o ritual de cativar",
+        content:
+          "Na Terra, o príncipe encontra uma raposa que lhe ensina o significado de 'cativar' — criar laços através de tempo dedicado e ritual repetido, até que aquele ser específico se torne único entre todos os outros semelhantes. A raposa explica que, uma vez cativada, ela reconhecerá o som dos passos do príncipe entre todos os outros, e que o trigo dourado dos campos passará a lembrá-la dele, pela cor de seu cabelo. É a raposa quem revela a frase mais citada da obra: 'só se vê bem com o coração; o essencial é invisível aos olhos'.",
+      },
+      {
+        title: "O jardim de rosas e a descoberta da unicidade",
+        content:
+          "Ao encontrar um jardim inteiro cheio de rosas idênticas à sua, o príncipe inicialmente se entristece, achando que sua rosa não era tão especial ou única quanto pensava. Mas, guiado pelo ensinamento da raposa, ele entende que sua rosa continua única não por ser fisicamente diferente das outras, mas porque é a única que ele regou, protegeu do vento com uma redoma, e ouviu se queixar ou se gabar — o vínculo construído pelo cuidado é o que torna algo insubstituível, não a raridade objetiva.",
+      },
+      {
+        title: "A despedida e o que fica invisível",
+        content:
+          "Perto do final, o príncipe se prepara para retornar ao seu planeta e à sua rosa, através de um ato que parece, à primeira vista, sua própria morte — permitindo que uma serpente o morda para que seu corpo, pesado demais para a jornada, seja deixado para trás. A obra termina com o narrador, de volta à civilização, olhando para as estrelas à noite e sabendo que, em alguma delas, o príncipe está rindo — transformando cada estrela, para ele, em algo capaz de fazer rir, um vínculo invisível que nenhum outro observador do céu consegue enxergar.",
+      },
+    ],
+    quiz: [
+      { q: "O que os adultos viam quando olhavam para o desenho da jiboia com o elefante dentro?", options: ["Uma jiboia claramente reconhecível", "Apenas um chapéu", "Um elefante isolado", "Nada, o desenho era abstrato demais"], correct: 1, explanation: "Essa cena estabelece o tema de adultos perderem a capacidade de ver além do óbvio." },
+      { q: "O que a relação do príncipe com sua rosa ilustra na obra?", options: ["Que coisas são especiais por natureza, independente de cuidado", "Que algo se torna importante através do tempo e cuidado investidos nele", "Que rosas são sempre mais valiosas que outras plantas", "Que relações não exigem esforço contínuo"], correct: 1, explanation: "O tempo perdido com a rosa é o que a torna verdadeiramente importante para o príncipe." },
+      { q: "O que os adultos que o príncipe visita em outros planetas têm em comum?", options: ["Todos são extremamente sábios", "Cada um está obcecado com uma forma limitada de ver o mundo", "Todos vivem em harmonia entre si", "Nenhum deles interage com o príncipe"], correct: 1, explanation: "Cada encontro satiriza uma forma específica de obsessão vazia dos adultos." },
+      { q: "O que significa 'cativar', segundo a raposa?", options: ["Capturar um animal fisicamente", "Criar laços através de tempo dedicado e ritual repetido", "Uma técnica de caça", "Um tipo de feitiço mágico"], correct: 1, explanation: "Cativar torna um ser específico único entre todos os outros semelhantes." },
+      { q: "Qual é a frase mais citada da obra, dita pela raposa?", options: ["O tempo cura todas as feridas", "Só se vê bem com o coração; o essencial é invisível aos olhos", "A vida é uma jornada, não um destino", "Tudo que é sólido desmancha no ar"], correct: 1, explanation: "Essa frase resume a mensagem central sobre enxergar além das aparências." },
+      { q: "Por que o príncipe inicialmente se entristece ao ver o jardim de rosas idênticas à sua?", options: ["Porque as rosas eram feias", "Porque achou que sua rosa não era tão especial ou única quanto pensava", "Porque não gostava de jardins", "Porque queria mais rosas para si"], correct: 1, explanation: "Ele temporariamente duvida da unicidade de sua própria rosa." },
+      { q: "O que finalmente torna a rosa do príncipe única, segundo o ensinamento da raposa?", options: ["Ser fisicamente diferente das outras rosas", "O vínculo construído pelo cuidado — regar, proteger, ouvir suas queixas", "Ser a rosa mais cara do jardim", "Ter uma cor exclusiva"], correct: 1, explanation: "O cuidado investido, não a raridade física, é o que torna algo insubstituível." },
+      { q: "Como o príncipe planeja retornar ao seu planeta?", options: ["Pedindo ajuda ao piloto para construir uma nave", "Permitindo que uma serpente o morda, deixando seu corpo pesado para trás", "Caminhando pelo deserto até encontrar uma saída", "A obra não revela como ele retorna"], correct: 1, explanation: "Esse ato simboliza deixar para trás o peso físico para retornar à sua rosa." },
+      { q: "O que o narrador sente ao olhar para as estrelas no final da obra?", options: ["Tristeza sem nenhum outro sentimento", "Que, em alguma estrela, o príncipe está rindo, tornando as estrelas especiais para ele", "Indiferença total", "Medo do desconhecido"], correct: 1, explanation: "Esse vínculo invisível transforma a forma como o narrador enxerga o céu." },
+      { q: "Qual é o papel do narrador adulto na estrutura da história?", options: ["Ele é apenas um observador desconectado da mensagem central", "Ele representa a possibilidade de um adulto recuperar a capacidade de ver o essencial", "Ele nunca aprende nada com o príncipe", "Ele é hostil ao príncipe durante toda a narrativa"], correct: 1, explanation: "O encontro com o príncipe reconecta o narrador com uma forma de ver perdida na vida adulta." },
+    ],
+  },
+
+  {
+    id: "1984-orwell",
+    title: "1984",
+    author: "Baseado na obra de George Orwell",
+    category: "Ficção",
+    tags: ["distopia", "totalitarismo", "vigilância"],
+    readTimeMin: 18,
+    premium: true,
+    coverIcon: "bookOpen",
+    synopsis:
+      "Um retrato distópico de um regime totalitário que controla não apenas ações, mas pensamentos e a própria realidade através de vigilância total, manipulação da linguagem e reescrita constante da história.",
+    chapters: [
+      {
+        title: "O Grande Irmão e a vigilância total",
+        content:
+          "Na Oceania, o protagonista Winston Smith vive sob vigilância constante de telas que também transmitem — as 'teletelas' — que monitoram cada gesto e palavra dentro das casas dos cidadãos do Partido. A figura do 'Grande Irmão', líder nunca visto pessoalmente, personifica um poder onipresente e onisciente. Essa vigilância total não serve apenas para punir dissidência já manifestada, mas para tornar a própria ideia de privacidade de pensamento praticamente impensável — o medo de ser observado molda o comportamento antes mesmo que qualquer ato de rebeldia real ocorra.",
+      },
+      {
+        title: "Novilíngua: controlar o pensamento através da linguagem",
+        content:
+          "O regime desenvolve a 'Novilíngua', uma versão reduzida e simplificada do idioma, projetada deliberadamente para eliminar palavras que expressam conceitos de liberdade, rebelião ou pensamento crítico — a lógica é que, se a palavra para um conceito não existe, torna-se progressivamente mais difícil até mesmo pensar aquele conceito claramente. Essa é uma das ideias centrais mais influentes da obra: controlar a linguagem disponível é uma forma poderosa e sutil de controlar os limites do próprio pensamento possível.",
+      },
+      {
+        title: "Reescrevendo o passado",
+        content:
+          "Winston trabalha no Ministério da Verdade, cuja função real é alterar registros históricos, jornais antigos e documentos oficiais para que sempre estejam alinhados com a versão atual da narrativa do Partido — se o Partido muda de aliado em uma guerra, todos os registros históricos são silenciosamente reescritos para mostrar que aquele sempre foi o aliado, nunca o contrário. O slogan do Partido resume essa lógica: 'quem controla o passado controla o futuro; quem controla o presente controla o passado' — sem registro histórico confiável e independente, a própria realidade objetiva se torna maleável ao poder.",
+      },
+      {
+        title: "Duplipensar",
+        content:
+          "O regime exige de seus cidadãos a capacidade de 'duplipensar': sustentar simultaneamente duas crenças contraditórias na mente e aceitar ambas como verdadeiras, sem sentir o conflito lógico entre elas — saber que um registro histórico foi alterado e, ao mesmo tempo, genuinamente acreditar na nova versão como se sempre tivesse sido verdadeira. Essa capacidade não é apresentada como hipocrisia consciente, mas como uma forma mais profunda e perturbadora de controle mental, onde a própria distinção entre verdade e mentira deixa de ter significado estável.",
+      },
+      {
+        title: "Rebelião pessoal e seus limites",
+        content:
+          "Winston inicia um relacionamento secreto com Julia e um diário pessoal, atos que representam pequenas mas significativas afirmações de individualidade e memória privada num sistema desenhado para eliminar ambas. A obra explora como mesmo esses gestos pequenos de resistência pessoal — amar alguém escolhido livremente, lembrar o passado de forma independente da versão oficial — são tratados pelo regime como ameaças graves, precisamente porque preservam um núcleo de identidade e realidade fora do controle total do Partido.",
+      },
+      {
+        title: "O Quarto 101 e a derrota final",
+        content:
+          "Capturado, Winston é levado ao Quarto 101, onde é confrontado com seu medo mais profundo e pessoal, especificamente escolhido para quebrar não apenas sua ação de resistência, mas sua última lealdade interna — o amor por Julia. A obra termina não com uma revolução heroica, mas com a derrota completa e genuína da resistência interna de Winston, que passa a amar verdadeiramente o Grande Irmão. Esse final deliberadamente sombrio é um dos aspectos mais discutidos da obra: um alerta sobre até onde um sistema de controle total pode, em tese, chegar quando não encontra resistência suficiente antes de se consolidar.",
+      },
+    ],
+    quiz: [
+      { q: "O que são as 'teletelas' na Oceania?", options: ["Dispositivos de entretenimento apenas", "Telas que monitoram e transmitem simultaneamente, vigiando os cidadãos", "Um sistema de correio", "Telefones públicos"], correct: 1, explanation: "Elas tornam a vigilância constante e onipresente na vida cotidiana." },
+      { q: "Qual é o propósito da 'Novilíngua'?", options: ["Facilitar a comunicação internacional", "Eliminar palavras que expressam conceitos de liberdade e pensamento crítico", "Aumentar o vocabulário disponível", "Preservar a língua original sem alterações"], correct: 1, explanation: "A ideia é que sem a palavra, o próprio conceito se torna mais difícil de pensar." },
+      { q: "Qual é a função real do Ministério da Verdade?", options: ["Preservar registros históricos fielmente", "Alterar registros históricos para alinhá-los com a narrativa atual do Partido", "Educar crianças sobre história", "Publicar jornais independentes"], correct: 1, explanation: "Documentos são reescritos silenciosamente sempre que a narrativa oficial muda." },
+      { q: "O que significa 'duplipensar'?", options: ["Pensar duas vezes antes de agir", "Sustentar duas crenças contraditórias simultaneamente, aceitando ambas como verdadeiras", "Um tipo de terapia psicológica", "Traduzir pensamentos para Novilíngua"], correct: 1, explanation: "É apresentado como uma forma profunda de controle mental, não hipocrisia consciente." },
+      { q: "O que o slogan 'quem controla o passado controla o futuro' expressa?", options: ["A importância de estudar história tradicionalmente", "Que sem registro histórico confiável, a realidade objetiva se torna maleável ao poder", "Uma crítica a historiadores acadêmicos", "Que o futuro é sempre previsível"], correct: 1, explanation: "Controlar a narrativa histórica é central para o poder do Partido." },
+      { q: "Por que o relacionamento entre Winston e Julia é tratado como ameaça pelo regime?", options: ["Porque é proibido por questões religiosas", "Porque preserva um núcleo de identidade e escolha pessoal fora do controle do Partido", "Porque consome recursos do Estado", "Porque Julia é uma agente estrangeira"], correct: 1, explanation: "Amor escolhido livremente representa uma forma de resistência à eliminação da individualidade." },
+      { q: "O que acontece no Quarto 101?", options: ["Uma celebração do Partido", "Winston é confrontado com seu medo mais profundo, para quebrar sua última lealdade interna", "Um julgamento público justo", "Winston consegue escapar do regime"], correct: 1, explanation: "É o momento decisivo de quebra da resistência interna do protagonista." },
+      { q: "Como a obra termina em relação à resistência de Winston?", options: ["Com uma revolução heroica bem-sucedida", "Com a derrota completa de sua resistência interna, passando a amar o Grande Irmão", "Com Winston escapando para outro país", "Com a queda do regime totalitário"], correct: 1, explanation: "Esse final sombrio é um dos aspectos mais discutidos e impactantes da obra." },
+      { q: "O que a vigilância constante busca alcançar, além de punir rebeldia já manifestada?", options: ["Apenas entreter os cidadãos", "Tornar a própria ideia de privacidade de pensamento praticamente impensável", "Melhorar a infraestrutura urbana", "Aumentar a produtividade econômica apenas"], correct: 1, explanation: "O medo de ser observado molda o comportamento antes mesmo de qualquer ato real de rebeldia." },
+      { q: "Qual é uma das ideias centrais mais influentes da obra sobre linguagem?", options: ["A linguagem não tem relação com o pensamento", "Controlar a linguagem disponível é uma forma poderosa de controlar os limites do pensamento possível", "Todas as línguas deveriam ser simplificadas por eficiência", "A linguagem é irrelevante para sistemas políticos"], correct: 1, explanation: "Essa ideia, exemplificada pela Novilíngua, é uma das contribuições mais discutidas da obra." },
+    ],
+  },
+
+  {
+    id: "legacy-all-blacks",
+    title: "Legacy: O Que os All Blacks Podem Ensinar sobre Liderança",
+    author: "Baseado na obra de James Kerr",
+    category: "Esportes",
+    tags: ["liderança", "cultura de equipe", "excelência sustentada"],
+    readTimeMin: 14,
+    premium: true,
+    coverIcon: "trophy",
+    synopsis:
+      "Os princípios de cultura e liderança por trás da equipe de rugby mais vitoriosa da história do esporte — e como eles se aplicam a qualquer organização que busca excelência sustentada, não apenas resultados pontuais.",
+    chapters: [
+      {
+        title: "Varra a arquibancada",
+        content:
+          "Um dos princípios mais citados da cultura do time é que, mesmo sendo os melhores jogadores de rugby do mundo, os próprios atletas seniores são responsáveis por varrer e limpar os vestiários depois dos jogos e treinos — ninguém é grande demais para as tarefas humildes. Esse costume simboliza um princípio maior: humildade genuína e responsabilidade pessoal por deixar o lugar (e a cultura) melhor do que se encontrou, independente do status ou das conquistas já alcançadas.",
+      },
+      {
+        title: "Melhor pessoa, melhor All Black",
+        content:
+          "A filosofia de seleção e desenvolvimento do time parte da premissa de que caráter pessoal robusto precede e sustenta desempenho esportivo de elite — não o contrário. Investir no desenvolvimento de qualidades pessoais como humildade, responsabilidade e integridade é tratado como fundação necessária para desempenho de alta performance sustentado, não como algo secundário ou opcional em relação às habilidades técnicas específicas do esporte.",
+      },
+      {
+        title: "Propósito além de si mesmo",
+        content:
+          "Jogadores são ensinados a entender que vestem a camisa não apenas para si mesmos, mas em nome de todos que vestiram aquela camisa antes deles e de todos que a vestirão depois — uma responsabilidade que transcende a carreira individual de qualquer jogador específico. Esse senso de propósito e legado compartilhado, maior do que qualquer ego individual, é apresentado como fonte de motivação mais duradoura do que recompensas puramente pessoais como fama ou dinheiro.",
+      },
+      {
+        title: "Práticas deliberadas sob pressão",
+        content:
+          "A obra descreve como a equipe pratica deliberadamente sob condições de pressão simulada e caos controlado, para que a tomada de decisão sob estresse real durante uma partida se torne mais natural e menos propensa a erros de pânico. Rituais e preparação mental consistentes (incluindo o icônico haka antes das partidas) servem tanto para consolidar identidade coletiva quanto para criar um estado mental de foco elevado imediatamente antes de momentos de alta pressão.",
+      },
+      {
+        title: "Adaptabilidade e aprendizado contínuo",
+        content:
+          "Apesar do sucesso histórico, a cultura do time evita a complacência através de revisão constante e brutalmente honesta de desempenho — inclusive depois de vitórias, não apenas derrotas — buscando ativamente onde a execução poderia ter sido melhor. Essa disposição de questionar até o próprio sucesso, em vez de simplesmente repetir fórmulas que funcionaram no passado, é apresentada como central para manter excelência ao longo de gerações de jogadores diferentes, evitando a estagnação que afeta times que já venceram muito.",
+      },
+      {
+        title: "Deixando um legado, não apenas um resultado",
+        content:
+          "O título da obra reflete sua tese central: a verdadeira medida de uma liderança ou cultura organizacional de excelência não é apenas vencer no presente, mas deixar a organização genuinamente mais forte para a próxima geração de líderes e membros. Isso exige um tipo específico de humildade de longo prazo — investir tempo e energia em desenvolver sucessores capazes, mesmo sabendo que os créditos por resultados futuros não pertencerão a quem investiu nesse desenvolvimento anos antes.",
+      },
+    ],
+    quiz: [
+      { q: "O que o princípio 'varra a arquibancada' simboliza?", options: ["Uma regra de higiene obrigatória apenas", "Humildade genuína e responsabilidade pessoal, independente do status", "Uma punição para jogadores que perdem partidas", "Uma tradição sem significado real"], correct: 1, explanation: "Mesmo os melhores atletas do mundo realizam tarefas humildes como parte da cultura do time." },
+      { q: "Qual é a premissa central da filosofia 'melhor pessoa, melhor All Black'?", options: ["Habilidade técnica é o único fator que importa", "Caráter pessoal robusto precede e sustenta desempenho esportivo de elite", "Desempenho esportivo não tem relação com caráter", "Apenas talento natural determina o sucesso"], correct: 1, explanation: "Qualidades pessoais são tratadas como fundação necessária para performance sustentada." },
+      { q: "O que significa 'propósito além de si mesmo' para os jogadores?", options: ["Jogar apenas para benefício pessoal", "Vestir a camisa em nome de todos que a vestiram antes e depois deles", "Ignorar completamente o histórico do time", "Focar exclusivamente em recordes individuais"], correct: 1, explanation: "Esse senso de legado compartilhado é uma fonte de motivação mais duradoura." },
+      { q: "Por que a equipe pratica deliberadamente sob pressão simulada?", options: ["Para aumentar o tempo total de treino sem propósito", "Para que a tomada de decisão sob estresse real se torne mais natural", "Porque é uma exigência da federação esportiva", "Para reduzir o número de jogadores na equipe"], correct: 1, explanation: "Isso reduz erros de pânico durante momentos de pressão real em partidas." },
+      { q: "Como a cultura do time evita a complacência apesar do sucesso histórico?", options: ["Ignorando qualquer análise após vitórias", "Através de revisão constante e honesta do desempenho, mesmo após vitórias", "Reduzindo a intensidade dos treinos com o tempo", "Mudando de esporte periodicamente"], correct: 1, explanation: "Questionar o próprio sucesso ajuda a manter excelência ao longo de gerações." },
+      { q: "Qual é a tese central refletida no título 'Legacy'?", options: ["Vencer no presente é a única medida de sucesso", "A verdadeira liderança deixa a organização mais forte para a próxima geração", "Legado não tem relação com liderança esportiva", "Resultados individuais importam mais que o time"], correct: 1, explanation: "O foco está em fortalecer a organização além do próprio tempo de atuação do líder." },
+      { q: "O que a obra sugere sobre investir no desenvolvimento de sucessores?", options: ["É uma perda de tempo para líderes atuais", "Exige humildade de longo prazo, mesmo sem receber crédito por resultados futuros", "Deve ser evitado para proteger a posição do líder atual", "Não tem relação com cultura organizacional"], correct: 1, explanation: "Essa é uma forma específica de humildade de longo prazo destacada na obra." },
+      { q: "O que caracteriza os rituais e preparação mental do time, como o haka?", options: ["São apenas tradições sem função prática", "Consolidam identidade coletiva e criam foco elevado antes de momentos de pressão", "Servem apenas para intimidar adversários", "Não têm relação com desempenho esportivo"], correct: 1, explanation: "Esses rituais cumprem uma função psicológica além do aspecto simbólico." },
+      { q: "Segundo a obra, como caráter pessoal se relaciona com desempenho de elite?", options: ["Não tem relação alguma", "É tratado como fundação necessária, não como algo secundário", "É menos importante que talento físico", "Só importa para jogadores iniciantes"], correct: 1, explanation: "A cultura do time prioriza desenvolvimento de caráter como base para performance sustentada." },
+      { q: "Por que times de sucesso frequentemente estagnam, segundo a lógica da obra?", options: ["Porque jogadores ficam velhos demais", "Porque param de questionar e simplesmente repetem fórmulas do passado", "Porque perdem acesso a recursos financeiros", "Porque mudam de técnico com frequência"], correct: 1, explanation: "A disposição de questionar até o sucesso evita essa estagnação comum." },
+    ],
+  },
 ];
 
 // Reflexões diárias — o índice é calculado a partir do dia do ano (rotaciona automaticamente por data)
@@ -995,12 +1850,10 @@ window.CATALOG_STUBS = [
   // Carreira & Negócios
   ["Empresas Feitas para Vencer", "Jim Collins", "Carreira & Negócios"],
   ["Empresas Feitas para Durar", "Jim Collins e Jerry Porras", "Carreira & Negócios"],
-  ["A Startup Enxuta", "Eric Ries", "Carreira & Negócios"],
   ["Zero to One", "Peter Thiel", "Carreira & Negócios"],
   ["O Gerente-Minuto", "Kenneth Blanchard e Spencer Johnson", "Carreira & Negócios"],
   ["Execução: A Disciplina para Atingir Resultados", "Larry Bossidy e Ram Charan", "Carreira & Negócios"],
   ["A Arte da Guerra", "Sun Tzu", "Carreira & Negócios"],
-  ["O Dilema da Inovação", "Clayton Christensen", "Carreira & Negócios"],
   ["A Empresa Exponencial", "Salim Ismail", "Carreira & Negócios"],
   ["Playing to Win", "A.G. Lafley e Roger Martin", "Carreira & Negócios"],
   ["O Executivo Eficaz", "Peter Drucker", "Carreira & Negócios"],
@@ -1049,7 +1902,6 @@ window.CATALOG_STUBS = [
   ["O Método Bazin", "Décio Bazin", "Investimentos & Finanças"],
 
   // Economia
-  ["Freakonomics", "Steven Levitt e Stephen Dubner", "Economia"],
   ["Superfreakonomics", "Steven Levitt e Stephen Dubner", "Economia"],
   ["Economia em Uma Única Lição", "Henry Hazlitt", "Economia"],
   ["Por Que as Nações Fracassam", "Daron Acemoglu e James Robinson", "Economia"],
@@ -1109,13 +1961,11 @@ window.CATALOG_STUBS = [
   // Gestão & Liderança
   ["O Monge e o Executivo", "James C. Hunter", "Gestão & Liderança"],
   ["Liderança: Teoria e Prática", "Peter Northouse", "Gestão & Liderança"],
-  ["Líderes Comem Por Último", "Simon Sinek", "Gestão & Liderança"],
   ["Os 21 Princípios Irrefutáveis da Liderança", "John C. Maxwell", "Gestão & Liderança"],
   ["Desenvolvendo os Líderes ao Redor de Você", "John C. Maxwell", "Gestão & Liderança"],
   ["A Quinta Disciplina", "Peter Senge", "Gestão & Liderança"],
   ["Liderança de Nível 5", "Jim Collins", "Gestão & Liderança"],
   ["O Poder do Propósito", "Richard Leider", "Gestão & Liderança"],
-  ["Radical Candor", "Kim Scott", "Gestão & Liderança"],
   ["Gestão de Pessoas Não é Bicho de Sete Cabeças", "Idalberto Chiavenato", "Gestão & Liderança"],
   ["Como Liderar Pessoas", "John C. Maxwell", "Gestão & Liderança"],
   ["A Coragem de Liderar", "Brené Brown", "Gestão & Liderança"],
@@ -1166,7 +2016,6 @@ window.CATALOG_STUBS = [
   ["A Única Coisa", "Gary Keller e Jay Papasan", "Produtividade & Gestão do Tempo"],
 
   // Inteligência Emocional
-  ["Inteligência Emocional", "Daniel Goleman", "Inteligência Emocional"],
   ["Trabalhando com a Inteligência Emocional", "Daniel Goleman", "Inteligência Emocional"],
   ["Liderança: O Poder da Inteligência Emocional", "Daniel Goleman", "Inteligência Emocional"],
   ["Inteligência Emocional 2.0", "Travis Bradberry e Jean Greaves", "Inteligência Emocional"],
@@ -1275,7 +2124,6 @@ window.CATALOG_STUBS = [
   ["Como Conquistar Amigos e Ser Feliz nos Relacionamentos", "Dale Carnegie", "Sexo & Relacionamentos"],
 
   // Parentalidade
-  ["Como Falar Para os Filhos Ouvirem", "Adele Faber e Elaine Mazlish", "Parentalidade"],
   ["Disciplina Sem Drama", "Daniel Siegel e Tina Payne Bryson", "Parentalidade"],
   ["O Cérebro da Criança", "Daniel Siegel e Tina Payne Bryson", "Parentalidade"],
   ["Filhos Brilhantes, Alunos Fascinantes", "Augusto Cury", "Parentalidade"],
@@ -1291,7 +2139,6 @@ window.CATALOG_STUBS = [
   ["Apego: A Base Segura para os Filhos", "John Bowlby", "Parentalidade"],
 
   // Livros Infantis
-  ["O Pequeno Príncipe", "Antoine de Saint-Exupéry", "Livros Infantis"],
   ["Alice no País das Maravilhas", "Lewis Carroll", "Livros Infantis"],
   ["O Menino Maluquinho", "Ziraldo", "Livros Infantis"],
   ["A Bolsa Amarela", "Lygia Bojunga", "Livros Infantis"],
@@ -1308,7 +2155,6 @@ window.CATALOG_STUBS = [
   ["O Mágico de Oz", "L. Frank Baum", "Livros Infantis"],
 
   // Ficção
-  ["1984", "George Orwell", "Ficção"],
   ["A Revolução dos Bichos", "George Orwell", "Ficção"],
   ["Admirável Mundo Novo", "Aldous Huxley", "Ficção"],
   ["Fahrenheit 451", "Ray Bradbury", "Ficção"],
@@ -1328,7 +2174,6 @@ window.CATALOG_STUBS = [
   ["O Nome do Vento", "Patrick Rothfuss", "Ficção"],
 
   // Biografias & Memórias
-  ["Steve Jobs", "Walter Isaacson", "Biografias & Memórias"],
   ["Elon Musk", "Walter Isaacson", "Biografias & Memórias"],
   ["Einstein: Sua Vida, Seu Universo", "Walter Isaacson", "Biografias & Memórias"],
   ["Leonardo da Vinci", "Walter Isaacson", "Biografias & Memórias"],
@@ -1368,7 +2213,6 @@ window.CATALOG_STUBS = [
   ["Casa-Grande & Senzala", "Gilberto Freyre", "História & Filosofia"],
 
   // Ciência
-  ["Uma Breve História do Tempo", "Stephen Hawking", "Ciência"],
   ["O Universo Numa Casca de Noz", "Stephen Hawking", "Ciência"],
   ["Breves Respostas para Grandes Perguntas", "Stephen Hawking", "Ciência"],
   ["Cosmos", "Carl Sagan", "Ciência"],
@@ -1407,7 +2251,6 @@ window.CATALOG_STUBS = [
 
   // Tecnologia e Inovação
   ["A Quarta Revolução Industrial", "Klaus Schwab", "Tecnologia e Inovação"],
-  ["O Dilema da Inovação", "Clayton Christensen", "Tecnologia e Inovação"],
   ["A Solução para a Inovação", "Clayton Christensen", "Tecnologia e Inovação"],
   ["Sociedade 5.0", "Klaus Schwab", "Tecnologia e Inovação"],
   ["Isso Vai Mudar Tudo", "John Brockman", "Tecnologia e Inovação"],
@@ -1429,7 +2272,6 @@ window.CATALOG_STUBS = [
   ["Quebrando o Hábito de Ser Você Mesmo", "Joe Dispenza", "Saúde & Dieta"],
   ["Corra ou Morra", "Christopher McDougall", "Saúde & Dieta"],
   ["O Poder do Metabolismo", "Frank Suárez", "Saúde & Dieta"],
-  ["Por Que Dormimos", "Matthew Walker", "Saúde & Dieta"],
   ["O Milagre do Jejum Intermitente", "Jason Fung", "Saúde & Dieta"],
   ["O Código da Obesidade", "Jason Fung", "Saúde & Dieta"],
   ["Manual de Nutrição Funcional", "Valéria Paschoal", "Saúde & Dieta"],
@@ -1462,7 +2304,6 @@ window.CATALOG_STUBS = [
   ["Relentless", "Tim Grover", "Esportes"],
   ["Mentalidade de Elite", "Steve Magness e Brad Stulberg", "Esportes"],
   ["O Poder do Hábito nos Esportes", "Charles Duhigg", "Esportes"],
-  ["Legacy: O Que os All Blacks Podem Ensinar sobre Liderança", "James Kerr", "Esportes"],
   ["Pep Confidencial", "Marti Perarnau", "Esportes"],
   ["Fear Less: A Mentalidade Vencedora", "Pippa Grange", "Esportes"],
   ["Michael Jordan: A Vida", "Roland Lazenby", "Esportes"],
@@ -1486,8 +2327,6 @@ window.CATALOG_STUBS = [
   ["A Pirâmide Invertida", "Jonathan Wilson", "Modo Copa"],
 
   // Sociedade & Política
-  ["1984", "George Orwell", "Sociedade & Política"],
-  ["Como as Democracias Morrem", "Steven Levitsky e Daniel Ziblatt", "Sociedade & Política"],
   ["O Contrato Social", "Jean-Jacques Rousseau", "Sociedade & Política"],
   ["A Origem do Totalitarismo", "Hannah Arendt", "Sociedade & Política"],
   ["Eichmann em Jerusalém", "Hannah Arendt", "Sociedade & Política"],
@@ -1562,7 +2401,6 @@ window.CATALOG_STUBS = [
   // Radar 3X
   ["Outlive: A Ciência e a Arte da Longevidade", "Peter Attia", "Radar 3X"],
   ["A Psicologia Financeira", "Morgan Housel", "Radar 3X"],
-  ["Como as Democracias Morrem", "Steven Levitsky e Daniel Ziblatt", "Radar 3X"],
   ["Atlas do Coração", "Brené Brown", "Radar 3X"],
   ["Vida 3.0", "Max Tegmark", "Radar 3X"],
   ["Foco: A Atenção e Seu Papel Fundamental para o Sucesso", "Daniel Goleman", "Radar 3X"],
@@ -1580,7 +2418,6 @@ window.CATALOG_STUBS = [
   ["Como Fazer Amigos e Influenciar Pessoas", "Dale Carnegie", "3X Originals"],
 
   // 3X Personalities
-  ["Steve Jobs", "Walter Isaacson", "3X Personalities"],
   ["Elon Musk", "Walter Isaacson", "3X Personalities"],
   ["Shoe Dog", "Phil Knight", "3X Personalities"],
   ["Becoming: Minha História", "Michelle Obama", "3X Personalities"],
@@ -1741,7 +2578,6 @@ window.CATALOG_STUBS = [
   ["Fechando Toda Venda", "Zig Ziglar", "Autoajuda & Motivação"],
   ["A Arte de Motivar Pessoas", "Zig Ziglar", "Autoajuda & Motivação"],
   ["Determinação: O Poder de Persistir", "Angela Duckworth", "Autoajuda & Motivação"],
-  ["Grit: O Poder da Paixão e da Perseverança", "Angela Duckworth", "Autoajuda & Motivação"],
   ["A Mentalidade de Crescimento no Dia a Dia", "Carol Dweck", "Autoajuda & Motivação"],
   ["Autoestima: Um Novo Olhar", "Augusto Cury", "Autoajuda & Motivação"],
 
