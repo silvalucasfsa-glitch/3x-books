@@ -1734,6 +1734,856 @@ window.BOOKS = [
       { q: "Por que times de sucesso frequentemente estagnam, segundo a lógica da obra?", options: ["Porque jogadores ficam velhos demais", "Porque param de questionar e simplesmente repetem fórmulas do passado", "Porque perdem acesso a recursos financeiros", "Porque mudam de técnico com frequência"], correct: 1, explanation: "A disposição de questionar até o sucesso evita essa estagnação comum." },
     ],
   },
+
+  {
+    id: "investidor-inteligente",
+    title: "O Investidor Inteligente",
+    author: "Baseado na obra de Benjamin Graham",
+    category: "Investimentos & Finanças",
+    tags: ["value investing", "análise fundamentalista", "disciplina"],
+    readTimeMin: 18,
+    premium: true,
+    coverIcon: "coins",
+    synopsis:
+      "A obra fundadora do investimento em valor, ensinando a diferença entre investir e especular, e como proteger o capital através de análise disciplinada e margem de segurança.",
+    chapters: [
+      {
+        title: "Investidor versus especulador",
+        content:
+          "A distinção central da obra é que um investimento genuíno exige análise cuidadosa que promete segurança do principal e retorno adequado — qualquer operação que não atenda a esses requisitos é especulação, mesmo que pareça sofisticada. Especular não é necessariamente errado, mas confundir especulação com investimento, ou especular com dinheiro que não se pode perder, é o erro mais comum e mais custoso que investidores cometem ao longo da vida.",
+      },
+      {
+        title: "O Sr. Mercado",
+        content:
+          "Graham propõe uma metáfora central: imagine um sócio de negócios chamado Sr. Mercado, que aparece todo dia oferecendo comprar sua parte ou vender a dele por um preço diferente — às vezes exageradamente otimista, às vezes exageradamente pessimista, quase nunca refletindo o valor real e estável do negócio subjacente. O investidor inteligente não é obrigado a negociar com ele todo dia; pode ignorá-lo na maioria das vezes e aproveitar suas ofertas apenas quando claramente vantajosas — a flutuação do mercado deve servir ao investidor, não guiá-lo emocionalmente.",
+      },
+      {
+        title: "Margem de segurança",
+        content:
+          "O conceito mais importante da obra é comprar um ativo por um preço substancialmente abaixo de sua estimativa conservadora de valor intrínseco — essa diferença, a margem de segurança, protege o investidor tanto de erros de análise quanto de reviravoltas de mercado imprevisíveis. Quanto maior a margem de segurança, menor o risco de perda permanente de capital, mesmo que o julgamento inicial sobre o valor do ativo esteja parcialmente equivocado.",
+      },
+      {
+        title: "Investidor defensivo versus empreendedor",
+        content:
+          "A obra distingue dois perfis legítimos: o investidor defensivo, que busca segurança e ausência de complicação, priorizando diversificação ampla e ativos de qualidade comprovada sem exigir análise aprofundada individual de cada posição; e o investidor empreendedor, disposto a dedicar tempo e esforço significativos a pesquisa individual em busca de retornos acima da média. Nenhum dos dois perfis é superior — o erro é tentar obter os retornos do investidor empreendedor com o esforço de análise do investidor defensivo.",
+      },
+      {
+        title: "Preço não é o mesmo que valor",
+        content:
+          "Um erro recorrente é assumir que o preço de mercado de uma ação reflete precisamente seu valor real subjacente a cada momento — na prática, preços de mercado no curto prazo são fortemente influenciados por sentimento coletivo, moda e psicologia de massa, que podem se distanciar consideravelmente do valor real do negócio por períodos prolongados. Aprender a distinguir preço de valor, e a julgar valor de forma independente da opinião predominante do mercado, é apresentado como habilidade central do investidor bem-sucedido de longo prazo.",
+      },
+      {
+        title: "Disciplina emocional acima de inteligência técnica",
+        content:
+          "Graham argumenta que o fator decisivo para o sucesso do investidor não é primariamente inteligência analítica superior, mas temperamento e disciplina emocional — a capacidade de manter um plano de investimento racional mesmo diante de euforia generalizada de mercado (que tenta seduzir a comprar caro) ou pânico generalizado (que tenta assustar a vender barato). A obra conclui que o pior inimigo do investidor, na maioria das vezes, não é o mercado — é ele mesmo, através de decisões emocionais tomadas nos piores momentos possíveis.",
+      },
+    ],
+    quiz: [
+      { q: "Qual é a distinção central entre investidor e especulador, segundo Graham?", options: ["Não existe diferença real entre eles", "Investimento exige análise que promete segurança do principal e retorno adequado", "Especuladores sempre ganham mais dinheiro", "Investidores nunca assumem nenhum risco"], correct: 1, explanation: "Qualquer operação sem essa análise cuidadosa é especulação, mesmo que pareça sofisticada." },
+      { q: "O que representa a metáfora do 'Sr. Mercado'?", options: ["Um investidor profissional real", "As flutuações emocionais e imprevisíveis do mercado, que nem sempre refletem valor real", "Um índice de bolsa específico", "Um tipo de fundo de investimento"], correct: 1, explanation: "O investidor inteligente não precisa negociar com ele todo dia, só aproveitar ofertas vantajosas." },
+      { q: "O que é 'margem de segurança'?", options: ["Um seguro contra perdas totais", "A diferença entre o preço pago e a estimativa conservadora de valor intrínseco", "Uma taxa cobrada por corretoras", "Um tipo de garantia bancária"], correct: 1, explanation: "Essa margem protege contra erros de análise e reviravoltas de mercado." },
+      { q: "Qual é a diferença entre investidor defensivo e empreendedor, segundo a obra?", options: ["Não há diferença relevante entre eles", "O defensivo busca simplicidade e diversificação; o empreendedor dedica esforço a análise individual", "Apenas o empreendedor pode ter sucesso", "O defensivo sempre ganha mais dinheiro"], correct: 1, explanation: "Nenhum perfil é superior, mas cada um exige uma abordagem coerente." },
+      { q: "Qual é o erro comum que Graham alerta sobre os dois perfis de investidor?", options: ["Escolher qualquer um dos dois perfis", "Tentar obter retornos do investidor empreendedor com esforço do investidor defensivo", "Diversificar demais os investimentos", "Investir apenas em ações conhecidas"], correct: 1, explanation: "Esse descompasso entre esforço e expectativa de retorno é um erro recorrente." },
+      { q: "Por que preço de mercado não é o mesmo que valor real, segundo a obra?", options: ["Preço e valor são sempre idênticos", "Preços de curto prazo são influenciados por sentimento coletivo e psicologia de massa", "O valor real não pode ser estimado", "Apenas ações pequenas têm essa diferença"], correct: 1, explanation: "Preços podem se distanciar do valor real por períodos prolongados." },
+      { q: "Segundo Graham, qual é o fator mais decisivo para o sucesso do investidor?", options: ["Inteligência analítica superior exclusivamente", "Temperamento e disciplina emocional", "Sorte no timing de mercado", "Acesso a informações privilegiadas"], correct: 1, explanation: "Manter disciplina racional diante de euforia ou pânico é mais decisivo que análise técnica isolada." },
+      { q: "Qual é, segundo a obra, o pior inimigo do investidor na maioria das vezes?", options: ["O próprio mercado em si", "Ele mesmo, através de decisões emocionais nos piores momentos", "Os corretores de investimento", "A inflação apenas"], correct: 1, explanation: "Decisões emocionais tomadas sob euforia ou pânico prejudicam mais que o mercado em si." },
+      { q: "O investidor inteligente é obrigado a negociar com o 'Sr. Mercado' todos os dias?", options: ["Sim, sempre que ele oferecer um preço", "Não, pode ignorá-lo e aproveitar apenas ofertas claramente vantajosas", "Sim, é uma obrigação legal", "Não, nunca deve negociar com ele"], correct: 1, explanation: "A flutuação do mercado deve servir ao investidor, não guiá-lo emocionalmente." },
+      { q: "Quanto maior a margem de segurança de um investimento, o que isso representa?", options: ["Maior risco de perda permanente de capital", "Menor risco de perda permanente, mesmo com erros parciais de análise", "Nenhuma relação com o risco do investimento", "Um sinal de que o ativo está supervalorizado"], correct: 1, explanation: "A margem de segurança protege contra erros de julgamento e reviravoltas imprevisíveis." },
+    ],
+  },
+
+  {
+    id: "quarta-revolucao-industrial",
+    title: "A Quarta Revolução Industrial",
+    author: "Baseado na obra de Klaus Schwab",
+    category: "Tecnologia e Inovação",
+    tags: ["transformação digital", "futuro do trabalho", "tecnologia"],
+    readTimeMin: 15,
+    premium: true,
+    coverIcon: "cpu",
+    synopsis:
+      "Uma análise de como a fusão entre tecnologias físicas, digitais e biológicas está transformando economias, empregos e sociedades numa velocidade e escala sem precedentes históricos.",
+    chapters: [
+      {
+        title: "Por que esta revolução é diferente",
+        content:
+          "Diferente das três revoluções industriais anteriores (vapor, eletricidade, computação), a quarta se caracteriza pela fusão de tecnologias através das fronteiras entre os domínios físico, digital e biológico — inteligência artificial, robótica avançada, internet das coisas, impressão 3D e biotecnologia avançando simultaneamente e se combinando de formas que amplificam seus efeitos individuais. A velocidade de disrupção também é qualitativamente diferente: mudanças que antes levavam décadas para se espalhar globalmente agora ocorrem em poucos anos.",
+      },
+      {
+        title: "Impacto no mercado de trabalho",
+        content:
+          "A obra reconhece tensão real entre a criação e a destruição de empregos: automação elimina tarefas rotineiras e previsíveis (tanto manuais quanto cognitivas), enquanto simultaneamente cria demanda por novas habilidades relacionadas à criação, manutenção e supervisão dessas mesmas tecnologias. O desafio central não é apenas quantos empregos serão eliminados versus criados, mas se trabalhadores deslocados conseguirão se requalificar na velocidade necessária, e se o sistema educacional e de treinamento profissional consegue acompanhar essa velocidade de mudança.",
+      },
+      {
+        title: "Governança em um mundo tecnológico acelerado",
+        content:
+          "Sistemas regulatórios e legais tradicionalmente evoluem de forma lenta e deliberada, enquanto tecnologias emergentes avançam exponencialmente — essa disparidade de velocidade cria vácuos regulatórios em áreas como privacidade de dados, inteligência artificial autônoma e edição genética, onde a tecnologia frequentemente ultrapassa a capacidade das instituições de estabelecer regras claras antes de amplo uso. A obra defende modelos de governança mais ágeis e adaptativos, capazes de ajustar regras rapidamente conforme a tecnologia evolui, em vez de tentar prever e regular tudo antecipadamente.",
+      },
+      {
+        title: "Identidade e o impacto sobre o indivíduo",
+        content:
+          "Além dos impactos econômicos, a obra explora como tecnologias como redes sociais, realidade aumentada e dispositivos sempre conectados afetam identidade pessoal, saúde mental e relações humanas — a linha entre presença física e digital torna-se cada vez mais tênue. Essa transformação levanta questões sobre autonomia individual, privacidade e bem-estar psicológico que vão além de métricas puramente econômicas de produtividade e crescimento.",
+      },
+      {
+        title: "Riscos de desigualdade ampliada",
+        content:
+          "A obra alerta que os benefícios econômicos dessa revolução tendem a se concentrar desproporcionalmente entre proprietários de capital intelectual e físico (donos de plataformas, algoritmos e infraestrutura), enquanto trabalhadores que oferecem apenas mão de obra ou capital físico tradicional enfrentam pressão descendente sobre salários. Sem intervenção deliberada de políticas públicas e educacionais, essa dinâmica ameaça ampliar desigualdades já existentes tanto dentro de países quanto entre economias mais e menos preparadas tecnologicamente.",
+      },
+      {
+        title: "Liderando através da transformação",
+        content:
+          "A obra conclui com um chamado à ação coletiva: governos, empresas e sociedade civil precisam colaborar ativamente para direcionar essa revolução tecnológica em direção a resultados inclusivos, em vez de simplesmente reagir passivamente às suas consequências. Isso exige investimento substancial em requalificação profissional contínua, sistemas educacionais redesenhados para habilidades adaptáveis (não apenas conhecimento técnico específico que pode rapidamente se tornar obsoleto), e diálogo internacional coordenado sobre padrões éticos para tecnologias emergentes.",
+      },
+    ],
+    quiz: [
+      { q: "O que caracteriza a Quarta Revolução Industrial, diferente das anteriores?", options: ["O uso exclusivo de eletricidade", "A fusão de tecnologias entre os domínios físico, digital e biológico", "A ausência total de automação", "O foco exclusivo em manufatura tradicional"], correct: 1, explanation: "Essa fusão amplifica os efeitos individuais de cada tecnologia envolvida." },
+      { q: "Qual é uma diferença qualitativa importante dessa revolução em relação às anteriores?", options: ["A velocidade de disrupção é muito mais lenta", "Mudanças que levavam décadas agora ocorrem em poucos anos", "Não afeta o mercado de trabalho", "É restrita a poucos países desenvolvidos"], correct: 1, explanation: "A velocidade de disseminação global das mudanças tecnológicas aumentou significativamente." },
+      { q: "Qual é o desafio central em relação ao mercado de trabalho, segundo a obra?", options: ["Não há nenhum impacto relevante no emprego", "Se trabalhadores deslocados conseguirão se requalificar na velocidade necessária", "Apenas empregos manuais serão afetados", "A automação só afeta países pobres"], correct: 1, explanation: "A capacidade de requalificação rápida é central para mitigar os impactos da automação." },
+      { q: "Por que existe um 'vácuo regulatório' em tecnologias emergentes, segundo a obra?", options: ["Porque não há necessidade de regulação", "Porque sistemas legais evoluem lentamente enquanto a tecnologia avança exponencialmente", "Porque governos não têm interesse em regular", "Porque a tecnologia sempre segue as leis existentes"], correct: 1, explanation: "Essa disparidade de velocidade cria lacunas em áreas como privacidade e IA autônoma." },
+      { q: "O que a obra recomenda como modelo de governança para tecnologias emergentes?", options: ["Regras fixas e imutáveis definidas antecipadamente", "Modelos mais ágeis e adaptativos, capazes de ajustar regras conforme a tecnologia evolui", "Ausência completa de regulação", "Regulação apenas após décadas de uso da tecnologia"], correct: 1, explanation: "A agilidade regulatória é vista como mais eficaz que tentar prever tudo antecipadamente." },
+      { q: "Como a obra descreve o impacto de tecnologias sempre conectadas na identidade pessoal?", options: ["Não há nenhum impacto relevante", "A linha entre presença física e digital torna-se cada vez mais tênue", "Apenas jovens são afetados por essa mudança", "O impacto é exclusivamente positivo"], correct: 1, explanation: "Isso levanta questões sobre autonomia, privacidade e bem-estar psicológico." },
+      { q: "Para quem os benefícios econômicos dessa revolução tendem a se concentrar, segundo a obra?", options: ["Igualmente entre todos os trabalhadores", "Desproporcionalmente entre proprietários de capital intelectual e físico", "Exclusivamente para governos", "Apenas para trabalhadores manuais"], correct: 1, explanation: "Isso ameaça ampliar desigualdades existentes sem intervenção de políticas públicas." },
+      { q: "O que a obra recomenda para sistemas educacionais diante dessa transformação?", options: ["Manter o foco exclusivo em conhecimento técnico específico", "Redesenhar para habilidades adaptáveis, não apenas conhecimento que pode se tornar obsoleto", "Eliminar completamente a educação técnica", "Focar apenas em educação superior tradicional"], correct: 1, explanation: "Habilidades adaptáveis preparam melhor para mudanças tecnológicas contínuas." },
+      { q: "Qual é o chamado à ação final da obra?", options: ["Reagir passivamente às consequências tecnológicas", "Colaboração ativa entre governos, empresas e sociedade civil para resultados inclusivos", "Deixar o mercado se autorregular sem intervenção", "Restringir completamente o avanço tecnológico"], correct: 1, explanation: "Isso exige investimento em requalificação e diálogo internacional coordenado." },
+      { q: "Quais tecnologias são citadas como exemplos centrais dessa revolução?", options: ["Apenas energia a vapor e eletricidade", "Inteligência artificial, robótica avançada, internet das coisas, impressão 3D e biotecnologia", "Exclusivamente redes sociais", "Apenas tecnologias militares"], correct: 1, explanation: "Essas tecnologias avançam simultaneamente e se combinam de formas que amplificam seus efeitos." },
+    ],
+  },
+
+  {
+    id: "vida-3-0",
+    title: "Vida 3.0",
+    author: "Baseado na obra de Max Tegmark",
+    category: "IA (Inteligência Artificial)",
+    tags: ["inteligência artificial", "futuro", "ética tecnológica"],
+    readTimeMin: 17,
+    premium: true,
+    coverIcon: "cpu",
+    synopsis:
+      "Uma exploração de como a inteligência artificial avançada pode transformar radicalmente a existência humana — e por que as decisões tomadas hoje sobre seu desenvolvimento moldarão o futuro da vida como a conhecemos.",
+    chapters: [
+      {
+        title: "As três fases da vida",
+        content:
+          "O autor propõe uma estrutura para pensar sobre a evolução da vida em três estágios: Vida 1.0 (biológica, como bactérias, incapaz de redesenhar seu próprio hardware ou software — apenas evolução lenta ao longo de gerações), Vida 2.0 (humanos, capazes de redesenhar seu 'software' através de aprendizado e cultura, mas ainda limitados pelo 'hardware' biológico dado pela evolução), e a possível Vida 3.0 — uma forma de vida capaz de redesenhar tanto seu software quanto seu hardware, potencialmente através de inteligência artificial avançada e alterações auto-dirigidas de sua própria estrutura física.",
+      },
+      {
+        title: "O espectro de cenários futuros",
+        content:
+          "A obra mapeia um amplo espectro de cenários possíveis para o desenvolvimento de inteligência artificial avançada — desde utopias onde IA elimina escassez material e doenças, passando por cenários de coexistência complexa entre humanos e sistemas de IA superinteligentes, até cenários distópicos onde objetivos de sistemas de IA avançados se desalinham catastroficamente dos valores humanos. O autor evita prever qual cenário é mais provável, argumentando que o objetivo do livro é justamente ampliar a imaginação coletiva sobre possibilidades, para que escolhas presentes sejam feitas com mais deliberação.",
+      },
+      {
+        title: "O problema do alinhamento",
+        content:
+          "Um dos temas técnicos centrais é o 'problema de alinhamento': como garantir que sistemas de inteligência artificial avançados persigam objetivos genuinamente alinhados com valores e bem-estar humanos, mesmo quando esses sistemas se tornam capazes de otimizar objetivos de formas criativas e imprevistas pelos próprios criadores. O risco descrito não é necessariamente uma IA 'malévola' no sentido de ficção científica, mas uma IA competente perseguindo um objetivo mal especificado de forma extremamente eficiente, com consequências não intencionadas e potencialmente irreversíveis.",
+      },
+      {
+        title: "Consciência e o que realmente importa",
+        content:
+          "A obra explora questões filosóficas profundas sobre se sistemas de inteligência artificial avançados poderiam desenvolver algo análogo à consciência subjetiva, e por que isso importaria eticamente — se experiência subjetiva (a capacidade de genuinamente sofrer ou sentir bem-estar) é o que confere valor moral a um ser, entender se e quando sistemas artificiais cruzam esse limiar se torna uma questão ética urgente, não apenas especulação filosófica abstrata e distante da prática.",
+      },
+      {
+        title: "Poder concentrado e corrida armamentista de IA",
+        content:
+          "Um risco discutido extensivamente é a possibilidade de que vantagens decisivas em capacidade de inteligência artificial concentrem poder desproporcional nas mãos de poucos atores — sejam corporações, governos ou indivíduos — criando dinâmicas de corrida competitiva onde segurança e consideração cuidadosa são sacrificadas em nome de velocidade de desenvolvimento, para não 'ficar para trás' de concorrentes. A obra argumenta que cooperação internacional genuína sobre padrões de segurança é mais valiosa, mas também mais difícil de coordenar, do que os incentivos competitivos imediatos sugerem.",
+      },
+      {
+        title: "Decisões de hoje, futuros possíveis",
+        content:
+          "A mensagem final da obra é que o futuro da inteligência artificial não é predeterminado por leis tecnológicas inevitáveis — é moldado por decisões humanas específicas tomadas hoje sobre pesquisa, regulação, investimento e valores priorizados no design desses sistemas. O autor convida o leitor a participar ativamente dessa conversa, argumentando que questões que antes pareciam exclusivamente técnicas, restritas a especialistas, agora são fundamentalmente questões sobre que tipo de futuro a humanidade coletivamente deseja construir.",
+      },
+    ],
+    quiz: [
+      { q: "O que caracteriza a 'Vida 1.0', segundo a estrutura proposta pelo autor?", options: ["Capacidade de redesenhar hardware e software", "Vida biológica incapaz de redesenhar seu próprio hardware ou software", "Uma forma de inteligência artificial avançada", "Uma fase ainda não alcançada por nenhum organismo"], correct: 1, explanation: "Organismos como bactérias evoluem apenas lentamente ao longo de gerações." },
+      { q: "O que caracteriza a 'Vida 2.0'?", options: ["Capacidade de redesenhar apenas o hardware biológico", "Capacidade de redesenhar o 'software' através de aprendizado e cultura, mas com hardware biológico fixo", "Nenhuma capacidade de adaptação", "Exclusiva de sistemas artificiais"], correct: 1, explanation: "Humanos se encaixam nessa categoria, segundo a estrutura do autor." },
+      { q: "O que seria a possível 'Vida 3.0'?", options: ["Uma forma de vida limitada como as bactérias", "Uma forma de vida capaz de redesenhar tanto software quanto hardware", "Sinônimo exato de Vida 2.0", "Uma fase já alcançada por todos os seres humanos"], correct: 1, explanation: "Essa possibilidade estaria ligada a inteligência artificial avançada e auto-modificação." },
+      { q: "Qual é o objetivo do autor ao mapear um amplo espectro de cenários futuros?", options: ["Prever com certeza qual cenário vai acontecer", "Ampliar a imaginação coletiva sobre possibilidades, para decisões presentes mais deliberadas", "Provar que apenas cenários distópicos são possíveis", "Desencorajar completamente a pesquisa em IA"], correct: 1, explanation: "O autor evita prever um único cenário como mais provável." },
+      { q: "O que é o 'problema de alinhamento' em IA?", options: ["Um problema técnico de conectividade de rede", "Garantir que sistemas de IA persigam objetivos genuinamente alinhados com valores humanos", "Um problema exclusivamente de hardware", "A dificuldade de treinar modelos rapidamente"], correct: 1, explanation: "Mesmo IA competente pode causar danos ao perseguir um objetivo mal especificado com eficiência." },
+      { q: "Segundo a obra, qual é o risco real, mais do que uma IA 'malévola' de ficção científica?", options: ["Uma IA competente perseguindo um objetivo mal especificado de forma extremamente eficiente", "IA nunca representa nenhum risco real", "Apenas falhas de hardware são preocupantes", "O risco é exclusivamente financeiro"], correct: 0, explanation: "Consequências não intencionadas podem surgir mesmo sem intenção maligna do sistema." },
+      { q: "Por que a questão da consciência em sistemas de IA é discutida como eticamente relevante?", options: ["Não tem nenhuma relevância ética", "Porque experiência subjetiva pode ser o que confere valor moral a um ser", "Porque só interessa a filósofos acadêmicos", "Porque já foi definitivamente resolvida pela ciência"], correct: 1, explanation: "Entender se sistemas artificiais podem sofrer ou sentir bem-estar se torna uma questão ética urgente." },
+      { q: "Qual risco a obra discute sobre concentração de poder em capacidade de IA?", options: ["A capacidade de IA sempre se distribui igualmente entre todos", "Vantagens decisivas podem concentrar poder desproporcional em poucos atores", "Não há nenhum risco de concentração de poder", "Apenas governos podem desenvolver IA avançada"], correct: 1, explanation: "Isso pode criar dinâmicas de corrida competitiva que sacrificam segurança por velocidade." },
+      { q: "O que a obra argumenta sobre cooperação internacional em segurança de IA?", options: ["É desnecessária e sem valor", "É mais valiosa, mas mais difícil de coordenar, do que incentivos competitivos imediatos sugerem", "Já está plenamente estabelecida globalmente", "Deve ser evitada para preservar vantagem competitiva nacional"], correct: 1, explanation: "Coordenar segurança internacionalmente é desafiador, mas apresentado como mais valioso que a corrida competitiva." },
+      { q: "Qual é a mensagem final da obra sobre o futuro da IA?", options: ["É predeterminado por leis tecnológicas inevitáveis", "É moldado por decisões humanas específicas tomadas hoje", "Não pode ser influenciado por nenhuma ação presente", "Depende exclusivamente de avanços de hardware"], correct: 1, explanation: "O autor convida o leitor a participar ativamente das decisões que moldam esse futuro." },
+    ],
+  },
+
+  {
+    id: "cosmos-sagan",
+    title: "Cosmos",
+    author: "Baseado na obra de Carl Sagan",
+    category: "Ciência",
+    tags: ["astronomia", "ciência popular", "universo"],
+    readTimeMin: 17,
+    premium: true,
+    coverIcon: "flask",
+    synopsis:
+      "Uma jornada poética e cientificamente rigorosa pelo universo, conectando a origem das estrelas à origem da vida na Terra e ao lugar da humanidade no cosmos.",
+    chapters: [
+      {
+        title: "'Somos feitos de poeira de estrelas'",
+        content:
+          "Uma das ideias centrais e mais citadas da obra é que os elementos químicos que compõem o corpo humano — carbono, oxigênio, nitrogênio, ferro — foram forjados no interior de estrelas através de fusão nuclear, e espalhados pelo universo quando essas estrelas explodiram como supernovas bilhões de anos atrás. Essa conexão literal e científica entre matéria estelar e vida terrestre é apresentada não como metáfora poética vazia, mas como fato astrofísico verificável que redefine a relação entre humanidade e cosmos.",
+      },
+      {
+        title: "O Calendário Cósmico",
+        content:
+          "Para tornar tangível a escala imensa do tempo cósmico, o autor comprime os 13,8 bilhões de anos desde o Big Bang em um único ano de calendário — nessa escala, o sistema solar só se forma em setembro, os dinossauros são extintos no dia 30 de dezembro, e toda a história humana registrada ocupa apenas os últimos segundos antes da meia-noite de 31 de dezembro. Esse exercício de escala reformula dramaticamente a percepção sobre quão recente e breve é, em termos cósmicos, toda a experiência humana coletiva.",
+      },
+      {
+        title: "O método científico como ferramenta de humildade",
+        content:
+          "A obra defende o método científico não apenas como técnica de descoberta, mas como uma disciplina de humildade intelectual — a disposição de abandonar até as crenças mais queridas quando evidências sólidas as contradizem, e de distinguir cuidadosamente entre o que se sabe com confiança e o que ainda é hipótese ou especulação. Ceticismo saudável, combinado com abertura genuína a novas evidências, é apresentado como o equilíbrio ideal contra tanto o dogmatismo quanto a credulidade ingênua.",
+      },
+      {
+        title: "A busca por vida extraterrestre",
+        content:
+          "Sagan discute a equação de Drake, uma tentativa de estimar quantas civilizações tecnologicamente avançadas poderiam existir na galáxia, considerando fatores como taxa de formação estelar, fração de estrelas com planetas habitáveis, e a longevidade provável de civilizações tecnológicas antes de sua eventual autodestruição ou colapso. Esse último fator é discutido com preocupação particular: se civilizações tecnológicas tendem a se autodestruir rapidamente após alcançar certas capacidades (nucleares, por exemplo), isso ajudaria a explicar por que ainda não detectamos sinais claros de vida inteligente alhures, apesar da vastidão do universo.",
+      },
+      {
+        title: "O Ponto Azul Pálido",
+        content:
+          "Uma das passagens mais influentes da obra reflete sobre uma fotografia da Terra tirada pela sonda Voyager 1 a bilhões de quilômetros de distância, onde o planeta aparece como um único pixel pálido suspenso num feixe de luz solar. A partir dessa imagem, Sagan argumenta que toda guerra, toda glória e toda tragédia da história humana aconteceram nesse ponto minúsculo — um convite à humildade coletiva e à responsabilidade compartilhada de cuidar do único lar conhecido da vida no universo observável.",
+      },
+      {
+        title: "Ciência como forma de espiritualidade secular",
+        content:
+          "Sagan argumenta que compreender genuinamente as leis que governam o universo — desde a formação de galáxias até a bioquímica da vida — não diminui o senso de admiração e reverência diante da existência; pelo contrário, aprofunda-o, oferecendo uma forma de significado e conexão com algo maior que não depende de explicações sobrenaturais. A obra propõe a própria busca científica pelo conhecimento, com toda sua incerteza e revisão constante, como uma jornada com profundo valor espiritual e existencial por direito próprio.",
+      },
+    ],
+    quiz: [
+      { q: "O que significa a frase 'somos feitos de poeira de estrelas'?", options: ["É apenas uma metáfora poética sem base científica", "Os elementos do corpo humano foram forjados no interior de estrelas e espalhados por supernovas", "Refere-se à poeira encontrada em meteoritos apenas", "É uma crença religiosa antiga sem evidência"], correct: 1, explanation: "É apresentado como fato astrofísico verificável, não apenas metáfora." },
+      { q: "O que é o 'Calendário Cósmico' proposto na obra?", options: ["Um calendário astrológico tradicional", "Uma compressão de 13,8 bilhões de anos em um único ano de calendário", "Um sistema de datação de rochas", "Um calendário usado por astrônomos antigos"], correct: 1, explanation: "Esse exercício ajuda a visualizar a escala imensa do tempo cósmico." },
+      { q: "Nessa escala do Calendário Cósmico, quando surge a história humana registrada?", options: ["Em janeiro, no início do ano", "Apenas nos últimos segundos antes da meia-noite de 31 de dezembro", "No meio do ano, em junho", "Não é mencionado na obra"], correct: 1, explanation: "Isso ilustra quão recente é a experiência humana em termos cósmicos." },
+      { q: "Como a obra descreve o método científico?", options: ["Como uma técnica puramente burocrática", "Como uma disciplina de humildade intelectual, disposta a revisar crenças diante de evidências", "Como um conjunto fixo de verdades imutáveis", "Como algo irrelevante para a vida cotidiana"], correct: 1, explanation: "Ceticismo saudável combinado com abertura a evidências é o equilíbrio defendido." },
+      { q: "O que é a equação de Drake, mencionada na obra?", options: ["Uma fórmula para calcular distâncias entre planetas", "Uma tentativa de estimar quantas civilizações tecnológicas avançadas existem na galáxia", "Uma equação sobre a velocidade da luz", "Um cálculo da idade do universo"], correct: 1, explanation: "Ela considera fatores como formação estelar e longevidade de civilizações tecnológicas." },
+      { q: "Por que a longevidade de civilizações tecnológicas é discutida com preocupação na obra?", options: ["Porque não tem relação com a busca por vida extraterrestre", "Porque autodestruição rápida ajudaria a explicar a ausência de sinais de vida inteligente detectados", "Porque todas as civilizações duram para sempre", "Porque esse fator não está na equação de Drake"], correct: 1, explanation: "Esse fator é central para entender o chamado 'paradoxo de Fermi'." },
+      { q: "O que é o 'Ponto Azul Pálido' mencionado na obra?", options: ["Um planeta descoberto recentemente", "Uma fotografia da Terra tirada pela Voyager 1 a bilhões de quilômetros de distância", "Uma estrela visível a olho nu", "Um fenômeno atmosférico raro"], correct: 1, explanation: "Essa imagem inspira reflexão sobre a pequenez da Terra no universo." },
+      { q: "Qual reflexão Sagan tira da imagem do Ponto Azul Pálido?", options: ["Que a Terra é insignificante e não merece cuidado", "Um convite à humildade coletiva e responsabilidade compartilhada pelo planeta", "Que a exploração espacial deveria ser abandonada", "Que outros planetas são mais importantes que a Terra"], correct: 1, explanation: "Toda história humana aconteceu nesse ponto minúsculo visto de longe." },
+      { q: "Como Sagan relaciona ciência e espiritualidade?", options: ["Ciência elimina completamente qualquer senso de admiração", "Compreender o universo aprofunda o senso de admiração e oferece significado sem depender do sobrenatural", "Ciência e espiritualidade são sempre incompatíveis", "Apenas explicações sobrenaturais geram significado genuíno"], correct: 1, explanation: "A busca científica é apresentada como tendo valor espiritual e existencial próprio." },
+      { q: "O que caracteriza o ceticismo saudável defendido na obra?", options: ["Rejeitar toda nova evidência automaticamente", "Equilíbrio entre dúvida crítica e abertura genuína a novas evidências", "Aceitar qualquer afirmação sem questionamento", "Um conceito equivalente a cinismo total"], correct: 1, explanation: "Esse equilíbrio evita tanto o dogmatismo quanto a credulidade ingênua." },
+    ],
+  },
+
+  {
+    id: "quatro-compromissos",
+    title: "Os Quatro Compromissos",
+    author: "Baseado na obra de Miguel Ruiz",
+    category: "Espiritualidade & Mindfulness",
+    tags: ["sabedoria tolteca", "liberdade pessoal", "autoconhecimento"],
+    readTimeMin: 12,
+    premium: true,
+    coverIcon: "moon",
+    synopsis:
+      "Um código de conduta pessoal baseado na sabedoria tolteca ancestral, propondo quatro compromissos simples capazes de transformar profundamente a forma de viver e se relacionar.",
+    chapters: [
+      {
+        title: "O domesticador e o sonho do planeta",
+        content:
+          "A obra parte da ideia de que, desde a infância, somos 'domesticados' por um sistema de crenças, regras e julgamentos absorvidos da família, sociedade e cultura — um processo comparado a um sonho coletivo compartilhado que a maioria das pessoas nunca questiona conscientemente. Esse condicionamento cria um sistema interno de autojulgamento severo (o autor chama de 'juiz interno') que constantemente avalia e frequentemente condena o comportamento da própria pessoa segundo padrões absorvidos, muitas vezes sem questionamento consciente sobre sua origem ou validade real.",
+      },
+      {
+        title: "Seja impecável com sua palavra",
+        content:
+          "O primeiro compromisso é usar a palavra com integridade — falar apenas o que se pensa genuinamente, evitando usá-la contra si mesmo (autocrítica destrutiva) ou contra outros (fofoca, julgamento, mentira). A obra argumenta que palavras têm poder criativo real: repetidas ao longo do tempo, moldam a autoimagem e a realidade percebida da pessoa que as pronuncia e de quem as recebe, por isso a responsabilidade de usá-las com cuidado deliberado, não automaticamente.",
+      },
+      {
+        title: "Não leve nada para o pessoal",
+        content:
+          "O segundo compromisso ensina que as ações e palavras de outras pessoas dizem respeito, na maior parte das vezes, à realidade interna delas mesmas, não a um julgamento objetivo sobre você — mesmo quando dirigidas diretamente a você. Quando alguém oferece uma opinião, crítica ou ataque, essa reação vem filtrada pelo próprio sistema de crenças, humor e história de vida da outra pessoa. Internalizar isso genuinamente reduz sofrimento desnecessário e imunidade emocional a manipulação, sem exigir indiferença real pelos outros.",
+      },
+      {
+        title: "Não faça suposições",
+        content:
+          "O terceiro compromisso alerta contra o hábito automático de preencher lacunas de informação com suposições não verificadas sobre o que outros pensam, sentem ou pretendem — e depois agir e sofrer como se essas suposições fossem fatos confirmados. A alternativa proposta é fazer perguntas diretas e comunicar claramente o que se deseja, em vez de assumir silenciosamente e depois se ressentir de expectativas que nunca foram genuinamente comunicadas à outra pessoa envolvida.",
+      },
+      {
+        title: "Faça sempre o seu melhor",
+        content:
+          "O quarto compromisso reconhece que a capacidade de 'melhor' varia de momento a momento — dependendo de energia, saúde, contexto emocional — e que fazer o melhor possível dentro dessas condições variáveis, sem se cobrar o padrão de um dia excepcional em um dia ruim, evita tanto a preguiça (fazer menos do que se poderia) quanto a autopunição excessiva por não performar perfeitamente sempre. Esse compromisso funciona como sustentação prática dos outros três: sem ele, os primeiros três se tornam apenas ideais abstratos nunca praticados de fato.",
+      },
+      {
+        title: "Um novo sonho de liberdade",
+        content:
+          "A obra conclui que praticar consistentemente esses quatro compromissos gradualmente 're-programa' os padrões de crença absorvidos durante a domesticação inicial, permitindo à pessoa construir conscientemente um novo 'sonho pessoal' mais alinhado com liberdade, amor próprio genuíno e paz interior, em vez de simplesmente reproduzir automaticamente o condicionamento herdado. Essa transformação é descrita como gradual e contínua, não um evento único — os compromissos precisam ser praticados repetidamente, especialmente nos momentos em que os padrões antigos tentam reafirmar seu controle habitual.",
+      },
+    ],
+    quiz: [
+      { q: "O que é o processo de 'domesticação' descrito na obra?", options: ["Um treinamento profissional formal", "A absorção de crenças, regras e julgamentos da família e sociedade desde a infância", "Um ritual religioso específico", "Um processo exclusivo da vida adulta"], correct: 1, explanation: "Esse condicionamento cria um sistema interno de autojulgamento raramente questionado." },
+      { q: "O que é o 'juiz interno' mencionado na obra?", options: ["Um conselheiro externo confiável", "Um sistema interno que constantemente avalia e condena o próprio comportamento", "Uma figura de autoridade legal", "Um conceito sem relação com autocrítica"], correct: 1, explanation: "Ele opera segundo padrões absorvidos durante a domesticação, muitas vezes sem questionamento." },
+      { q: "O que significa 'ser impecável com sua palavra'?", options: ["Falar o mínimo possível", "Usar a palavra com integridade, sem usá-la contra si mesmo ou os outros", "Nunca discordar de ninguém", "Falar apenas em ocasiões formais"], correct: 1, explanation: "Palavras têm poder criativo real, moldando autoimagem e realidade percebida." },
+      { q: "O que o compromisso 'não leve nada para o pessoal' ensina?", options: ["Que você deve ignorar completamente os outros", "Que as reações dos outros dizem respeito principalmente à realidade interna deles mesmos", "Que nada nunca deveria incomodar você", "Que você deve sempre concordar com críticas recebidas"], correct: 1, explanation: "Isso reduz sofrimento desnecessário sem exigir indiferença genuína pelos outros." },
+      { q: "O que o terceiro compromisso, 'não faça suposições', recomenda?", options: ["Confiar sempre na primeira impressão sobre os outros", "Fazer perguntas diretas em vez de preencher lacunas com suposições não verificadas", "Nunca se comunicar com outras pessoas", "Assumir sempre a pior intenção alheia"], correct: 1, explanation: "Suposições não verificadas levam a sofrimento baseado em expectativas nunca comunicadas." },
+      { q: "O que o quarto compromisso, 'faça sempre o seu melhor', reconhece?", options: ["Que o 'melhor' é sempre o mesmo padrão fixo todos os dias", "Que a capacidade de 'melhor' varia conforme energia, saúde e contexto", "Que não vale a pena se esforçar em dias ruins", "Que apenas resultados perfeitos contam como sucesso"], correct: 1, explanation: "Isso evita tanto a preguiça quanto a autopunição excessiva por não performar sempre no máximo." },
+      { q: "Por que o quarto compromisso é descrito como sustentação dos outros três?", options: ["Porque não tem relação com os demais", "Porque sem ele, os primeiros três se tornam apenas ideais nunca praticados de fato", "Porque é o único compromisso realmente importante", "Porque substitui completamente os outros três"], correct: 1, explanation: "A prática consistente do quarto compromisso viabiliza a aplicação real dos demais." },
+      { q: "O que a obra propõe como resultado da prática consistente dos quatro compromissos?", options: ["Nenhuma mudança perceptível na vida da pessoa", "A construção consciente de um novo 'sonho pessoal' alinhado com liberdade e paz interior", "Isolamento social completo", "Dependência maior de aprovação externa"], correct: 1, explanation: "Isso gradualmente reprograma os padrões de crença absorvidos durante a domesticação." },
+      { q: "A transformação proposta pela obra é descrita como um evento único?", options: ["Sim, acontece de uma vez por todas", "Não, é gradual e contínua, exigindo prática repetida", "Sim, ocorre apenas na infância", "A obra não aborda esse aspecto"], correct: 1, explanation: "Os compromissos precisam ser praticados repetidamente, especialmente quando padrões antigos ressurgem." },
+      { q: "De qual tradição de sabedoria a obra se origina, segundo o autor?", options: ["Filosofia grega clássica", "Sabedoria tolteca ancestral", "Budismo tibetano", "Estoicismo romano"], correct: 1, explanation: "Miguel Ruiz baseia os quatro compromissos nessa tradição ancestral mexicana." },
+    ],
+  },
+
+  {
+    id: "homens-marte-mulheres-venus",
+    title: "Homens São de Marte, Mulheres São de Vênus",
+    author: "Baseado na obra de John Gray",
+    category: "Sexo & Relacionamentos",
+    tags: ["comunicação de casal", "diferenças de gênero", "relacionamento"],
+    readTimeMin: 14,
+    premium: true,
+    coverIcon: "users",
+    synopsis:
+      "Um modelo popular para entender diferenças recorrentes na forma como homens e mulheres tendem a se comunicar e processar emoções — e como isso pode reduzir mal-entendidos recorrentes em relacionamentos.",
+    chapters: [
+      {
+        title: "A metáfora dos planetas diferentes",
+        content:
+          "A obra propõe que homens e mulheres, embora vivendo juntos, frequentemente parecem operar segundo regras de comunicação emocional tão diferentes que poderiam vir de planetas distintos — não por serem fundamentalmente incompatíveis, mas por terem padrões típicos diferentes de expressar e processar necessidades emocionais. Reconhecer essas diferenças típicas, sem tratá-las como defeito de nenhum dos lados, é apresentado como o primeiro passo para reduzir frustração e mal-entendido recorrente em relacionamentos.",
+      },
+      {
+        title: "A caverna e a necessidade de espaço",
+        content:
+          "Um padrão descrito é que, diante de estresse ou problemas, muitos homens tendem a se retrair silenciosamente para processar sozinhos antes de estarem prontos para conversar — comportamento que a obra chama metaforicamente de 'ir para a caverna'. Esse recuo temporário não significa desinteresse pela relação ou pelo problema em si; é descrito como uma forma comum de autorregulação emocional masculina que, mal interpretada pela parceira como rejeição, pode gerar um ciclo de ansiedade e cobrança que paradoxalmente prolonga o próprio recuo.",
+      },
+      {
+        title: "Falar para processar, não necessariamente para resolver",
+        content:
+          "Um padrão complementar descrito é que muitas mulheres processam emoções verbalizando o problema em voz alta, buscando primariamente ser ouvidas e validadas emocionalmente — não necessariamente pedindo uma solução prática imediata. Quando um parceiro pula direto para oferecer soluções técnicas sem primeiro validar o sentimento expresso, isso pode ser recebido como minimização da experiência emocional, mesmo quando a intenção genuína era ajudar de forma prática e bem-intencionada.",
+      },
+      {
+        title: "Pontos de pontuação emocional",
+        content:
+          "A obra descreve como pequenos gestos de atenção — um bilhete, uma pergunta genuína sobre o dia, lembrar um detalhe mencionado antes — funcionam como 'pontos' acumulados na conta emocional de um relacionamento, sendo mais valorizados coletivamente ao longo do tempo do que gestos grandes e ocasionais isolados. Investir consistentemente em pequenos gestos regulares constrói uma reserva de boa vontade que ajuda o relacionamento a atravessar inevitáveis momentos de tensão ou conflito com mais resiliência.",
+      },
+      {
+        title: "Pedir em vez de exigir ou assumir",
+        content:
+          "A obra recomenda comunicar necessidades específicas através de pedidos diretos e não ameaçadores, em vez de reclamações indiretas, sarcasmo ou expectativas silenciosas de que o parceiro deveria simplesmente 'adivinhar' o que é necessário. Pedidos formulados de forma clara e sem crítica embutida têm muito mais probabilidade de gerar cooperação genuína do que exigências veladas em tom de reclamação, que tendem a gerar defensividade automática em vez de disposição colaborativa.",
+      },
+      {
+        title: "Aceitando diferenças sem julgamento",
+        content:
+          "A mensagem final é que compreender padrões típicos diferentes de processamento emocional não significa que um estilo seja superior ao outro — significa reconhecer a diferença como natural o suficiente para não interpretá-la automaticamente como falha de caráter ou falta de amor por parte do parceiro. Essa aceitação mútua, combinada com disposição genuína de aprender a linguagem emocional do outro, é apresentada como base prática mais sólida para relacionamentos duradouros do que esperar que o parceiro simplesmente se torne idêntico em processamento emocional.",
+      },
+    ],
+    quiz: [
+      { q: "Qual é a proposta central da metáfora dos planetas diferentes?", options: ["Que homens e mulheres são fundamentalmente incompatíveis", "Que existem padrões típicos diferentes de expressar e processar necessidades emocionais", "Que apenas mulheres têm necessidades emocionais válidas", "Que a comunicação entre gêneros é impossível"], correct: 1, explanation: "Reconhecer essas diferenças sem julgá-las é o primeiro passo proposto pela obra." },
+      { q: "O que significa 'ir para a caverna', segundo a obra?", options: ["Um passeio físico literal", "Um recuo temporário para processar sozinho antes de conversar sobre um problema", "Um sinal definitivo de fim do relacionamento", "Uma técnica de meditação formal"], correct: 1, explanation: "Esse comportamento não significa desinteresse pela relação, mas uma forma de autorregulação." },
+      { q: "O que pode acontecer quando esse recuo é mal interpretado como rejeição?", options: ["O relacionamento sempre melhora imediatamente", "Pode gerar um ciclo de ansiedade e cobrança que prolonga o próprio recuo", "Não tem nenhum efeito perceptível", "Resolve o problema mais rapidamente"], correct: 1, explanation: "A cobrança excessiva pode paradoxalmente intensificar o comportamento de retraimento." },
+      { q: "Por que algumas pessoas verbalizam problemas sem buscar solução imediata, segundo a obra?", options: ["Porque não têm interesse em resolver o problema", "Porque o processamento emocional busca primariamente ser ouvido e validado", "Porque estão testando o parceiro deliberadamente", "Porque não conseguem formular soluções sozinhas"], correct: 1, explanation: "Pular direto para soluções pode ser recebido como minimização do sentimento expresso." },
+      { q: "O que são os 'pontos de pontuação emocional' descritos na obra?", options: ["Um sistema formal de recompensas no relacionamento", "Pequenos gestos de atenção que se acumulam como reserva de boa vontade ao longo do tempo", "Uma métrica de compatibilidade astrológica", "Pontos usados apenas em terapia de casal"], correct: 1, explanation: "Gestos pequenos e regulares são mais valorizados coletivamente que gestos grandes e ocasionais." },
+      { q: "O que a obra recomenda em vez de reclamações indiretas ou expectativas silenciosas?", options: ["Ignorar completamente a necessidade não atendida", "Pedidos diretos e não ameaçadores, formulados com clareza", "Esperar que o parceiro adivinhe a necessidade", "Usar sarcasmo para comunicar frustração"], correct: 1, explanation: "Pedidos claros geram mais cooperação do que exigências veladas em tom de reclamação." },
+      { q: "Por que exigências veladas tendem a gerar defensividade, segundo a obra?", options: ["Porque são sempre mal-intencionadas", "Porque o tom de reclamação tende a provocar reação defensiva em vez de colaboração", "Porque nunca funcionam em nenhum contexto", "Porque não têm relação com comunicação de casal"], correct: 1, explanation: "Pedidos formulados sem crítica embutida geram mais disposição colaborativa." },
+      { q: "Qual é a mensagem final da obra sobre as diferenças de processamento emocional?", options: ["Que um estilo é claramente superior ao outro", "Que reconhecer a diferença como natural evita interpretá-la como falha de caráter", "Que os parceiros devem se tornar idênticos em processamento emocional", "Que diferenças emocionais são sempre motivo de separação"], correct: 1, explanation: "Aceitação mútua é apresentada como base mais sólida do que exigir uniformidade emocional." },
+      { q: "Qual é o risco de pular direto para soluções técnicas sem validar o sentimento primeiro?", options: ["Nenhum risco real existe nessa abordagem", "Pode ser recebido como minimização da experiência emocional do outro", "Sempre resolve o problema mais rapidamente", "Aumenta automaticamente a conexão emocional"], correct: 1, explanation: "Mesmo com boa intenção, isso pode parecer desconsiderar o que a pessoa realmente precisava naquele momento." },
+      { q: "O que a obra sugere sobre aprender a 'linguagem emocional' do parceiro?", options: ["É desnecessário e sem benefício prático", "É apresentado como parte da base para relacionamentos duradouros", "Deve ser evitado para preservar a individualidade", "Só é relevante no início do relacionamento"], correct: 1, explanation: "Essa disposição de aprendizado mútuo sustenta relações de longo prazo, segundo a obra." },
+    ],
+  },
+
+  {
+    id: "o-alquimista",
+    title: "O Alquimista",
+    author: "Baseado na obra de Paulo Coelho",
+    category: "Autoajuda & Motivação",
+    tags: ["jornada pessoal", "propósito", "ficção filosófica"],
+    readTimeMin: 13,
+    premium: true,
+    coverIcon: "sparkle",
+    synopsis:
+      "A jornada de um jovem pastor espanhol em busca de seu tesouro pessoal, uma fábula sobre escutar os próprios sonhos, reconhecer sinais e perseverar diante de obstáculos no caminho da própria história pessoal.",
+    chapters: [
+      {
+        title: "A Lenda Pessoal",
+        content:
+          "O conceito central da obra é a 'Lenda Pessoal' — aquilo que uma pessoa sempre quis realizar profundamente, um propósito único que só ela pode cumprir. A narrativa sugere que, quando alguém genuinamente deseja algo alinhado com sua Lenda Pessoal, 'todo o universo conspira' para ajudar a realizá-lo — não como garantia de facilidade, mas como um princípio de que perseguir esse propósito autêntico traz consigo sincronicidades e oportunidades que perseguir objetivos alheios ou impostos raramente traz.",
+      },
+      {
+        title: "Os sinais ao longo do caminho",
+        content:
+          "O protagonista, Santiago, aprende a prestar atenção a 'sinais' — coincidências, encontros e eventos aparentemente pequenos que, interpretados com atenção e abertura, apontam direção no caminho da própria jornada. A obra não trata sinais como magia literal isolada da ação prática, mas como uma forma de atenção mais aguçada ao ambiente e às próprias intuições, que fica disponível quando alguém está genuinamente engajado em perseguir um propósito significativo, em vez de andar pela vida em piloto automático desatento.",
+      },
+      {
+        title: "Medo de perder o que se tem",
+        content:
+          "Um dos maiores obstáculos descritos no caminho de Santiago não é falta de oportunidade, mas o medo de arriscar o conforto e a segurança já conquistados em troca da possibilidade incerta de algo maior. A obra explora como esse medo — de perder posses, relacionamentos confortáveis ou uma vida já estabelecida — frequentemente impede pessoas de sequer tentar perseguir sua Lenda Pessoal, preferindo a segurança relativa da mediocridade conhecida ao risco genuíno de uma busca significativa mas incerta.",
+      },
+      {
+        title: "A linguagem universal do mundo",
+        content:
+          "Ao longo da jornada, Santiago aprende sobre a chamada 'linguagem universal' — a ideia de que existe uma forma de comunicação e entendimento compartilhada entre todas as coisas (pessoas, natureza, elementos), acessível quando alguém aprende a ouvir além das palavras literais, através da intuição, observação atenta e presença genuína no momento. Personagens como o alquimista que dá título à obra dominam essa linguagem através de décadas de prática contemplativa e observação paciente do mundo natural.",
+      },
+      {
+        title: "O tesouro estava em casa",
+        content:
+          "Sem revelar o desfecho completo, a estrutura narrativa da obra segue um padrão clássico: a jornada externa em busca de um tesouro material específico revela, ao final, que a verdadeira transformação e sabedoria adquiridas ao longo do caminho — não necessariamente o objeto físico originalmente buscado — são o real tesouro da experiência. Esse padrão narrativo reforça a ideia de que o valor de perseguir a Lenda Pessoal está tanto na jornada de autoconhecimento quanto (ou mais que) no destino final alcançado.",
+      },
+      {
+        title: "Perseverança diante de reveses",
+        content:
+          "A jornada de Santiago inclui perdas materiais, traições e recomeços forçados que testam repetidamente sua disposição de continuar. A obra apresenta esses reveses não como sinais de que o caminho estava errado, mas como parte esperada e até necessária do processo de amadurecimento rumo à realização da Lenda Pessoal — cada obstáculo superado fortalece a capacidade da pessoa de lidar com desafios maiores adiante, e desistir diante da primeira dificuldade significativa é retratado como o verdadeiro risco a evitar, mais do que o fracasso pontual em si.",
+      },
+    ],
+    quiz: [
+      { q: "O que é a 'Lenda Pessoal' na obra?", options: ["Uma história folclórica tradicional", "O propósito único e profundo que uma pessoa sempre quis realizar", "Um mito sobre a origem do protagonista", "Um conto contado por outros personagens"], correct: 1, explanation: "É o conceito central em torno do qual toda a jornada de Santiago se organiza." },
+      { q: "O que significa a frase 'todo o universo conspira' para ajudar a realizar a Lenda Pessoal?", options: ["Que tudo será sempre fácil e sem esforço", "Que perseguir um propósito autêntico traz sincronicidades e oportunidades", "Que o resultado é garantido sem nenhuma ação prática", "Que forças sobrenaturais literais garantem o sucesso"], correct: 1, explanation: "Não é apresentado como garantia de facilidade, mas como princípio de alinhamento com propósito." },
+      { q: "Como a obra trata os 'sinais' ao longo da jornada?", options: ["Como eventos mágicos completamente desconectados da ação prática", "Como uma forma de atenção mais aguçada disponível para quem persegue um propósito genuíno", "Como irrelevantes para a narrativa", "Como um conceito exclusivamente religioso"], correct: 1, explanation: "Sinais representam intuição e observação atenta, não magia isolada da ação." },
+      { q: "Qual é um dos maiores obstáculos enfrentados por Santiago, segundo a obra?", options: ["Falta de oportunidades externas", "O medo de arriscar o conforto e segurança já conquistados", "Falta de inteligência ou capacidade", "Oposição direta de outras pessoas apenas"], correct: 1, explanation: "Esse medo frequentemente impede pessoas de perseguir sua Lenda Pessoal." },
+      { q: "O que é a 'linguagem universal' mencionada na obra?", options: ["Um idioma específico falado por todos os personagens", "Uma forma de entendimento compartilhado entre pessoas, natureza e elementos", "Um sistema de escrita antigo", "Um conceito apenas decorativo sem função narrativa"], correct: 1, explanation: "Ela é acessível através de intuição, observação atenta e presença genuína." },
+      { q: "O que a estrutura narrativa clássica da obra revela sobre o tesouro buscado?", options: ["Que o tesouro material é o único valor real da jornada", "Que a transformação e sabedoria adquiridas ao longo do caminho são o verdadeiro tesouro", "Que a busca é completamente em vão", "Que não há nenhuma revelação ao final"], correct: 1, explanation: "A jornada de autoconhecimento é apresentada como tão valiosa quanto o destino final." },
+      { q: "Como a obra apresenta os reveses e perdas enfrentados por Santiago?", options: ["Como sinais definitivos de que o caminho estava errado", "Como parte esperada e necessária do processo de amadurecimento", "Como eventos aleatórios sem significado", "Como motivo para desistir imediatamente"], correct: 1, explanation: "Cada obstáculo superado fortalece a capacidade de lidar com desafios maiores." },
+      { q: "Qual é apresentado como o 'verdadeiro risco' a evitar, segundo a obra?", options: ["Tentar e falhar uma vez", "Desistir diante da primeira dificuldade significativa", "Buscar ajuda de outras pessoas", "Mudar de direção durante a jornada"], correct: 1, explanation: "A desistência precoce é vista como mais prejudicial que o fracasso pontual." },
+      { q: "Quem domina a 'linguagem universal' de forma mais completa na obra?", options: ["Apenas Santiago desde o início", "O alquimista que dá título à obra, através de décadas de prática contemplativa", "Nenhum personagem específico", "Apenas personagens secundários sem nome"], correct: 1, explanation: "Essa maestria é retratada como fruto de observação paciente e prática de longo prazo." },
+      { q: "Qual é a mensagem geral da obra sobre perseguir objetivos alheios ou impostos?", options: ["Eles trazem os mesmos benefícios que a Lenda Pessoal", "Perseguir propósitos autênticos traz mais sincronicidade do que perseguir objetivos impostos", "Não há diferença entre os dois tipos de objetivo", "Objetivos impostos são sempre mais seguros e recomendados"], correct: 1, explanation: "A autenticidade do propósito é central para a experiência descrita na obra." },
+    ],
+  },
+
+  {
+    id: "magica-da-arrumacao",
+    title: "A Mágica da Arrumação",
+    author: "Baseado na obra de Marie Kondo",
+    category: "Estilo de Vida",
+    tags: ["organização", "minimalismo", "espaço doméstico"],
+    readTimeMin: 13,
+    premium: true,
+    coverIcon: "sparkle",
+    synopsis:
+      "Um método estruturado para organizar o espaço doméstico de forma definitiva, guiado pela pergunta central de se cada objeto genuinamente 'desperta alegria' — e por que arrumar por categoria, não por cômodo, faz toda a diferença.",
+    chapters: [
+      {
+        title: "Por que a maioria das arrumações fracassa",
+        content:
+          "A autora observa que a maioria das tentativas de organização falha porque as pessoas arrumam repetidamente, um pouco de cada vez, sem nunca completar o processo de forma definitiva — o que gera um ciclo interminável de bagunça que retorna semanas depois. O método proposto exige uma arrumação intensiva, concentrada em um curto período, feita uma única vez de forma completa e correta, para que o espaço nunca mais volte à desordem anterior, em vez de manutenção fragmentada e recorrente ao longo dos anos.",
+      },
+      {
+        title: "Arrumar por categoria, não por cômodo",
+        content:
+          "Em vez de organizar cômodo por cômodo (o que frequentemente resulta em reorganizar os mesmos itens repetidamente conforme são encontrados espalhados em diferentes lugares da casa), a autora recomenda reunir todos os itens de uma única categoria de todos os lugares da casa simultaneamente — roupas, depois livros, depois papéis, e assim por diante numa ordem específica. Ver o volume total real de posses em uma categoria específica, tudo junto de uma vez, costuma ser revelador e motivador de uma forma que a organização fragmentada nunca consegue proporcionar.",
+      },
+      {
+        title: "O critério da alegria (tokimeku)",
+        content:
+          "O critério central para decidir o que manter não é utilidade prática abstrata nem valor de revenda, mas se o objeto genuinamente 'desperta alegria' ao ser fisicamente segurado nas mãos — uma resposta corporal e emocional direta, não uma racionalização mental posterior sobre por que algo deveria ser mantido. Itens que não despertam essa resposta positiva, mesmo que tecnicamente úteis ou caros, são liberados com gratidão pelo papel que já cumpriram, em vez de mantidos por obrigação, culpa ou medo abstrato de precisar deles algum dia no futuro.",
+      },
+      {
+        title: "Agradecer antes de deixar ir",
+        content:
+          "Um elemento distintivo do método é o ritual de agradecer conscientemente a cada objeto antes de descartá-lo ou doá-lo — reconhecendo o propósito que serviu (mesmo que apenas ensinar, através da experiência de compra, que aquele tipo de item não era realmente necessário) antes de deixá-lo ir. Esse gesto, aparentemente pequeno, é apresentado como forma de reduzir a culpa associada ao descarte e tratar posses passadas com respeito, em vez de simplesmente as jogar fora com indiferença ou constrangimento não processado.",
+      },
+      {
+        title: "Um lugar para cada coisa",
+        content:
+          "Depois de decidir o que manter, o método exige designar um local fixo e específico para cada categoria de item — evitando a prática comum de guardar objetos onde há espaço disponível no momento, sem lógica organizacional consistente ao longo do tempo. Ter um lugar designado e fixo para cada tipo de objeto elimina a fricção diária de decidir onde guardar algo repetidamente, e torna imediatamente visível quando algo está fora do lugar, facilitando manutenção contínua sem esforço mental significativo.",
+      },
+      {
+        title: "Organização como reflexão pessoal",
+        content:
+          "A autora argumenta que o processo de decidir deliberadamente o que manter, item por item, funciona como um exercício mais amplo de autoconhecimento — revisitar e questionar por que certas posses foram acumuladas revela padrões emocionais mais profundos sobre apego, medo de escassez futura, ou identidade construída através de objetos materiais. Arrumar o espaço físico externo, nessa visão, está diretamente conectado a clarear prioridades e valores internos, tornando o processo tanto prático quanto genuinamente reflexivo.",
+      },
+    ],
+    quiz: [
+      { q: "Por que, segundo a autora, a maioria das tentativas de arrumação fracassa?", options: ["Porque as pessoas nunca tentam organizar nada", "Porque arrumam repetidamente, um pouco de cada vez, sem completar o processo de forma definitiva", "Porque compram organizadores caros demais", "Porque não têm espaço suficiente em casa"], correct: 1, explanation: "Isso gera um ciclo interminável de bagunça que retorna repetidamente." },
+      { q: "Como o método recomenda organizar os itens?", options: ["Cômodo por cômodo, um de cada vez", "Por categoria, reunindo todos os itens de um tipo de todos os lugares da casa", "Aleatoriamente, sem ordem específica", "Apenas os itens visíveis no momento"], correct: 1, explanation: "Ver o volume total de uma categoria de uma vez é revelador e motivador." },
+      { q: "Qual é o critério central para decidir o que manter, segundo o método?", options: ["Valor de revenda do item", "Se o objeto genuinamente 'desperta alegria' ao ser segurado nas mãos", "Quanto o item custou originalmente", "Se algum familiar aprovaria manter o item"], correct: 1, explanation: "Esse critério é uma resposta corporal e emocional direta, não uma racionalização mental." },
+      { q: "O que a autora recomenda fazer com itens que não despertam alegria, mesmo sendo úteis?", options: ["Guardá-los por obrigação de qualquer forma", "Liberá-los com gratidão pelo papel que já cumpriram", "Nunca descartar nada, independente do sentimento", "Vendê-los sempre, nunca doar"], correct: 1, explanation: "Isso evita manter itens por culpa ou medo abstrato de precisar deles no futuro." },
+      { q: "O que é o ritual de 'agradecer antes de deixar ir'?", options: ["Uma prática puramente decorativa sem função real", "Reconhecer conscientemente o propósito que o objeto serviu antes de descartá-lo", "Um ritual religioso obrigatório", "Uma técnica de venda de itens usados"], correct: 1, explanation: "Isso reduz a culpa associada ao descarte e trata posses passadas com respeito." },
+      { q: "Por que o método recomenda um lugar fixo para cada categoria de item?", options: ["Para dificultar encontrar os objetos", "Para eliminar a fricção diária de decidir onde guardar algo repetidamente", "Não há recomendação sobre isso na obra", "Apenas para itens de grande valor financeiro"], correct: 1, explanation: "Isso torna visível quando algo está fora do lugar, facilitando manutenção contínua." },
+      { q: "Como a organização física se conecta a um processo mais amplo, segundo a autora?", options: ["Não tem nenhuma conexão além do aspecto prático", "Funciona como exercício de autoconhecimento sobre apego e valores pessoais", "É apenas uma tarefa doméstica sem significado emocional", "Serve exclusivamente para impressionar visitantes"], correct: 1, explanation: "Revisitar por que posses foram acumuladas revela padrões emocionais mais profundos." },
+      { q: "Qual é a diferença central entre o método proposto e a manutenção fragmentada tradicional?", options: ["Não há diferença real entre os dois métodos", "O método propõe uma arrumação intensiva e definitiva, feita uma única vez corretamente", "O método tradicional é sempre mais eficaz", "Ambos os métodos exigem o mesmo tempo e esforço"], correct: 1, explanation: "Isso evita o ciclo interminável de reorganizações fragmentadas e recorrentes." },
+      { q: "O que ver o volume total de uma categoria de itens de uma vez costuma proporcionar?", options: ["Nenhum efeito perceptível na decisão", "Uma percepção reveladora e motivadora sobre o total real de posses", "Apenas confusão sobre o que fazer", "Motivação para comprar mais itens da mesma categoria"], correct: 1, explanation: "Essa visão completa é impossível de obter organizando cômodo por cômodo." },
+      { q: "Qual ordem o método sugere para começar a organização por categorias?", options: ["Começar por papéis e documentos", "Roupas, depois livros, depois papéis, seguindo uma ordem específica", "Não há ordem recomendada, pode ser aleatória", "Sempre começar pela cozinha"], correct: 1, explanation: "A ordem específica ajuda a desenvolver o critério de decisão progressivamente ao longo do processo." },
+    ],
+  },
+
+  {
+    id: "como-evitar-preocupacoes",
+    title: "Como Evitar Preocupações e Começar a Viver",
+    author: "Baseado na obra de Dale Carnegie",
+    category: "Do Fundo do Baú",
+    tags: ["ansiedade", "clássico", "bem-estar"],
+    readTimeMin: 16,
+    premium: true,
+    coverIcon: "clock",
+    synopsis:
+      "Um clássico atemporal sobre como reduzir ansiedade e preocupação excessiva, através de princípios práticos testados por décadas para viver o presente com mais clareza e menos sofrimento antecipado.",
+    chapters: [
+      {
+        title: "Viva em 'compartimentos estanques de tempo'",
+        content:
+          "Carnegie recomenda focar a energia mental exclusivamente no dia presente, tratando passado e futuro como compartimentos fechados que não devem vazar preocupação para o momento atual — inspirado na imagem de navios com compartimentos estanques que isolam vazamentos e evitam que afundem completamente. A maior parte da ansiedade, segundo a obra, vem de remoer arrependimentos passados irreversíveis ou temer futuros hipotéticos que, na maioria das vezes, nunca se concretizam da forma catastrófica imaginada.",
+      },
+      {
+        title: "A fórmula mágica para lidar com preocupações",
+        content:
+          "A obra propõe um processo de três perguntas diante de qualquer preocupação: o que há de pior que pode realmente acontecer nesta situação; aceitar mentalmente essa possibilidade mais grave como algo que se poderia, se necessário, suportar; e então dedicar energia exclusivamente a melhorar essa pior situação possível, em vez de gastar energia mental repetidamente imaginando cenários sem nunca de fato processá-los ou agir sobre eles.",
+      },
+      {
+        title: "Calcule as probabilidades reais",
+        content:
+          "Muita ansiedade crônica se sustenta em superestimar a probabilidade real de eventos temidos ocorrerem. A obra recomenda o hábito de perguntar concretamente: com base em evidências reais e experiência passada, qual é a chance real desse cenário específico acontecer? Frequentemente, ao examinar probabilidades reais em vez de medos abstratos amplificados pela imaginação ansiosa, a preocupação perde grande parte de sua intensidade emocional original.",
+      },
+      {
+        title: "Mantenha-se ocupado com ação construtiva",
+        content:
+          "A obra observa que preocupação e ação construtiva simultânea raramente coexistem bem — a mente ansiosa tende a se acalmar quando ocupada ativamente com tarefas concretas que exigem atenção, porque a ruminação ansiosa depende de tempo mental ocioso para se manter ativa. Isso não significa evitar reflexão necessária sobre problemas reais, mas reconhecer quando a 'reflexão' já se tornou repetição improdutiva sem novo insight, e nesse ponto redirecionar deliberadamente a atenção para ação prática disponível.",
+      },
+      {
+        title: "Não se deixe perturbar por críticas",
+        content:
+          "Carnegie observa que críticas injustas frequentemente dizem mais sobre quem as faz do que sobre quem as recebe, e que buscar aprovação universal é uma meta impossível que gera ansiedade constante e desnecessária. A recomendação prática é diferenciar entre crítica construtiva genuína (que merece reflexão honesta) e crítica motivada por inveja, má vontade ou frustração alheia (que não merece o mesmo peso emocional), e cultivar segurança interna que não dependa inteiramente da aprovação de todos ao redor.",
+      },
+    ],
+    quiz: [
+      { q: "O que significa viver em 'compartimentos estanques de tempo'?", options: ["Planejar cada minuto do dia rigorosamente", "Focar exclusivamente no dia presente, isolando passado e futuro da preocupação atual", "Dividir o dia em blocos de trabalho", "Nunca pensar no futuro"], correct: 1, explanation: "Essa imagem vem de navios que isolam vazamentos para não afundarem completamente." },
+      { q: "Qual é a primeira pergunta da 'fórmula mágica' para lidar com preocupações?", options: ["Quem é o culpado por essa situação?", "O que há de pior que pode realmente acontecer?", "Quanto tempo essa preocupação vai durar?", "Como evitar pensar nisso completamente?"], correct: 1, explanation: "Identificar o pior cenário real é o primeiro passo do processo proposto." },
+      { q: "Depois de identificar o pior cenário possível, o que a fórmula recomenda fazer?", options: ["Ignorar completamente a situação", "Aceitar mentalmente essa possibilidade e dedicar energia a melhorá-la", "Evitar pensar em qualquer solução", "Culpar outras pessoas pela situação"], correct: 1, explanation: "Isso redireciona energia mental de ruminação para ação construtiva." },
+      { q: "Por que calcular probabilidades reais ajuda a reduzir ansiedade, segundo a obra?", options: ["Porque elimina completamente qualquer risco real", "Porque frequentemente a preocupação superestima a chance real de eventos temidos", "Porque probabilidades nunca têm relação com ansiedade", "Porque distrai a mente de qualquer outro assunto"], correct: 1, explanation: "Examinar evidências reais costuma reduzir a intensidade emocional do medo abstrato." },
+      { q: "O que a obra observa sobre preocupação e ação construtiva simultânea?", options: ["Elas sempre coexistem facilmente", "Raramente coexistem bem, pois ruminação ansiosa depende de tempo mental ocioso", "Ação construtiva sempre aumenta a ansiedade", "Não há relação entre elas"], correct: 1, explanation: "Manter-se ocupado com tarefas concretas tende a reduzir a ruminação ansiosa." },
+      { q: "Como a obra recomenda lidar com críticas recebidas?", options: ["Aceitar toda crítica com o mesmo peso emocional", "Diferenciar entre crítica construtiva genuína e crítica motivada por má vontade", "Ignorar completamente qualquer crítica recebida", "Buscar aprovação universal de todas as pessoas"], correct: 1, explanation: "Buscar aprovação universal é descrito como uma meta impossível e geradora de ansiedade." },
+      { q: "O que a obra sugere sobre críticas injustas?", options: ["Elas sempre refletem uma verdade sobre quem as recebe", "Frequentemente dizem mais sobre quem as faz do que sobre quem as recebe", "Devem ser sempre levadas muito a sério", "Nunca devem ser consideradas de forma alguma"], correct: 1, explanation: "Isso ajuda a reduzir o peso emocional desnecessário atribuído a críticas mal-intencionadas." },
+      { q: "Segundo a obra, de onde vem a maior parte da ansiedade cotidiana?", options: ["Exclusivamente de problemas financeiros", "De remoer arrependimentos passados ou temer futuros hipotéticos", "Apenas de problemas de saúde física", "De fatores genéticos apenas"], correct: 1, explanation: "Grande parte dos medos futuros nunca se concretiza da forma catastrófica imaginada." },
+      { q: "Qual é o objetivo prático de calcular probabilidades reais de um evento temido?", options: ["Aumentar a ansiedade sobre o evento", "Substituir medo abstrato amplificado pela imaginação por avaliação baseada em evidências", "Evitar qualquer ação preventiva necessária", "Ignorar completamente o risco real"], correct: 1, explanation: "Isso ajuda a calibrar a resposta emocional à real probabilidade do evento." },
+      { q: "Por que a obra é considerada um clássico atemporal, segundo a categoria em que está inserida?", options: ["Porque perdeu relevância com o tempo", "Porque seus princípios práticos continuam aplicáveis décadas depois de escritos", "Porque é uma obra recente", "Porque trata apenas de temas tecnológicos específicos"], correct: 1, explanation: "Os princípios sobre ansiedade e preocupação mantêm relevância prática ao longo do tempo." },
+    ],
+  },
+
+  {
+    id: "soccernomics",
+    title: "Soccernomics",
+    author: "Baseado na obra de Simon Kuper e Stefan Szymanski",
+    category: "Modo Copa",
+    tags: ["futebol", "economia do esporte", "dados"],
+    readTimeMin: 16,
+    premium: true,
+    coverIcon: "trophy",
+    synopsis:
+      "Uma análise econômica e estatística do futebol mundial, desafiando mitos populares sobre transferências, seleções nacionais e o que realmente prevê sucesso no esporte mais popular do mundo.",
+    chapters: [
+      {
+        title: "O mercado de transferências é ineficiente",
+        content:
+          "Os autores analisam décadas de dados de transferências e descobrem que clubes sistematicamente pagam mais por atacantes vistosos que marcam gols visíveis do que por jogadores em posições menos glamorosas mas com impacto estatístico equivalente ou maior no resultado das partidas. Essa ineficiência de mercado, motivada por vieses de percepção (gols são mais memoráveis que desarmes ou passes decisivos), cria oportunidades para clubes com análise mais rigorosa de dados encontrarem jogadores subvalorizados em posições menos badaladas.",
+      },
+      {
+        title: "Por que certos países são potências e outros não",
+        content:
+          "A obra examina fatores estruturais que explicam por que algumas nações produzem consistentemente seleções fortes: população total, experiência histórica acumulada jogando futebol competitivo internacionalmente, e principalmente riqueza relativa (não apenas absoluta) — países de renda média com boa infraestrutura esportiva básica tendem a superar tanto nações muito pobres (sem recursos para desenvolvimento) quanto certas nações muito ricas (onde talentos atléticos frequentemente se dispersam para outros esportes mais lucrativos localmente).",
+      },
+      {
+        title: "O mito do 'apoio da torcida local' decisivo",
+        content:
+          "Contrariando a crença popular de que jogar em casa com torcida apaixonada garante vantagem decisiva, a análise estatística mostra que a vantagem de jogar em casa, embora real e mensurável, é mais modesta do que o senso comum sugere, e vem principalmente de familiaridade com o campo e rotina, não primariamente da intensidade emocional da torcida presente — evidenciado por partidas disputadas sem público, onde a vantagem de mando de campo diminui, mas não desaparece completamente.",
+      },
+      {
+        title: "Cidades e clubes: por que uns crescem, outros estagnam",
+        content:
+          "Os autores comparam o desempenho histórico de clubes de diferentes cidades europeias e encontram uma correlação forte entre o tamanho e riqueza da área metropolitana de origem de um clube e seu sucesso esportivo sustentado no longo prazo — clubes em cidades grandes e prósperas tendem a ter vantagens estruturais duradouras (base de torcedores, receita, atração de patrocínio) que clubes de cidades menores dificilmente conseguem superar de forma consistente ao longo de décadas, independente de picos ocasionais de sucesso.",
+      },
+      {
+        title: "Depressão, suicídio e o mito do desespero coletivo em derrotas",
+        content:
+          "Um capítulo particularmente contraintuitivo examina dados sobre bem-estar psicológico coletivo após grandes derrotas esportivas nacionais, encontrando evidências de que o impacto emocional negativo é real mas geralmente breve e superestimado pela narrativa midiática dramática — a vida cotidiana e indicadores agregados de bem-estar da população tendem a se normalizar rapidamente após o choque inicial de uma eliminação importante, desafiando a narrativa popular de trauma coletivo duradouro após derrotas esportivas significativas.",
+      },
+      {
+        title: "O futuro econômico do futebol global",
+        content:
+          "A obra conclui explorando tendências econômicas de longo prazo no futebol profissional: crescente desigualdade financeira entre uma elite de clubes globalmente dominantes e o restante do mercado, a globalização da audiência e receita de transmissão como motor econômico principal (superando receita de bilheteria tradicional), e questiona se esse modelo de concentração crescente de recursos é sustentável a longo prazo para a saúde competitiva geral do esporte, ou se tende a criar ligas cada vez mais previsíveis e menos competitivamente interessantes.",
+      },
+    ],
+    quiz: [
+      { q: "O que os autores descobrem sobre o mercado de transferências no futebol?", options: ["É perfeitamente eficiente e sem distorções", "Clubes pagam sistematicamente mais por atacantes vistosos do que por jogadores com impacto estatístico equivalente em posições menos glamorosas", "Apenas goleiros são subvalorizados", "Não há nenhum padrão identificável nos dados"], correct: 1, explanation: "Isso cria oportunidades para clubes com análise de dados mais rigorosa." },
+      { q: "Quais fatores estruturais explicam por que certos países são potências no futebol?", options: ["Apenas o tamanho do território nacional", "População, experiência histórica acumulada e riqueza relativa (não apenas absoluta)", "Exclusivamente o clima do país", "Apenas investimento governamental direto"], correct: 1, explanation: "Países de renda média com boa infraestrutura básica tendem a se destacar." },
+      { q: "Por que nações muito ricas às vezes não se destacam tanto no futebol, segundo a obra?", options: ["Porque não têm interesse no esporte", "Porque talentos atléticos podem se dispersar para outros esportes mais lucrativos localmente", "Porque o clima impede a prática do esporte", "Porque é proibido nesses países"], correct: 1, explanation: "A riqueza pode redirecionar talento esportivo para outras modalidades mais rentáveis." },
+      { q: "O que a análise estatística revela sobre a vantagem de jogar em casa?", options: ["Não existe nenhuma vantagem real", "É real mas mais modesta que o senso comum sugere, vindo principalmente de familiaridade com o campo", "É sempre decisiva e garante vitória", "Depende exclusivamente do tamanho da torcida"], correct: 1, explanation: "Jogos sem público mostram que a vantagem diminui, mas não desaparece completamente." },
+      { q: "Qual correlação os autores encontram entre cidades e sucesso de clubes?", options: ["Nenhuma correlação relevante existe", "Cidades grandes e prósperas tendem a produzir clubes com vantagens estruturais duradouras", "Apenas cidades pequenas produzem clubes de sucesso", "O tamanho da cidade não afeta o desempenho esportivo"], correct: 1, explanation: "Base de torcedores, receita e patrocínio favorecem clubes de áreas metropolitanas maiores." },
+      { q: "O que os dados revelam sobre bem-estar psicológico coletivo após grandes derrotas esportivas?", options: ["O impacto negativo é permanente e nunca se recupera", "O impacto é real mas breve, normalizando-se rapidamente, ao contrário da narrativa midiática", "Não há nenhum impacto emocional mensurável", "Apenas jogadores são afetados, nunca torcedores"], correct: 1, explanation: "Isso desafia a narrativa popular de trauma coletivo duradouro após eliminações importantes." },
+      { q: "Qual tendência econômica de longo prazo a obra identifica no futebol profissional?", options: ["Redução da desigualdade financeira entre clubes", "Crescente desigualdade entre uma elite global de clubes e o restante do mercado", "Estagnação total do mercado esportivo", "Diminuição da audiência global do esporte"], correct: 1, explanation: "Essa concentração levanta questões sobre a sustentabilidade competitiva do esporte." },
+      { q: "Qual fonte de receita superou a bilheteria tradicional como motor econômico do futebol, segundo a obra?", options: ["Venda de produtos licenciados apenas", "Audiência global e receita de transmissão", "Doações de torcedores", "Impostos governamentais sobre o esporte"], correct: 1, explanation: "A globalização da audiência tornou-se central para a economia do futebol moderno." },
+      { q: "Qual pergunta a obra levanta sobre a crescente concentração de recursos no futebol?", options: ["Se isso vai aumentar a competitividade geral do esporte", "Se é sustentável a longo prazo ou tende a criar ligas mais previsíveis e menos interessantes", "Se deveria ser completamente eliminada por lei", "Se afeta apenas ligas menores, sem relevância para grandes ligas"], correct: 1, explanation: "Essa é uma das questões centrais discutidas na conclusão da obra." },
+      { q: "Por que gols tendem a ser supervalorizados no mercado de transferências, segundo a análise?", options: ["Porque são estatisticamente mais importantes que qualquer outra ação", "Porque são mais memoráveis visualmente que ações como desarmes ou passes decisivos", "Porque são mais fáceis de treinar", "Porque geram mais lesões, aumentando seu valor"], correct: 1, explanation: "Esse viés de percepção cria distorções de preço no mercado de jogadores." },
+    ],
+  },
+
+  {
+    id: "becoming-michelle-obama",
+    title: "Becoming: Minha História",
+    author: "Baseado na obra de Michelle Obama",
+    category: "Biografias & Memórias",
+    tags: ["memórias", "liderança feminina", "identidade"],
+    readTimeMin: 18,
+    premium: true,
+    coverIcon: "bookOpen",
+    synopsis:
+      "As memórias da ex-primeira-dama americana, narrando sua trajetória desde a infância no South Side de Chicago até a Casa Branca, e as tensões entre ambição pessoal, família e vida pública.",
+    chapters: [
+      {
+        title: "Raízes no South Side de Chicago",
+        content:
+          "Michelle cresceu em uma família de classe trabalhadora, em um bairro que testemunhou a chamada 'fuga branca' (white flight) durante sua infância, com pais que, apesar de recursos limitados, investiram intensamente no desenvolvimento educacional e no senso de valor próprio dos filhos. A obra descreve como essa origem específica moldou uma ética de trabalho duro e desconfiança inicial em relação a espaços de elite (como Princeton e Harvard, onde estudaria depois), onde frequentemente se sentiu como uma das poucas pessoas de sua origem socioeconômica e racial presentes.",
+      },
+      {
+        title: "Encontrando a própria voz em espaços de elite",
+        content:
+          "Ao entrar em universidades de prestígio majoritariamente brancas e de classes mais abastadas, Michelle descreve a sensação recorrente de precisar provar constantemente que pertencia àqueles espaços — um fenômeno que reconheceria mais tarde como comum entre pessoas de grupos sub-representados navegando ambientes de elite. Em vez de se moldar completamente às expectativas alheias sobre como deveria se comportar ou falar, a narrativa descreve um processo gradual de integrar essa origem à própria identidade profissional, em vez de escondê-la ou negá-la.",
+      },
+      {
+        title: "Carreira, ambição e a decisão de mudar de rumo",
+        content:
+          "Depois de anos como advogada bem-sucedida em um escritório corporativo prestigioso, Michelle descreve uma crise de propósito genuína ao perceber que o trabalho, apesar do sucesso financeiro e status, não trazia sentido pessoal duradouro. A decisão de deixar essa carreira segura por trabalho no setor público e sem fins lucrativos — financeiramente mais arriscada, mas alinhada a valores pessoais mais profundos — é apresentada como um ponto de virada central, ilustrando uma tensão recorrente entre segurança convencional e propósito autêntico.",
+      },
+      {
+        title: "Parceria de casamento sob pressão pública extrema",
+        content:
+          "A obra é honesta sobre as tensões reais do casamento com Barack Obama, especialmente durante os anos de ausências frequentes causadas pela carreira política dele e pelo peso adicional de criar filhas pequenas sem uma rede de apoio equivalente à disponível para ele. Michelle descreve terapia de casal como ferramenta importante nesse período, desafiando o silêncio comum sobre dificuldades conjugais em figuras públicas, e apresentando parceria de longo prazo como um processo de ajuste contínuo, não um estado estático alcançado uma vez e mantido automaticamente depois.",
+      },
+      {
+        title: "Vida na Casa Branca e o papel de primeira-dama",
+        content:
+          "Ao assumir o papel público sem precedentes de primeira-dama, Michelle descreve o desafio de definir uma agenda própria e significativa (incluindo iniciativas sobre nutrição infantil e educação de meninas) dentro de um cargo sem descrição formal de funções, ao mesmo tempo em que navegava escrutínio público intenso sobre aparência, tom de voz e comportamento — escrutínio frequentemente carregado de dinâmicas raciais específicas que ela discute com franqueza, incluindo a consciência constante de ser a primeira mulher negra a ocupar essa posição na história do país.",
+      },
+      {
+        title: "Continuando a 'se tornar'",
+        content:
+          "O título da obra reflete sua tese central: identidade e propósito não são destinos fixos alcançados definitivamente em algum ponto da vida, mas um processo contínuo de 'se tornar' (becoming) que continua indefinidamente, mesmo após conquistas externas significativas. A obra termina não com uma sensação de chegada definitiva, mas com reflexão aberta sobre os próximos capítulos ainda não escritos — uma mensagem deliberada de que crescimento pessoal genuíno não tem ponto final claro, independente de status ou posição já alcançados.",
+      },
+    ],
+    quiz: [
+      { q: "Onde e em que contexto Michelle Obama cresceu, segundo a obra?", options: ["Em uma família rica em Manhattan", "No South Side de Chicago, em uma família de classe trabalhadora", "Em uma fazenda rural no meio-oeste", "Fora dos Estados Unidos"], correct: 1, explanation: "Essa origem moldou profundamente sua ética de trabalho e senso de identidade." },
+      { q: "O que a obra descreve sobre a experiência de Michelle em universidades de elite?", options: ["Ela se sentiu imediatamente confortável e pertencente", "A sensação recorrente de precisar provar constantemente que pertencia àqueles espaços", "Ela nunca frequentou universidades de prestígio", "Não há menção a essa experiência na obra"], correct: 1, explanation: "Esse fenômeno é comum entre pessoas de grupos sub-representados em ambientes de elite." },
+      { q: "Por que Michelle deixou sua carreira como advogada corporativa, segundo a obra?", options: ["Foi demitida do escritório", "Percebeu uma crise de propósito, apesar do sucesso financeiro e status", "Por exigência do marido", "Por problemas de saúde"], correct: 1, explanation: "Essa decisão ilustra a tensão entre segurança convencional e propósito autêntico." },
+      { q: "O que a obra revela sobre o casamento de Michelle e Barack Obama?", options: ["Foi sempre fácil e sem nenhuma tensão", "Passou por tensões reais, incluindo terapia de casal durante períodos difíceis", "Nunca é mencionado na obra", "Terminou em separação"], correct: 1, explanation: "Essa honestidade desafia o silêncio comum sobre dificuldades conjugais em figuras públicas." },
+      { q: "Qual desafio Michelle descreve sobre o papel de primeira-dama?", options: ["O cargo tinha uma descrição de funções claramente definida", "Definir uma agenda própria significativa dentro de um cargo sem descrição formal de funções", "Não havia nenhum escrutínio público sobre sua atuação", "O cargo era idêntico a qualquer outro emprego anterior"], correct: 1, explanation: "Ela também navegou escrutínio intenso com dinâmicas raciais específicas envolvidas." },
+      { q: "Quais iniciativas Michelle desenvolveu como primeira-dama, segundo a obra?", options: ["Apenas eventos sociais sem conteúdo programático", "Iniciativas sobre nutrição infantil e educação de meninas", "Exclusivamente política externa", "Reformas do sistema judiciário"], correct: 1, explanation: "Essas iniciativas refletiram valores pessoais desenvolvidos ao longo de sua trajetória." },
+      { q: "O que o título 'Becoming' (Se Tornando) reflete sobre a tese central da obra?", options: ["Que identidade é um destino fixo alcançado definitivamente", "Que identidade e propósito são um processo contínuo, sem ponto final claro", "Que a vida termina ao alcançar sucesso público", "Que apenas conquistas externas definem uma pessoa"], correct: 1, explanation: "Esse processo continua indefinidamente, mesmo após conquistas significativas." },
+      { q: "Como a obra termina, em relação à narrativa pessoal de Michelle?", options: ["Com sensação de chegada definitiva e final", "Com reflexão aberta sobre próximos capítulos ainda não escritos", "Sem nenhuma reflexão sobre o futuro", "Anunciando aposentadoria da vida pública"], correct: 1, explanation: "Isso reforça a mensagem de que crescimento pessoal não tem ponto final claro." },
+      { q: "Que dinâmica específica Michelle discute com franqueza sobre seu tempo na Casa Branca?", options: ["Apenas questões de protocolo diplomático", "Dinâmicas raciais específicas ligadas a ser a primeira mulher negra nessa posição", "Exclusivamente questões de segurança nacional", "Assuntos que não têm relação com sua identidade pessoal"], correct: 1, explanation: "Essa consciência esteve presente ao longo de sua atuação pública no cargo." },
+      { q: "O que caracterizou a infância de Michelle no bairro onde cresceu?", options: ["Um bairro de extrema riqueza desde sempre", "Um bairro que testemunhou a chamada 'fuga branca' (white flight) durante sua infância", "Um bairro exclusivamente rural", "Um bairro sem nenhuma mudança demográfica relevante"], correct: 1, explanation: "Esse contexto socioeconômico específico moldou parte importante de sua perspectiva de vida." },
+    ],
+  },
+
+  {
+    id: "poder-do-habito",
+    title: "O Poder do Hábito",
+    author: "Baseado na obra de Charles Duhigg",
+    category: "Carreira & Negócios",
+    tags: ["hábitos", "neurociência do comportamento", "mudança organizacional"],
+    readTimeMin: 17,
+    premium: true,
+    coverIcon: "bolt",
+    synopsis:
+      "Como hábitos se formam no cérebro, por que são tão difíceis de mudar, e como empresas e indivíduos podem usar esse conhecimento para transformar comportamentos de forma duradoura.",
+    chapters: [
+      {
+        title: "O loop do hábito",
+        content:
+          "Todo hábito segue uma estrutura neurológica de três partes: uma deixa (gatilho que inicia o comportamento automático), uma rotina (o comportamento em si) e uma recompensa (o benefício que o cérebro aprende a esperar e associar àquela sequência). Com repetição suficiente, essa sequência se torna automatizada em regiões cerebrais associadas a comportamento automático, liberando capacidade consciente para outras tarefas — o que explica por que hábitos bem estabelecidos podem ser executados quase sem pensamento deliberado.",
+      },
+      {
+        title: "A regra de ouro da mudança de hábitos",
+        content:
+          "A obra propõe que a forma mais eficaz de mudar um hábito não é tentar eliminar completamente deixa e recompensa (o que raramente funciona de forma sustentável), mas manter a mesma deixa e a mesma recompensa, substituindo apenas a rotina intermediária por um comportamento diferente e mais desejável. Como o cérebro já está condicionado a esperar aquela recompensa específica diante daquela deixa específica, trocar apenas o comportamento do meio tende a ser mais sustentável do que tentar eliminar o ciclo inteiro de uma vez.",
+      },
+      {
+        title: "Hábitos-chave e seus efeitos cascata",
+        content:
+          "Certos hábitos, chamados 'hábitos-chave', têm poder desproporcional de gerar mudanças em cascata sobre outras áreas da vida, mesmo sem intenção direta de afetá-las — exercício físico regular, por exemplo, frequentemente leva a melhorias espontâneas em alimentação, produtividade no trabalho e até relacionamentos, sem que a pessoa tenha planejado essas mudanças secundárias deliberadamente. Identificar e investir nesses hábitos de alto impacto é apresentado como estratégia mais eficiente do que tentar mudar dezenas de comportamentos menores simultaneamente.",
+      },
+      {
+        title: "Força de vontade como músculo limitado",
+        content:
+          "Pesquisas citadas na obra sugerem que força de vontade funciona como um recurso mental finito que se esgota ao longo do dia com uso repetido — decisões e resistência a tentações consomem essa reserva, tornando autocontrole progressivamente mais difícil conforme o dia avança. Organizações e indivíduos que estruturam ambientes para exigir menos força de vontade constante (removendo tentações do caminho, automatizando decisões repetitivas através de rotinas) conseguem resultados mais consistentes do que aqueles que dependem de disciplina pura e constante.",
+      },
+      {
+        title: "Hábitos organizacionais e cultura empresarial",
+        content:
+          "A obra estende o conceito de hábito individual para 'hábitos organizacionais' — rotinas institucionais profundamente arraigadas que moldam como decisões são tomadas dentro de empresas, muitas vezes de forma tão automática e não questionada quanto hábitos pessoais individuais. Mudanças organizacionais bem-sucedidas frequentemente exigem identificar e modificar deliberadamente esses padrões institucionais arraigados, não apenas anunciar novas políticas formais que, sem mudança real de rotina subjacente, tendem a ser ignoradas na prática cotidiana real da organização.",
+      },
+      {
+        title: "Força de vontade como hábito treinável",
+        content:
+          "Apesar de força de vontade se esgotar no curto prazo, a obra apresenta evidências de que a capacidade geral de autocontrole pode ser fortalecida ao longo do tempo através de prática consistente, similar a um músculo que se desenvolve com exercício regular. Pequenos exercícios deliberados de autocontrole em áreas específicas (como postura ou hábitos financeiros pequenos) parecem fortalecer a capacidade geral de autorregulação em áreas completamente não relacionadas, sugerindo que força de vontade tem tanto componente de recurso limitado no curto prazo quanto de capacidade treinável no longo prazo.",
+      },
+    ],
+    quiz: [
+      { q: "Quais são as três partes do 'loop do hábito'?", options: ["Início, meio e fim", "Deixa, rotina e recompensa", "Pensamento, ação e reflexão", "Estímulo, resposta e punição"], correct: 1, explanation: "Essa estrutura neurológica sustenta a formação e automatização de qualquer hábito." },
+      { q: "Qual é a 'regra de ouro' para mudar um hábito, segundo a obra?", options: ["Eliminar completamente deixa e recompensa", "Manter a mesma deixa e recompensa, substituindo apenas a rotina intermediária", "Ignorar a deixa e focar apenas na recompensa", "Mudar tudo simultaneamente de uma vez"], correct: 1, explanation: "Isso aproveita o condicionamento já existente, tornando a mudança mais sustentável." },
+      { q: "O que são 'hábitos-chave'?", options: ["Hábitos sem nenhum efeito relevante", "Hábitos com poder desproporcional de gerar mudanças em cascata em outras áreas da vida", "Apenas hábitos relacionados a trabalho", "Hábitos impossíveis de mudar"], correct: 1, explanation: "Exercício físico é um exemplo citado de hábito-chave com efeitos cascata amplos." },
+      { q: "Como a obra descreve força de vontade no curto prazo?", options: ["Como um recurso infinito e inesgotável", "Como um recurso mental finito que se esgota ao longo do dia com uso repetido", "Como algo que não afeta decisões diárias", "Como idêntica para todas as pessoas em qualquer situação"], correct: 1, explanation: "Isso explica por que autocontrole fica mais difícil conforme o dia avança." },
+      { q: "O que ambientes que exigem menos força de vontade constante tendem a proporcionar?", options: ["Resultados menos consistentes", "Resultados mais consistentes do que depender de disciplina pura", "Nenhuma diferença mensurável", "Maior gasto de energia mental"], correct: 1, explanation: "Remover tentações e automatizar decisões reduz a demanda por autocontrole constante." },
+      { q: "O que são 'hábitos organizacionais', segundo a obra?", options: ["Políticas formais escritas em manuais apenas", "Rotinas institucionais arraigadas que moldam decisões de forma automática dentro de empresas", "Um conceito sem aplicação prática real", "Apenas normas de vestimenta corporativa"], correct: 1, explanation: "Mudanças organizacionais eficazes exigem modificar esses padrões arraigados, não só anunciar novas políticas." },
+      { q: "Por que anunciar novas políticas formais nem sempre gera mudança organizacional real?", options: ["Porque políticas formais sempre funcionam automaticamente", "Porque sem mudança real na rotina subjacente, tendem a ser ignoradas na prática cotidiana", "Porque funcionários nunca leem políticas novas", "Porque políticas formais são sempre desnecessárias"], correct: 1, explanation: "O hábito organizacional arraigado precisa ser modificado diretamente, não apenas declarado." },
+      { q: "O que a obra sugere sobre força de vontade no longo prazo?", options: ["Ela nunca pode ser fortalecida", "Pode ser fortalecida ao longo do tempo através de prática consistente, como um músculo", "É completamente independente de qualquer prática", "Diminui permanentemente após os 30 anos"], correct: 1, explanation: "Pequenos exercícios de autocontrole parecem fortalecer a capacidade geral de autorregulação." },
+      { q: "O que acontece quando pequenos exercícios de autocontrole são praticados em áreas específicas?", options: ["Não têm nenhum efeito em outras áreas", "Parecem fortalecer a capacidade geral de autorregulação em áreas não relacionadas", "Enfraquecem a força de vontade geral", "Só funcionam na mesma área exata praticada"], correct: 1, explanation: "Isso sugere um componente treinável de força de vontade, além do esgotamento de curto prazo." },
+      { q: "Por que hábitos bem estabelecidos podem ser executados quase sem pensamento deliberado?", options: ["Porque nunca envolveram o cérebro em nenhum momento", "Porque a sequência se automatiza em regiões cerebrais associadas a comportamento automático", "Porque são sempre simples e sem complexidade", "Porque a pessoa está sempre distraída ao executá-los"], correct: 1, explanation: "Essa automatização libera capacidade consciente para outras tarefas simultâneas." },
+    ],
+  },
+
+  {
+    id: "homem-busca-sentido",
+    title: "Em Busca de Sentido",
+    author: "Baseado na obra de Viktor E. Frankl",
+    category: "Psicologia",
+    tags: ["propósito", "resiliência", "logoterapia"],
+    readTimeMin: 15,
+    premium: true,
+    coverIcon: "brain",
+    synopsis:
+      "As reflexões de um psiquiatra que sobreviveu a campos de concentração nazistas sobre como encontrar sentido mesmo nas circunstâncias mais extremas de sofrimento — e a fundação da logoterapia, escola de psicoterapia centrada em propósito.",
+    chapters: [
+      {
+        title: "Sobrevivência e a última liberdade humana",
+        content:
+          "Baseado em sua experiência direta nos campos de concentração, Frankl observa que, mesmo despojados de absolutamente tudo — posses, identidade, dignidade externa, controle sobre o próprio corpo — prisioneiros mantinham uma liberdade final que nenhuma circunstância externa poderia remover completamente: a escolha da própria atitude interna diante do sofrimento imposto. Essa observação, forjada em condições extremas de desumanização deliberada, torna-se a base filosófica central de toda sua obra posterior sobre a natureza humana.",
+      },
+      {
+        title: "Quem tem um porquê suporta quase qualquer como",
+        content:
+          "Frankl observa, através de experiência clínica direta durante o cativeiro, que prisioneiros com um senso claro de propósito para o qual sobreviver — uma pessoa amada esperando, um trabalho inacabado, uma missão pessoal específica ainda não realizada — apresentavam maior capacidade de suportar sofrimento físico e psicológico extremo do que aqueles sem esse ponto de ancoragem existencial. Essa observação viria a se tornar princípio central de sua abordagem terapêutica: sentido de propósito, mais do que ausência de sofrimento, é o que sustenta resiliência humana genuína diante de circunstâncias adversas.",
+      },
+      {
+        title: "Três fontes de significado",
+        content:
+          "A logoterapia, escola de psicoterapia fundada por Frankl, identifica três caminhos principais pelos quais uma pessoa pode encontrar significado genuíno na vida: através de um trabalho ou obra criativa realizada, através de experiências significativas ou relacionamentos profundos vividos (especialmente amor genuíno por outra pessoa), e — talvez o mais radical — através da atitude assumida diante de sofrimento inevitável e irremediável, quando as duas primeiras fontes se tornam impossíveis ou estão temporariamente fora de alcance.",
+      },
+      {
+        title: "O vazio existencial da modernidade",
+        content:
+          "Frankl observa, em sua prática clínica posterior à guerra, um padrão crescente que chama de 'vazio existencial' — um sentimento difuso de falta de propósito, especialmente comum em sociedades onde necessidades materiais básicas já estão satisfeitas, mas onde tradições, religião e estruturas sociais tradicionais que anteriormente forneciam sentido automático já não cumprem mais essa função para muitas pessoas. Diferente da neurose tradicional descrita por outras escolas psicológicas, esse vazio não vem de conflito psíquico reprimido, mas de ausência genuína de direção e significado percebido na própria existência.",
+      },
+      {
+        title: "Tensão saudável versus equilíbrio homeostático",
+        content:
+          "Contrariando a ideia psicológica popular de que saúde mental significa ausência de tensão ou estado de equilíbrio confortável constante, Frankl argumenta que certo grau de tensão saudável — entre onde a pessoa está e onde poderia ou deveria estar em relação a um propósito significativo ainda não plenamente realizado — é necessário e até desejável para bem-estar psicológico genuíno, não um sintoma a ser eliminado através de conforto ou ausência total de desafio.",
+      },
+      {
+        title: "Aplicando sentido além do sofrimento extremo",
+        content:
+          "Embora forjados em circunstâncias de sofrimento extremo, os princípios da logoterapia são apresentados como aplicáveis a desafios cotidianos comuns: encontrar propósito específico em trabalho aparentemente rotineiro, atribuir significado consciente a dificuldades pessoais menores, e reconhecer que a busca ativa por sentido, mais do que a busca direta por felicidade ou prazer imediato, é o que sustenta bem-estar psicológico duradouro e resiliência diante das inevitáveis dificuldades da vida cotidiana comum.",
+      },
+    ],
+    quiz: [
+      { q: "Qual é a 'última liberdade humana' que Frankl observa mesmo em condições extremas?", options: ["A liberdade de posses materiais", "A escolha da própria atitude interna diante do sofrimento imposto", "A liberdade de movimento físico", "A liberdade de comunicação externa"], correct: 1, explanation: "Essa liberdade não pode ser removida completamente por nenhuma circunstância externa." },
+      { q: "O que Frankl observa sobre prisioneiros com um senso claro de propósito?", options: ["Não havia diferença de resiliência entre eles e os demais", "Apresentavam maior capacidade de suportar sofrimento físico e psicológico extremo", "Sofriam mais do que aqueles sem propósito definido", "Eram sempre libertados mais cedo"], correct: 1, explanation: "Sentido de propósito sustentava resiliência mesmo em condições extremas de sofrimento." },
+      { q: "Quais são as três fontes de significado identificadas pela logoterapia?", options: ["Dinheiro, status e poder", "Trabalho criativo, experiências/relacionamentos significativos, e atitude diante do sofrimento inevitável", "Apenas sucesso profissional", "Apenas relacionamentos familiares"], correct: 1, explanation: "A terceira fonte se torna relevante quando as duas primeiras estão fora de alcance." },
+      { q: "O que é o 'vazio existencial' descrito por Frankl?", options: ["Um sentimento raro em sociedades modernas", "Um sentimento difuso de falta de propósito, comum quando necessidades materiais já estão satisfeitas", "Um sintoma exclusivamente físico", "Um conceito sem relação com bem-estar psicológico"], correct: 1, explanation: "Esse vazio surge quando estruturas tradicionais de sentido perdem função para muitas pessoas." },
+      { q: "Como o vazio existencial difere da neurose tradicional, segundo Frankl?", options: ["São exatamente a mesma coisa", "Não vem de conflito psíquico reprimido, mas de ausência genuína de direção e significado", "É sempre mais grave que qualquer neurose", "Não tem nenhuma relação com psicologia clínica"], correct: 1, explanation: "Essa distinção é central para a abordagem terapêutica proposta pela logoterapia." },
+      { q: "O que Frankl argumenta sobre tensão psicológica saudável?", options: ["Saúde mental exige ausência total de tensão", "Certo grau de tensão entre onde se está e onde se poderia estar é necessário e desejável", "Tensão é sempre um sintoma a ser eliminado", "Tensão nunca contribui para bem-estar psicológico"], correct: 1, explanation: "Isso contraria a ideia popular de que equilíbrio homeostático constante é o ideal de saúde mental." },
+      { q: "Como os princípios da logoterapia se aplicam além do sofrimento extremo, segundo a obra?", options: ["Não têm nenhuma aplicação em contextos cotidianos", "São aplicáveis a desafios cotidianos comuns, como encontrar propósito no trabalho rotineiro", "Aplicam-se apenas a sobreviventes de guerra", "Só funcionam em contextos clínicos formais"], correct: 1, explanation: "A busca ativa por sentido é apresentada como relevante para a vida cotidiana comum." },
+      { q: "O que, segundo Frankl, sustenta bem-estar psicológico duradouro mais do que a busca direta por felicidade?", options: ["A busca ativa por sentido e propósito", "A eliminação completa de qualquer desafio", "O acúmulo de posses materiais", "A ausência total de responsabilidades"], correct: 0, explanation: "Sentido é apresentado como mais sustentável que prazer imediato para bem-estar duradouro." },
+      { q: "Qual escola de psicoterapia Frankl fundou?", options: ["Psicanálise clássica", "Logoterapia", "Terapia cognitivo-comportamental", "Behaviorismo radical"], correct: 1, explanation: "A logoterapia é centrada na busca de sentido como motivação humana primária." },
+      { q: "Qual foi a experiência direta que fundamentou as observações centrais da obra?", options: ["Pesquisa de laboratório apenas", "A sobrevivência do próprio autor em campos de concentração nazistas", "Entrevistas com pacientes ricos", "Estudos exclusivamente teóricos sem experiência prática"], correct: 1, explanation: "Essa experiência direta forjou a base filosófica e clínica de toda sua obra posterior." },
+    ],
+  },
+
+  {
+    id: "vaca-roxa",
+    title: "A Vaca Roxa",
+    author: "Baseado na obra de Seth Godin",
+    category: "Marketing & Vendas",
+    tags: ["diferenciação", "marketing", "produtos notáveis"],
+    readTimeMin: 13,
+    premium: true,
+    coverIcon: "handshake",
+    synopsis:
+      "Por que ser 'muito bom' já não é suficiente no mercado saturado atual — e por que produtos e ideias genuinamente notáveis, dignos de serem comentados espontaneamente, são a nova forma de se destacar.",
+    chapters: [
+      {
+        title: "A metáfora da vaca roxa",
+        content:
+          "Ao dirigir por uma estrada rural cheia de vacas comuns, marrons e brancas, todas parecem igualmente sem graça depois de alguns minutos — mas uma vaca roxa seria instantaneamente notável, digna de comentário espontâneo. A metáfora captura a tese central da obra: em mercados saturados de produtos 'bons o suficiente', ser apenas competente e correto já não gera atenção nem crescimento — apenas o genuinamente notável, surpreendente ou extraordinário consegue romper o ruído competitivo atual.",
+      },
+      {
+        title: "O fim do marketing de interrupção em massa",
+        content:
+          "Godin argumenta que a era da publicidade de interrupção em massa — anúncios de TV genéricos direcionados a públicos amplos e indiferenciados — perdeu grande parte de sua eficácia original, tanto pela fragmentação de canais de atenção quanto pela capacidade crescente do consumidor de simplesmente ignorar ou pular mensagens publicitárias tradicionais. A alternativa proposta não é gastar mais em publicidade tradicional, mas investir na criação do produto ou serviço em si de forma que ele naturalmente gere conversa espontânea entre as pessoas certas.",
+      },
+      {
+        title: "Segmentando para os 'inovadores' primeiro",
+        content:
+          "Em vez de tentar agradar imediatamente ao consumidor médio e conservador (a maioria pragmática do mercado), a obra recomenda direcionar esforço inicial de produto e marketing especificamente para consumidores early adopters — pessoas que buscam ativamente novidade, têm influência social desproporcional em suas redes de contato, e estão dispostas a experimentar e recomendar produtos ainda não comprovados amplamente. Conquistar genuinamente esse grupo pequeno mas influente costuma ser pré-requisito necessário para eventualmente alcançar o mercado mais amplo depois.",
+      },
+      {
+        title: "Ser notável, não necessariamente perfeito",
+        content:
+          "A obra distingue 'notável' de simplesmente 'bom': um produto pode ser tecnicamente excelente e ainda assim genericamente esquecível, enquanto um produto com uma característica marcante e ousada — mesmo que imperfeita em outros aspectos — gera conversa espontânea precisamente por sua disposição a se destacar deliberadamente, correndo o risco calculado de não agradar a todos igualmente. Tentar agradar a todo mundo simultaneamente é apresentado como receita quase garantida para não ser notável por ninguém em particular.",
+      },
+      {
+        title: "O risco de não arriscar",
+        content:
+          "Godin argumenta que, em mercados competitivos e saturados, a segurança aparente de jogar pelo caminho convencional e testado é, na verdade, um dos maiores riscos disponíveis — produtos e campanhas genéricos, mesmo tecnicamente bem executados, tendem a se afogar silenciosamente na multidão de opções similares disponíveis ao consumidor moderno. Correr o risco calculado de ousadia genuína, mesmo com chance real de rejeição por parte de alguns segmentos de público, é apresentado como estratégia comparativamente mais segura no ambiente competitivo atual do que a alternativa aparentemente 'segura' da mediocridade competente.",
+      },
+      {
+        title: "Vacas roxas ficam malhadas com o tempo",
+        content:
+          "A obra alerta que mesmo inovações genuinamente notáveis eventualmente se tornam familiares e perdem seu impacto diferencial original conforme concorrentes copiam a ideia e consumidores se acostumam com a novidade — nenhuma vaca roxa permanece roxa e surpreendente para sempre. Isso exige um processo contínuo de reinvenção e diferenciação renovada, não uma única inovação pontual seguida de acomodação permanente, tratando notabilidade como capacidade organizacional a ser cultivada continuamente, não conquista única a ser celebrada e depois arquivada.",
+      },
+    ],
+    quiz: [
+      { q: "O que a metáfora da 'vaca roxa' representa?", options: ["Um tipo específico de gado leiteiro", "Algo genuinamente notável em meio a opções comuns e indistinguíveis", "Uma técnica de precificação", "Um erro de marketing comum"], correct: 1, explanation: "Em mercados saturados, apenas o extraordinário consegue romper o ruído competitivo." },
+      { q: "O que a obra argumenta sobre o marketing de interrupção em massa tradicional?", options: ["Continua tão eficaz quanto sempre foi", "Perdeu grande parte de sua eficácia devido à fragmentação de canais e capacidade de ignorar anúncios", "É a única estratégia ainda viável hoje", "Nunca foi eficaz em nenhuma época"], correct: 1, explanation: "A alternativa proposta é investir no produto em si para gerar conversa espontânea." },
+      { q: "Para quem a obra recomenda direcionar esforço inicial de produto e marketing?", options: ["Para o consumidor médio e conservador imediatamente", "Para consumidores early adopters, com influência social desproporcional", "Apenas para grandes corporações", "Para nenhum segmento específico"], correct: 1, explanation: "Conquistar esse grupo pequeno costuma ser pré-requisito para alcançar o mercado mais amplo depois." },
+      { q: "Qual é a diferença entre 'notável' e simplesmente 'bom', segundo a obra?", options: ["São sinônimos exatos", "Um produto pode ser tecnicamente excelente e ainda genericamente esquecível, enquanto notável gera conversa espontânea", "Bom é sempre superior a notável", "Notável significa apenas mais caro"], correct: 1, explanation: "Características marcantes e ousadas geram conversa, mesmo com imperfeições em outros aspectos." },
+      { q: "O que tentar agradar a todo mundo simultaneamente tende a gerar, segundo a obra?", options: ["O produto mais notável possível", "Uma receita quase garantida para não ser notável por ninguém em particular", "Sempre o maior sucesso comercial", "Nenhum efeito relevante no mercado"], correct: 1, explanation: "Produtos genéricos tendem a se afogar na multidão de opções similares." },
+      { q: "Por que a obra argumenta que jogar pelo caminho convencional é, na verdade, arriscado?", options: ["Porque é sempre a estratégia mais segura disponível", "Porque produtos genéricos tendem a se afogar silenciosamente na multidão de opções similares", "Porque caminhos convencionais são sempre proibidos por lei", "Porque não tem relação com sucesso comercial"], correct: 1, explanation: "A segurança aparente da mediocridade competente é, paradoxalmente, um dos maiores riscos." },
+      { q: "O que a obra recomenda em vez de aumentar gastos em publicidade tradicional?", options: ["Reduzir investimento em produto", "Investir na criação do produto de forma que ele naturalmente gere conversa espontânea", "Ignorar completamente o marketing", "Copiar exatamente produtos concorrentes de sucesso"], correct: 1, explanation: "Um produto genuinamente notável gera seu próprio marketing orgânico através de recomendação." },
+      { q: "O que acontece com inovações notáveis ao longo do tempo, segundo a obra?", options: ["Permanecem notáveis para sempre sem esforço adicional", "Eventualmente se tornam familiares e perdem impacto conforme são copiadas", "Nunca são copiadas por concorrentes", "Tornam-se automaticamente mais valiosas com o tempo"], correct: 1, explanation: "Isso exige um processo contínuo de reinvenção, não uma única inovação seguida de acomodação." },
+      { q: "Como a obra sugere tratar a notabilidade de um produto ou marca?", options: ["Como uma conquista única a ser celebrada e depois arquivada", "Como uma capacidade organizacional a ser cultivada continuamente", "Como algo irrelevante para o sucesso de longo prazo", "Como um resultado automático do tamanho da empresa"], correct: 1, explanation: "Reinvenção contínua é necessária, já que nenhuma vaca roxa permanece surpreendente para sempre." },
+      { q: "Qual é o risco calculado que a obra recomenda assumir?", options: ["Evitar completamente qualquer possibilidade de rejeição", "Ousadia genuína, mesmo com chance real de rejeição por parte de alguns segmentos", "Copiar exatamente a estratégia de concorrentes de sucesso", "Nunca lançar produtos novos no mercado"], correct: 1, explanation: "Essa ousadia é apresentada como comparativamente mais segura que a mediocridade competente no longo prazo." },
+    ],
+  },
+
+  {
+    id: "quinta-disciplina",
+    title: "A Quinta Disciplina",
+    author: "Baseado na obra de Peter Senge",
+    category: "Gestão & Liderança",
+    tags: ["pensamento sistêmico", "organizações que aprendem", "liderança"],
+    readTimeMin: 18,
+    premium: true,
+    coverIcon: "compass",
+    synopsis:
+      "Uma introdução ao pensamento sistêmico aplicado à gestão organizacional, e às cinco disciplinas que, combinadas, permitem que empresas se tornem genuínas 'organizações que aprendem'.",
+    chapters: [
+      {
+        title: "Pensamento sistêmico: a quinta disciplina",
+        content:
+          "A disciplina que dá nome à obra é a capacidade de enxergar organizações (e problemas em geral) como sistemas interconectados, onde ações em uma parte geram efeitos, muitas vezes atrasados e não óbvios, em outras partes distantes do sistema — em vez de enxergar eventos isolados com causas lineares simples e diretas. Problemas organizacionais recorrentes frequentemente persistem precisamente porque são tratados com soluções pontuais que ignoram a estrutura sistêmica mais ampla que continua gerando o mesmo problema repetidamente, de formas ligeiramente diferentes a cada vez.",
+      },
+      {
+        title: "Domínio pessoal",
+        content:
+          "Essa disciplina envolve o compromisso contínuo de clarificar e aprofundar a própria visão pessoal do que se busca genuinamente alcançar, e de enxergar com honestidade a realidade atual em relação a essa visão — a tensão criativa gerada entre visão desejada e realidade presente é apresentada como fonte genuína de energia para crescimento e mudança, desde que a pessoa não resolva essa tensão simplesmente baixando suas expectativas em vez de trabalhar ativamente para elevar a realidade em direção à visão original.",
+      },
+      {
+        title: "Modelos mentais",
+        content:
+          "Modelos mentais são pressupostos profundamente arraigados, generalizações ou até imagens que influenciam como cada pessoa entende o mundo e toma decisões — frequentemente operando abaixo do nível de consciência plena, moldando o que a pessoa nota e ignora sem perceber essa filtragem ativa. A disciplina envolve trazer esses pressupostos implícitos à superfície consciente, examiná-los criticamente, e estar genuinamente disposto a revisá-los diante de evidência contraditória, em vez de defendê-los automaticamente como se fossem fatos objetivos incontestáveis.",
+      },
+      {
+        title: "Visão compartilhada",
+        content:
+          "Diferente de uma visão imposta de cima para baixo por liderança executiva e depois comunicada como já decidida, uma visão genuinamente compartilhada emerge de um processo de diálogo genuíno entre membros da organização, gerando comprometimento autêntico em vez de mera complacência superficial com uma diretriz externa. A obra argumenta que organizações com visão verdadeiramente compartilhada — não apenas declarada formalmente em documentos institucionais — mobilizam energia coletiva significativamente maior do que aquelas com visões meramente impostas de cima para baixo sem esse processo de construção coletiva genuína.",
+      },
+      {
+        title: "Aprendizagem em equipe",
+        content:
+          "Equipes com alto desempenho sustentado desenvolvem capacidade de diálogo genuíno — suspender pressupostos individuais temporariamente para realmente escutar e pensar coletivamente, não apenas alternar monólogos individuais disfarçados de discussão em grupo. Essa disciplina exige equilibrar diálogo aberto e exploratório com discussão focada em decisão quando apropriado, reconhecendo quando cada modo de interação serve melhor ao propósito específico do momento da equipe.",
+      },
+      {
+        title: "Integrando as cinco disciplinas",
+        content:
+          "Senge enfatiza que essas cinco disciplinas não funcionam isoladamente — pensamento sistêmico é descrito como a 'quinta disciplina' precisamente porque integra e dá sentido prático às outras quatro, evitando que sejam praticadas de forma fragmentada e desconectada entre si. Organizações que aprendem genuinamente são aquelas que cultivam simultaneamente essas cinco capacidades ao longo do tempo, permitindo adaptação contínua e genuína a mudanças no ambiente, em vez de mudança superficial e cosmética que não altera a estrutura sistêmica subjacente que gera os resultados observados.",
+      },
+    ],
+    quiz: [
+      { q: "O que é pensamento sistêmico, a 'quinta disciplina'?", options: ["A capacidade de resolver problemas isoladamente e rapidamente", "A capacidade de enxergar organizações como sistemas interconectados, com efeitos muitas vezes atrasados e não óbvios", "Um software de gestão empresarial", "Uma técnica exclusiva de contabilidade"], correct: 1, explanation: "Isso contrasta com enxergar eventos isolados com causas lineares simples." },
+      { q: "Por que problemas organizacionais recorrentes frequentemente persistem, segundo a obra?", options: ["Porque não têm solução possível", "Porque são tratados com soluções pontuais que ignoram a estrutura sistêmica mais ampla", "Porque funcionários são sempre incompetentes", "Porque não há recursos financeiros suficientes"], correct: 1, explanation: "A estrutura sistêmica subjacente continua gerando o mesmo problema repetidamente." },
+      { q: "O que é 'domínio pessoal', segundo a obra?", options: ["Controlar completamente outras pessoas na organização", "O compromisso contínuo de clarificar a própria visão e enxergar honestamente a realidade atual", "Uma técnica de gestão financeira", "Dominar tecnicamente uma única habilidade específica"], correct: 1, explanation: "A tensão entre visão e realidade gera energia genuína para crescimento." },
+      { q: "O que são 'modelos mentais', segundo a obra?", options: ["Diagramas usados em apresentações formais", "Pressupostos profundamente arraigados que moldam como cada pessoa entende o mundo", "Um tipo de software de simulação", "Testes psicológicos padronizados"], correct: 1, explanation: "Eles frequentemente operam abaixo do nível de consciência plena, filtrando percepção." },
+      { q: "O que a disciplina de modelos mentais exige, segundo a obra?", options: ["Defender automaticamente pressupostos como fatos incontestáveis", "Trazer pressupostos implícitos à superfície e revisá-los diante de evidência contraditória", "Ignorar completamente crenças pessoais", "Adotar os modelos mentais de outras pessoas sem questionamento"], correct: 1, explanation: "Isso exige disposição genuína para examinar e revisar crenças arraigadas." },
+      { q: "Como uma visão genuinamente compartilhada se diferencia de uma visão imposta de cima para baixo?", options: ["Não há diferença real entre elas", "Emerge de diálogo genuíno entre membros, gerando comprometimento autêntico", "É sempre mais rápida de implementar", "É definida exclusivamente pela liderança executiva"], correct: 1, explanation: "Isso mobiliza energia coletiva maior do que visões meramente impostas e declaradas formalmente." },
+      { q: "O que caracteriza a disciplina de 'aprendizagem em equipe'?", options: ["Alternar monólogos individuais disfarçados de discussão", "A capacidade de diálogo genuíno, suspendendo pressupostos individuais para pensar coletivamente", "Evitar completamente qualquer debate em grupo", "Delegar toda decisão para um único líder"], correct: 1, explanation: "Isso exige equilibrar diálogo aberto com discussão focada quando apropriado." },
+      { q: "Por que pensamento sistêmico é chamado de 'quinta disciplina', segundo Senge?", options: ["Porque é a menos importante das cinco", "Porque integra e dá sentido prático às outras quatro disciplinas", "Porque foi desenvolvida por último cronologicamente", "Porque substitui completamente as outras quatro"], correct: 1, explanation: "Sem essa integração, as outras disciplinas seriam praticadas de forma fragmentada." },
+      { q: "O que caracteriza uma organização que aprende genuinamente, segundo a obra?", options: ["Mudança superficial e cosmética apenas", "Cultivo simultâneo das cinco disciplinas, permitindo adaptação contínua real", "Foco exclusivo em resultados financeiros de curto prazo", "Ausência completa de mudança ao longo do tempo"], correct: 1, explanation: "Isso permite adaptação genuína, diferente de mudanças que não alteram a estrutura sistêmica subjacente." },
+      { q: "O que a tensão entre visão desejada e realidade atual representa, segundo a disciplina de domínio pessoal?", options: ["Um problema a ser eliminado imediatamente baixando expectativas", "Uma fonte genuína de energia para crescimento e mudança", "Um sinal de fracasso pessoal", "Algo irrelevante para o desenvolvimento pessoal"], correct: 1, explanation: "Resolver essa tensão baixando expectativas anula o potencial de crescimento que ela oferece." },
+    ],
+  },
 ];
 
 // Reflexões diárias — o índice é calculado a partir do dia do ano (rotaciona automaticamente por data)
@@ -1877,7 +2727,6 @@ window.CATALOG_STUBS = [
   ["De Zero a Um Milhão", "Ryan Daniel Moran", "Carreira & Negócios"],
 
   // Investimentos & Finanças
-  ["O Investidor Inteligente", "Benjamin Graham", "Investimentos & Finanças"],
   ["Ações Comuns, Lucros Extraordinários", "Philip Fisher", "Investimentos & Finanças"],
   ["Os Segredos da Mente Milionária", "T. Harv Eker", "Investimentos & Finanças"],
   ["Pai Rico Investidor", "Robert Kiyosaki", "Investimentos & Finanças"],
@@ -1963,7 +2812,6 @@ window.CATALOG_STUBS = [
   ["Liderança: Teoria e Prática", "Peter Northouse", "Gestão & Liderança"],
   ["Os 21 Princípios Irrefutáveis da Liderança", "John C. Maxwell", "Gestão & Liderança"],
   ["Desenvolvendo os Líderes ao Redor de Você", "John C. Maxwell", "Gestão & Liderança"],
-  ["A Quinta Disciplina", "Peter Senge", "Gestão & Liderança"],
   ["Liderança de Nível 5", "Jim Collins", "Gestão & Liderança"],
   ["O Poder do Propósito", "Richard Leider", "Gestão & Liderança"],
   ["Gestão de Pessoas Não é Bicho de Sete Cabeças", "Idalberto Chiavenato", "Gestão & Liderança"],
@@ -1988,7 +2836,6 @@ window.CATALOG_STUBS = [
   ["Pré-Suasão", "Robert Cialdini", "Marketing & Vendas"],
   ["Contágio: Por Que as Coisas Pegam", "Jonah Berger", "Marketing & Vendas"],
   ["Marketing de Permissão", "Seth Godin", "Marketing & Vendas"],
-  ["A Vaca Roxa", "Seth Godin", "Marketing & Vendas"],
   ["Isso é Marketing", "Seth Godin", "Marketing & Vendas"],
   ["Posicionamento: A Batalha por Sua Mente", "Al Ries e Jack Trout", "Marketing & Vendas"],
   ["As 22 Consagradas Leis do Marketing", "Al Ries e Jack Trout", "Marketing & Vendas"],
@@ -2031,7 +2878,6 @@ window.CATALOG_STUBS = [
   ["A Inteligência Emocional das Crianças", "John Gottman", "Inteligência Emocional"],
 
   // Psicologia
-  ["O Homem em Busca de Sentido", "Viktor Frankl", "Psicologia"],
   ["A Sociedade do Cansaço", "Byung-Chul Han", "Psicologia"],
   ["O Corpo Guarda as Marcas", "Bessel van der Kolk", "Psicologia"],
   ["12 Regras para a Vida", "Jordan Peterson", "Psicologia"],
@@ -2053,13 +2899,11 @@ window.CATALOG_STUBS = [
 
   // Desenvolvimento Pessoal
   ["Um Novo Mundo, Uma Nova Terra", "Eckhart Tolle", "Desenvolvimento Pessoal"],
-  ["Os Quatro Compromissos", "Miguel Ruiz", "Desenvolvimento Pessoal"],
   ["O Quinto Compromisso", "Miguel Ruiz", "Desenvolvimento Pessoal"],
   ["Como Fazer Amigos e Influenciar Pessoas na Era Digital", "Dale Carnegie Training", "Desenvolvimento Pessoal"],
   ["Seja Foda", "Jen Sincero", "Desenvolvimento Pessoal"],
   ["Você é Foda", "Jen Sincero", "Desenvolvimento Pessoal"],
   ["A Coragem de Não Agradar", "Ichiro Kishimi e Fumitake Koga", "Desenvolvimento Pessoal"],
-  ["O Poder do Hábito", "Charles Duhigg", "Desenvolvimento Pessoal"],
   ["Mais Esperto que o Diabo", "Napoleon Hill", "Desenvolvimento Pessoal"],
   ["A Lei do Triunfo", "Napoleon Hill", "Desenvolvimento Pessoal"],
   ["O Homem Mais Rico de Todos os Tempos", "Napoleon Hill", "Desenvolvimento Pessoal"],
@@ -2076,7 +2920,6 @@ window.CATALOG_STUBS = [
   ["A Vida Que Você Sempre Quis", "John Ortberg", "Autoajuda & Motivação"],
   ["Faça Acontecer", "Mel Robbins", "Autoajuda & Motivação"],
   ["A Regra dos 5 Segundos", "Mel Robbins", "Autoajuda & Motivação"],
-  ["O Alquimista", "Paulo Coelho", "Autoajuda & Motivação"],
   ["Ninguém é de Ninguém", "Augusto Cury", "Autoajuda & Motivação"],
   ["Ansiedade: Como Enfrentar o Mal do Século", "Augusto Cury", "Autoajuda & Motivação"],
   ["O Vendedor de Sonhos", "Augusto Cury", "Autoajuda & Motivação"],
@@ -2113,7 +2956,6 @@ window.CATALOG_STUBS = [
   // Sexo & Relacionamentos
   ["Por Que os Homens Fazem Sexo e as Mulheres Fazem Amor", "Allan e Barbara Pease", "Sexo & Relacionamentos"],
   ["Por Que os Homens Não Escutam e as Mulheres Não Entendem Mapas", "Allan e Barbara Pease", "Sexo & Relacionamentos"],
-  ["Homens São de Marte, Mulheres São de Vênus", "John Gray", "Sexo & Relacionamentos"],
   ["Casamento Blindado", "Renato e Cristiane Cardoso", "Sexo & Relacionamentos"],
   ["Sete Princípios para Fazer o Casamento Funcionar", "John Gottman", "Sexo & Relacionamentos"],
   ["O Apego Seguro", "Amir Levine e Rachel Heller", "Sexo & Relacionamentos"],
@@ -2181,7 +3023,6 @@ window.CATALOG_STUBS = [
   ["A Autobiografia de Malcolm X", "Malcolm X e Alex Haley", "Biografias & Memórias"],
   ["Longa Caminhada até a Liberdade", "Nelson Mandela", "Biografias & Memórias"],
   ["Uma Educação", "Tara Westover", "Biografias & Memórias"],
-  ["Becoming: Minha História", "Michelle Obama", "Biografias & Memórias"],
   ["O Diário de Anne Frank", "Anne Frank", "Biografias & Memórias"],
   ["Sonhos de Meu Pai", "Barack Obama", "Biografias & Memórias"],
   ["Shoe Dog", "Phil Knight", "Biografias & Memórias"],
@@ -2215,7 +3056,6 @@ window.CATALOG_STUBS = [
   // Ciência
   ["O Universo Numa Casca de Noz", "Stephen Hawking", "Ciência"],
   ["Breves Respostas para Grandes Perguntas", "Stephen Hawking", "Ciência"],
-  ["Cosmos", "Carl Sagan", "Ciência"],
   ["Bilhões e Bilhões", "Carl Sagan", "Ciência"],
   ["O Mundo Assombrado pelos Demônios", "Carl Sagan", "Ciência"],
   ["A Origem das Espécies", "Charles Darwin", "Ciência"],
@@ -2234,10 +3074,8 @@ window.CATALOG_STUBS = [
   ["O Gene: Uma História Íntima", "Siddhartha Mukherjee", "Ciência"],
 
   // IA (Inteligência Artificial)
-  ["Vida 3.0", "Max Tegmark", "IA (Inteligência Artificial)"],
   ["Superinteligência", "Nick Bostrom", "IA (Inteligência Artificial)"],
   ["Inteligência Artificial: Uma Abordagem Moderna", "Stuart Russell e Peter Norvig", "IA (Inteligência Artificial)"],
-  ["A Quarta Revolução Industrial", "Klaus Schwab", "IA (Inteligência Artificial)"],
   ["Homo Deus", "Yuval Noah Harari", "IA (Inteligência Artificial)"],
   ["A Era das Máquinas Espirituais", "Ray Kurzweil", "IA (Inteligência Artificial)"],
   ["A Singularidade está Próxima", "Ray Kurzweil", "IA (Inteligência Artificial)"],
@@ -2250,7 +3088,6 @@ window.CATALOG_STUBS = [
   ["O Futuro do Trabalho", "Daniel Susskind", "IA (Inteligência Artificial)"],
 
   // Tecnologia e Inovação
-  ["A Quarta Revolução Industrial", "Klaus Schwab", "Tecnologia e Inovação"],
   ["A Solução para a Inovação", "Clayton Christensen", "Tecnologia e Inovação"],
   ["Sociedade 5.0", "Klaus Schwab", "Tecnologia e Inovação"],
   ["Isso Vai Mudar Tudo", "John Brockman", "Tecnologia e Inovação"],
@@ -2315,7 +3152,6 @@ window.CATALOG_STUBS = [
   ["Futebol Nação: Uma História do Brasil Através do Futebol", "David Goldblatt", "Modo Copa"],
   ["A Bola: Uma História de Prazer e Poder", "David Goldblatt", "Modo Copa"],
   ["Barça: A Trajetória do Futebol Catalão", "Jimmy Burns", "Modo Copa"],
-  ["Soccernomics", "Simon Kuper e Stefan Szymanski", "Modo Copa"],
   ["A Alma do Jogo", "Tim Vickery", "Modo Copa"],
   ["1970: Como o Brasil Ganhou a Copa do Mundo", "Tim Vickery", "Modo Copa"],
   ["O Livro de Ouro do Futebol", "José Ribamar", "Modo Copa"],
@@ -2344,7 +3180,6 @@ window.CATALOG_STUBS = [
 
   // Estilo de Vida
   ["A Vida Organizada", "Marie Kondo", "Estilo de Vida"],
-  ["A Mágica da Arrumação", "Marie Kondo", "Estilo de Vida"],
   ["Alegria depois da Arrumação", "Marie Kondo", "Estilo de Vida"],
   ["Minimalismo: Viva uma Vida com Mais Significado", "Joshua Fields Millburn e Ryan Nicodemus", "Estilo de Vida"],
   ["A Arte de Viver com Menos", "Fumio Sasaki", "Estilo de Vida"],
@@ -2385,7 +3220,6 @@ window.CATALOG_STUBS = [
 
   // Do Fundo do Baú
   ["Como Fazer Amigos e Influenciar Pessoas", "Dale Carnegie", "Do Fundo do Baú"],
-  ["Como Evitar Preocupações e Começar a Viver", "Dale Carnegie", "Do Fundo do Baú"],
   ["A Riqueza das Nações", "Adam Smith", "Do Fundo do Baú"],
   ["Pense e Enriqueça", "Napoleon Hill", "Do Fundo do Baú"],
   ["A Arte da Guerra", "Sun Tzu", "Do Fundo do Baú"],
@@ -2402,7 +3236,6 @@ window.CATALOG_STUBS = [
   ["Outlive: A Ciência e a Arte da Longevidade", "Peter Attia", "Radar 3X"],
   ["A Psicologia Financeira", "Morgan Housel", "Radar 3X"],
   ["Atlas do Coração", "Brené Brown", "Radar 3X"],
-  ["Vida 3.0", "Max Tegmark", "Radar 3X"],
   ["Foco: A Atenção e Seu Papel Fundamental para o Sucesso", "Daniel Goleman", "Radar 3X"],
   ["O Corpo Guarda as Marcas", "Bessel van der Kolk", "Radar 3X"],
   ["Ikigai: Os Segredos dos Japoneses para uma Vida Longa e Feliz", "Héctor García e Francesc Miralles", "Radar 3X"],
@@ -2420,7 +3253,6 @@ window.CATALOG_STUBS = [
   // 3X Personalities
   ["Elon Musk", "Walter Isaacson", "3X Personalities"],
   ["Shoe Dog", "Phil Knight", "3X Personalities"],
-  ["Becoming: Minha História", "Michelle Obama", "3X Personalities"],
   ["Sonhos de Meu Pai", "Barack Obama", "3X Personalities"],
   ["Longa Caminhada até a Liberdade", "Nelson Mandela", "3X Personalities"],
   ["Eu Sou Malala", "Malala Yousafzai", "3X Personalities"],
